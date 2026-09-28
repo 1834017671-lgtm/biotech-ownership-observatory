@@ -1,0 +1,622 @@
+[
+  {
+    "id": "f0001263508",
+    "name": "Baker Bros",
+    "legalName": "BAKER BROS. ADVISORS LP",
+    "cik": "0001263508",
+    "source": "https://13f.info/manager/0001263508-baker-bros-advisors-lp",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "rtw",
+    "name": "RTW Investments",
+    "cik": "0001493215",
+    "source": "https://13f.info/manager/0001493215-rtw-investments-lp"
+  },
+  {
+    "id": "ra",
+    "name": "RA Capital",
+    "cik": "0001346824",
+    "source": "https://13f.info/manager/0001346824-ra-capital-management-l-p"
+  },
+  {
+    "id": "avoro",
+    "name": "Avoro Capital",
+    "cik": "0001633313",
+    "source": "https://13f.info/manager/0001633313-avoro-capital-advisors-llc"
+  },
+  {
+    "id": "f0001009258",
+    "name": "Deerfield Management",
+    "legalName": "DEERFIELD MANAGEMENT COMPANY, L.P.",
+    "cik": "0001009258",
+    "source": "https://13f.info/manager/0001009258-deerfield-management-company-l-p",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "deeptrack",
+    "name": "Deep Track",
+    "cik": "0001856083",
+    "source": "https://13f.info/manager/0001856083-deep-track-capital-lp"
+  },
+  {
+    "id": "perceptive",
+    "name": "Perceptive Advisors",
+    "cik": "0001224962",
+    "source": "https://13f.info/manager/0001224962-perceptive-advisors-llc"
+  },
+  {
+    "id": "f0001055951",
+    "name": "OrbiMed Advisors",
+    "legalName": "ORBIMED ADVISORS LLC",
+    "cik": "0001055951",
+    "source": "https://13f.info/manager/0001055951-orbimed-advisors-llc",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001855655",
+    "name": "Paradigm Biocapital",
+    "legalName": "Paradigm Biocapital Advisors LP",
+    "cik": "0001855655",
+    "source": "https://13f.info/manager/0001855655-paradigm-biocapital-advisors-lp",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001892134",
+    "name": "Frazier Life Sciences",
+    "legalName": "Frazier Life Sciences Management, L.P.",
+    "cik": "0001892134",
+    "source": "https://13f.info/manager/0001892134-frazier-life-sciences-management-l-p",
+    "location": "Palo Alto, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001974915",
+    "name": "Vestal Point",
+    "legalName": "Vestal Point Capital, LP",
+    "cik": "0001974915",
+    "source": "https://13f.info/manager/0001974915-vestal-point-capital-lp",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001839948",
+    "name": "TCG Crossover",
+    "legalName": "TCG Crossover Management, LLC",
+    "cik": "0001839948",
+    "source": "https://13f.info/manager/0001839948-tcg-crossover-management-llc",
+    "location": "Palo Alto, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "bvf",
+    "name": "BVF Partners",
+    "cik": "0001056807",
+    "source": "https://13f.info/manager/0001056807-bvf-inc-il"
+  },
+  {
+    "id": "f0001615982",
+    "name": "VR Adviser",
+    "legalName": "Venrock Adviser, LLC",
+    "cik": "0001615982",
+    "source": "https://13f.info/manager/0001615982-venrock-adviser-llc",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001802630",
+    "name": "Soleus",
+    "legalName": "Soleus Capital Management, L.P.",
+    "cik": "0001802630",
+    "source": "https://13f.info/manager/0001802630-soleus-capital-management-l-p",
+    "location": "Greenwich, CT",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001920938",
+    "name": "Braidwell",
+    "legalName": "BRAIDWELL LP",
+    "cik": "0001920938",
+    "source": "https://13f.info/manager/0001920938-braidwell-lp",
+    "location": "Stamford, CT",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001773206",
+    "name": "Integral Health",
+    "legalName": "Integral Health Asset Management, LLC",
+    "cik": "0001773206",
+    "source": "https://13f.info/manager/0001773206-integral-health-asset-management-llc",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001792126",
+    "name": "Logos Global",
+    "legalName": "Logos Global Management LP",
+    "cik": "0001792126",
+    "source": "https://13f.info/manager/0001792126-logos-global-management-lp",
+    "location": "San Francisco, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001773195",
+    "name": "Affinity Asset",
+    "legalName": "Affinity Asset Advisors, LLC",
+    "cik": "0001773195",
+    "source": "https://13f.info/manager/0001773195-affinity-asset-advisors-llc",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001232621",
+    "name": "Tang Capital",
+    "legalName": "TANG CAPITAL MANAGEMENT LLC",
+    "cik": "0001232621",
+    "source": "https://13f.info/manager/0001232621-tang-capital-management-llc",
+    "location": "San Diego, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "adar1",
+    "name": "ADAR1 Capital",
+    "cik": "0001940272",
+    "source": "https://13f.info/manager/0001940272-adar1-capital-management-llc"
+  },
+  {
+    "id": "caligan",
+    "name": "Caligan Partners",
+    "cik": "0001727492",
+    "source": "https://13f.info/manager/0001727492-caligan-partners-lp"
+  },
+  {
+    "id": "ecor1",
+    "name": "EcoR1 Capital",
+    "cik": "0001587114",
+    "source": "https://13f.info/manager/0001587114-ecor1-capital-llc"
+  },
+  {
+    "id": "f0001595725",
+    "name": "Rock Springs",
+    "legalName": "Rock Springs Capital Management LP",
+    "cik": "0001595725",
+    "source": "https://13f.info/manager/0001595725-rock-springs-capital-management-lp",
+    "location": "Baltimore, MD",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001534261",
+    "name": "Casdin",
+    "legalName": "Casdin Capital, LLC",
+    "cik": "0001534261",
+    "source": "https://13f.info/manager/0001534261-casdin-capital-llc",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "cormorant",
+    "name": "Cormorant",
+    "cik": "0001583977",
+    "source": "https://13f.info/manager/0001583977-cormorant-asset-management-lp"
+  },
+  {
+    "id": "f0001631134",
+    "name": "Sofinnova Investments",
+    "legalName": "Sofinnova Investments, Inc.",
+    "cik": "0001631134",
+    "source": "https://13f.info/manager/0001631134-sofinnova-investments-inc",
+    "location": "Menlo Park, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001907884",
+    "name": "Kynam",
+    "legalName": "Kynam Capital Management, LP",
+    "cik": "0001907884",
+    "source": "https://13f.info/manager/0001907884-kynam-capital-management-lp",
+    "location": "Princeton, NJ",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001703031",
+    "name": "Bain Capital Life Sciences",
+    "legalName": "Bain Capital Life Sciences Investors, LLC",
+    "cik": "0001703031",
+    "source": "https://13f.info/manager/0001703031-bain-capital-life-sciences-investors-llc",
+    "location": "Boston, MA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001831942",
+    "name": "Commodore",
+    "legalName": "Commodore Capital LP",
+    "cik": "0001831942",
+    "source": "https://13f.info/manager/0001831942-commodore-capital-lp",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001600004",
+    "name": "First Light Asset",
+    "legalName": "First Light Asset Management, LLC",
+    "cik": "0001600004",
+    "source": "https://13f.info/manager/0001600004-first-light-asset-management-llc",
+    "location": "Edina, MN",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001687078",
+    "name": "Bioimpact",
+    "legalName": "MPM BIOIMPACT LLC",
+    "cik": "0001687078",
+    "source": "https://13f.info/manager/0001687078-mpm-bioimpact-llc",
+    "location": "Boston, MA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001802528",
+    "name": "Fairmount",
+    "legalName": "Fairmount Funds Management LLC",
+    "cik": "0001802528",
+    "source": "https://13f.info/manager/0001802528-fairmount-funds-management-llc",
+    "location": "West Conshohocken, PA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001425738",
+    "name": "Redmile",
+    "legalName": "Redmile Group, LLC",
+    "cik": "0001425738",
+    "source": "https://13f.info/manager/0001425738-redmile-group-llc",
+    "location": "Larkspur, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0002018299",
+    "name": "Boxer Capital Management",
+    "legalName": "Boxer Capital Management, LLC",
+    "cik": "0002018299",
+    "source": "https://13f.info/manager/0002018299-boxer-capital-management-llc",
+    "location": "San Diego, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001744967",
+    "name": "Samsara",
+    "legalName": "SAMSARA BIOCAPITAL, LLC",
+    "cik": "0001744967",
+    "source": "https://13f.info/manager/0001744967-samsara-biocapital-llc",
+    "location": "Palo Alto, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001442756",
+    "name": "PFM Health",
+    "legalName": "PFM Health Sciences, LP",
+    "cik": "0001442756",
+    "source": "https://13f.info/manager/0001442756-pfm-health-sciences-lp",
+    "location": "San Francisco, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001839435",
+    "name": "Octagon Capital Advisors",
+    "legalName": "Octagon Capital Advisors LP",
+    "cik": "0001839435",
+    "source": "https://13f.info/manager/0001839435-octagon-capital-advisors-lp",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001595855",
+    "name": "Opaleye",
+    "legalName": "Opaleye Management Inc.",
+    "cik": "0001595855",
+    "source": "https://13f.info/manager/0001595855-opaleye-management-inc",
+    "location": "Boston, MA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001674712",
+    "name": "Vivo Capital",
+    "legalName": "Vivo Capital, LLC",
+    "cik": "0001674712",
+    "source": "https://13f.info/manager/0001674712-vivo-capital-llc",
+    "location": "Palo Alto, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001910264",
+    "name": "SR One Capital",
+    "legalName": "SR One Capital Management, LP",
+    "cik": "0001910264",
+    "source": "https://13f.info/manager/0001910264-sr-one-capital-management-lp",
+    "location": "Redwood City, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001777015",
+    "name": "Parkman",
+    "legalName": "Parkman Healthcare Partners LLC",
+    "cik": "0001777015",
+    "source": "https://13f.info/manager/0001777015-parkman-healthcare-partners-llc",
+    "location": "Stamford, CT",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001816307",
+    "name": "Silverarc",
+    "legalName": "SILVERARC CAPITAL MANAGEMENT, LLC",
+    "cik": "0001816307",
+    "source": "https://13f.info/manager/0001816307-silverarc-capital-management-llc",
+    "location": "Boston, MA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001993440",
+    "name": "First Turn",
+    "legalName": "First Turn Management, LLC",
+    "cik": "0001993440",
+    "source": "https://13f.info/manager/0001993440-first-turn-management-llc",
+    "location": "Del Mar, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001778253",
+    "name": "Ikarian",
+    "legalName": "Ikarian Capital, LLC",
+    "cik": "0001778253",
+    "source": "https://13f.info/manager/0001778253-ikarian-capital-llc",
+    "location": "Dallas, TX",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001826434",
+    "name": "Tri Locum",
+    "legalName": "Tri Locum Partners LP",
+    "cik": "0001826434",
+    "source": "https://13f.info/manager/0001826434-tri-locum-partners-lp",
+    "location": "New York, NY",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0002010850",
+    "name": "Decheng",
+    "legalName": "Decheng Capital LLC",
+    "cik": "0002010850",
+    "source": "https://13f.info/manager/0002010850-decheng-capital-llc",
+    "location": "Menlo Park, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001306923",
+    "name": "Palo Alto Investors",
+    "legalName": "Palo Alto Investors LP",
+    "cik": "0001306923",
+    "source": "https://13f.info/manager/0001306923-palo-alto-investors-lp",
+    "location": "Palo Alto, CA",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001791827",
+    "name": "Avidity",
+    "legalName": "Avidity Partners Management LP",
+    "cik": "0001791827",
+    "source": "https://13f.info/manager/0001791827-avidity-partners-management-lp",
+    "location": "Dallas, TX",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  },
+  {
+    "id": "f0001842545",
+    "name": "Eagle Health",
+    "legalName": "Eagle Health Investments LP",
+    "cik": "0001842545",
+    "source": "https://13f.info/manager/0001842545-eagle-health-investments-lp",
+    "location": "Greenwich, CT",
+    "inclusionSources": [
+      "https://www.biopharmawatch.com/biotech-hedge-funds",
+      "https://rxdatalab.com/research/biotech-specialist-investors/",
+      "https://www.stifel.com/newsletters/investmentbanking/bal/marketing/healthcare/biopharma_timopler/2026/BiopharmaMarketUpdate_052826.pdf"
+    ],
+    "rationale": "US-based healthcare/life-sciences specialist candidate; current public equity reporting; ranked by reported 13F value within the researched candidate pool."
+  }
+]

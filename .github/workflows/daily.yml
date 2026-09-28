@@ -1,0 +1,63 @@
+name: Daily refresh and publish
+
+on:
+  schedule:
+    # 00:30 UTC Tue–Sat: the previous US session's close is final and its date is before "today" in UTC.
+    - cron: '30 0 * * 2-6'
+  workflow_dispatch:
+    inputs:
+      refresh_holders:
+        description: Also refresh broader institutional holders (slow, about 500 requests to 13f.info)
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh data
+        if: github.event_name != 'push'
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          REFRESH_HOLDERS: ${{ inputs.refresh_holders && '1' || '0' }}
+        run: python3 scripts/daily.py
+
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "dashboard-refresh[bot]"
+          git config user.email "dashboard-refresh@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "Data refresh $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Build site
+        run: python3 scripts/prepare.py
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deploy
+        uses: actions/deploy-pages@v4

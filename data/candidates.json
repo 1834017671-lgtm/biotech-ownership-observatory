@@ -1,0 +1,7232 @@
+[
+  {
+    "key": "INCY",
+    "ticker": "INCY",
+    "name": "Incyte Corporation",
+    "value": 3487217000,
+    "shares": 30762330,
+    "cusips": [
+      "45337C102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 1,
+    "weight": 17.47519623669735,
+    "equityWeight": 17.53601926659648
+  },
+  {
+    "key": "07725L102",
+    "ticker": null,
+    "name": "Beone Medicines Ltd.",
+    "value": 2508182000,
+    "shares": 8801567,
+    "cusips": [
+      "07725L102"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Biotech / biopharma",
+    "rank": 2,
+    "weight": 12.56904077014767,
+    "equityWeight": 12.612787754857383
+  },
+  {
+    "key": "RVMD",
+    "ticker": "RVMD",
+    "name": "Revolution Medicines Inc",
+    "value": 22538000,
+    "shares": 120346,
+    "cusips": [
+      "76155X100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 12,
+    "weight": 3.735736970171123,
+    "equityWeight": 3.735817469065714
+  },
+  {
+    "key": "MDGL",
+    "ticker": "MDGL",
+    "name": "Madrigal Pharmaceuticals Inc",
+    "value": 959000,
+    "shares": 1787,
+    "cusips": [
+      "558868105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 45,
+    "weight": 0.13251017661575365,
+    "equityWeight": 0.1325147541844401
+  },
+  {
+    "key": "ACAD",
+    "ticker": "ACAD",
+    "name": "Acadia Pharmaceuticals Inc",
+    "value": 72461000,
+    "shares": 2864096,
+    "cusips": [
+      "004225108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 2,
+    "weight": 10.012325242705032,
+    "equityWeight": 10.012671118830776
+  },
+  {
+    "key": "KYMR",
+    "ticker": "KYMR",
+    "name": "Kymera Therapeutics Inc",
+    "value": 19052000,
+    "shares": 166148,
+    "cusips": [
+      "501575104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 3.157922653105876,
+    "equityWeight": 3.1579907010666424
+  },
+  {
+    "key": "INSM",
+    "ticker": "INSM",
+    "name": "Insmed Inc",
+    "value": 40955000,
+    "shares": 384130,
+    "cusips": [
+      "457669307"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 4,
+    "weight": 6.78840658502788,
+    "equityWeight": 6.788552863855991
+  },
+  {
+    "key": "CELC",
+    "ticker": "CELC",
+    "name": "Celcuity Inc",
+    "value": 34430000,
+    "shares": 329101,
+    "cusips": [
+      "15102K100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 10,
+    "weight": 3.6834757118479966,
+    "equityWeight": 3.6835427057723455
+  },
+  {
+    "key": "KOD",
+    "ticker": "KOD",
+    "name": "Kodiak Sciences Inc",
+    "value": 41287000,
+    "shares": 1059730,
+    "cusips": [
+      "50015M109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 2,
+    "weight": 4.448196135638361,
+    "equityWeight": 6.785301663004518
+  },
+  {
+    "key": "RYTM",
+    "ticker": "RYTM",
+    "name": "Rhythm Pharmaceuticals Inc",
+    "value": 17100000,
+    "shares": 154018,
+    "cusips": [
+      "76243J105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 1.8294346405053947,
+    "equityWeight": 1.829467913700468
+  },
+  {
+    "key": "PRAX",
+    "ticker": "PRAX",
+    "name": "Praxis Precision Medicines I",
+    "value": 24386000,
+    "shares": 72842,
+    "cusips": [
+      "74006W207"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 4,
+    "weight": 2.627309103680991,
+    "equityWeight": 4.007711055635628
+  },
+  {
+    "key": "ALKS",
+    "ticker": "ALKS",
+    "name": "Alkermes Plc",
+    "value": 15577000,
+    "shares": 297302,
+    "cusips": [
+      "G01767105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 17,
+    "weight": 2.581931617018173,
+    "equityWeight": 2.581987253333775
+  },
+  {
+    "key": "SMMT",
+    "ticker": "SMMT",
+    "name": "Summit Therapeutics Inc",
+    "value": 18212000,
+    "shares": 1250000,
+    "cusips": [
+      "86627T108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 16,
+    "weight": 1.6369777931180778,
+    "equityWeight": 1.6715372415413532
+  },
+  {
+    "key": "GRAL",
+    "ticker": "GRAL",
+    "name": "Grail Inc",
+    "value": 32769000,
+    "shares": 480000,
+    "cusips": [
+      "384747101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 14,
+    "weight": 1.6402559217698687,
+    "equityWeight": 1.640269879431229
+  },
+  {
+    "key": "ABCL",
+    "ticker": "ABCL",
+    "name": "Abcellera Biologics Inc.",
+    "value": 259145000,
+    "shares": 33012138,
+    "cusips": [
+      "00288U106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 15,
+    "weight": 1.2986314670864862,
+    "equityWeight": 1.3031513991937254
+  },
+  {
+    "key": "IMVT",
+    "ticker": "IMVT",
+    "name": "Immunovant Inc",
+    "value": 23853000,
+    "shares": 619096,
+    "cusips": [
+      "45258J102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 12,
+    "weight": 2.479124963363453,
+    "equityWeight": 2.6923489342009472
+  },
+  {
+    "key": "IDYA",
+    "ticker": "IDYA",
+    "name": "Ideaya Biosciences Inc",
+    "value": 23860000,
+    "shares": 640202,
+    "cusips": [
+      "45166A102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 1.601871221906831,
+    "equityWeight": 1.6018905799971803
+  },
+  {
+    "key": "KNSA",
+    "ticker": "KNSA",
+    "name": "Kiniksa Pharmaceuticals Intl",
+    "value": 144519000,
+    "shares": 2259889,
+    "cusips": [
+      "G52694109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 4,
+    "weight": 6.563713928731525,
+    "equityWeight": 6.8869370788262385
+  },
+  {
+    "key": "ROIV",
+    "ticker": "ROIV",
+    "name": "Roivant Sciences Ltd",
+    "value": 47106000,
+    "shares": 1331066,
+    "cusips": [
+      "G76279101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 6,
+    "weight": 5.039611004423809,
+    "equityWeight": 5.039702663320131
+  },
+  {
+    "key": "ARWR",
+    "ticker": "ARWR",
+    "name": "Arrowhead Pharmaceuticals In",
+    "value": 10732000,
+    "shares": 131667,
+    "cusips": [
+      "04280A100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 41,
+    "weight": 0.9208531362806012,
+    "equityWeight": 0.9317719294589959
+  },
+  {
+    "key": "IONS",
+    "ticker": "IONS",
+    "name": "Ionis Pharmaceuticals Inc",
+    "value": 15428000,
+    "shares": 194577,
+    "cusips": [
+      "462222100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 18,
+    "weight": 2.5572344474132613,
+    "equityWeight": 2.5572895515460927
+  },
+  {
+    "key": "EWTX",
+    "ticker": "EWTX",
+    "name": "Edgewise Therapeutics Inc",
+    "value": 23444000,
+    "shares": 577036,
+    "cusips": [
+      "28036F105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 12,
+    "weight": 2.4000155605854467,
+    "equityWeight": 2.4078517082148787
+  },
+  {
+    "key": "REPL",
+    "ticker": "REPL",
+    "name": "Replimune Group Inc",
+    "value": 15331000,
+    "shares": 1384993,
+    "cusips": [
+      "76029N106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 20,
+    "weight": 1.388448643430159,
+    "equityWeight": 1.3884750502870504
+  },
+  {
+    "key": "NRIX",
+    "ticker": "NRIX",
+    "name": "Nurix Therapeutics Inc",
+    "value": 98830000,
+    "shares": 4073787,
+    "cusips": [
+      "67080M103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 6.635076817311488,
+    "equityWeight": 6.635157000046996
+  },
+  {
+    "key": "STOK",
+    "ticker": "STOK",
+    "name": "Stoke Therapeutics Inc",
+    "value": 2769000,
+    "shares": 84631,
+    "cusips": [
+      "86150R107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 33,
+    "weight": 0.38260759024924074,
+    "equityWeight": 0.3826208074418296
+  },
+  {
+    "key": "GLUE",
+    "ticker": "GLUE",
+    "name": "Monte Rosa Therapeutics Inc",
+    "value": 26820000,
+    "shares": 1108295,
+    "cusips": [
+      "61225M102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 2.7874955568443305,
+    "equityWeight": 3.0272417899328974
+  },
+  {
+    "key": "IMTX",
+    "ticker": "IMTX",
+    "name": "Immatics N.V",
+    "value": 4811000,
+    "shares": 475000,
+    "cusips": [
+      "N44445109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 42,
+    "weight": 0.36233221141643956,
+    "equityWeight": 0.3623384878638071
+  },
+  {
+    "key": "DNLI",
+    "ticker": "DNLI",
+    "name": "Denali Therapeutics Inc",
+    "value": 52597000,
+    "shares": 2045000,
+    "cusips": [
+      "24823R105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 8,
+    "weight": 2.6327486562705538,
+    "equityWeight": 2.6327710594905045
+  },
+  {
+    "key": "CRNX",
+    "ticker": "CRNX",
+    "name": "Crinetics Pharmaceuticals Inc",
+    "value": 50923000,
+    "shares": 1360866,
+    "cusips": [
+      "22663K107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 3.095105681421039,
+    "equityWeight": 3.0951357810533175
+  },
+  {
+    "key": "DNTH",
+    "ticker": "DNTH",
+    "name": "Dianthus Therapeutics Inc",
+    "value": 12803000,
+    "shares": 131344,
+    "cusips": [
+      "252828108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 20,
+    "weight": 2.1221333050448528,
+    "equityWeight": 2.1221790334745023
+  },
+  {
+    "key": "GPCR",
+    "ticker": "GPCR",
+    "name": "Structure Therapeutics Inc",
+    "value": 5259000,
+    "shares": 98000,
+    "cusips": [
+      "86366E106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 19,
+    "weight": 0.8421932576496418,
+    "equityWeight": 0.8422175352285229
+  },
+  {
+    "key": "RAPP",
+    "ticker": "RAPP",
+    "name": "Rapport Therapeutics Inc",
+    "value": 79356000,
+    "shares": 1904408,
+    "cusips": [
+      "75383L102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 4.10265000294686,
+    "equityWeight": 4.239098035151672
+  },
+  {
+    "key": "ALMS",
+    "ticker": "ALMS",
+    "name": "Alumis Inc",
+    "value": 24497000,
+    "shares": 870548,
+    "cusips": [
+      "022307102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 3,
+    "weight": 2.639268068271682,
+    "equityWeight": 4.025953322804313
+  },
+  {
+    "key": "PRLD",
+    "ticker": "PRLD",
+    "name": "Prelude Therapeutics Inc",
+    "value": 12872000,
+    "shares": 2415087,
+    "cusips": [
+      "74065P101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 21,
+    "weight": 0.7113921112406807,
+    "equityWeight": 0.7113984018958834
+  },
+  {
+    "key": "RLAY",
+    "ticker": "RLAY",
+    "name": "Relay Therapeutics Inc",
+    "value": 8419000,
+    "shares": 450000,
+    "cusips": [
+      "75943R102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 30,
+    "weight": 0.6340625416576605,
+    "equityWeight": 0.6340735251144028
+  },
+  {
+    "key": "MIRM",
+    "ticker": "MIRM",
+    "name": "Mirum Pharmaceuticals Inc",
+    "value": 40834000,
+    "shares": 348808,
+    "cusips": [
+      "604749101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 4,
+    "weight": 5.642252921718128,
+    "equityWeight": 5.642447833542676
+  },
+  {
+    "key": "BCYC",
+    "ticker": "BCYC",
+    "name": "Bicycle Therapeutics Plc-Adr",
+    "value": 856000,
+    "shares": 201890,
+    "cusips": [
+      "088786108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 47,
+    "weight": 0.11827811385097511,
+    "equityWeight": 0.11828219977255548
+  },
+  {
+    "key": "ELVN",
+    "ticker": "ELVN",
+    "name": "Enliven Therapeutics Inc",
+    "value": 27912000,
+    "shares": 550000,
+    "cusips": [
+      "29337E102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 4.469917894564899,
+    "equityWeight": 4.470046747156975
+  },
+  {
+    "key": "CLDX",
+    "ticker": "CLDX",
+    "name": "Celldex Therapeutics Inc",
+    "value": 14878000,
+    "shares": 399856,
+    "cusips": [
+      "15117B202"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 18,
+    "weight": 2.055773104993934,
+    "equityWeight": 2.0558441217477577
+  },
+  {
+    "key": "VRDN",
+    "ticker": "VRDN",
+    "name": "Viridian Therapeutics Inc",
+    "value": 7807000,
+    "shares": 425000,
+    "cusips": [
+      "92790C104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 23,
+    "weight": 0.8411138428785983,
+    "equityWeight": 1.2830394575308517
+  },
+  {
+    "key": "DSGN",
+    "ticker": "DSGN",
+    "name": "Design Therapeutics, Inc.",
+    "value": 94438000,
+    "shares": 6526476,
+    "cusips": [
+      "25056L103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 9.08925541406362,
+    "equityWeight": 9.089316650625602
+  },
+  {
+    "key": "TRDA",
+    "ticker": "TRDA",
+    "name": "Entrada Therapeutics, Inc.",
+    "value": 9222000,
+    "shares": 1253053,
+    "cusips": [
+      "29384C108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 34,
+    "weight": 0.5623318172366715,
+    "equityWeight": 0.5623379894008252
+  },
+  {
+    "key": "FTH",
+    "ticker": "FTH",
+    "name": "Faeth Therapeutics Inc",
+    "value": 18050000,
+    "shares": 722020,
+    "cusips": [
+      "81728A207"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 23,
+    "weight": 1.6482513012510271,
+    "equityWeight": 1.6482814040983305
+  },
+  {
+    "key": "AKTS",
+    "ticker": "AKTS",
+    "name": "Aktis Oncology Inc",
+    "value": 15605000,
+    "shares": 484200,
+    "cusips": [
+      "01021M104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 7,
+    "weight": 2.4990351370265564,
+    "equityWeight": 2.4991071757446472
+  },
+  {
+    "key": "NGNE",
+    "ticker": "NGNE",
+    "name": "Neurogene Inc",
+    "value": 54003000,
+    "shares": 1717127,
+    "cusips": [
+      "64135M105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 6,
+    "weight": 4.43570312666843,
+    "equityWeight": 4.435746847919832
+  },
+  {
+    "key": "JBIO",
+    "ticker": "JBIO",
+    "name": "Jade Biosciences Inc",
+    "value": 37789000,
+    "shares": 1700708,
+    "cusips": [
+      "008064206"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 4,
+    "weight": 6.051652598083726,
+    "equityWeight": 6.0518270467295405
+  },
+  {
+    "key": "TSHA",
+    "ticker": "TSHA",
+    "name": "Taysha Gene Therapies Inc",
+    "value": 9475000,
+    "shares": 1391382,
+    "cusips": [
+      "877619106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 1.3092115989929778,
+    "equityWeight": 1.3092568257534618
+  },
+  {
+    "key": "RCUS",
+    "ticker": "RCUS",
+    "name": "Arcus Biosciences, Inc",
+    "value": 14329000,
+    "shares": 464779,
+    "cusips": [
+      "03969F109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 6,
+    "weight": 1.9581851153879268,
+    "equityWeight": 1.9581984956487515
+  },
+  {
+    "key": "IRON",
+    "ticker": "IRON",
+    "name": "Disc Medicine Inc",
+    "value": 30473000,
+    "shares": 416646,
+    "cusips": [
+      "254604101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 4.2106179478747245,
+    "equityWeight": 4.210763403819023
+  },
+  {
+    "key": "ABSI",
+    "ticker": "ABSI",
+    "name": "Absci Corporation",
+    "value": 4100000,
+    "shares": 353772,
+    "cusips": [
+      "00091E109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 46,
+    "weight": 0.4417275209174142,
+    "equityWeight": 0.6738134719964765
+  },
+  {
+    "key": "ARGX",
+    "ticker": "ARGX",
+    "name": "Argenx Se",
+    "value": 70897000,
+    "shares": 76417,
+    "cusips": [
+      "04016X101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 1,
+    "weight": 11.751377405902126,
+    "equityWeight": 11.751630628465344
+  },
+  {
+    "key": "PTCT",
+    "ticker": "PTCT",
+    "name": "Ptc Therapeutics Inc",
+    "value": 74950000,
+    "shares": 918846,
+    "cusips": [
+      "69366J200"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 1,
+    "weight": 10.35624373029274,
+    "equityWeight": 10.356601487094666
+  },
+  {
+    "key": "PTGX",
+    "ticker": "PTGX",
+    "name": "Protagonist Therapeutics Inc",
+    "value": 30439000,
+    "shares": 248322,
+    "cusips": [
+      "74366E102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 8,
+    "weight": 5.045349970495998,
+    "equityWeight": 5.045458689364241
+  },
+  {
+    "key": "CGON",
+    "ticker": "CGON",
+    "name": "Cg Oncology Inc",
+    "value": 99395000,
+    "shares": 1398948,
+    "cusips": [
+      "156944100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 2,
+    "weight": 15.917436555255021,
+    "equityWeight": 15.917895401034235
+  },
+  {
+    "key": "TNGX",
+    "ticker": "TNGX",
+    "name": "Tango Therapeutics Inc",
+    "value": 625000,
+    "shares": 20000,
+    "cusips": [
+      "87583X109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 0.08541180104106735,
+    "equityWeight": 0.08541238465911576
+  },
+  {
+    "key": "SYRE",
+    "ticker": "SYRE",
+    "name": "Spyre Therapeutics Inc",
+    "value": 5323000,
+    "shares": 59959,
+    "cusips": [
+      "00773J202"
+    ],
+    "mappingNote": "Issuer-name correction: provider ticker AGLE \u2192 SYRE; original CUSIP retained.",
+    "category": "Biotech / biopharma",
+    "rank": 44,
+    "weight": 0.5532378392648163,
+    "equityWeight": 0.6008205834382108
+  },
+  {
+    "key": "ERAS",
+    "ticker": "ERAS",
+    "name": "Erasca Inc",
+    "value": 22381000,
+    "shares": 1221721,
+    "cusips": [
+      "29479A108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 21,
+    "weight": 2.394419689424049,
+    "equityWeight": 2.3944632383935773
+  },
+  {
+    "key": "RDNT",
+    "ticker": "RDNT",
+    "name": "Radnet Inc",
+    "value": 298911000,
+    "shares": 4846958,
+    "cusips": [
+      "750491102"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 11,
+    "weight": 2.551975484178761,
+    "equityWeight": 2.5519833277696624
+  },
+  {
+    "key": "ORKA",
+    "ticker": "ORKA",
+    "name": "Oruka Therapeutics Inc",
+    "value": 72369000,
+    "shares": 760424,
+    "cusips": [
+      "687604108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 3,
+    "weight": 11.589405564336742,
+    "equityWeight": 11.589739647642704
+  },
+  {
+    "key": "NTRA",
+    "ticker": "NTRA",
+    "name": "Natera Inc",
+    "value": 4301000,
+    "shares": 15847,
+    "cusips": [
+      "632307104"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 23,
+    "weight": 0.7129028622196291,
+    "equityWeight": 0.7129182240860608
+  },
+  {
+    "key": "RARE",
+    "ticker": "RARE",
+    "name": "Ultragenyx Pharmaceutical In",
+    "value": 29520000,
+    "shares": 884121,
+    "cusips": [
+      "90400D108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 4.8930231324630205,
+    "equityWeight": 4.893128568942226
+  },
+  {
+    "key": "IRTC",
+    "ticker": "IRTC",
+    "name": "Irhythm Holdings Inc",
+    "value": 8001000,
+    "shares": 67267,
+    "cusips": [
+      "450056106"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 44,
+    "weight": 0.8190805536701996,
+    "equityWeight": 0.8217548847221994
+  },
+  {
+    "key": "CYTK",
+    "ticker": "CYTK",
+    "name": "Cytokinetics Inc",
+    "value": 2742000,
+    "shares": 32195,
+    "cusips": [
+      "23282W605"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 34,
+    "weight": 0.37887685534973564,
+    "equityWeight": 0.37888994366395695
+  },
+  {
+    "key": "KLRA",
+    "ticker": "KLRA",
+    "name": "Kailera Therapeutics Inc",
+    "value": 1762000,
+    "shares": 80000,
+    "cusips": [
+      "482931102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 32,
+    "weight": 0.2821723749721751,
+    "equityWeight": 0.28218050904595127
+  },
+  {
+    "key": "ESTA",
+    "ticker": "ESTA",
+    "name": "Establishment Labs Hldgs Inc",
+    "value": 7634000,
+    "shares": 88964,
+    "cusips": [
+      "G31249108"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 29,
+    "weight": 0.5125182274952534,
+    "equityWeight": 0.5125244211105815
+  },
+  {
+    "key": "GH",
+    "ticker": "GH",
+    "name": "Guardant Health Inc",
+    "value": 45111000,
+    "shares": 300685,
+    "cusips": [
+      "40131M109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 3,
+    "weight": 7.477275288907159,
+    "equityWeight": 7.477436411705717
+  },
+  {
+    "key": "NBIX",
+    "ticker": "NBIX",
+    "name": "Neurocrine Biosciences Inc",
+    "value": 3053000,
+    "shares": 18117,
+    "cusips": [
+      "64125C109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 31,
+    "weight": 0.421849394377368,
+    "equityWeight": 0.4218639671794532
+  },
+  {
+    "key": "TARS",
+    "ticker": "TARS",
+    "name": "Tarsus Pharmaceuticals Inc",
+    "value": 20665000,
+    "shares": 328340,
+    "cusips": [
+      "87650L103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 2.5411202817427916,
+    "equityWeight": 2.5411484047884016
+  },
+  {
+    "key": "QURE",
+    "ticker": "QURE",
+    "name": "Uniqure Nv",
+    "value": 28047000,
+    "shares": 608925,
+    "cusips": [
+      "N90064101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 13,
+    "weight": 3.00059376387455,
+    "equityWeight": 3.0006483377518727
+  },
+  {
+    "key": "RGEN",
+    "ticker": "RGEN",
+    "name": "Repligen Corp",
+    "value": 10615000,
+    "shares": 77800,
+    "cusips": [
+      "759916109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 10,
+    "weight": 1.6999204088136428,
+    "equityWeight": 1.6999694117609376
+  },
+  {
+    "key": "URGN",
+    "ticker": "URGN",
+    "name": "Urogen Pharma Ltd",
+    "value": 901000,
+    "shares": 24500,
+    "cusips": [
+      "M96088105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 46,
+    "weight": 0.1244960053501502,
+    "equityWeight": 0.12450030606900991
+  },
+  {
+    "key": "GHRS",
+    "ticker": "GHRS",
+    "name": "Gh Research Plc",
+    "value": 232516247.0,
+    "shares": 8650158.0,
+    "cusips": [
+      "G3855L106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 5.945193413827659,
+    "equityWeight": 5.945610066120204
+  },
+  {
+    "key": "IMCR",
+    "ticker": "IMCR",
+    "name": "Immunocore Hldgs Plc",
+    "value": 1470000,
+    "shares": 46300,
+    "cusips": [
+      "45258D105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 26,
+    "weight": 0.24365663972630894,
+    "equityWeight": 0.24366189012009049
+  },
+  {
+    "key": "CMPS",
+    "ticker": "CMPS",
+    "name": "Compass Pathways Plc",
+    "value": 29155000,
+    "shares": 2060427,
+    "cusips": [
+      "20451W101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 10,
+    "weight": 4.832523354571794,
+    "equityWeight": 4.832627487381795
+  },
+  {
+    "key": "ZLAB",
+    "ticker": "ZLAB",
+    "name": "Zai Lab Ltd",
+    "value": 15479000,
+    "shares": 814707,
+    "cusips": [
+      "98887Q104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 44,
+    "weight": 0.7555124735944022,
+    "equityWeight": 0.7555312806740867
+  },
+  {
+    "key": "BLTE",
+    "ticker": "BLTE",
+    "name": "Belite Bio Inc",
+    "value": 21127000,
+    "shares": 137208,
+    "cusips": [
+      "07782B104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 28,
+    "weight": 1.288265485009668,
+    "equityWeight": 1.2882796250348336
+  },
+  {
+    "key": "XNCR",
+    "ticker": "XNCR",
+    "name": "Xencor Inc",
+    "value": 114852892.0,
+    "shares": 7133720.0,
+    "cusips": [
+      "98401F105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 2.9366664303568406,
+    "equityWeight": 2.9368722384299306
+  },
+  {
+    "key": "COGT",
+    "ticker": "COGT",
+    "name": "Cogent Biosciences Inc",
+    "value": 14322000,
+    "shares": 370084,
+    "cusips": [
+      "19240Q201"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 1.543029647458343,
+    "equityWeight": 2.353745499008179
+  },
+  {
+    "key": "CSTL",
+    "ticker": "CSTL",
+    "name": "Castle Biosciences Inc",
+    "value": 66263000,
+    "shares": 2778335,
+    "cusips": [
+      "14843C105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 40,
+    "weight": 0.5657254216410144,
+    "equityWeight": 0.5657271604189914
+  },
+  {
+    "key": "CADL",
+    "ticker": "CADL",
+    "name": "Candel Therapeutics Inc",
+    "value": 996000,
+    "shares": 96741,
+    "cusips": [
+      "137404109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 30,
+    "weight": 0.05504556733963004,
+    "equityWeight": 0.055046054093248906
+  },
+  {
+    "key": "RCKT",
+    "ticker": "RCKT",
+    "name": "Rocket Pharmaceuticals Inc",
+    "value": 3420000,
+    "shares": 1000000,
+    "cusips": [
+      "77313F106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 41,
+    "weight": 0.3097315478788823,
+    "equityWeight": 0.30973743865251535
+  },
+  {
+    "key": "AXGN",
+    "ticker": "AXGN",
+    "name": "Axogen Inc",
+    "value": 126946000,
+    "shares": 2748361,
+    "cusips": [
+      "05463X106"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 3,
+    "weight": 7.715792192794517,
+    "equityWeight": 7.715867228199329
+  },
+  {
+    "key": "DHR",
+    "ticker": "DHR",
+    "name": "Danaher Corp Del",
+    "value": 14533000,
+    "shares": 76300,
+    "cusips": [
+      "235851102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 45,
+    "weight": 0.7093392841105658,
+    "equityWeight": 0.7093569417944636
+  },
+  {
+    "key": "CGEM",
+    "ticker": "CGEM",
+    "name": "Cullinan Therapeutics, Inc.",
+    "value": 177207000,
+    "shares": 9731341,
+    "cusips": [
+      "230031106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 1,
+    "weight": 10.805588195300242,
+    "equityWeight": 10.805706797630886
+  },
+  {
+    "key": "HNGE",
+    "ticker": "HNGE",
+    "name": "Hinge Health Inc",
+    "value": 110400000,
+    "shares": 1330127,
+    "cusips": [
+      "433313103"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 2,
+    "weight": 4.083639143900564,
+    "equityWeight": 4.271739925329677
+  },
+  {
+    "key": "OBIO",
+    "ticker": "OBIO",
+    "name": "Orchestra Biomed Hldgs Inc",
+    "value": 41234000,
+    "shares": 9556063,
+    "cusips": [
+      "68572M106"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 50,
+    "weight": 0.352038423191609,
+    "equityWeight": 0.3520395051947043
+  },
+  {
+    "key": "ASND",
+    "ticker": "ASND",
+    "name": "Ascendis Pharma A/S",
+    "value": 28314000,
+    "shares": 106158,
+    "cusips": [
+      "K08588103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 4.693125236197763,
+    "equityWeight": 4.693226365211049
+  },
+  {
+    "key": "PBLS",
+    "ticker": "PBLS",
+    "name": "Parabilis Medicines Inc",
+    "value": 15218000,
+    "shares": 556044,
+    "cusips": [
+      "698955101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 12,
+    "weight": 1.2499774120260017,
+    "equityWeight": 1.2499897326378906
+  },
+  {
+    "key": "PCVX",
+    "ticker": "PCVX",
+    "name": "Vaxcyte Inc",
+    "value": 22594000,
+    "shares": 388682,
+    "cusips": [
+      "92243G108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 2.43424185551416,
+    "equityWeight": 3.7132052649483875
+  },
+  {
+    "key": "SION",
+    "ticker": "SION",
+    "name": "Sionna Therapeutics Inc",
+    "value": 4860000,
+    "shares": 110493,
+    "cusips": [
+      "829401108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 30,
+    "weight": 0.5199445820383753,
+    "equityWeight": 0.5199540386306594
+  },
+  {
+    "key": "TYRA",
+    "ticker": "TYRA",
+    "name": "Tyra Biosciences Inc",
+    "value": 59887000,
+    "shares": 1875000,
+    "cusips": [
+      "90240B106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 3.5669019705008562,
+    "equityWeight": 3.578255021847629
+  },
+  {
+    "key": "NAMS",
+    "ticker": "NAMS",
+    "name": "Newamsterdam Pharma Co Nv",
+    "value": 1503000,
+    "shares": 44359,
+    "cusips": [
+      "N62509109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 43,
+    "weight": 0.2076775760724481,
+    "equityWeight": 0.20768475030157815
+  },
+  {
+    "key": "COAG",
+    "ticker": "COAG",
+    "name": "Hemab Therapeutics Hldgs Inc",
+    "value": 1750000,
+    "shares": 47652,
+    "cusips": [
+      "423494103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 49,
+    "weight": 0.15848836514270292,
+    "equityWeight": 0.15849137942745667
+  },
+  {
+    "key": "SEPN",
+    "ticker": "SEPN",
+    "name": "Septerna Inc",
+    "value": 105464000,
+    "shares": 3149128,
+    "cusips": [
+      "81734D104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 4,
+    "weight": 8.662611235504682,
+    "equityWeight": 8.662696619984393
+  },
+  {
+    "key": "BCAX",
+    "ticker": "BCAX",
+    "name": "Bicara Therapeutics Inc",
+    "value": 16341000,
+    "shares": 550408,
+    "cusips": [
+      "055477103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 16,
+    "weight": 2.257923666400449,
+    "equityWeight": 2.2580016664524876
+  },
+  {
+    "key": "MLYS",
+    "ticker": "MLYS",
+    "name": "Mineralys Therapeutics Inc",
+    "value": 10261000,
+    "shares": 380354,
+    "cusips": [
+      "603170101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 39,
+    "weight": 1.0504418899150003,
+    "equityWeight": 1.0538716250636782
+  },
+  {
+    "key": "SGP",
+    "ticker": "SGP",
+    "name": "Spyglass Pharma Inc",
+    "value": 46967000,
+    "shares": 2109953,
+    "cusips": [
+      "85220G109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 8,
+    "weight": 3.8577795446592997,
+    "equityWeight": 3.8578175695100416
+  },
+  {
+    "key": "ARTV",
+    "ticker": "ARTV",
+    "name": "Artiva Biotherapeutics Inc",
+    "value": 5092000,
+    "shares": 525000,
+    "cusips": [
+      "04317A107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 45,
+    "weight": 0.5292292086298035,
+    "equityWeight": 0.5747470243974017
+  },
+  {
+    "key": "JANX",
+    "ticker": "JANX",
+    "name": "Janux Therapeutics Inc",
+    "value": 27488000,
+    "shares": 1789617,
+    "cusips": [
+      "47103J105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 35,
+    "weight": 0.6606856921456566,
+    "equityWeight": 0.6610504950423618
+  },
+  {
+    "key": "BCRX",
+    "ticker": "BCRX",
+    "name": "Biocryst Pharmaceuticals Inc",
+    "value": 16242000,
+    "shares": 1624279,
+    "cusips": [
+      "09058V103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 1.662730452782325,
+    "equityWeight": 1.6681593347903965
+  },
+  {
+    "key": "WVE",
+    "ticker": "WVE",
+    "name": "Wave Life Sciences Ltd",
+    "value": 1099000,
+    "shares": 189253,
+    "cusips": [
+      "Y95308105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 47,
+    "weight": 0.05681753557687635,
+    "equityWeight": 0.05870720223589504
+  },
+  {
+    "key": "NUVL",
+    "ticker": "NUVL",
+    "name": "Nuvalent Inc",
+    "value": 3247000,
+    "shares": 26298,
+    "cusips": [
+      "670703107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 31,
+    "weight": 0.34737861273222315,
+    "equityWeight": 0.34738493074768534
+  },
+  {
+    "key": "ABVX",
+    "ticker": "ABVX",
+    "name": "Abivax Sa",
+    "value": 43352000,
+    "shares": 328635,
+    "cusips": [
+      "00370M103"
+    ],
+    "mappingNote": "Issuer-name correction: provider ticker 2X10.SG \u2192 ABVX; original CUSIP retained.",
+    "category": "Biotech / biopharma",
+    "rank": 1,
+    "weight": 4.6706759723931075,
+    "equityWeight": 7.124673570241767
+  },
+  {
+    "key": "ELYM",
+    "ticker": "ELYM",
+    "name": "Climb Bio Inc",
+    "value": 3912000,
+    "shares": 300000,
+    "cusips": [
+      "28658R106"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 48,
+    "weight": 0.4214726980070548,
+    "equityWeight": 0.642916659134199
+  },
+  {
+    "key": "SLDB",
+    "ticker": "SLDB",
+    "name": "Solid Biosciences Inc",
+    "value": 6677000,
+    "shares": 668450,
+    "cusips": [
+      "83422E204"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 40,
+    "weight": 0.6939637521644144,
+    "equityWeight": 0.7536500160843383
+  },
+  {
+    "key": "SPRY",
+    "ticker": "SPRY",
+    "name": "Ars Pharmaceuticals, Inc.",
+    "value": 32143000,
+    "shares": 4012903,
+    "cusips": [
+      "82835W108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 10,
+    "weight": 3.0936268956802024,
+    "equityWeight": 3.093647738209817
+  },
+  {
+    "key": "NTLA",
+    "ticker": "NTLA",
+    "name": "Intellia Therapeutics Inc",
+    "value": 1269000,
+    "shares": 75000,
+    "cusips": [
+      "45826J105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 34,
+    "weight": 0.2032217615435245,
+    "equityWeight": 0.20322761973854261
+  },
+  {
+    "key": "LBRX",
+    "ticker": "LBRX",
+    "name": "Lb Pharmaceuticals Inc",
+    "value": 25964000,
+    "shares": 800000,
+    "cusips": [
+      "50180M108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 18,
+    "weight": 2.3709250296776547,
+    "equityWeight": 2.3709683310808343
+  },
+  {
+    "key": "DFTX",
+    "ticker": "DFTX",
+    "name": "Definium Therapeutics Inc",
+    "value": 7667000,
+    "shares": 162996,
+    "cusips": [
+      "24477V105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 19,
+    "weight": 0.9427906702212429,
+    "equityWeight": 0.9428011042590213
+  },
+  {
+    "key": "ACRS",
+    "ticker": "ACRS",
+    "name": "Aclaris Therapeutics Inc",
+    "value": 8535000,
+    "shares": 1613430,
+    "cusips": [
+      "00461U105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 1.1793267543435426,
+    "equityWeight": 1.1793674942275245
+  },
+  {
+    "key": "FDMT",
+    "ticker": "FDMT",
+    "name": "4D Molecular Therapeutics In",
+    "value": 12610000,
+    "shares": 948184,
+    "cusips": [
+      "35104E100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 31,
+    "weight": 1.2909143584278484,
+    "equityWeight": 1.295129245887631
+  },
+  {
+    "key": "SANA",
+    "ticker": "SANA",
+    "name": "Sana Biotechnology Inc",
+    "value": 65437500.0,
+    "shares": 18750000.0,
+    "cusips": [
+      "799566104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 35,
+    "weight": 0.568649789357936,
+    "equityWeight": 0.5701833231410507
+  },
+  {
+    "key": "GLTO",
+    "ticker": "GLTO",
+    "name": "Damora Therapeutics Inc",
+    "value": 8731000,
+    "shares": 335710,
+    "cusips": [
+      "36322Q206"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 0.9406641427146203,
+    "equityWeight": 1.4348940058539599
+  },
+  {
+    "key": "MNPR",
+    "ticker": "MNPR",
+    "name": "Monopar Therapeutics Inc",
+    "value": 4431000,
+    "shares": 47861,
+    "cusips": [
+      "61023L207"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 43,
+    "weight": 0.47738893785001524,
+    "equityWeight": 0.7282115840039969
+  },
+  {
+    "key": "ABOS",
+    "ticker": "ABOS",
+    "name": "Acumen Pharmaceuticals Inc",
+    "value": 56050426.0,
+    "shares": 20992669.0,
+    "cusips": [
+      "00509G209"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 38,
+    "weight": 0.48707641548534986,
+    "equityWeight": 0.488389962332784
+  },
+  {
+    "key": "GERN",
+    "ticker": "GERN",
+    "name": "Geron Corp",
+    "value": 11099000,
+    "shares": 8671797,
+    "cusips": [
+      "374163103"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 28,
+    "weight": 1.0135147475116428,
+    "equityWeight": 1.0135332578441758
+  },
+  {
+    "key": "RZLT",
+    "ticker": "RZLT",
+    "name": "Rezolute Inc",
+    "value": 4862000,
+    "shares": 935012,
+    "cusips": [
+      "76200L309"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 41,
+    "weight": 0.5238241967562116,
+    "equityWeight": 0.7990441709382605
+  },
+  {
+    "key": "EVMN",
+    "ticker": "EVMN",
+    "name": "Evommune Inc",
+    "value": 996000,
+    "shares": 75000,
+    "cusips": [
+      "30054Y107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 38,
+    "weight": 0.15950265917836914,
+    "equityWeight": 0.1595072570997545
+  },
+  {
+    "key": "VOR",
+    "ticker": "VOR",
+    "name": "Vor Biopharma Inc",
+    "value": 35440000,
+    "shares": 1925066,
+    "cusips": [
+      "929033207"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 13,
+    "weight": 1.6672107996119876,
+    "equityWeight": 1.7098577836402697
+  },
+  {
+    "key": "IPSC",
+    "ticker": "IPSC",
+    "name": "Century Therapeutics Inc",
+    "value": 21304000,
+    "shares": 8695652,
+    "cusips": [
+      "15673T100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 20,
+    "weight": 1.268877712684727,
+    "equityWeight": 1.2729164089943041
+  },
+  {
+    "key": "BIOA",
+    "ticker": "BIOA",
+    "name": "Bioage Labs Inc",
+    "value": 4901000,
+    "shares": 200000,
+    "cusips": [
+      "09077V100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 40,
+    "weight": 0.5280259951259139,
+    "equityWeight": 0.8054536161596906
+  },
+  {
+    "key": "CCCC",
+    "ticker": "CCCC",
+    "name": "C4 Therapeutics Inc",
+    "value": 11362000,
+    "shares": 2433000,
+    "cusips": [
+      "12529R107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 15,
+    "weight": 1.2241239250399172,
+    "equityWeight": 1.867285041176577
+  },
+  {
+    "key": "CAPR",
+    "ticker": "CAPR",
+    "name": "Capricor Therapeutics Inc",
+    "value": 5532000,
+    "shares": 229763,
+    "cusips": [
+      "14070B309"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 27,
+    "weight": 0.7643861282985914,
+    "equityWeight": 0.764412534044132
+  },
+  {
+    "key": "PEPG",
+    "ticker": "PEPG",
+    "name": "Pepgen Inc",
+    "value": 4185000,
+    "shares": 2325000,
+    "cusips": [
+      "713317105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 39,
+    "weight": 0.38215688065016895,
+    "equityWeight": 0.38216386017459913
+  },
+  {
+    "key": "UTHR",
+    "ticker": "UTHR",
+    "name": "United Therapeutics Corp",
+    "value": 33911000,
+    "shares": 62587,
+    "cusips": [
+      "91307C102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 8,
+    "weight": 4.685664858411702,
+    "equityWeight": 4.685826724868142
+  },
+  {
+    "key": "KRYS",
+    "ticker": "KRYS",
+    "name": "Krystal Biotech Inc",
+    "value": 234897000,
+    "shares": 632005,
+    "cusips": [
+      "501147102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 2,
+    "weight": 15.770106639239264,
+    "equityWeight": 15.770297215825552
+  },
+  {
+    "key": "XENE",
+    "ticker": "XENE",
+    "name": "Xenon Pharmaceuticals Inc",
+    "value": 3099000,
+    "shares": 51345,
+    "cusips": [
+      "98420N105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 30,
+    "weight": 0.42820546124319137,
+    "equityWeight": 0.4282202536158288
+  },
+  {
+    "key": "VERA",
+    "ticker": "VERA",
+    "name": "Vera Therapeutics Inc",
+    "value": 13302000,
+    "shares": 310000,
+    "cusips": [
+      "92337R101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 12,
+    "weight": 1.433136459327669,
+    "equityWeight": 2.1861138547553978
+  },
+  {
+    "key": "OCUL",
+    "ticker": "OCUL",
+    "name": "Ocular Therapeutix Inc",
+    "value": 5892000,
+    "shares": 600000,
+    "cusips": [
+      "67576A100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 32,
+    "weight": 0.5336076842404603,
+    "equityWeight": 0.5336178329066142
+  },
+  {
+    "key": "AVTX",
+    "ticker": "AVTX",
+    "name": "Avalo Therapeutics Inc",
+    "value": 4344000,
+    "shares": 235093,
+    "cusips": [
+      "05338F306"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 0.720030233313664,
+    "equityWeight": 0.720045748763043
+  },
+  {
+    "key": "AADI",
+    "ticker": "AADI",
+    "name": "Whitehawk Therapeutics Inc",
+    "value": 13050261.0,
+    "shares": 2849402.0,
+    "cusips": [
+      "00032Q104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 0.11718721098398167,
+    "equityWeight": 0.11718721098398167
+  },
+  {
+    "key": "LXEO",
+    "ticker": "LXEO",
+    "name": "Lexeo Therapeutics Inc",
+    "value": 27034000,
+    "shares": 5807611,
+    "cusips": [
+      "52886X107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 21,
+    "weight": 1.2218867515186578,
+    "equityWeight": 1.3590353935366137
+  },
+  {
+    "key": "VTRS",
+    "ticker": "VTRS",
+    "name": "Viatris Inc",
+    "value": 320873000,
+    "shares": 20206170,
+    "cusips": [
+      "92556V106"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 4,
+    "weight": 3.3472991469771576,
+    "equityWeight": 3.9963199377473155
+  },
+  {
+    "key": "CNC",
+    "ticker": "CNC",
+    "name": "Centene Corp Del",
+    "value": 15974000,
+    "shares": 248867,
+    "cusips": [
+      "15135B101"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 23,
+    "weight": 1.3706399551757662,
+    "equityWeight": 1.3868919866919491
+  },
+  {
+    "key": "LEGN",
+    "ticker": "LEGN",
+    "name": "Legend Biotech Corp",
+    "value": 433000,
+    "shares": 15000,
+    "cusips": [
+      "52490G102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 42,
+    "weight": 0.06934201950224281,
+    "equityWeight": 0.06934401839778484
+  },
+  {
+    "key": "GMAB",
+    "ticker": "GMAB",
+    "name": "Genmab A/S",
+    "value": 1373000,
+    "shares": 50000,
+    "cusips": [
+      "372303206"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 33,
+    "weight": 0.21987665768263132,
+    "equityWeight": 0.21988299598189048
+  },
+  {
+    "key": "BKD",
+    "ticker": "BKD",
+    "name": "Brookdale Sr Living Inc",
+    "value": 187239000,
+    "shares": 11637032,
+    "cusips": [
+      "112463104"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 10,
+    "weight": 1.9532492449687446,
+    "equityWeight": 2.3319723031351023
+  },
+  {
+    "key": "ACHC",
+    "ticker": "ACHC",
+    "name": "Acadia Healthcare Company In",
+    "value": 15501000,
+    "shares": 524934,
+    "cusips": [
+      "00404A109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 26,
+    "weight": 1.3300544600713378,
+    "equityWeight": 1.3458252589027109
+  },
+  {
+    "key": "AHCO",
+    "ticker": "AHCO",
+    "name": "Adapthealth Corp",
+    "value": 119597000,
+    "shares": 11477730,
+    "cusips": [
+      "00653Q102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 18,
+    "weight": 1.2476180173496279,
+    "equityWeight": 1.489523504921778
+  },
+  {
+    "key": "PHVS",
+    "ticker": "PHVS",
+    "name": "Pharvaris N V",
+    "value": 10680000,
+    "shares": 308856,
+    "cusips": [
+      "N69605108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 20,
+    "weight": 1.150646322779996,
+    "equityWeight": 1.7552019221761874
+  },
+  {
+    "key": "LRMR",
+    "ticker": "LRMR",
+    "name": "Larimar Therapeutics Inc",
+    "value": 108601000,
+    "shares": 35606974,
+    "cusips": [
+      "517125100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 1.1329093898859246,
+    "equityWeight": 1.3525735775814614
+  },
+  {
+    "key": "SVRA",
+    "ticker": "SVRA",
+    "name": "Savara Inc",
+    "value": 308000,
+    "shares": 50000,
+    "cusips": [
+      "805111101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 44,
+    "weight": 0.04932411548889327,
+    "equityWeight": 0.04932553733606866
+  },
+  {
+    "key": "LNTH",
+    "ticker": "LNTH",
+    "name": "Lantheus Hldgs Inc",
+    "value": 16241000,
+    "shares": 146403,
+    "cusips": [
+      "516544103"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 22,
+    "weight": 1.393549737824566,
+    "equityWeight": 1.4100734165433797
+  },
+  {
+    "key": "SNDX",
+    "ticker": "SNDX",
+    "name": "Syndax Pharmaceuticals Inc",
+    "value": 18908000,
+    "shares": 864986,
+    "cusips": [
+      "87164F105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 2.612619832586726,
+    "equityWeight": 2.612710085630233
+  },
+  {
+    "key": "BMRN",
+    "ticker": "BMRN",
+    "name": "Biomarin Pharmaceutical Inc",
+    "value": 35743000,
+    "shares": 624676,
+    "cusips": [
+      "09061G101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 5.924502907304395,
+    "equityWeight": 5.924630570450608
+  },
+  {
+    "key": "PFE",
+    "ticker": "PFE",
+    "name": "Pfizer Inc",
+    "value": 73203000,
+    "shares": 3040000,
+    "cusips": [
+      "717081103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 30,
+    "weight": 0.7636427479288344,
+    "equityWeight": 0.9117083967891244
+  },
+  {
+    "key": "INDV",
+    "ticker": "INDV",
+    "name": "Indivior Pharmaceuticals Inc",
+    "value": 14945000,
+    "shares": 364269,
+    "cusips": [
+      "45579U109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 26,
+    "weight": 1.5299536151232511,
+    "equityWeight": 1.5349489753997339
+  },
+  {
+    "key": "BIO",
+    "ticker": "BIO",
+    "name": "Bio Rad Labs Inc",
+    "value": 66376000,
+    "shares": 226070,
+    "cusips": [
+      "090572207"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 32,
+    "weight": 0.6924245049591452,
+    "equityWeight": 0.8266813729666124
+  },
+  {
+    "key": "NVST",
+    "ticker": "NVST",
+    "name": "Envista Holdings Corporation",
+    "value": 14595000,
+    "shares": 553916,
+    "cusips": [
+      "29415F104"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 27,
+    "weight": 1.4941233196871093,
+    "equityWeight": 1.499001692603487
+  },
+  {
+    "key": "INSP",
+    "ticker": "INSP",
+    "name": "Inspire Medical Systems Inc",
+    "value": 391000,
+    "shares": 8772,
+    "cusips": [
+      "457730109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 50,
+    "weight": 0.05402656835949914,
+    "equityWeight": 0.05402843470919299
+  },
+  {
+    "key": "CDNA",
+    "ticker": "CDNA",
+    "name": "Caredx Inc",
+    "value": 15158000,
+    "shares": 531870,
+    "cusips": [
+      "14167L103"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 17,
+    "weight": 2.094462207655468,
+    "equityWeight": 2.0945345609256965
+  },
+  {
+    "key": "BSX",
+    "ticker": "BSX",
+    "name": "Boston Scientific Corp",
+    "value": 15755000,
+    "shares": 369164,
+    "cusips": [
+      "101137107"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 16,
+    "weight": 2.611435618291155,
+    "equityWeight": 2.611491890368725
+  },
+  {
+    "key": "CERT",
+    "ticker": "CERT",
+    "name": "Certara Inc",
+    "value": 49209000,
+    "shares": 7512928,
+    "cusips": [
+      "15687V109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 42,
+    "weight": 0.5133409284159121,
+    "equityWeight": 0.6128745884403102
+  },
+  {
+    "key": "BBOT",
+    "ticker": "BBOT",
+    "name": "Bridgebio Oncology Therapeut",
+    "value": 334000,
+    "shares": 43853,
+    "cusips": [
+      "107924102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 43,
+    "weight": 0.05348783952366997,
+    "equityWeight": 0.05348938139690563
+  },
+  {
+    "key": "AVLN",
+    "ticker": "AVLN",
+    "name": "Avalyn Pharmaceuticals Inc",
+    "value": 1975000,
+    "shares": 60000,
+    "cusips": [
+      "05348Y105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 31,
+    "weight": 0.31628288341092275,
+    "equityWeight": 0.31629200077511554
+  },
+  {
+    "key": "FHTX",
+    "ticker": "FHTX",
+    "name": "Foghorn Therapeutics Inc",
+    "value": 28508960.0,
+    "shares": 5842000.0,
+    "cusips": [
+      "344174107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 29,
+    "weight": 0.7289438196853236,
+    "equityWeight": 0.7289949056790782
+  },
+  {
+    "key": "BBNX",
+    "ticker": "BBNX",
+    "name": "Beta Bionics Inc",
+    "value": 7730000,
+    "shares": 493344,
+    "cusips": [
+      "08659B102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 18,
+    "weight": 0.9505376132529291,
+    "equityWeight": 0.9505481330275511
+  },
+  {
+    "key": "ALNY",
+    "ticker": "ALNY",
+    "name": "Alnylam Pharmaceuticals Inc",
+    "value": 15253000,
+    "shares": 50672,
+    "cusips": [
+      "02043Q107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 1.561484275107056,
+    "equityWeight": 1.5665825842604306
+  },
+  {
+    "key": "MANE",
+    "ticker": "MANE",
+    "name": "Veradermics Inc",
+    "value": 11679000,
+    "shares": 95000,
+    "cusips": [
+      "922967104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 1.2138389488584989,
+    "equityWeight": 1.318238510985321
+  },
+  {
+    "key": "AXSM",
+    "ticker": "AXSM",
+    "name": "Axsome Therapeutics Inc.",
+    "value": 15922000,
+    "shares": 65051,
+    "cusips": [
+      "05464T104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 15,
+    "weight": 2.6391163385865926,
+    "equityWeight": 2.63917320713747
+  },
+  {
+    "key": "MLTX",
+    "ticker": "MLTX",
+    "name": "Moonlake Immunotherapeutics",
+    "value": 27258000,
+    "shares": 1400000,
+    "cusips": [
+      "61559X104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 17,
+    "weight": 2.489087754542964,
+    "equityWeight": 2.489133214011762
+  },
+  {
+    "key": "MAZE",
+    "ticker": "MAZE",
+    "name": "Maze Therapeutics Inc",
+    "value": 11309000,
+    "shares": 378999,
+    "cusips": [
+      "578784100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 16,
+    "weight": 1.2184137887939115,
+    "equityWeight": 1.858574769465403
+  },
+  {
+    "key": "MBX",
+    "ticker": "MBX",
+    "name": "Mbx Biosciences Inc",
+    "value": 44169000,
+    "shares": 800173,
+    "cusips": [
+      "55287L101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 1,
+    "weight": 4.521680911768409,
+    "equityWeight": 4.536444382364058
+  },
+  {
+    "key": "ATAI",
+    "ticker": "ATAI",
+    "name": "Ataibeckley Inc",
+    "value": 9008000,
+    "shares": 1709359,
+    "cusips": [
+      "04650F101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 21,
+    "weight": 1.493101367792239,
+    "equityWeight": 1.4931335416338607
+  },
+  {
+    "key": "ALT",
+    "ticker": "ALT",
+    "name": "Altimmune Inc",
+    "value": 3800000,
+    "shares": 1250000,
+    "cusips": [
+      "02155H200"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 44,
+    "weight": 0.19473138854753957,
+    "equityWeight": 0.19612042826508258
+  },
+  {
+    "key": "PSNL",
+    "ticker": "PSNL",
+    "name": "Personalis Inc",
+    "value": 34170000,
+    "shares": 2550000,
+    "cusips": [
+      "71535D106"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 13,
+    "weight": 1.7103831318281428,
+    "equityWeight": 1.7103976862328754
+  },
+  {
+    "key": "CRMD",
+    "ticker": "CRMD",
+    "name": "Cormedix Inc",
+    "value": 49251000,
+    "shares": 6274076,
+    "cusips": [
+      "21900C308"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 40,
+    "weight": 0.7168506254813172,
+    "equityWeight": 0.7255558565753251
+  },
+  {
+    "key": "WGS",
+    "ticker": "WGS",
+    "name": "Genedx Holdings Corp",
+    "value": 8393000,
+    "shares": 122269,
+    "cusips": [
+      "81663L200"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 34,
+    "weight": 0.8723135797387944,
+    "equityWeight": 0.9473393118160629
+  },
+  {
+    "key": "HROW",
+    "ticker": "HROW",
+    "name": "Harrow Inc",
+    "value": 5766000,
+    "shares": 135775,
+    "cusips": [
+      "415858109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 35,
+    "weight": 0.6212197281975147,
+    "equityWeight": 0.9476118242760203
+  },
+  {
+    "key": "CRVS",
+    "ticker": "CRVS",
+    "name": "Corvus Pharmaceuticals Inc",
+    "value": 1195000,
+    "shares": 80000,
+    "cusips": [
+      "221015100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 35,
+    "weight": 0.19137116236762158,
+    "equityWeight": 0.19137667895000662
+  },
+  {
+    "key": "BEAM",
+    "ticker": "BEAM",
+    "name": "Beam Therapeutics Inc",
+    "value": 39957000,
+    "shares": 1164259,
+    "cusips": [
+      "07373V105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 2.6825636384631704,
+    "equityWeight": 2.682596056368287
+  },
+  {
+    "key": "DYN",
+    "ticker": "DYN",
+    "name": "Dyne Therapeutics Inc",
+    "value": 36591000,
+    "shares": 1647521,
+    "cusips": [
+      "26818M108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 7,
+    "weight": 5.055974841029241,
+    "equityWeight": 5.056149499856984
+  },
+  {
+    "key": "IMMX",
+    "ticker": "IMMX",
+    "name": "Immix Biopharma Inc",
+    "value": 24176000,
+    "shares": 2345000,
+    "cusips": [
+      "45258H106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 2.1894941232514205,
+    "equityWeight": 2.1895357651646816
+  },
+  {
+    "key": "XFOR",
+    "ticker": "XFOR",
+    "name": "X4 Pharmaceuticals Inc",
+    "value": 6517000,
+    "shares": 1395587,
+    "cusips": [
+      "98420X202"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 20,
+    "weight": 0.5352939147176667,
+    "equityWeight": 0.5352991909318658
+  },
+  {
+    "key": "STTK",
+    "ticker": "STTK",
+    "name": "Shattuck Labs Inc",
+    "value": 6940000,
+    "shares": 1000000,
+    "cusips": [
+      "82024L103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 34,
+    "weight": 0.5226741939784016,
+    "equityWeight": 0.5226832479265894
+  },
+  {
+    "key": "MNKD",
+    "ticker": "MNKD",
+    "name": "Mannkind Corp",
+    "value": 28116000,
+    "shares": 6600000,
+    "cusips": [
+      "56400P706"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 27,
+    "weight": 0.6122720965419561,
+    "equityWeight": 0.6137032898695957
+  },
+  {
+    "key": "TVTX",
+    "ticker": "TVTX",
+    "name": "Travere Therapeutics Inc",
+    "value": 9517000,
+    "shares": 167525,
+    "cusips": [
+      "89422G107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 23,
+    "weight": 1.315014964392208,
+    "equityWeight": 1.3150603916301526
+  },
+  {
+    "key": "KARD",
+    "ticker": "KARD",
+    "name": "Kardigan Inc",
+    "value": 1192000,
+    "shares": 50000,
+    "cusips": [
+      "485925101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 40,
+    "weight": 0.05966569192681142,
+    "equityWeight": 0.05966619964851003
+  },
+  {
+    "key": "APGE",
+    "ticker": "APGE",
+    "name": "Apogee Therapeutics Inc",
+    "value": 18425000,
+    "shares": 138822,
+    "cusips": [
+      "03770N101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 1.9711890790240876,
+    "equityWeight": 1.9712249304053286
+  },
+  {
+    "key": "AMLX",
+    "ticker": "AMLX",
+    "name": "Amylyx Pharmaceuticals Inc",
+    "value": 7162000,
+    "shares": 398782,
+    "cusips": [
+      "03237H101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 48,
+    "weight": 0.7331902168961341,
+    "equityWeight": 0.7355841125334823
+  },
+  {
+    "key": "MGTX",
+    "ticker": "MGTX",
+    "name": "Meiragtx Hldgs Plc",
+    "value": 47960000,
+    "shares": 3550000,
+    "cusips": [
+      "G59665102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 7,
+    "weight": 4.343486852710876,
+    "equityWeight": 4.343569461337613
+  },
+  {
+    "key": "INBX",
+    "ticker": "INBX",
+    "name": "Inhibrx Biosciences Inc",
+    "value": 15613000,
+    "shares": 164783,
+    "cusips": [
+      "45720N103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 26,
+    "weight": 1.6703487159187558,
+    "equityWeight": 1.6703790957079185
+  },
+  {
+    "key": "ZYME",
+    "ticker": "ZYME",
+    "name": "Zymeworks Inc",
+    "value": 12851000,
+    "shares": 491654,
+    "cusips": [
+      "98985Y108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 0.862768108664069,
+    "equityWeight": 0.8627785349347763
+  },
+  {
+    "key": "BIIB",
+    "ticker": "BIIB",
+    "name": "Biogen Inc",
+    "value": 30308000,
+    "shares": 140279,
+    "cusips": [
+      "09062X103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 10,
+    "weight": 4.187819012377749,
+    "equityWeight": 4.187963680732023
+  },
+  {
+    "key": "UNH",
+    "ticker": "UNH",
+    "name": "Unitedhealth Group Inc",
+    "value": 23242000,
+    "shares": 55921,
+    "cusips": [
+      "91324P102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 13,
+    "weight": 2.379336361505159,
+    "equityWeight": 2.38710499071533
+  },
+  {
+    "key": "STRO",
+    "ticker": "STRO",
+    "name": "Sutro Biopharma Inc",
+    "value": 35287000,
+    "shares": 1062872,
+    "cusips": [
+      "869367201"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 2.8984066853831987,
+    "equityWeight": 2.8984352540145384
+  },
+  {
+    "key": "ANRO",
+    "ticker": "ANRO",
+    "name": "Alto Neuroscience Inc",
+    "value": 10749000,
+    "shares": 407338,
+    "cusips": [
+      "02157Q109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 19,
+    "weight": 1.1580802737417768,
+    "equityWeight": 1.7665417098756402
+  },
+  {
+    "key": "JAZZ",
+    "ticker": "JAZZ",
+    "name": "Jazz Pharmaceuticals Plc",
+    "value": 53427000,
+    "shares": 221720,
+    "cusips": [
+      "G50871105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 7,
+    "weight": 6.569776592919048,
+    "equityWeight": 6.569849301845146
+  },
+  {
+    "key": "CTMX",
+    "ticker": "CTMX",
+    "name": "Cytomx Therapeutics Inc.",
+    "value": 81386000,
+    "shares": 21703093,
+    "cusips": [
+      "23284F105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 4.497930264561377,
+    "equityWeight": 4.497970038587505
+  },
+  {
+    "key": "AORT",
+    "ticker": "AORT",
+    "name": "Artivion Inc",
+    "value": 39036000,
+    "shares": 1737290,
+    "cusips": [
+      "228903100"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 37,
+    "weight": 0.5859662611566784,
+    "equityWeight": 0.607707687558292
+  },
+  {
+    "key": "CORT",
+    "ticker": "CORT",
+    "name": "Corcept Therapeutics Inc",
+    "value": 29171000,
+    "shares": 335500,
+    "cusips": [
+      "218352102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 13,
+    "weight": 2.1969638202512902,
+    "equityWeight": 2.197001876839559
+  },
+  {
+    "key": "AVR",
+    "ticker": "AVR",
+    "name": "Anteris Technologies Global",
+    "value": 30979000,
+    "shares": 3145096,
+    "cusips": [
+      "03675P102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 10,
+    "weight": 1.4176844685319263,
+    "equityWeight": 1.6119221569442632
+  },
+  {
+    "key": "CRL",
+    "ticker": "CRL",
+    "name": "Charles Riv Labs Intl Inc",
+    "value": 2267000,
+    "shares": 10000,
+    "cusips": [
+      "159864107"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 29,
+    "weight": 0.36304470718610726,
+    "equityWeight": 0.3630551725352846
+  },
+  {
+    "key": "DBVT",
+    "ticker": "DBVT",
+    "name": "Dbv Technologies Sa",
+    "value": 30254000,
+    "shares": 1844758,
+    "cusips": [
+      "23306J309"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 15,
+    "weight": 2.762670075792165,
+    "equityWeight": 2.7627205318332906
+  },
+  {
+    "key": "ADPT",
+    "ticker": "ADPT",
+    "name": "Adaptive Biotechnologies Cor",
+    "value": 10445000,
+    "shares": 486984,
+    "cusips": [
+      "00650F109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 37,
+    "weight": 1.0692783880871435,
+    "equityWeight": 1.0727696251622763
+  },
+  {
+    "key": "SABS",
+    "ticker": "SABS",
+    "name": "Sab Biotherapeutics Inc",
+    "value": 28469000,
+    "shares": 7299909,
+    "cusips": [
+      "78397T202"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 16,
+    "weight": 2.5996712628983656,
+    "equityWeight": 2.5997187420097165
+  },
+  {
+    "key": "LLY",
+    "ticker": "LLY",
+    "name": "Eli Lilly & Co",
+    "value": 2391000,
+    "shares": 1994,
+    "cusips": [
+      "532457108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 0.3963149833915678,
+    "equityWeight": 0.39632352331777987
+  },
+  {
+    "key": "SINX",
+    "ticker": "SINX",
+    "name": "Sinovac Biotech Ltd.",
+    "value": 38192000,
+    "shares": 5903000,
+    "cusips": [
+      "P8696W104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 3.4875353848963564,
+    "equityWeight": 3.4875990795193044
+  },
+  {
+    "key": "AZN",
+    "ticker": "AZN",
+    "name": "Astrazeneca Plc",
+    "value": 85329000,
+    "shares": 450000,
+    "cusips": [
+      "G0593M107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 16,
+    "weight": 1.993921191403489,
+    "equityWeight": 1.9939295781526503
+  },
+  {
+    "key": "AVBP",
+    "ticker": "AVBP",
+    "name": "Arrivent Biopharma Inc",
+    "value": 58436000,
+    "shares": 1682097,
+    "cusips": [
+      "04272N102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 4,
+    "weight": 5.336133686421332,
+    "equityWeight": 5.336231142930197
+  },
+  {
+    "key": "MRK",
+    "ticker": "MRK",
+    "name": "Merck & Co Inc",
+    "value": 16334000,
+    "shares": 127118,
+    "cusips": [
+      "58933Y105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 20,
+    "weight": 1.4015295497584175,
+    "equityWeight": 1.418147847165788
+  },
+  {
+    "key": "EW",
+    "ticker": "EW",
+    "name": "Edwards Lifesciences Corp",
+    "value": 3043000,
+    "shares": 33640,
+    "cusips": [
+      "28176E108"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 32,
+    "weight": 0.4204676407108846,
+    "equityWeight": 0.42048216578024106
+  },
+  {
+    "key": "HUM",
+    "ticker": "HUM",
+    "name": "Humana Inc",
+    "value": 1582000,
+    "shares": 3985,
+    "cusips": [
+      "444859102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 42,
+    "weight": 0.2185934300376666,
+    "equityWeight": 0.21860098135535372
+  },
+  {
+    "key": "ISRG",
+    "ticker": "ISRG",
+    "name": "Intuitive Surgical Inc",
+    "value": 1745000,
+    "shares": 4390,
+    "cusips": [
+      "46120E602"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 25,
+    "weight": 0.2892386641649041,
+    "equityWeight": 0.2892448967752095
+  },
+  {
+    "key": "ODTX",
+    "ticker": "ODTX",
+    "name": "Odyssey Therapeutics, Inc.",
+    "value": 71002000,
+    "shares": 3794883,
+    "cusips": [
+      "67613T104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 6,
+    "weight": 6.833640196841792,
+    "equityWeight": 6.8336862367661215
+  },
+  {
+    "key": "ARQT",
+    "ticker": "ARQT",
+    "name": "Arcutis Biotherapeutics Inc",
+    "value": 4588000,
+    "shares": 175000,
+    "cusips": [
+      "03969K108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 39,
+    "weight": 0.23511252912002933,
+    "equityWeight": 0.23678961181057864
+  },
+  {
+    "key": "BMY",
+    "ticker": "BMY",
+    "name": "Bristol-Myers Squibb Co",
+    "value": 50531000,
+    "shares": 876970,
+    "cusips": [
+      "110122108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 10,
+    "weight": 2.612417552534248,
+    "equityWeight": 2.69930267168518
+  },
+  {
+    "key": "QTTB",
+    "ticker": "QTTB",
+    "name": "Q32 Bio Inc",
+    "value": 5478000,
+    "shares": 430000,
+    "cusips": [
+      "746964105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 38,
+    "weight": 0.5901910633135597,
+    "equityWeight": 0.9002805364869995
+  },
+  {
+    "key": "SYK",
+    "ticker": "SYK",
+    "name": "Stryker Corporation",
+    "value": 21400000,
+    "shares": 67973,
+    "cusips": [
+      "863667101"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 14,
+    "weight": 2.190766635238379,
+    "equityWeight": 2.197919576684798
+  },
+  {
+    "key": "CAI",
+    "ticker": "CAI",
+    "name": "Caris Life Sciences Inc",
+    "value": 147122000,
+    "shares": 8256032,
+    "cusips": [
+      "142152107"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 1,
+    "weight": 5.441967012037488,
+    "equityWeight": 5.692635156651745
+  },
+  {
+    "key": "TMO",
+    "ticker": "TMO",
+    "name": "Thermo Fisher Scientific Inc",
+    "value": 14286000,
+    "shares": 28496,
+    "cusips": [
+      "883556102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 29,
+    "weight": 1.2258020783548889,
+    "equityWeight": 1.2403367298035048
+  },
+  {
+    "key": "PVLA",
+    "ticker": "PVLA",
+    "name": "Palvella Therapeutics Inc Ne",
+    "value": 10697000,
+    "shares": 70000,
+    "cusips": [
+      "697947109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 8,
+    "weight": 1.7130521538464,
+    "equityWeight": 1.7131015353374235
+  },
+  {
+    "key": "ELV",
+    "ticker": "ELV",
+    "name": "Elevance Health Inc Formerly",
+    "value": 19336000,
+    "shares": 50000,
+    "cusips": [
+      "036752103"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 38,
+    "weight": 0.7637465290532561,
+    "equityWeight": 0.7933167088023855
+  },
+  {
+    "key": "UPB",
+    "ticker": "UPB",
+    "name": "Upstream Bio Inc.",
+    "value": 18856000,
+    "shares": 2724868,
+    "cusips": [
+      "91678A107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 2.576839872688586,
+    "equityWeight": 2.576857480211659
+  },
+  {
+    "key": "FBRX",
+    "ticker": "FBRX",
+    "name": "Forte Biosciences Inc",
+    "value": 5833000,
+    "shares": 274500,
+    "cusips": [
+      "34962G208"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 36,
+    "weight": 0.4393023881089361,
+    "equityWeight": 0.4393099978610657
+  },
+  {
+    "key": "CMPX",
+    "ticker": "CMPX",
+    "name": "Compass Therapeutics Inc",
+    "value": 12771000,
+    "shares": 5831813,
+    "cusips": [
+      "20454B104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 19,
+    "weight": 1.7646376074658914,
+    "equityWeight": 1.764698566933769
+  },
+  {
+    "key": "NKTR",
+    "ticker": "NKTR",
+    "name": "Nektar Therapeutics",
+    "value": 32933000,
+    "shares": 471763,
+    "cusips": [
+      "640268306"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 1.7026131930421007,
+    "equityWeight": 1.759239573461994
+  },
+  {
+    "key": "000000000",
+    "ticker": null,
+    "name": "Prelude Therapeutics Inc",
+    "value": 30275000,
+    "shares": 5680186,
+    "cusips": [
+      "000000000"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Biotech / biopharma",
+    "rank": 49,
+    "weight": 0.5609827639782915,
+    "equityWeight": 0.5748311486901634
+  },
+  {
+    "key": "OLMA",
+    "ticker": "OLMA",
+    "name": "Olema Pharmaceuticals Inc",
+    "value": 4794000,
+    "shares": 383281,
+    "cusips": [
+      "68062P106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 42,
+    "weight": 0.5164979842141667,
+    "equityWeight": 0.7878687279880751
+  },
+  {
+    "key": "ASMB",
+    "ticker": "ASMB",
+    "name": "Assembly Biosciences Inc",
+    "value": 19818000,
+    "shares": 721181,
+    "cusips": [
+      "045396207"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 18,
+    "weight": 2.028813699867018,
+    "equityWeight": 2.035437858445763
+  },
+  {
+    "key": "EYPT",
+    "ticker": "EYPT",
+    "name": "Eyepoint Inc",
+    "value": 18420000,
+    "shares": 1288163,
+    "cusips": [
+      "30233G209"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 20,
+    "weight": 1.885697262667801,
+    "equityWeight": 1.8918541403053257
+  },
+  {
+    "key": "ACHV",
+    "ticker": "ACHV",
+    "name": "Achieve Life Sciences Inc.",
+    "value": 17964000,
+    "shares": 2751032,
+    "cusips": [
+      "004468500"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 24,
+    "weight": 1.640398137156424,
+    "equityWeight": 1.640428096577419
+  },
+  {
+    "key": "MPLT",
+    "ticker": "MPLT",
+    "name": "Maplight Therapeutics Inc",
+    "value": 24580000,
+    "shares": 685852,
+    "cusips": [
+      "56565P103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 0.4602515317687777,
+    "equityWeight": 0.4602527382978214
+  },
+  {
+    "key": "EDIT",
+    "ticker": "EDIT",
+    "name": "Editas Medicine Inc",
+    "value": 11519000,
+    "shares": 3555250,
+    "cusips": [
+      "28106W103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 27,
+    "weight": 1.0518674093690072,
+    "equityWeight": 1.0518866201556052
+  },
+  {
+    "key": "IVA",
+    "ticker": "IVA",
+    "name": "Inventiva Sa",
+    "value": 4152000,
+    "shares": 1129101,
+    "cusips": [
+      "46124U107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 45,
+    "weight": 0.4473299187436839,
+    "equityWeight": 0.682359398958383
+  },
+  {
+    "key": "TRVI",
+    "ticker": "TRVI",
+    "name": "Trevi Therapeutics Inc",
+    "value": 124000,
+    "shares": 6660,
+    "cusips": [
+      "89532M101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 45,
+    "weight": 0.019857760781242743,
+    "equityWeight": 0.01985833321322245
+  },
+  {
+    "key": "PHAT",
+    "ticker": "PHAT",
+    "name": "Phathom Pharmaceuticals Inc",
+    "value": 2170000,
+    "shares": 200000,
+    "cusips": [
+      "71722W107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 30,
+    "weight": 0.347510813671748,
+    "equityWeight": 0.3475208312313928
+  },
+  {
+    "key": "BBIO",
+    "ticker": "BBIO",
+    "name": "Bridgebio Pharma Inc",
+    "value": 744000,
+    "shares": 10000,
+    "cusips": [
+      "10806X102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 40,
+    "weight": 0.11914656468745646,
+    "equityWeight": 0.11914999927933469
+  },
+  {
+    "key": "AURA",
+    "ticker": "AURA",
+    "name": "Aura Biosciences Inc",
+    "value": 8283000,
+    "shares": 1166667,
+    "cusips": [
+      "05153U107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 34,
+    "weight": 0.7563692813441695,
+    "equityWeight": 0.7563830952989736
+  },
+  {
+    "key": "ALLO",
+    "ticker": "ALLO",
+    "name": "Allogene Therapeutics Inc",
+    "value": 3120000,
+    "shares": 1500000,
+    "cusips": [
+      "019770106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 49,
+    "weight": 0.23497744743697593,
+    "equityWeight": 0.23498151779985
+  },
+  {
+    "key": "EOLS",
+    "ticker": "EOLS",
+    "name": "Evolus Inc",
+    "value": 21897000,
+    "shares": 3155209,
+    "cusips": [
+      "30052C107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 48,
+    "weight": 0.8099587530252775,
+    "equityWeight": 0.8472671118201442
+  },
+  {
+    "key": "92025Y103",
+    "ticker": null,
+    "name": "Valneva Se",
+    "value": 3991000,
+    "shares": 763199,
+    "cusips": [
+      "92025Y103"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Unclassified equity",
+    "rank": 40,
+    "weight": 0.36444160350652904,
+    "equityWeight": 0.36444825948789134
+  },
+  {
+    "key": "AUTL",
+    "ticker": "AUTL",
+    "name": "Autolus Therapeutics Ltd",
+    "value": 7116000,
+    "shares": 4447910,
+    "cusips": [
+      "05280R100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 38,
+    "weight": 0.1549625920825352,
+    "equityWeight": 0.155324818989616
+  },
+  {
+    "key": "XLO",
+    "ticker": "XLO",
+    "name": "Xilio Therapeutics Inc",
+    "value": 6361000,
+    "shares": 664021,
+    "cusips": [
+      "98422T209"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 19,
+    "weight": 0.3781760156383303,
+    "equityWeight": 0.3786593518323398
+  },
+  {
+    "key": "IBIO",
+    "ticker": "IBIO",
+    "name": "Ibio Inc",
+    "value": 6160000,
+    "shares": 3520490,
+    "cusips": [
+      "451033708"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 41,
+    "weight": 0.640230150267005,
+    "equityWeight": 0.6952949077549085
+  },
+  {
+    "key": "ABT",
+    "ticker": "ABT",
+    "name": "Abbott Laboratories",
+    "value": 907000,
+    "shares": 10000,
+    "cusips": [
+      "002824100"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 39,
+    "weight": 0.14524991152086428,
+    "equityWeight": 0.14525409858381258
+  },
+  {
+    "key": "ZBH",
+    "ticker": "ZBH",
+    "name": "Zimmer Biomet Holdings Inc",
+    "value": 20020000,
+    "shares": 232557,
+    "cusips": [
+      "98956P102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 16,
+    "weight": 2.049492898947306,
+    "equityWeight": 2.0561845759453106
+  },
+  {
+    "key": "PODD",
+    "ticker": "PODD",
+    "name": "Insulet Corp",
+    "value": 3654000,
+    "shares": 24000,
+    "cusips": [
+      "45784P101"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 23,
+    "weight": 0.5851633701182337,
+    "equityWeight": 0.5851802383960872
+  },
+  {
+    "key": "SNY",
+    "ticker": "SNY",
+    "name": "Sanofi Sa",
+    "value": 85320000,
+    "shares": 2000000,
+    "cusips": [
+      "80105N105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 17,
+    "weight": 1.993710884348178,
+    "equityWeight": 1.9937192702127546
+  },
+  {
+    "key": "GMED",
+    "ticker": "GMED",
+    "name": "Globus Med Inc",
+    "value": 37049000,
+    "shares": 468922,
+    "cusips": [
+      "379577208"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 21,
+    "weight": 1.2766804997555117,
+    "equityWeight": 1.2766994172166444
+  },
+  {
+    "key": "10919W405",
+    "ticker": null,
+    "name": "Bright Minds Biosciences Inc",
+    "value": 6244000,
+    "shares": 88951,
+    "cusips": [
+      "10919W405"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Biotech / biopharma",
+    "rank": 31,
+    "weight": 0.672718692831301,
+    "equityWeight": 1.0261686144258535
+  },
+  {
+    "key": "H01301128",
+    "ticker": null,
+    "name": "Alcon Ag",
+    "value": 17165000,
+    "shares": 255824,
+    "cusips": [
+      "H01301128"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Unclassified equity",
+    "rank": 28,
+    "weight": 0.8874185606706848,
+    "equityWeight": 0.9169327810547211
+  },
+  {
+    "key": "MYGN",
+    "ticker": "MYGN",
+    "name": "Myriad Genetics Inc",
+    "value": 32746000,
+    "shares": 5735000,
+    "cusips": [
+      "62855J104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 34,
+    "weight": 0.7651905370237393,
+    "equityWeight": 0.7651937555366486
+  },
+  {
+    "key": "CBIO",
+    "ticker": "CBIO",
+    "name": "Crescent Biopharma Inc.",
+    "value": 23748000,
+    "shares": 1319351,
+    "cusips": [
+      "G2545C104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 12,
+    "weight": 2.1507323973765193,
+    "equityWeight": 2.150773302081852
+  },
+  {
+    "key": "GEHC",
+    "ticker": "GEHC",
+    "name": "Ge Healthcare Technologies Inc",
+    "value": 28804000,
+    "shares": 450000,
+    "cusips": [
+      "36266G107"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 37,
+    "weight": 0.673076046797526,
+    "equityWeight": 0.6730788778622618
+  },
+  {
+    "key": "VKTX",
+    "ticker": "VKTX",
+    "name": "Viking Therapeutics Inc",
+    "value": 9960000,
+    "shares": 255330,
+    "cusips": [
+      "92686J106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 44,
+    "weight": 0.8546121167866927,
+    "equityWeight": 0.8647454731095414
+  },
+  {
+    "key": "REGN",
+    "ticker": "REGN",
+    "name": "Regeneron Pharmaceuticals",
+    "value": 13847000,
+    "shares": 22208,
+    "cusips": [
+      "75886F107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 33,
+    "weight": 0.6336769048633456,
+    "equityWeight": 0.7204973080863556
+  },
+  {
+    "key": "TRAX",
+    "ticker": "TRAX",
+    "name": "First Tracks Biotherapeutics",
+    "value": 12142000,
+    "shares": 603489,
+    "cusips": [
+      "337185102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 21,
+    "weight": 1.6777253018440883,
+    "equityWeight": 1.677783258923328
+  },
+  {
+    "key": "TECX",
+    "ticker": "TECX",
+    "name": "Tectonic Therapeutic Inc",
+    "value": 7075000,
+    "shares": 205837,
+    "cusips": [
+      "878972108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 26,
+    "weight": 0.7622493196318794,
+    "equityWeight": 1.1627391010670904
+  },
+  {
+    "key": "SRZN",
+    "ticker": "SRZN",
+    "name": "Surrozen Inc",
+    "value": 6747000,
+    "shares": 260000,
+    "cusips": [
+      "86889P208"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 35,
+    "weight": 0.6161081179800931,
+    "equityWeight": 0.6161193702743178
+  },
+  {
+    "key": "SLN",
+    "ticker": "SLN",
+    "name": "Silence Therapeutics Plc",
+    "value": 23769000,
+    "shares": 2164777,
+    "cusips": [
+      "82686Q101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 15,
+    "weight": 1.5957618220244538,
+    "equityWeight": 1.5957811062847014
+  },
+  {
+    "key": "IFRX",
+    "ticker": "IFRX",
+    "name": "Inflarx Nv",
+    "value": 16352000,
+    "shares": 7300000,
+    "cusips": [
+      "N44821101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 23,
+    "weight": 0.9739339259209846,
+    "equityWeight": 0.9770338490365593
+  },
+  {
+    "key": "CATX",
+    "ticker": "CATX",
+    "name": "Perspective Therapeutics Inc",
+    "value": 21482000,
+    "shares": 6299999,
+    "cusips": [
+      "46489V302"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 6,
+    "weight": 3.4401969121181986,
+    "equityWeight": 3.440296081342295
+  },
+  {
+    "key": "AGMB",
+    "ticker": "AGMB",
+    "name": "Agomab Therapeutics Nv",
+    "value": 7788000,
+    "shares": 600000,
+    "cusips": [
+      "00860C102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 18,
+    "weight": 0.6396914236337562,
+    "equityWeight": 0.6396977288595014
+  },
+  {
+    "key": "BHVN",
+    "ticker": "BHVN",
+    "name": "Biohaven Ltd",
+    "value": 11132000,
+    "shares": 748181,
+    "cusips": [
+      "G1110E107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 17,
+    "weight": 1.1993440885006474,
+    "equityWeight": 1.8294857488450673
+  },
+  {
+    "key": "ALEC",
+    "ticker": "ALEC",
+    "name": "Alector Inc",
+    "value": 3985000,
+    "shares": 1982606,
+    "cusips": [
+      "014442107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 47,
+    "weight": 0.42933760264777937,
+    "equityWeight": 0.6549138258307217
+  },
+  {
+    "key": "ADCT",
+    "ticker": "ADCT",
+    "name": "Adc Therapeutics Sa",
+    "value": 12333000,
+    "shares": 11526710,
+    "cusips": [
+      "H0036K147"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 0.8279915247182291,
+    "equityWeight": 0.8280015307252818
+  },
+  {
+    "key": "ALXO",
+    "ticker": "ALXO",
+    "name": "Alx Oncology Hldgs Inc",
+    "value": 11891000,
+    "shares": 5744757,
+    "cusips": [
+      "00166B105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 1.2358728436404152,
+    "equityWeight": 1.342167491576886
+  },
+  {
+    "key": "ARVN",
+    "ticker": "ARVN",
+    "name": "Arvinas Holding Co Llc",
+    "value": 5875000,
+    "shares": 707098,
+    "cusips": [
+      "04335A105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 48,
+    "weight": 0.14120810685956536,
+    "equityWeight": 0.14128607604677954
+  },
+  {
+    "key": "KRRO",
+    "ticker": "KRRO",
+    "name": "Korro Bio Inc",
+    "value": 13305000,
+    "shares": 1009500,
+    "cusips": [
+      "500946108"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 29,
+    "weight": 0.4034200805263472,
+    "equityWeight": 0.40342191534598165
+  },
+  {
+    "key": "RACC",
+    "ticker": "RACC",
+    "name": "Research Alliance Corp Iii",
+    "value": 3852000,
+    "shares": 360000,
+    "cusips": [
+      "G75226103"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 48,
+    "weight": 0.40035171084878307,
+    "equityWeight": 0.43478506244673826
+  },
+  {
+    "key": "XOMA",
+    "ticker": "XOMA",
+    "name": "Xoma Royalty Corporation",
+    "value": 14380000,
+    "shares": 338374,
+    "cusips": [
+      "98419J206"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 21,
+    "weight": 1.3023215375726103,
+    "equityWeight": 1.302346306381044
+  },
+  {
+    "key": "KURA",
+    "ticker": "KURA",
+    "name": "Kura Oncology Inc",
+    "value": 92650086.0,
+    "shares": 8445769.0,
+    "cusips": [
+      "50127T109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 15,
+    "weight": 2.368964268882966,
+    "equityWeight": 2.369130291134032
+  },
+  {
+    "key": "ANNX",
+    "ticker": "ANNX",
+    "name": "Annexon Inc",
+    "value": 16833000,
+    "shares": 2948090,
+    "cusips": [
+      "03589W102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 15,
+    "weight": 2.32590594679143,
+    "equityWeight": 2.3259862952937227
+  },
+  {
+    "key": "ACIU",
+    "ticker": "ACIU",
+    "name": "Ac Immune Sa",
+    "value": 47177398.0,
+    "shares": 19822436.0,
+    "cusips": [
+      "H00263105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 21,
+    "weight": 1.2062759462616228,
+    "equityWeight": 1.2063604847456495
+  },
+  {
+    "key": "ELDN",
+    "ticker": "ELDN",
+    "name": "Eledon Pharmaceuticals Inc",
+    "value": 24795531.0,
+    "shares": 6293282.0,
+    "cusips": [
+      "28617K101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 31,
+    "weight": 0.6339953852496146,
+    "equityWeight": 0.6340398170472603
+  },
+  {
+    "key": "IVVD",
+    "ticker": "IVVD",
+    "name": "Invivyd Inc",
+    "value": 2266000,
+    "shares": 2597759,
+    "cusips": [
+      "00534A102"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 38,
+    "weight": 0.15213077069743836,
+    "equityWeight": 0.15213260914809767
+  },
+  {
+    "key": "SGMT",
+    "ticker": "SGMT",
+    "name": "Sagimet Biosciences Inc-A",
+    "value": 1932000,
+    "shares": 250000,
+    "cusips": [
+      "786700104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 38,
+    "weight": 0.266954808364584,
+    "equityWeight": 0.2669640303277771
+  },
+  {
+    "key": "OKUR",
+    "ticker": "OKUR",
+    "name": "Onkure Therapeutics Inc",
+    "value": 8790000,
+    "shares": 1927710,
+    "cusips": [
+      "68277Q105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 31,
+    "weight": 0.8026664231577024,
+    "equityWeight": 0.8026810826606275
+  },
+  {
+    "key": "IMUX",
+    "ticker": "IMUX",
+    "name": "Immunic Inc",
+    "value": 10296000,
+    "shares": 669941,
+    "cusips": [
+      "4525EP200"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 11,
+    "weight": 1.648834717771575,
+    "equityWeight": 1.6488822480914382
+  },
+  {
+    "key": "IMA",
+    "ticker": "IMA",
+    "name": "Imagenebio Inc",
+    "value": 6549012.0,
+    "shares": 1110002.0,
+    "cusips": [
+      "45175G207"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 37,
+    "weight": 0.1674512792625554,
+    "equityWeight": 0.16746301461825164
+  },
+  {
+    "key": "TCRX",
+    "ticker": "TCRX",
+    "name": "Tscan Therapeutics Inc",
+    "value": 5453561.0,
+    "shares": 5564290.0,
+    "cusips": [
+      "89854M101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 38,
+    "weight": 0.13944176098415775,
+    "equityWeight": 0.13945153337091565
+  },
+  {
+    "key": "MOLN",
+    "ticker": "MOLN",
+    "name": "Molecular Partners Ag",
+    "value": 5145078.0,
+    "shares": 1353968.0,
+    "cusips": [
+      "60853G106"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 40,
+    "weight": 0.1315541784021208,
+    "equityWeight": 0.13156339800966083
+  },
+  {
+    "key": "TENX",
+    "ticker": "TENX",
+    "name": "Tenax Therapeutics Inc",
+    "value": 3869000,
+    "shares": 265934,
+    "cusips": [
+      "88032L605"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 21,
+    "weight": 0.6195941650211949,
+    "equityWeight": 0.6196120258222391
+  },
+  {
+    "key": "ENTX",
+    "ticker": "ENTX",
+    "name": "Entera Bio Ltd",
+    "value": 4292250.0,
+    "shares": 2425000.0,
+    "cusips": [
+      "M40527109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 42,
+    "weight": 0.10974827247448979,
+    "equityWeight": 0.10975596387595421
+  },
+  {
+    "key": "RLMD",
+    "ticker": "RLMD",
+    "name": "Relmada Therapeutics Inc",
+    "value": 14866000,
+    "shares": 2148359,
+    "cusips": [
+      "75955J402"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 1.6016393477947022,
+    "equityWeight": 2.443149042609663
+  },
+  {
+    "key": "ORIC",
+    "ticker": "ORIC",
+    "name": "Oric Pharmaceuticals Inc",
+    "value": 21847000,
+    "shares": 2017284,
+    "cusips": [
+      "68622P109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 2.3372899760889685,
+    "equityWeight": 2.337332486000826
+  },
+  {
+    "key": "ZURA",
+    "ticker": "ZURA",
+    "name": "Zura Bio Ltd",
+    "value": 7189000,
+    "shares": 1218492,
+    "cusips": [
+      "G9TY5A101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 25,
+    "weight": 0.7745314994817781,
+    "equityWeight": 1.1814744024835777
+  },
+  {
+    "key": "ANL",
+    "ticker": "ANL",
+    "name": "Adlai Nortye Ltd",
+    "value": 10749000,
+    "shares": 934716,
+    "cusips": [
+      "00704R109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 18,
+    "weight": 0.9661692454549867,
+    "equityWeight": 0.986566758693609
+  },
+  {
+    "key": "CYBN",
+    "ticker": "CYBN",
+    "name": "Cybin Inc",
+    "value": 5221000,
+    "shares": 790000,
+    "cusips": [
+      "23256X407"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 40,
+    "weight": 0.3932106580347601,
+    "equityWeight": 0.39321746936955665
+  },
+  {
+    "key": "INM",
+    "ticker": "INM",
+    "name": "Inmed Pharmaceuticals Inc",
+    "value": 1237000,
+    "shares": 798377,
+    "cusips": [
+      "457637700"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 44,
+    "weight": 0.11295772075609534,
+    "equityWeight": 0.1129597837600906
+  },
+  {
+    "key": "TGTX",
+    "ticker": "TGTX",
+    "name": "Tg Therapeutics Inc",
+    "value": 29392000,
+    "shares": 535000,
+    "cusips": [
+      "88322Q108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 10,
+    "weight": 2.661880016156757,
+    "equityWeight": 2.6619306423610327
+  },
+  {
+    "key": "NVCR",
+    "ticker": "NVCR",
+    "name": "Novocure Ltd",
+    "value": 19398000,
+    "shares": 1280439,
+    "cusips": [
+      "G6674U108"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 13,
+    "weight": 2.68032576224441,
+    "equityWeight": 2.6804183541916253
+  },
+  {
+    "key": "RIGL",
+    "ticker": "RIGL",
+    "name": "Rigel Pharmaceuticals Inc",
+    "value": 72117000,
+    "shares": 1843504,
+    "cusips": [
+      "766559702"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 8,
+    "weight": 2.485097238815305,
+    "equityWeight": 2.485134062226045
+  },
+  {
+    "key": "ANIP",
+    "ticker": "ANIP",
+    "name": "Ani Pharmaceuticals Inc",
+    "value": 22523000,
+    "shares": 272085,
+    "cusips": [
+      "00182C103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 6,
+    "weight": 2.4265924277129076,
+    "equityWeight": 3.7015367877504
+  },
+  {
+    "key": "VCEL",
+    "ticker": "VCEL",
+    "name": "Vericel Corp",
+    "value": 64917000,
+    "shares": 1459152,
+    "cusips": [
+      "92346J108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 2.2369906880787216,
+    "equityWeight": 2.237023835122484
+  },
+  {
+    "key": "NPCE",
+    "ticker": "NPCE",
+    "name": "Neuropace Inc",
+    "value": 45463000,
+    "shares": 2861167,
+    "cusips": [
+      "641288105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 15,
+    "weight": 2.763246265821823,
+    "equityWeight": 2.763273138150285
+  },
+  {
+    "key": "PGNY",
+    "ticker": "PGNY",
+    "name": "Progyny Inc",
+    "value": 46185000,
+    "shares": 1602000,
+    "cusips": [
+      "74340E103"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 17,
+    "weight": 1.5915001452457098,
+    "equityWeight": 1.5915237276080523
+  },
+  {
+    "key": "EDAP",
+    "ticker": "EDAP",
+    "name": "Edap Tms S A",
+    "value": 37861000,
+    "shares": 7309254,
+    "cusips": [
+      "268311107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 20,
+    "weight": 1.304661405199693,
+    "equityWeight": 1.3046807372733238
+  },
+  {
+    "key": "PALI",
+    "ticker": "PALI",
+    "name": "Palisade Bio Inc",
+    "value": 21477000,
+    "shares": 10276317,
+    "cusips": [
+      "696389402"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 13,
+    "weight": 1.9304509149350404,
+    "equityWeight": 1.9712060914003757
+  },
+  {
+    "key": "ORGO",
+    "ticker": "ORGO",
+    "name": "Organogenesis Hldgs Inc",
+    "value": 24642000,
+    "shares": 10140951,
+    "cusips": [
+      "68621F102"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 33,
+    "weight": 0.8491446698959573,
+    "equityWeight": 0.8491572522619383
+  },
+  {
+    "key": "SUPN",
+    "ticker": "SUPN",
+    "name": "Supernus Pharmaceuticals",
+    "value": 48199000,
+    "shares": 1036328,
+    "cusips": [
+      "868459108"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 11,
+    "weight": 2.4918547745858626,
+    "equityWeight": 2.5747301552028254
+  },
+  {
+    "key": "PRCT",
+    "ticker": "PRCT",
+    "name": "Procept Biorobotics Corp",
+    "value": 22647000,
+    "shares": 1003000,
+    "cusips": [
+      "74276L105"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 35,
+    "weight": 0.7803984797960289,
+    "equityWeight": 0.7804100435019932
+  },
+  {
+    "key": "IKT",
+    "ticker": "IKT",
+    "name": "Inhibikase Therapeutics Inc",
+    "value": 17508000,
+    "shares": 8625000,
+    "cusips": [
+      "45719W205"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 12,
+    "weight": 1.1571964226582603,
+    "equityWeight": 1.1572002469328377
+  },
+  {
+    "key": "LIVN",
+    "ticker": "LIVN",
+    "name": "Livanova Plc",
+    "value": 17311000,
+    "shares": 210529,
+    "cusips": [
+      "G5509L101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 22,
+    "weight": 1.772166412271569,
+    "equityWeight": 1.7779526071023615
+  },
+  {
+    "key": "NVCT",
+    "ticker": "NVCT",
+    "name": "Nuvectis Pharma Inc",
+    "value": 3678000,
+    "shares": 200000,
+    "cusips": [
+      "67080T108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 0.5890068076887969,
+    "equityWeight": 0.5890237867599368
+  },
+  {
+    "key": "KIDS",
+    "ticker": "KIDS",
+    "name": "Orthopediatrics Corp",
+    "value": 21050000,
+    "shares": 1100370,
+    "cusips": [
+      "68752L100"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 50,
+    "weight": 0.7786286592310404,
+    "equityWeight": 0.814493889748095
+  },
+  {
+    "key": "GKOS",
+    "ticker": "GKOS",
+    "name": "Glaukos Corp",
+    "value": 20964000,
+    "shares": 150000,
+    "cusips": [
+      "377322102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 33,
+    "weight": 0.8280503845196763,
+    "equityWeight": 0.8601102339332442
+  },
+  {
+    "key": "NEO",
+    "ticker": "NEO",
+    "name": "Neogenomics Inc",
+    "value": 179158000,
+    "shares": 12279523,
+    "cusips": [
+      "64049M209"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 1,
+    "weight": 10.889243439546581,
+    "equityWeight": 10.889349336487447
+  },
+  {
+    "key": "ATEC",
+    "ticker": "ATEC",
+    "name": "Alphatec Hldgs Inc",
+    "value": 56496000,
+    "shares": 6531439,
+    "cusips": [
+      "02081G201"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 13,
+    "weight": 2.0897579445091146,
+    "equityWeight": 2.186016474831752
+  },
+  {
+    "key": "GENB",
+    "ticker": "GENB",
+    "name": "Generate Biomedicines Inc",
+    "value": 55398000,
+    "shares": 3283844,
+    "cusips": [
+      "370920100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 2.0491434899801035,
+    "equityWeight": 2.1435312353570057
+  },
+  {
+    "key": "MRVI",
+    "ticker": "MRVI",
+    "name": "Maravai Lifesciences Hldgs I",
+    "value": 54306000,
+    "shares": 8702921,
+    "cusips": [
+      "56600D107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 15,
+    "weight": 2.008750972361087,
+    "equityWeight": 2.1012781556608098
+  },
+  {
+    "key": "BTSG",
+    "ticker": "BTSG",
+    "name": "Brightspring Health Svcs Inc",
+    "value": 9897000,
+    "shares": 141914,
+    "cusips": [
+      "10950A106"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 45,
+    "weight": 0.8492064377347288,
+    "equityWeight": 0.8592756975266196
+  },
+  {
+    "key": "TMDX",
+    "ticker": "TMDX",
+    "name": "Transmedics Group Inc",
+    "value": 40497000,
+    "shares": 609715,
+    "cusips": [
+      "89377M109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 24,
+    "weight": 1.4979631740085246,
+    "equityWeight": 1.5669624253267747
+  },
+  {
+    "key": "ALMR",
+    "ticker": "ALMR",
+    "name": "Alamar Biosciences Inc",
+    "value": 2979000,
+    "shares": 110000,
+    "cusips": [
+      "010911105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 26,
+    "weight": 0.4770666884461462,
+    "equityWeight": 0.4770804406628199
+  },
+  {
+    "key": "AVAH",
+    "ticker": "AVAH",
+    "name": "Aveanna Healthcare Hldgs Inc",
+    "value": 26267000,
+    "shares": 3065106,
+    "cusips": [
+      "05356F105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 41,
+    "weight": 0.9716028024713416,
+    "equityWeight": 1.0163568171977773
+  },
+  {
+    "key": "CVS",
+    "ticker": "CVS",
+    "name": "Cvs Health Corp",
+    "value": 40530000,
+    "shares": 391791,
+    "cusips": [
+      "126650100"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 3,
+    "weight": 4.14914821150521,
+    "equityWeight": 4.162695347805367
+  },
+  {
+    "key": "CAH",
+    "ticker": "CAH",
+    "name": "Cardinal Health Inc",
+    "value": 71268000,
+    "shares": 300000,
+    "cusips": [
+      "14149Y108"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 8,
+    "weight": 2.8149921200127976,
+    "equityWeight": 2.92398092692017
+  },
+  {
+    "key": "ALHC",
+    "ticker": "ALHC",
+    "name": "Alignment Healthcare Inc",
+    "value": 47620000,
+    "shares": 2000000,
+    "cusips": [
+      "01625V104"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 12,
+    "weight": 1.8809272710755096,
+    "equityWeight": 1.9537516380414561
+  },
+  {
+    "key": "DGX",
+    "ticker": "DGX",
+    "name": "Quest Diagnostics Inc",
+    "value": 10597000,
+    "shares": 50000,
+    "cusips": [
+      "74834L100"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 28,
+    "weight": 0.5304340078426347,
+    "equityWeight": 0.5304385215396483
+  },
+  {
+    "key": "SRRK",
+    "ticker": "SRRK",
+    "name": "Scholar Rock Hldg Corp",
+    "value": 30539000,
+    "shares": 555272,
+    "cusips": [
+      "80706P103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 7,
+    "weight": 5.061925252110033,
+    "equityWeight": 5.062034328147921
+  },
+  {
+    "key": "LFST",
+    "ticker": "LFST",
+    "name": "Lifestance Health Group Inc",
+    "value": 32130000,
+    "shares": 3000000,
+    "cusips": [
+      "53228F101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 21,
+    "weight": 1.2690926757592635,
+    "equityWeight": 1.3182284781661484
+  },
+  {
+    "key": "NVS",
+    "ticker": "NVS",
+    "name": "Novartis Ag",
+    "value": 31344000,
+    "shares": 200000,
+    "cusips": [
+      "66987V109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 1.2380467111421833,
+    "equityWeight": 1.2859804985882277
+  },
+  {
+    "key": "THC",
+    "ticker": "THC",
+    "name": "Tenet Healthcare Corp",
+    "value": 18199000,
+    "shares": 97280,
+    "cusips": [
+      "88033G407"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 21,
+    "weight": 1.8630729904066945,
+    "equityWeight": 1.8691559988825532
+  },
+  {
+    "key": "NVO",
+    "ticker": "NVO",
+    "name": "Novo-Nordisk A S",
+    "value": 12704000,
+    "shares": 265016,
+    "cusips": [
+      "670100205"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 34,
+    "weight": 1.0900594710500147,
+    "equityWeight": 1.102984587387913
+  },
+  {
+    "key": "VRTX",
+    "ticker": "VRTX",
+    "name": "Vertex Pharmaceuticals Inc",
+    "value": 100235000,
+    "shares": 201791,
+    "cusips": [
+      "92532F100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 2,
+    "weight": 12.325632298112204,
+    "equityWeight": 12.32576870815221
+  },
+  {
+    "key": "MDT",
+    "ticker": "MDT",
+    "name": "Medtronic Plc",
+    "value": 5476000,
+    "shares": 70000,
+    "cusips": [
+      "G5960L103"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 17,
+    "weight": 0.8769443390168167,
+    "equityWeight": 0.8769696183516622
+  },
+  {
+    "key": "WAT",
+    "ticker": "WAT",
+    "name": "Waters Corp",
+    "value": 11328000,
+    "shares": 30206,
+    "cusips": [
+      "941848103"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 34,
+    "weight": 1.159673104858895,
+    "equityWeight": 1.163459484331093
+  },
+  {
+    "key": "BNTX",
+    "ticker": "BNTX",
+    "name": "Biontech Se-Adr",
+    "value": 1825000,
+    "shares": 19614,
+    "cusips": [
+      "09075V102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 40,
+    "weight": 0.2521700441332121,
+    "equityWeight": 0.25217875535620765
+  },
+  {
+    "key": "NERV",
+    "ticker": "NERV",
+    "name": "Minerva Neurosciences Inc",
+    "value": 23991000,
+    "shares": 4322747,
+    "cusips": [
+      "603380205"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 19,
+    "weight": 2.1907588348096065,
+    "equityWeight": 2.1907988457464294
+  },
+  {
+    "key": "CRSP",
+    "ticker": "CRSP",
+    "name": "Crispr Therapeutics Ag",
+    "value": 2160000,
+    "shares": 39605,
+    "cusips": [
+      "H17182108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 37,
+    "weight": 0.2984587919604045,
+    "equityWeight": 0.29846910222981293
+  },
+  {
+    "key": "ANAB",
+    "ticker": "ANAB",
+    "name": "Anaptysbio Inc",
+    "value": 40735000,
+    "shares": 603489,
+    "cusips": [
+      "032724106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 5.628573560419943,
+    "equityWeight": 5.628767999690477
+  },
+  {
+    "key": "OVID",
+    "ticker": "OVID",
+    "name": "Ovid Therapeutics Inc",
+    "value": 6105000,
+    "shares": 2269704,
+    "cusips": [
+      "690469101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 32,
+    "weight": 0.6577430524880034,
+    "equityWeight": 1.0033246942776801
+  },
+  {
+    "key": "EQ",
+    "ticker": "EQ",
+    "name": "Equillium Inc.",
+    "value": 14231000,
+    "shares": 4447308,
+    "cusips": [
+      "29446K106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 7,
+    "weight": 1.9447925449846872,
+    "equityWeight": 1.944805833734202
+  },
+  {
+    "key": "TEVA",
+    "ticker": "TEVA",
+    "name": "Teva Pharmaceutical Inds Ltd",
+    "value": 6776000,
+    "shares": 200000,
+    "cusips": [
+      "881624209"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 1.0851305407556517,
+    "equityWeight": 1.0851618213935104
+  },
+  {
+    "key": "29842P105",
+    "ticker": null,
+    "name": "Eupraxia Pharmaceuticals Inc",
+    "value": 5352000,
+    "shares": 809741,
+    "cusips": [
+      "29842P105"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Biotech / biopharma",
+    "rank": 39,
+    "weight": 0.5766160224268294,
+    "equityWeight": 0.879573098079303
+  },
+  {
+    "key": "AUPH",
+    "ticker": "AUPH",
+    "name": "Aurinia Pharmaceuticals Inc",
+    "value": 221358000,
+    "shares": 13044106,
+    "cusips": [
+      "05156V102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 1,
+    "weight": 10.053561039283093,
+    "equityWeight": 10.548638019186534
+  },
+  {
+    "key": "GLPG",
+    "ticker": "GLPG",
+    "name": "Lakefront Biotherapeutics Nv",
+    "value": 49980000,
+    "shares": 1667119,
+    "cusips": [
+      "36315X101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 2.430067490529884,
+    "equityWeight": 2.481012658227848
+  },
+  {
+    "key": "PGEN",
+    "ticker": "PGEN",
+    "name": "Precigen Inc",
+    "value": 29355000,
+    "shares": 5150000,
+    "cusips": [
+      "74017N105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 12,
+    "weight": 2.210821464587317,
+    "equityWeight": 2.210859761222627
+  },
+  {
+    "key": "FULC",
+    "ticker": "FULC",
+    "name": "Fulcrum Therapeutics Inc",
+    "value": 3839000,
+    "shares": 1049161,
+    "cusips": [
+      "359616109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 49,
+    "weight": 0.41360779336633,
+    "equityWeight": 0.6309194924376763
+  },
+  {
+    "key": "AVIR",
+    "ticker": "AVIR",
+    "name": "Atea Pharmaceuticals Inc",
+    "value": 9651000,
+    "shares": 2075639,
+    "cusips": [
+      "04683R106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 18,
+    "weight": 0.5737740491943918,
+    "equityWeight": 0.5745073737673183
+  },
+  {
+    "key": "63008G203",
+    "ticker": null,
+    "name": "Nano Dimension Ltd",
+    "value": 20724000,
+    "shares": 14292813,
+    "cusips": [
+      "63008G203"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Unclassified equity",
+    "rank": 24,
+    "weight": 0.941235460105814,
+    "equityWeight": 0.9875856048104055
+  },
+  {
+    "key": "NUVB",
+    "ticker": "NUVB",
+    "name": "Nuvation Bio Inc",
+    "value": 1855000,
+    "shares": 326609,
+    "cusips": [
+      "67080N101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 39,
+    "weight": 0.25631530513266215,
+    "equityWeight": 0.25632415955384397
+  },
+  {
+    "key": "DERM",
+    "ticker": "DERM",
+    "name": "Journey Med Corp",
+    "value": 2478000,
+    "shares": 350000,
+    "cusips": [
+      "48115J109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 45,
+    "weight": 0.22441952504206733,
+    "equityWeight": 0.22442379326927867
+  },
+  {
+    "key": "PLRX",
+    "ticker": "PLRX",
+    "name": "Pliant Therapeutics Inc",
+    "value": 880000,
+    "shares": 772126,
+    "cusips": [
+      "729139105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 39,
+    "weight": 0.059079910950461494,
+    "equityWeight": 0.05908062491188259
+  },
+  {
+    "key": "BOLD",
+    "ticker": "BOLD",
+    "name": "Boundless Bio Inc",
+    "value": 2500000,
+    "shares": 1000000,
+    "cusips": [
+      "10170A100"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 48,
+    "weight": 0.12811275562338129,
+    "equityWeight": 0.12902659754281748
+  },
+  {
+    "key": "PMVP",
+    "ticker": "PMVP",
+    "name": "Pmv Pharmaceuticals Inc",
+    "value": 5688000,
+    "shares": 4245085,
+    "cusips": [
+      "69353Y103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 33,
+    "weight": 0.2583356155704435,
+    "equityWeight": 0.2710570797221379
+  },
+  {
+    "key": "MRNA",
+    "ticker": "MRNA",
+    "name": "Moderna Inc",
+    "value": 5252000,
+    "shares": 75000,
+    "cusips": [
+      "60770K107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 32,
+    "weight": 0.26288944127484365,
+    "equityWeight": 0.2628916783170928
+  },
+  {
+    "key": "HRTX",
+    "ticker": "HRTX",
+    "name": "Heron Therapeutics Inc",
+    "value": 2667000,
+    "shares": 6250000,
+    "cusips": [
+      "427746102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 36,
+    "weight": 0.12112888303909507,
+    "equityWeight": 0.12709374676844967
+  },
+  {
+    "key": "LENZ",
+    "ticker": "LENZ",
+    "name": "Lenz Therapeutics Inc",
+    "value": 2562000,
+    "shares": 451114,
+    "cusips": [
+      "52635N103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 37,
+    "weight": 0.11636002937613855,
+    "equityWeight": 0.12209005595079417
+  },
+  {
+    "key": "AGIO",
+    "ticker": "AGIO",
+    "name": "Agios Pharmaceuticals Inc",
+    "value": 7926000,
+    "shares": 213601,
+    "cusips": [
+      "00847X104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 26,
+    "weight": 1.0951779560547064,
+    "equityWeight": 1.095215789015508
+  },
+  {
+    "key": "VIR",
+    "ticker": "VIR",
+    "name": "Vir Biotechnology Inc",
+    "value": 5291000,
+    "shares": 519300,
+    "cusips": [
+      "92764N102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 18,
+    "weight": 0.8473178410770592,
+    "equityWeight": 0.8473422663803224
+  },
+  {
+    "key": "ENTA",
+    "ticker": "ENTA",
+    "name": "Enanta Pharmaceuticals Inc",
+    "value": 1822000,
+    "shares": 125000,
+    "cusips": [
+      "29251M106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 48,
+    "weight": 0.16500902930857414,
+    "equityWeight": 0.1650121676096149
+  },
+  {
+    "key": "PRTA",
+    "ticker": "PRTA",
+    "name": "Prothena Corp Plc",
+    "value": 11191000,
+    "shares": 1143155,
+    "cusips": [
+      "G72800108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 1.5463205281615215,
+    "equityWeight": 1.5463739458582575
+  },
+  {
+    "key": "RLYB",
+    "ticker": "RLYB",
+    "name": "Rallybio Corp",
+    "value": 14821000,
+    "shares": 926352,
+    "cusips": [
+      "75120L209"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 32,
+    "weight": 0.6782498307922037,
+    "equityWeight": 0.7711771938432784
+  },
+  {
+    "key": "SRPT",
+    "ticker": "SRPT",
+    "name": "Sarepta Therapeutics Inc",
+    "value": 8445000,
+    "shares": 470000,
+    "cusips": [
+      "803607100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 29,
+    "weight": 0.4227154096660423,
+    "equityWeight": 0.42271900673797574
+  },
+  {
+    "key": "LQDA",
+    "ticker": "LQDA",
+    "name": "Liquidia Corporation",
+    "value": 195139000,
+    "shares": 2447500,
+    "cusips": [
+      "53635D202"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 1,
+    "weight": 17.67272062033252,
+    "equityWeight": 17.67305673719684
+  },
+  {
+    "key": "EXEL",
+    "ticker": "EXEL",
+    "name": "Exelixis Inc",
+    "value": 84512000,
+    "shares": 1553262,
+    "cusips": [
+      "30161Q104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 3.975714421467503,
+    "equityWeight": 4.077412556743976
+  },
+  {
+    "key": "ADMA",
+    "ticker": "ADMA",
+    "name": "Adma Biologics Inc",
+    "value": 47918000,
+    "shares": 5725007,
+    "cusips": [
+      "000899104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 2.254215775841062,
+    "equityWeight": 2.311878252722191
+  },
+  {
+    "key": "OCUP",
+    "ticker": "OCUP",
+    "name": "Opus Genetics Inc",
+    "value": 4623000,
+    "shares": 1125000,
+    "cusips": [
+      "67577R102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 36,
+    "weight": 0.41868097831698037,
+    "equityWeight": 0.4186889411960755
+  },
+  {
+    "key": "ANIK",
+    "ticker": "ANIK",
+    "name": "Anika Therapeutics Inc",
+    "value": 20995000,
+    "shares": 1435130,
+    "cusips": [
+      "035255108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 19,
+    "weight": 0.9876718605489188,
+    "equityWeight": 1.012936347842197
+  },
+  {
+    "key": "VRCA",
+    "ticker": "VRCA",
+    "name": "Verrica Pharmaceuticals Inc",
+    "value": 5654000,
+    "shares": 923910,
+    "cusips": [
+      "92511W207"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 0.2659822195543504,
+    "equityWeight": 0.27278600193854646
+  },
+  {
+    "key": "CLRB",
+    "ticker": "CLRB",
+    "name": "Cellectar Biosciences Inc",
+    "value": 1306000,
+    "shares": 469998,
+    "cusips": [
+      "15117F880"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 0.06143841152069007,
+    "equityWeight": 0.0630099962029964
+  },
+  {
+    "key": "ETON",
+    "ticker": "ETON",
+    "name": "Eton Pharmaceuticals Inc",
+    "value": 103532000,
+    "shares": 2860000,
+    "cusips": [
+      "29772L108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 2,
+    "weight": 9.376352811402468,
+    "equityWeight": 9.376531139933398
+  },
+  {
+    "key": "ZBIO",
+    "ticker": "ZBIO",
+    "name": "Zenas Biopharma Inc",
+    "value": 12938000,
+    "shares": 509789,
+    "cusips": [
+      "98937L105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 1.3446911824926155,
+    "equityWeight": 1.4603450513852283
+  },
+  {
+    "key": "ATRA",
+    "ticker": "ATRA",
+    "name": "Atara Biotherapeutics Inc",
+    "value": 5070000,
+    "shares": 441701,
+    "cusips": [
+      "046513206"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 34,
+    "weight": 0.34038085058959067,
+    "equityWeight": 0.34038496398095996
+  },
+  {
+    "key": "EIKN",
+    "ticker": "EIKN",
+    "name": "Eikon Therapeutics Inc",
+    "value": 9560000,
+    "shares": 732606,
+    "cusips": [
+      "282564103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 21,
+    "weight": 0.4648148301213624,
+    "equityWeight": 0.47455944403077693
+  },
+  {
+    "key": "29014R301",
+    "ticker": null,
+    "name": "Eloxx Pharmaceuticals Inc",
+    "value": 5552000,
+    "shares": 400000,
+    "cusips": [
+      "29014R301"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Biotech / biopharma",
+    "rank": 21,
+    "weight": 0.4560306605052149,
+    "equityWeight": 0.45603515544786233
+  },
+  {
+    "key": "AARD",
+    "ticker": "AARD",
+    "name": "Aardvark Therapeutics Inc",
+    "value": 22563000,
+    "shares": 3917299,
+    "cusips": [
+      "002942100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 3,
+    "weight": 3.0834343470233647,
+    "equityWeight": 3.083455416101806
+  },
+  {
+    "key": "MREO",
+    "ticker": "MREO",
+    "name": "Mereo Biopharma Group Plc",
+    "value": 317000,
+    "shares": 1000000,
+    "cusips": [
+      "589492107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 29,
+    "weight": 0.01541279300716233,
+    "equityWeight": 0.01573591461901216
+  },
+  {
+    "key": "PEN",
+    "ticker": "PEN",
+    "name": "Penumbra Inc",
+    "value": 19014000,
+    "shares": 60221,
+    "cusips": [
+      "70975L107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 15,
+    "weight": 1.631485420540379,
+    "equityWeight": 1.6508303640265884
+  },
+  {
+    "key": "AGL",
+    "ticker": "AGL",
+    "name": "Agilon Health Inc",
+    "value": 28145000,
+    "shares": 262600,
+    "cusips": [
+      "00857U206"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 18,
+    "weight": 1.3737256004466987,
+    "equityWeight": 1.3737597967938608
+  },
+  {
+    "key": "DXCM",
+    "ticker": "DXCM",
+    "name": "Dexcom Inc",
+    "value": 6735000,
+    "shares": 100000,
+    "cusips": [
+      "252131107"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 15,
+    "weight": 1.078564668239273,
+    "equityWeight": 1.0785957596052675
+  },
+  {
+    "key": "MMED",
+    "ticker": "MMED",
+    "name": "Minimed Group Inc",
+    "value": 22724000,
+    "shares": 1520000,
+    "cusips": [
+      "60365F109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 27,
+    "weight": 1.109132724979598,
+    "equityWeight": 1.1091603347786
+  },
+  {
+    "key": "HTFL",
+    "ticker": "HTFL",
+    "name": "Heartflow Inc",
+    "value": 247868000,
+    "shares": 8448158,
+    "cusips": [
+      "42238D107"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 2,
+    "weight": 14.736320176739767,
+    "equityWeight": 14.75515425561679
+  },
+  {
+    "key": "EVH",
+    "ticker": "EVH",
+    "name": "Evolent Health Inc",
+    "value": 13550000,
+    "shares": 2500000,
+    "cusips": [
+      "30050B101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 47,
+    "weight": 0.6613601664968118,
+    "equityWeight": 0.6613766298296967
+  },
+  {
+    "key": "BLFS",
+    "ticker": "BLFS",
+    "name": "Biolife Solutions Inc",
+    "value": 131457000,
+    "shares": 4655000,
+    "cusips": [
+      "09062W204"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 4,
+    "weight": 6.580094684247356,
+    "equityWeight": 6.580150677176327
+  },
+  {
+    "key": "ILMN",
+    "ticker": "ILMN",
+    "name": "Illumina Inc",
+    "value": 32952000,
+    "shares": 187413,
+    "cusips": [
+      "452327109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 6,
+    "weight": 5.461886797456689,
+    "equityWeight": 5.46200449199811
+  },
+  {
+    "key": "LAB",
+    "ticker": "LAB",
+    "name": "Standard Biotools Inc",
+    "value": 73042000,
+    "shares": 88783856,
+    "cusips": [
+      "34385P108"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 6,
+    "weight": 3.6561253940588587,
+    "equityWeight": 3.6561565056430108
+  },
+  {
+    "key": "TXG",
+    "ticker": "TXG",
+    "name": "10X Genomics Inc",
+    "value": 40257000,
+    "shares": 1050000,
+    "cusips": [
+      "88025U109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 11,
+    "weight": 2.0150685905181605,
+    "equityWeight": 2.015085737625896
+  },
+  {
+    "key": "HIMS",
+    "ticker": "HIMS",
+    "name": "Hims & Hers Health Inc",
+    "value": 6531000,
+    "shares": 188381,
+    "cusips": [
+      "433000106"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 28,
+    "weight": 0.70363961929552,
+    "equityWeight": 1.0733355574656067
+  },
+  {
+    "key": "VCYT",
+    "ticker": "VCYT",
+    "name": "Veracyte Inc",
+    "value": 18676000,
+    "shares": 318001,
+    "cusips": [
+      "92337F107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 19,
+    "weight": 1.9410614101276928,
+    "equityWeight": 2.1080077430569273
+  },
+  {
+    "key": "PRME",
+    "ticker": "PRME",
+    "name": "Prime Medicine Inc",
+    "value": 5127000,
+    "shares": 1389632,
+    "cusips": [
+      "74168J101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 33,
+    "weight": 0.3442076175488819,
+    "equityWeight": 0.3442117771854796
+  },
+  {
+    "key": "CTNM",
+    "ticker": "CTNM",
+    "name": "Contineum Therapeutics Inc",
+    "value": 13241000,
+    "shares": 807874,
+    "cusips": [
+      "21217B100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 13,
+    "weight": 1.4265644157237758,
+    "equityWeight": 2.1760888250500843
+  },
+  {
+    "key": "PACB",
+    "ticker": "PACB",
+    "name": "Pacific Biosciences Calif In",
+    "value": 1215000,
+    "shares": 723767,
+    "cusips": [
+      "69404D108"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 39,
+    "weight": 0.06081695947237909,
+    "equityWeight": 0.0608174769907212
+  },
+  {
+    "key": "RXRX",
+    "ticker": "RXRX",
+    "name": "Recursion Pharmaceuticals In",
+    "value": 606000,
+    "shares": 165323,
+    "cusips": [
+      "75629V104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 41,
+    "weight": 0.03033339707017426,
+    "equityWeight": 0.030333655190433784
+  },
+  {
+    "key": "DNA",
+    "ticker": "DNA",
+    "name": "Ginkgo Bioworks Holdings Inc",
+    "value": 361000,
+    "shares": 36493,
+    "cusips": [
+      "37611X209"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 42,
+    "weight": 0.018069894954344735,
+    "equityWeight": 0.01807004871905379
+  },
+  {
+    "key": "TNYA",
+    "ticker": "TNYA",
+    "name": "Tenaya Therapeutics Inc",
+    "value": 267000,
+    "shares": 361969,
+    "cusips": [
+      "87990A106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 43,
+    "weight": 0.013364714550720342,
+    "equityWeight": 0.013364828276973302
+  },
+  {
+    "key": "CRBP",
+    "ticker": "CRBP",
+    "name": "Corbus Pharmaceuticals Hldgs",
+    "value": 21995000,
+    "shares": 2344971,
+    "cusips": [
+      "21833P301"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 1.1271360239745085,
+    "equityWeight": 1.1351760051817081
+  },
+  {
+    "key": "CABA",
+    "ticker": "CABA",
+    "name": "Cabaletta Bio Inc",
+    "value": 12016000,
+    "shares": 3863800,
+    "cusips": [
+      "12674W109"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 26,
+    "weight": 1.0882263974598392,
+    "equityWeight": 1.0882470944001827
+  },
+  {
+    "key": "QNCX",
+    "ticker": "QNCX",
+    "name": "Quince Therapeutics Inc",
+    "value": 100000,
+    "shares": 5498,
+    "cusips": [
+      "22053A305"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 49,
+    "weight": 0.005124510224935252,
+    "equityWeight": 0.005161063901712699
+  },
+  {
+    "key": "SPTX",
+    "ticker": "SPTX",
+    "name": "Seaport Therapeutics Inc",
+    "value": 77428000,
+    "shares": 3564871,
+    "cusips": [
+      "81221K108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 6,
+    "weight": 4.002973743991248,
+    "equityWeight": 4.136106692193705
+  },
+  {
+    "key": "GILD",
+    "ticker": "GILD",
+    "name": "Gilead Sciences Inc",
+    "value": 2526000,
+    "shares": 20000,
+    "cusips": [
+      "375558103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 28,
+    "weight": 0.4045218043017675,
+    "equityWeight": 0.40453346529516043
+  },
+  {
+    "key": "IMNM",
+    "ticker": "IMNM",
+    "name": "Immunome Inc",
+    "value": 42740000,
+    "shares": 2017009,
+    "cusips": [
+      "45257U108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 5,
+    "weight": 4.4421163348071095,
+    "equityWeight": 4.824172785299479
+  },
+  {
+    "key": "BOLT",
+    "ticker": "BOLT",
+    "name": "Bolt Biotherapeutics Inc",
+    "value": 278000,
+    "shares": 72414,
+    "cusips": [
+      "097702203"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 45,
+    "weight": 0.025385809515112774,
+    "equityWeight": 0.02538627314899368
+  },
+  {
+    "key": "BNR",
+    "ticker": "BNR",
+    "name": "Burning Rock Biotech Ltd",
+    "value": 10517000,
+    "shares": 1238563,
+    "cusips": [
+      "12233L206"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 23,
+    "weight": 0.5812391884647482,
+    "equityWeight": 0.5812443282115448
+  },
+  {
+    "key": "AMRN",
+    "ticker": "AMRN",
+    "name": "Amarin Corp Plc",
+    "value": 8495000,
+    "shares": 532982,
+    "cusips": [
+      "023111404"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 25,
+    "weight": 0.4694900547692342,
+    "equityWeight": 0.4694942063475396
+  },
+  {
+    "key": "CRBU",
+    "ticker": "CRBU",
+    "name": "Caribou Biosciences Inc",
+    "value": 4405000,
+    "shares": 2503302,
+    "cusips": [
+      "142038108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 28,
+    "weight": 0.24344952221995014,
+    "equityWeight": 0.24345167498068415
+  },
+  {
+    "key": "PRQR",
+    "ticker": "PRQR",
+    "name": "Proqr Thrapeutics N V",
+    "value": 6372000,
+    "shares": 3425930,
+    "cusips": [
+      "N71542109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 30,
+    "weight": 0.6865092105575032,
+    "equityWeight": 1.047204742332085
+  },
+  {
+    "key": "ENGN",
+    "ticker": "ENGN",
+    "name": "Engene Holdings Inc.",
+    "value": 1293000,
+    "shares": 747750,
+    "cusips": [
+      "29286M105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 15,
+    "weight": 0.12444574483136302,
+    "equityWeight": 0.12444658325312802
+  },
+  {
+    "key": "TRAW",
+    "ticker": "TRAW",
+    "name": "Traws Pharma Inc",
+    "value": 71000,
+    "shares": 84400,
+    "cusips": [
+      "68232V884"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 32,
+    "weight": 0.00392393100513427,
+    "equityWeight": 0.003923965703434409
+  },
+  {
+    "key": "KYTX",
+    "ticker": "KYTX",
+    "name": "Kyverna Therapeutics Inc",
+    "value": 25705000,
+    "shares": 2885000,
+    "cusips": [
+      "501976104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 1.52822111020017,
+    "equityWeight": 1.53017428688104
+  },
+  {
+    "key": "RPID",
+    "ticker": "RPID",
+    "name": "Rapid Micro Biosystems Inc",
+    "value": 14591000,
+    "shares": 8434560,
+    "cusips": [
+      "75340L104"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 16,
+    "weight": 0.8674683609776572,
+    "equityWeight": 0.8685770480405077
+  },
+  {
+    "key": "ANTX",
+    "ticker": "ANTX",
+    "name": "An2 Therapeutics Inc",
+    "value": 15263000,
+    "shares": 3153640,
+    "cusips": [
+      "037326105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 26,
+    "weight": 1.3937539950689435,
+    "equityWeight": 1.3937794499032035
+  },
+  {
+    "key": "ATHA",
+    "ticker": "ATHA",
+    "name": "Leonabio Inc",
+    "value": 4267000,
+    "shares": 464398,
+    "cusips": [
+      "04746L203"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 31,
+    "weight": 0.2541448178757853,
+    "equityWeight": 0.25495373249993875
+  },
+  {
+    "key": "VTGN",
+    "ticker": "VTGN",
+    "name": "Vistagen Therapeutics Inc",
+    "value": 630000,
+    "shares": 2788620,
+    "cusips": [
+      "92840H400"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 32,
+    "weight": 0.037523139269216015,
+    "equityWeight": 0.03764257123856607
+  },
+  {
+    "key": "SIBN",
+    "ticker": "SIBN",
+    "name": "Si-Bone Inc",
+    "value": 132648000,
+    "shares": 8127985,
+    "cusips": [
+      "825704109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 2,
+    "weight": 8.062360395678533,
+    "equityWeight": 8.062438801428833
+  },
+  {
+    "key": "TWST",
+    "ticker": "TWST",
+    "name": "Twist Bioscience Corporation",
+    "value": 74889000,
+    "shares": 727933,
+    "cusips": [
+      "90184D100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 6,
+    "weight": 4.551761863518257,
+    "equityWeight": 4.551806129004612
+  },
+  {
+    "key": "MASS",
+    "ticker": "MASS",
+    "name": "908 Devices Inc",
+    "value": 54660000,
+    "shares": 6282804,
+    "cusips": [
+      "65443P102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 9,
+    "weight": 3.322240962756986,
+    "equityWeight": 3.322273271260027
+  },
+  {
+    "key": "SLP",
+    "ticker": "SLP",
+    "name": "Simulations Plus Inc",
+    "value": 51133000,
+    "shares": 2792677,
+    "cusips": [
+      "829214105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 12,
+    "weight": 3.107869505097932,
+    "equityWeight": 3.10789972885728
+  },
+  {
+    "key": "TNDM",
+    "ticker": "TNDM",
+    "name": "Tandem Diabetes Care Inc",
+    "value": 51057000,
+    "shares": 3383553,
+    "cusips": [
+      "875372203"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 13,
+    "weight": 3.1032502165291516,
+    "equityWeight": 3.103280395366322
+  },
+  {
+    "key": "TLSI",
+    "ticker": "TLSI",
+    "name": "Trisalus Life Sciences Inc",
+    "value": 29813000,
+    "shares": 6552491,
+    "cusips": [
+      "89680M101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 20,
+    "weight": 1.812037501329565,
+    "equityWeight": 1.812055123235916
+  },
+  {
+    "key": "HCAT",
+    "ticker": "HCAT",
+    "name": "Health Catalyst Inc",
+    "value": 25493000,
+    "shares": 12810861,
+    "cusips": [
+      "42225T107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 22,
+    "weight": 1.5494674142620535,
+    "equityWeight": 1.549482482697253
+  },
+  {
+    "key": "BFLY",
+    "ticker": "BFLY",
+    "name": "Butterfly Network Inc",
+    "value": 22249000,
+    "shares": 2642404,
+    "cusips": [
+      "124155102"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 23,
+    "weight": 1.3522967285104315,
+    "equityWeight": 1.3523098794779425
+  },
+  {
+    "key": "OMCL",
+    "ticker": "OMCL",
+    "name": "Omnicell Inc",
+    "value": 18780000,
+    "shares": 452324,
+    "cusips": [
+      "68213N109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 27,
+    "weight": 1.1414505173907097,
+    "equityWeight": 1.141461617897243
+  },
+  {
+    "key": "ATRC",
+    "ticker": "ATRC",
+    "name": "Atricure Inc",
+    "value": 15888000,
+    "shares": 567838,
+    "cusips": [
+      "04963C209"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 28,
+    "weight": 0.96567443132607,
+    "equityWeight": 0.965683822425527
+  },
+  {
+    "key": "KRMD",
+    "ticker": "KRMD",
+    "name": "Koru Medical Systems Inc",
+    "value": 14229000,
+    "shares": 3387902,
+    "cusips": [
+      "759910102"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 29,
+    "weight": 0.8648402242786161,
+    "equityWeight": 0.864848634774221
+  },
+  {
+    "key": "TCMD",
+    "ticker": "TCMD",
+    "name": "Tactile Systems Technology Inc",
+    "value": 13775000,
+    "shares": 462562,
+    "cusips": [
+      "87357P100"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 30,
+    "weight": 0.8372460530914285,
+    "equityWeight": 0.83725419523613
+  },
+  {
+    "key": "CNTX",
+    "ticker": "CNTX",
+    "name": "Context Therapeutics Inc",
+    "value": 2768000,
+    "shares": 4998267,
+    "cusips": [
+      "21077P108"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 27,
+    "weight": 0.44327646647161223,
+    "equityWeight": 0.443289244630643
+  },
+  {
+    "key": "HOWL",
+    "ticker": "HOWL",
+    "name": "Werewolf Therapeutics, Inc.",
+    "value": 28000,
+    "shares": 80142,
+    "cusips": [
+      "95075A107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 37,
+    "weight": 0.0017073618393653003,
+    "equityWeight": 0.0017073805793995996
+  },
+  {
+    "key": "RGNX",
+    "ticker": "RGNX",
+    "name": "Regenxbio Inc",
+    "value": 52338000,
+    "shares": 4368804,
+    "cusips": [
+      "75901B107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 8,
+    "weight": 3.5137777037786977,
+    "equityWeight": 3.513820166634217
+  },
+  {
+    "key": "FATE",
+    "ticker": "FATE",
+    "name": "Fate Therapeutics Inc",
+    "value": 34756000,
+    "shares": 12872946,
+    "cusips": [
+      "31189P102"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 13,
+    "weight": 2.3333879374934545,
+    "equityWeight": 2.3334161357243084
+  },
+  {
+    "key": "CBLL",
+    "ticker": "CBLL",
+    "name": "Ceribell Inc",
+    "value": 7522000,
+    "shares": 386786,
+    "cusips": [
+      "15678C102"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 30,
+    "weight": 0.5049989661015584,
+    "equityWeight": 0.5050050688490691
+  },
+  {
+    "key": "ARDX",
+    "ticker": "ARDX",
+    "name": "Ardelyx Inc",
+    "value": 3272000,
+    "shares": 641750,
+    "cusips": [
+      "039697107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 37,
+    "weight": 0.2196698507158068,
+    "equityWeight": 0.21967250535418165
+  },
+  {
+    "key": "38000Q201",
+    "ticker": null,
+    "name": "Crescent Biopharma Inc.",
+    "value": 8166000,
+    "shares": 453686,
+    "cusips": [
+      "38000Q201"
+    ],
+    "mappingNote": "Ticker requires review; position retained by CUSIP.",
+    "category": "Biotech / biopharma",
+    "rank": 31,
+    "weight": 0.6150082806956236,
+    "equityWeight": 0.6150189340876843
+  },
+  {
+    "key": "KZIA",
+    "ticker": "KZIA",
+    "name": "Kazia Therapeutics Ltd",
+    "value": 5578000,
+    "shares": 396201,
+    "cusips": [
+      "48669G303"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 36,
+    "weight": 0.6009649052871552,
+    "equityWeight": 0.9167150114137428
+  },
+  {
+    "key": "NMRA",
+    "ticker": "NMRA",
+    "name": "Neumora Therapeutics Inc.",
+    "value": 3400000,
+    "shares": 2000000,
+    "cusips": [
+      "640979100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 47,
+    "weight": 0.2560651670787559,
+    "equityWeight": 0.25606960273060575
+  },
+  {
+    "key": "INO",
+    "ticker": "INO",
+    "name": "Inovio Pharmaceuticals Inc",
+    "value": 3129000,
+    "shares": 2844994,
+    "cusips": [
+      "45773H409"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 48,
+    "weight": 0.23565526699689032,
+    "equityWeight": 0.23565934910119568
+  },
+  {
+    "key": "KLRS",
+    "ticker": "KLRS",
+    "name": "Kalaris Therapeutics Inc",
+    "value": 52426000,
+    "shares": 12881175,
+    "cusips": [
+      "482929106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 7,
+    "weight": 4.306171363048703,
+    "equityWeight": 4.3062138075485645
+  },
+  {
+    "key": "VTVT",
+    "ticker": "VTVT",
+    "name": "Vtv Therapeutics Inc",
+    "value": 11238000,
+    "shares": 298496,
+    "cusips": [
+      "918385204"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 13,
+    "weight": 0.9230678247041798,
+    "equityWeight": 0.9230769230769231
+  },
+  {
+    "key": "AQST",
+    "ticker": "AQST",
+    "name": "Aquestive Therapeutics Inc",
+    "value": 10400000,
+    "shares": 2500000,
+    "cusips": [
+      "03843E104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 14,
+    "weight": 0.8542361075746102,
+    "equityWeight": 0.8542445274959957
+  },
+  {
+    "key": "NKTX",
+    "ticker": "NKTX",
+    "name": "Nkarta, Inc.",
+    "value": 9433000,
+    "shares": 3333333,
+    "cusips": [
+      "65487U108"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 12,
+    "weight": 0.9078860873892092,
+    "equityWeight": 0.9078922040423484
+  },
+  {
+    "key": "RANI",
+    "ticker": "RANI",
+    "name": "Rani Therapeutics Hldgs Inc",
+    "value": 7884000,
+    "shares": 10369159,
+    "cusips": [
+      "753018100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 17,
+    "weight": 0.6475766800113679,
+    "equityWeight": 0.6475830629594644
+  },
+  {
+    "key": "CHRS",
+    "ticker": "CHRS",
+    "name": "Coherus Oncology Inc",
+    "value": 4799000,
+    "shares": 3428571,
+    "cusips": [
+      "19249H103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 0.39418068079332247,
+    "equityWeight": 0.3941845661012773
+  },
+  {
+    "key": "GOSS",
+    "ticker": "GOSS",
+    "name": "Gossamer Bio Inc",
+    "value": 1275000,
+    "shares": 7750000,
+    "cusips": [
+      "38341P102"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 26,
+    "weight": 0.11460282704950303,
+    "equityWeight": 0.11702229205827067
+  },
+  {
+    "key": "ICLR",
+    "ticker": "ICLR",
+    "name": "Icon Pub Ltd Co",
+    "value": 53527000,
+    "shares": 308143,
+    "cusips": [
+      "G4705A100"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 2,
+    "weight": 8.872250989544312,
+    "equityWeight": 8.872442171740195
+  },
+  {
+    "key": "MTD",
+    "ticker": "MTD",
+    "name": "Mettler Toledo International",
+    "value": 17047000,
+    "shares": 13344,
+    "cusips": [
+      "592688105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 18,
+    "weight": 1.462708107917947,
+    "equityWeight": 1.4800518152709188
+  },
+  {
+    "key": "COO",
+    "ticker": "COO",
+    "name": "Cooper Cos Inc",
+    "value": 15840000,
+    "shares": 220890,
+    "cusips": [
+      "216648501"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 24,
+    "weight": 1.359142161636668,
+    "equityWeight": 1.3752578608489092
+  },
+  {
+    "key": "OSCR",
+    "ticker": "OSCR",
+    "name": "Oscar Health Inc",
+    "value": 14802000,
+    "shares": 519016,
+    "cusips": [
+      "687793109"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 28,
+    "weight": 1.270077163923356,
+    "equityWeight": 1.2851367964826739
+  },
+  {
+    "key": "MMSI",
+    "ticker": "MMSI",
+    "name": "Merit Med Sys Inc",
+    "value": 13662000,
+    "shares": 197038,
+    "cusips": [
+      "589889104"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 31,
+    "weight": 1.1722601144116263,
+    "equityWeight": 1.1861599049821843
+  },
+  {
+    "key": "ITGR",
+    "ticker": "ITGR",
+    "name": "Integer Hldgs Corp",
+    "value": 11837000,
+    "shares": 126669,
+    "cusips": [
+      "45826H109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 35,
+    "weight": 1.015667030763462,
+    "equityWeight": 1.0277100567467512
+  },
+  {
+    "key": "HSIC",
+    "ticker": "HSIC",
+    "name": "Schein Henry Inc",
+    "value": 11227000,
+    "shares": 134423,
+    "cusips": [
+      "806407102"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 40,
+    "weight": 0.9633263288317471,
+    "equityWeight": 0.9747487376105242
+  },
+  {
+    "key": "TFX",
+    "ticker": "TFX",
+    "name": "Teleflex Incorporated",
+    "value": 10103000,
+    "shares": 79708,
+    "cusips": [
+      "879369106"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 43,
+    "weight": 0.8668821501903571,
+    "equityWeight": 0.8771609954644273
+  },
+  {
+    "key": "AMRX",
+    "ticker": "AMRX",
+    "name": "Amneal Pharmaceuticals Inc",
+    "value": 9367000,
+    "shares": 541190,
+    "cusips": [
+      "03168L105"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 43,
+    "weight": 0.9589210781438269,
+    "equityWeight": 0.9620519941498364
+  },
+  {
+    "key": "DTIL",
+    "ticker": "DTIL",
+    "name": "Precision Biosciences Inc",
+    "value": 36000,
+    "shares": 4675,
+    "cusips": [
+      "74019P207"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 47,
+    "weight": 0.0032873710163455394,
+    "equityWeight": 0.0032874310552653686
+  },
+  {
+    "key": "GYRE",
+    "ticker": "GYRE",
+    "name": "Gyre Therapeutics Inc",
+    "value": 6289000,
+    "shares": 954416,
+    "cusips": [
+      "403783103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 0.5652840622073133,
+    "equityWeight": 0.5772181919642857
+  },
+  {
+    "key": "UNCY",
+    "ticker": "UNCY",
+    "name": "Unicycive Therapeutics",
+    "value": 2579000,
+    "shares": 550000,
+    "cusips": [
+      "90466Y202"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 42,
+    "weight": 0.2355036069765318,
+    "equityWeight": 0.2355079080980385
+  },
+  {
+    "key": "SLGL",
+    "ticker": "SLGL",
+    "name": "Sol-Gel Technologies Ltd",
+    "value": 37070000,
+    "shares": 500000,
+    "cusips": [
+      "M8694L137"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 8,
+    "weight": 3.357236397622856,
+    "equityWeight": 3.3573002487861823
+  },
+  {
+    "key": "ACOG",
+    "ticker": "ACOG",
+    "name": "Alpha Cognition Inc",
+    "value": 6037000,
+    "shares": 836259,
+    "cusips": [
+      "02074J501"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 34,
+    "weight": 0.6504168399459583,
+    "equityWeight": 0.9921492513274948
+  },
+  {
+    "key": "CDXS",
+    "ticker": "CDXS",
+    "name": "Codexis Inc",
+    "value": 15334000,
+    "shares": 6785000,
+    "cusips": [
+      "192005106"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 19,
+    "weight": 1.3887203377704038,
+    "equityWeight": 1.3887467497946404
+  },
+  {
+    "key": "VSTM",
+    "ticker": "VSTM",
+    "name": "Verastem Inc",
+    "value": 1182000,
+    "shares": 309685,
+    "cusips": [
+      "92337C203"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 44,
+    "weight": 0.16332328337833243,
+    "equityWeight": 0.16332892538686986
+  },
+  {
+    "key": "ZNTL",
+    "ticker": "ZNTL",
+    "name": "Zentalis Pharmaceuticals Inc.",
+    "value": 6418000,
+    "shares": 1323327,
+    "cusips": [
+      "98943L107"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 0.8770767025305125,
+    "equityWeight": 0.8770826955875279
+  },
+  {
+    "key": "LYEL",
+    "ticker": "LYEL",
+    "name": "Lyell Immunopharma, Inc.",
+    "value": 9723000,
+    "shares": 692050,
+    "cusips": [
+      "55083R104"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 9,
+    "weight": 1.3287343064356767,
+    "equityWeight": 1.328743385664932
+  },
+  {
+    "key": "VYGR",
+    "ticker": "VYGR",
+    "name": "Voyager Therapeutics Inc",
+    "value": 4147000,
+    "shares": 1185000,
+    "cusips": [
+      "92915B106"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 39,
+    "weight": 0.37557214299816516,
+    "equityWeight": 0.37557928599180734
+  },
+  {
+    "key": "BDSX",
+    "ticker": "BDSX",
+    "name": "Biodesix Inc",
+    "value": 4059000,
+    "shares": 180000,
+    "cusips": [
+      "09075X207"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 40,
+    "weight": 0.36760244235098927,
+    "equityWeight": 0.36760943376916955
+  },
+  {
+    "key": "SNWV",
+    "ticker": "SNWV",
+    "name": "Sanuwave Health Inc",
+    "value": 3061000,
+    "shares": 306140,
+    "cusips": [
+      "80303D305"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 43,
+    "weight": 0.2772187918296078,
+    "equityWeight": 0.2772240642442542
+  },
+  {
+    "key": "FBIO",
+    "ticker": "FBIO",
+    "name": "Fortress Biotech Inc",
+    "value": 2723000,
+    "shares": 890000,
+    "cusips": [
+      "34960Q307"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 44,
+    "weight": 0.24660789616204573,
+    "equityWeight": 0.2466125863891226
+  },
+  {
+    "key": "CAMP",
+    "ticker": "CAMP",
+    "name": "Camp4 Therapeutics Corporation",
+    "value": 18557000,
+    "shares": 4246568,
+    "cusips": [
+      "13463J101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 22,
+    "weight": 1.6945484430645603,
+    "equityWeight": 1.6945793914599847
+  },
+  {
+    "key": "MSLE",
+    "ticker": "MSLE",
+    "name": "Satellos Bioscience Inc",
+    "value": 3014000,
+    "shares": 387769,
+    "cusips": [
+      "80401L803"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 25,
+    "weight": 0.4826717015698841,
+    "equityWeight": 0.48268561536010046
+  },
+  {
+    "key": "SERA",
+    "ticker": "SERA",
+    "name": "Sera Prognostics Inc",
+    "value": 3003000,
+    "shares": 1650440,
+    "cusips": [
+      "81749D107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 41,
+    "weight": 0.27422153228015705,
+    "equityWeight": 0.2742265405267195
+  },
+  {
+    "key": "TIL",
+    "ticker": "TIL",
+    "name": "Instil Bio Inc",
+    "value": 2251000,
+    "shares": 292743,
+    "cusips": [
+      "45783C200"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 43,
+    "weight": 0.20555200438316135,
+    "equityWeight": 0.20555575848339847
+  },
+  {
+    "key": "KTTA",
+    "ticker": "KTTA",
+    "name": "Pasithea Therapeutics Corp",
+    "value": 239000,
+    "shares": 465471,
+    "cusips": [
+      "70261F202"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 46,
+    "weight": 0.021824490914071775,
+    "equityWeight": 0.02182488950578953
+  },
+  {
+    "key": "MOBI",
+    "ticker": "MOBI",
+    "name": "Mobia Med Inc",
+    "value": 10696000,
+    "shares": 798282,
+    "cusips": [
+      "60705V103"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 9,
+    "weight": 1.7128920106142933,
+    "equityWeight": 1.7129413874889299
+  },
+  {
+    "key": "OCS",
+    "ticker": "OCS",
+    "name": "Oculis Holding Ag",
+    "value": 8890000,
+    "shares": 641022,
+    "cusips": [
+      "H5870P102"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 13,
+    "weight": 0.8556246493045764,
+    "equityWeight": 0.8556304138594804
+  },
+  {
+    "key": "IQV",
+    "ticker": "IQV",
+    "name": "Iqvia Hldgs Inc",
+    "value": 20444000,
+    "shares": 105811,
+    "cusips": [
+      "46266C105"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 15,
+    "weight": 2.092898742561375,
+    "equityWeight": 2.099732141389907
+  },
+  {
+    "key": "XERS",
+    "ticker": "XERS",
+    "name": "Xeris Biopharma Holdings Inc",
+    "value": 826000,
+    "shares": 104410,
+    "cusips": [
+      "98422E103"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 48,
+    "weight": 0.11413285285152505,
+    "equityWeight": 0.1141367955749192
+  },
+  {
+    "key": "CYRX",
+    "ticker": "CYRX",
+    "name": "Cryoport Inc",
+    "value": 7980000,
+    "shares": 508324,
+    "cusips": [
+      "229050307"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 45,
+    "weight": 0.816930735944031,
+    "equityWeight": 0.8195980477544246
+  },
+  {
+    "key": "RMD",
+    "ticker": "RMD",
+    "name": "Resmed Inc",
+    "value": 6427000,
+    "shares": 32983,
+    "cusips": [
+      "761152107"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 50,
+    "weight": 0.6579465964802366,
+    "equityWeight": 0.6600948186613642
+  },
+  {
+    "key": "CERS",
+    "ticker": "CERS",
+    "name": "Cerus Corp",
+    "value": 10140000,
+    "shares": 3472737,
+    "cusips": [
+      "157085101"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 30,
+    "weight": 1.0538853447577,
+    "equityWeight": 1.144527656596554
+  },
+  {
+    "key": "BNTC",
+    "ticker": "BNTC",
+    "name": "Benitec Biopharma Inc",
+    "value": 9096000,
+    "shares": 679826,
+    "cusips": [
+      "08205P209"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 32,
+    "weight": 0.9453788063033569,
+    "equityWeight": 1.0266887144380923
+  },
+  {
+    "key": "CGEN",
+    "ticker": "CGEN",
+    "name": "Compugen Ltd",
+    "value": 6814000,
+    "shares": 3184257,
+    "cusips": [
+      "M25722105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 39,
+    "weight": 0.7082026369998982,
+    "equityWeight": 0.7691135554288875
+  },
+  {
+    "key": "ABEO",
+    "ticker": "ABEO",
+    "name": "Abeona Therapeutics Inc",
+    "value": 672000,
+    "shares": 108865,
+    "cusips": [
+      "00289Y206"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 49,
+    "weight": 0.09285384638768139,
+    "equityWeight": 0.09285705402705291
+  },
+  {
+    "key": "CNTB",
+    "ticker": "CNTB",
+    "name": "Connect Biopharma Hldgs Ltd",
+    "value": 10801000,
+    "shares": 4538534,
+    "cusips": [
+      "G23549101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 18,
+    "weight": 1.1636826715680466,
+    "equityWeight": 1.7750876368375468
+  },
+  {
+    "key": "PTHS",
+    "ticker": "PTHS",
+    "name": "Pelthos Therapeutics Inc",
+    "value": 7251000,
+    "shares": 256598,
+    "cusips": [
+      "171126204"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 24,
+    "weight": 0.7812112815054074,
+    "equityWeight": 1.1916637769381586
+  },
+  {
+    "key": "SPRB",
+    "ticker": "SPRB",
+    "name": "Spruce Biosciences Inc",
+    "value": 6553000,
+    "shares": 121356,
+    "cusips": [
+      "85209E208"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 27,
+    "weight": 0.706009864529711,
+    "equityWeight": 1.0769511419494904
+  },
+  {
+    "key": "OCGN",
+    "ticker": "OCGN",
+    "name": "Ocugen Inc",
+    "value": 6063000,
+    "shares": 3962972,
+    "cusips": [
+      "67577C105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 33,
+    "weight": 0.6532180388590932,
+    "equityWeight": 0.9964222148084481
+  },
+  {
+    "key": "CRDL",
+    "ticker": "CRDL",
+    "name": "Cardiol Therapeutics Inc",
+    "value": 3524000,
+    "shares": 3325000,
+    "cusips": [
+      "14161Y200"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 50,
+    "weight": 0.3796701911495043,
+    "equityWeight": 0.5791508964184349
+  },
+  {
+    "key": "JNJ",
+    "ticker": "JNJ",
+    "name": "Johnson & Johnson",
+    "value": 107923000,
+    "shares": 424945,
+    "cusips": [
+      "478160104"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 1,
+    "weight": 13.271005282677342,
+    "equityWeight": 13.271152155334075
+  },
+  {
+    "key": "BYSI",
+    "ticker": "BYSI",
+    "name": "Beyondspring Inc.",
+    "value": 6651000,
+    "shares": 3800702,
+    "cusips": [
+      "G10830100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 10,
+    "weight": 0.9089182219586224,
+    "equityWeight": 0.9089244325884461
+  },
+  {
+    "key": "PYXS",
+    "ticker": "PYXS",
+    "name": "Pyxis Oncology Inc",
+    "value": 2601000,
+    "shares": 864277,
+    "cusips": [
+      "747324101"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 35,
+    "weight": 0.3593941286523204,
+    "equityWeight": 0.3594065439350664
+  },
+  {
+    "key": "IOVA",
+    "ticker": "IOVA",
+    "name": "Iovance Biotherapeutics Inc",
+    "value": 22032000,
+    "shares": 5296209,
+    "cusips": [
+      "462260100"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 11,
+    "weight": 3.0442796779961254,
+    "equityWeight": 3.044384842744092
+  },
+  {
+    "key": "ALGN",
+    "ticker": "ALGN",
+    "name": "Align Technology Inc",
+    "value": 5294000,
+    "shares": 31389,
+    "cusips": [
+      "016255101"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 28,
+    "weight": 0.7315003910362876,
+    "equityWeight": 0.731525660742884
+  },
+  {
+    "key": "EHTH",
+    "ticker": "EHTH",
+    "name": "Ehealth Inc",
+    "value": 2209000,
+    "shares": 1482797,
+    "cusips": [
+      "28238P109"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 36,
+    "weight": 0.3052293849261729,
+    "equityWeight": 0.30523992908595216
+  },
+  {
+    "key": "SENS",
+    "ticker": "SENS",
+    "name": "Senseonics Hldgs Inc",
+    "value": 9088000,
+    "shares": 1600000,
+    "cusips": [
+      "81727U303"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 12,
+    "weight": 1.4553816933865649,
+    "equityWeight": 1.455423647111013
+  },
+  {
+    "key": "KPTI",
+    "ticker": "KPTI",
+    "name": "Karyopharm Therapeutics Inc",
+    "value": 9032000,
+    "shares": 924487,
+    "cusips": [
+      "48576U205"
+    ],
+    "mappingNote": null,
+    "category": "Biotech / biopharma",
+    "rank": 13,
+    "weight": 1.4464136723885845,
+    "equityWeight": 1.446455367595364
+  },
+  {
+    "key": "TEM",
+    "ticker": "TEM",
+    "name": "Tempus Ai Inc",
+    "value": 14845000,
+    "shares": 256269,
+    "cusips": [
+      "88023B103"
+    ],
+    "mappingNote": null,
+    "category": "Adjacent healthcare",
+    "rank": 19,
+    "weight": 2.4606005556034396,
+    "equityWeight": 2.4606535774372404
+  },
+  {
+    "key": "EHC",
+    "ticker": "EHC",
+    "name": "Encompass Health Corp",
+    "value": 4245000,
+    "shares": 42000,
+    "cusips": [
+      "29261A100"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 20,
+    "weight": 0.6798080202933504,
+    "equityWeight": 0.6798276168558813
+  },
+  {
+    "key": "ODD",
+    "ticker": "ODD",
+    "name": "Oddity Tech Ltd",
+    "value": 1059000,
+    "shares": 70000,
+    "cusips": [
+      "M7518J104"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 36,
+    "weight": 0.1695916828010973,
+    "equityWeight": 0.16959657155485947
+  },
+  {
+    "key": "SCYX",
+    "ticker": "SCYX",
+    "name": "Scynexis Inc",
+    "value": 1059000,
+    "shares": 260206,
+    "cusips": [
+      "811292309"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 37,
+    "weight": 0.1695916828010973,
+    "equityWeight": 0.16959657155485947
+  },
+  {
+    "key": "PTON",
+    "ticker": "PTON",
+    "name": "Peloton Interactive Inc",
+    "value": 591000,
+    "shares": 100000,
+    "cusips": [
+      "70614W100"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 41,
+    "weight": 0.09464465017511663,
+    "equityWeight": 0.09464737845979408
+  },
+  {
+    "key": "FTRE",
+    "ticker": "FTRE",
+    "name": "Fortrea Hldgs Inc",
+    "value": 20554000,
+    "shares": 1181274,
+    "cusips": [
+      "34965K107"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 13,
+    "weight": 3.4068833829486764,
+    "equityWeight": 3.4069567955975106
+  },
+  {
+    "key": "PCSC",
+    "ticker": "PCSC",
+    "name": "Perceptive Cap Solutions Cor",
+    "value": 410000,
+    "shares": 37686,
+    "cusips": [
+      "G70077105"
+    ],
+    "mappingNote": null,
+    "category": "Unclassified equity",
+    "rank": 27,
+    "weight": 0.06795865461754196,
+    "equityWeight": 0.06796011901308646
+  }
+]
