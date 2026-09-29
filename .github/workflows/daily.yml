@@ -2,8 +2,8 @@ name: Daily refresh and publish
 
 on:
   schedule:
-    # 00:30 UTC Tue–Sat: the previous US session's close is final and its date is before "today" in UTC.
-    - cron: '30 0 * * 2-6'
+    # 03:00 UTC Tue–Sat: Yahoo's daily bar for the previous US session was still incomplete at 00:50 UTC.
+    - cron: '0 3 * * 2-6'
   workflow_dispatch:
     inputs:
       refresh_holders:

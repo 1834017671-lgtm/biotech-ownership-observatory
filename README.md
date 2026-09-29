@@ -16,7 +16,7 @@ Open http://127.0.0.1:8765/ . The static site also contains a downloadable JSON 
 
 The site is published with GitHub Pages by `.github/workflows/daily.yml`. The open page checks `version.json` every second (paused while the tab is hidden) and loads new data in place, keeping the selected tab, filters and open company profile. Source data does not change every second: prices are refreshed once per US trading day and 13F holdings change quarterly.
 
-The workflow runs at 00:30 UTC Tuesday–Saturday, on manual dispatch, and on every push to `main` (push runs only rebuild the site). A scheduled run calls `scripts/daily.py`, which:
+The workflow runs at 03:00 UTC Tuesday–Saturday, on manual dispatch, and on every push to `main` (push runs only rebuild the site). A scheduled run calls `scripts/daily.py`, which:
 
 - checks SEC EDGAR for new 13F-HR and 13F-HR/A filings by each tracked manager and re-collects only managers with new filings (amendments are listed for human review);
 - refreshes prices and statistics for every candidate, keeping the last good observation, marked `carriedForward`, when a vendor request fails;
