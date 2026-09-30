@@ -82,5 +82,33 @@
     "XOMA"
    ]
   }
+ },
+ {
+  "run": "2026-09-30T03:06:21+00:00",
+  "newFilings": [],
+  "errors": [
+   {
+    "source": "SEC EDGAR",
+    "error": "SEC_USER_AGENT not set; new-filing check skipped"
+   }
+  ],
+  "prices": {
+   "withPrices": 465,
+   "carriedForward": [
+    "APGE"
+   ],
+   "missing": [
+    "AADI",
+    "ATHA",
+    "CYBN",
+    "EDAP",
+    "ELYM",
+    "GLPG",
+    "GLTO",
+    "OCUP",
+    "PCSC",
+    "XOMA"
+   ]
+  }
  }
 ]
