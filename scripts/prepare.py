@@ -43,6 +43,12 @@ def prepare():
  market=json.loads((BASE/'data/market.json').read_text()) if (BASE/'data/market.json').exists() else {}
  owners=json.loads((BASE/'data/holders.json').read_text()) if (BASE/'data/holders.json').exists() else {}
  selection=json.loads((BASE/'data/universe-selection.json').read_text()) if (BASE/'data/universe-selection.json').exists() else None
+ # Rebuild equal-weight healthcare proxy baskets from the latest daily series before packaging the snapshot.
+ try:
+  import importlib.util
+  spec=importlib.util.spec_from_file_location('proxies',BASE/'scripts'/'proxies.py');mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod);mod.build()
+ except Exception as e:print('proxy build skipped:',e)
+ proxies=json.loads((BASE/'data/proxies.json').read_text()) if (BASE/'data/proxies.json').exists() else None
  log=json.loads((BASE/'data/refresh-log.json').read_text()) if (BASE/'data/refresh-log.json').exists() else []
  built=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')
  # Hash UI assets so open tabs can full-reload when app.js or style.css changes, not only when holdings data changes.
@@ -50,7 +56,7 @@ def prepare():
   p=BASE/'dist'/name
   return hashlib.sha1(p.read_bytes()).hexdigest()[:12] if p.exists() else None
  appHash=asset('app.js');styleHash=asset('style.css')
- payload={'retrieved':d['retrieved'],'built':built,'build':built,'app':appHash,'style':styleHash,'funds':funds,'market':market,'owners':owners,'selection':selection,'therapeuticAreas':{'note':areas_src.get('note'),'areas':areas_src.get('areas',[])},'errors':d['errors'],'refreshLog':log[-30:],'expectedFunds':len(funds),'version':2}
+ payload={'retrieved':d['retrieved'],'built':built,'build':built,'app':appHash,'style':styleHash,'funds':funds,'market':market,'owners':owners,'selection':selection,'therapeuticAreas':{'note':areas_src.get('note'),'areas':areas_src.get('areas',[])},'proxies':proxies,'errors':d['errors'],'refreshLog':log[-30:],'expectedFunds':len(funds),'version':2}
  # The browser polls version.json every second, so it is written last and every file is replaced atomically.
  def write(name,text):
   tmp=BASE/'dist'/(name+'.tmp');tmp.write_text(text);os.replace(tmp,BASE/'dist'/name)

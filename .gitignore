@@ -18,4 +18,6 @@ data/*
 !data/candidates.json
 !data/refresh-log.json
 !data/therapeutic-areas.json
+!data/healthcare-proxies.json
+!data/proxies.json
 !data/raw/

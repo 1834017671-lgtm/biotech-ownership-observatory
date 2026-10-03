@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "asOfNote": "Custom equal-weight equity proxies for subsector beta and relative-alpha measurement. Individual equities only — not XLV/XBI/IBB/IHI/XPH or other broad ETFs.",
+  "weighting": "equal-weight",
+  "rebalance": "quarterly (conceptual; returns below are equal-weight averages of member total returns over each window, using completed daily bars)",
+  "currency": "USD",
+  "limitations": [
+    "Not Morgan Stanley or other sell-side baskets; constituents are a transparent research proxy.",
+    "Equal-weight overstates small names vs cap-weight sector beta.",
+    "EU Pharma uses liquid US-listed ADRs/ORDs; local European share classes are not included.",
+    "SMID Biotech uses a qualitative commercial/clinical + size screen; market-cap bands are checked when vendor market cap is available and otherwise rely on curated membership.",
+    "Returns require a completed daily close for each member; missing members are dropped from that window and flagged."
+  ],
+  "baskets": [
+    {
+      "id": "us_pharma",
+      "label": "US Pharma",
+      "group": "Pharma",
+      "definition": "US-listed large commercial pharma / major biopharma with diversified marketed drug franchises (not pure clinical biotech, not tools/medtech/payers).",
+      "rules": {
+        "listing": "US common shares preferred",
+        "business": "Diversified commercial pharmaceutical or large biopharma franchises",
+        "exclude": "Clinical-stage biotech, tools, medtech, managed care, facilities, EU-domiciled ADRs"
+      },
+      "constituents": [
+        {"ticker": "LLY", "name": "Eli Lilly", "rationale": "US mega-cap pharma; diabetes/obesity and broad specialty franchise"},
+        {"ticker": "JNJ", "name": "Johnson & Johnson", "rationale": "US diversified healthcare with large Innovative Medicine drug franchise"},
+        {"ticker": "ABBV", "name": "AbbVie", "rationale": "US large-cap immunology and specialty pharma"},
+        {"ticker": "MRK", "name": "Merck", "rationale": "US large-cap pharma; oncology and vaccines"},
+        {"ticker": "PFE", "name": "Pfizer", "rationale": "US large-cap diversified pharma"},
+        {"ticker": "BMY", "name": "Bristol-Myers Squibb", "rationale": "US large-cap oncology and specialty pharma"},
+        {"ticker": "AMGN", "name": "Amgen", "rationale": "US large-cap commercial biopharma"},
+        {"ticker": "GILD", "name": "Gilead Sciences", "rationale": "US large-cap antiviral and oncology commercial franchise"},
+        {"ticker": "REGN", "name": "Regeneron", "rationale": "US large commercial biopharma with antibody franchise"},
+        {"ticker": "BIIB", "name": "Biogen", "rationale": "US large commercial neuroscience biopharma"},
+        {"ticker": "VRTX", "name": "Vertex Pharmaceuticals", "rationale": "US large commercial specialty biopharma"}
+      ]
+    },
+    {
+      "id": "eu_pharma",
+      "label": "EU Pharma",
+      "group": "Pharma",
+      "definition": "European-domiciled large pharma accessed via liquid US listings/ADRs.",
+      "rules": {
+        "listing": "US-listed ADR or ordinary share of EU/UK/Swiss domicile",
+        "business": "Large commercial European pharmaceutical companies",
+        "exclude": "US-domiciled names, clinical biotech, tools"
+      },
+      "constituents": [
+        {"ticker": "NVO", "name": "Novo Nordisk", "rationale": "Danish mega-cap diabetes/obesity pharma"},
+        {"ticker": "AZN", "name": "AstraZeneca", "rationale": "UK large-cap oncology and biopharma"},
+        {"ticker": "NVS", "name": "Novartis", "rationale": "Swiss large-cap diversified pharma"},
+        {"ticker": "SNY", "name": "Sanofi", "rationale": "French large-cap pharma"},
+        {"ticker": "GSK", "name": "GSK", "rationale": "UK large-cap vaccines and specialty pharma"},
+        {"ticker": "RHHBY", "name": "Roche", "rationale": "Swiss large-cap pharma/diagnostics ADR"},
+        {"ticker": "ARGX", "name": "argenx", "rationale": "Dutch commercial immunology biopharma with EU domicile"},
+        {"ticker": "GMAB", "name": "Genmab", "rationale": "Danish antibody biopharma with commercial partnerships"}
+      ]
+    },
+    {
+      "id": "life_science_tools",
+      "label": "Life Science Tools",
+      "group": "Tools",
+      "definition": "Instruments, reagents, and research/clinical lab workflow enablers — not implant medtech, hospitals, or payers.",
+      "rules": {
+        "listing": "US-listed",
+        "business": "Life-science tools, instruments, reagents, research services enabling discovery/clinical labs",
+        "exclude": "Orthopedics/implants, hospitals, managed care, pure-play therapeutic biotech"
+      },
+      "constituents": [
+        {"ticker": "TMO", "name": "Thermo Fisher Scientific", "rationale": "Broad life-science tools and lab products"},
+        {"ticker": "DHR", "name": "Danaher", "rationale": "Life-science and diagnostics tools conglomerate"},
+        {"ticker": "A", "name": "Agilent Technologies", "rationale": "Analytical instruments and lab tools"},
+        {"ticker": "MTD", "name": "Mettler-Toledo", "rationale": "Precision instruments for labs and manufacturing"},
+        {"ticker": "WAT", "name": "Waters", "rationale": "Chromatography and analytical instruments"},
+        {"ticker": "ILMN", "name": "Illumina", "rationale": "Sequencing tools/platform"},
+        {"ticker": "IQV", "name": "IQVIA", "rationale": "Research/clinical data and CRO-adjacent tools services"},
+        {"ticker": "TECH", "name": "Bio-Techne", "rationale": "Reagents and protein tools"},
+        {"ticker": "BRKR", "name": "Bruker", "rationale": "Scientific instruments"},
+        {"ticker": "BIO", "name": "Bio-Rad Laboratories", "rationale": "Life-science research and clinical diagnostics products"},
+        {"ticker": "CRL", "name": "Charles River Laboratories", "rationale": "Discovery and safety assessment research services"},
+        {"ticker": "QGEN", "name": "Qiagen", "rationale": "Sample-prep and molecular testing tools"}
+      ]
+    },
+    {
+      "id": "smid_biotech",
+      "label": "SMID Biotech",
+      "group": "Biotech",
+      "definition": "Small/mid-cap biotechnology and clinical or early-commercial biopharma. Excludes mega-cap biotech and diversified big pharma.",
+      "rules": {
+        "listing": "US-listed common shares or ADRs",
+        "business": "Biotechnology / biopharma therapeutic developers",
+        "size": "Prefer below mega-cap; exclude AMGN/GILD/VRTX/REGN-scale names from this sleeve",
+        "exclude": "Tools, medtech, payers, US/EU large diversified pharma"
+      },
+      "constituents": [
+        {"ticker": "RVMD", "name": "Revolution Medicines", "rationale": "Clinical oncology biotech; specialist-owned"},
+        {"ticker": "CGON", "name": "CG Oncology", "rationale": "Clinical oncology biotech"},
+        {"ticker": "DNTH", "name": "Dianthus Therapeutics", "rationale": "Clinical I&I / complement biotech"},
+        {"ticker": "ASND", "name": "Ascendis Pharma", "rationale": "SMID commercial/clinical endocrinology biopharma ADR"},
+        {"ticker": "MDGL", "name": "Madrigal Pharmaceuticals", "rationale": "Commercial/early-commercial metabolic biotech"},
+        {"ticker": "PCVX", "name": "Vaxcyte", "rationale": "Clinical vaccine biotech"},
+        {"ticker": "CYTK", "name": "Cytokinetics", "rationale": "Clinical cardiovascular biotech"},
+        {"ticker": "BBIO", "name": "BridgeBio Pharma", "rationale": "SMID genetic-disease biopharma platform"},
+        {"ticker": "ROIV", "name": "Roivant Sciences", "rationale": "SMID biopharma pipeline holding company"},
+        {"ticker": "NUVL", "name": "Nuvalent", "rationale": "Clinical oncology biotech"},
+        {"ticker": "CRSP", "name": "CRISPR Therapeutics", "rationale": "SMID gene-editing biotech"},
+        {"ticker": "BEAM", "name": "Beam Therapeutics", "rationale": "SMID base-editing biotech"},
+        {"ticker": "NTLA", "name": "Intellia Therapeutics", "rationale": "SMID in vivo CRISPR biotech"},
+        {"ticker": "SRPT", "name": "Sarepta Therapeutics", "rationale": "SMID/mid commercial rare-disease biotech"},
+        {"ticker": "NBIX", "name": "Neurocrine Biosciences", "rationale": "Mid-cap neuroscience biopharma"},
+        {"ticker": "EXEL", "name": "Exelixis", "rationale": "Mid-cap commercial oncology biotech"},
+        {"ticker": "IONS", "name": "Ionis Pharmaceuticals", "rationale": "Mid-cap RNA platform biotech"},
+        {"ticker": "ALNY", "name": "Alnylam Pharmaceuticals", "rationale": "Upper-mid RNAi biotech; kept in SMID sleeve vs mega-cap pharma"},
+        {"ticker": "BNTX", "name": "BioNTech", "rationale": "SMID/mid immuno-oncology & vaccine biotech ADR"},
+        {"ticker": "UTHR", "name": "United Therapeutics", "rationale": "Mid-cap commercial pulmonary biotech"}
+      ]
+    }
+  ]
+}

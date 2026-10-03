@@ -83,7 +83,12 @@ def one(t):
   except Exception as e:o['statisticsError']=str(e)
  return t,o
 def main():
- candidates=json.loads((BASE/'data/candidates.json').read_text());tickers=sorted({p['ticker'] for p in candidates if p['ticker']}|{'XBI','XLV'})
+ candidates=json.loads((BASE/'data/candidates.json').read_text());tickers={p['ticker'] for p in candidates if p['ticker']}|{'XBI','XLV'}
+ # Always refresh custom healthcare proxy constituents alongside the ownership screen.
+ if (BASE/'data/healthcare-proxies.json').exists():
+  for b in json.loads((BASE/'data/healthcare-proxies.json').read_text()).get('baskets',[]):
+   tickers|={c['ticker'] for c in b.get('constituents',[]) if c.get('ticker')}
+ tickers=sorted(tickers)
  previous=json.loads((BASE/'data/market.json').read_text()) if (BASE/'data/market.json').exists() else {}
  result={}
  with concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS) as pool:
