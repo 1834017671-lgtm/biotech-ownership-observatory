@@ -1,5 +1,5 @@
 """Normalize common equity and produce the browser snapshot; no inferred shorts."""
-import json,pathlib,re,collections,datetime,os
+import json,pathlib,re,collections,datetime,os,hashlib
 BASE=pathlib.Path(__file__).resolve().parents[1]
 # Positions per fund that receive market and holder data; the dashboard offers cutoffs up to 50.
 CANDIDATE_DEPTH=int(os.environ.get('CANDIDATE_DEPTH','50'))
@@ -37,13 +37,18 @@ def prepare():
  selection=json.loads((BASE/'data/universe-selection.json').read_text()) if (BASE/'data/universe-selection.json').exists() else None
  log=json.loads((BASE/'data/refresh-log.json').read_text()) if (BASE/'data/refresh-log.json').exists() else []
  built=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')
- payload={'retrieved':d['retrieved'],'built':built,'build':built,'funds':funds,'market':market,'owners':owners,'selection':selection,'errors':d['errors'],'refreshLog':log[-30:],'expectedFunds':len(funds),'version':2}
+ # Hash UI assets so open tabs can full-reload when app.js or style.css changes, not only when holdings data changes.
+ def asset(name):
+  p=BASE/'dist'/name
+  return hashlib.sha1(p.read_bytes()).hexdigest()[:12] if p.exists() else None
+ appHash=asset('app.js');styleHash=asset('style.css')
+ payload={'retrieved':d['retrieved'],'built':built,'build':built,'app':appHash,'style':styleHash,'funds':funds,'market':market,'owners':owners,'selection':selection,'errors':d['errors'],'refreshLog':log[-30:],'expectedFunds':len(funds),'version':2}
  # The browser polls version.json every second, so it is written last and every file is replaced atomically.
  def write(name,text):
   tmp=BASE/'dist'/(name+'.tmp');tmp.write_text(text);os.replace(tmp,BASE/'dist'/name)
  write('data.js','window.DASHBOARD_DATA='+json.dumps(payload,separators=(',',':'))+';\n')
  write('snapshot.json',json.dumps(payload))
- write('version.json',json.dumps({'version':built,'built':built,'holdingsPeriod':max((f['filings'][0]['period'] for f in funds if f['filings']),default=None),'pricesThrough':max((m.get('technical',{}).get('date') or '' for m in market.values()),default='') or None}))
+ write('version.json',json.dumps({'version':built,'built':built,'app':appHash,'style':styleHash,'holdingsPeriod':max((f['filings'][0]['period'] for f in funds if f['filings']),default=None),'pricesThrough':max((m.get('technical',{}).get('date') or '' for m in market.values()),default='') or None}))
  candidates={p['key']:p for f in funds if f['filings'] for p in f['filings'][0]['positions'][:CANDIDATE_DEPTH]}
  (BASE/'data/candidates.json').write_text(json.dumps(list(candidates.values()),indent=2))
  print(f'{len(funds)} funds; {len(candidates)} top-{CANDIDATE_DEPTH} candidates')
