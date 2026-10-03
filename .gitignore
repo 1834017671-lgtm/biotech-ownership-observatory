@@ -17,4 +17,5 @@ data/*
 !data/holders.json
 !data/candidates.json
 !data/refresh-log.json
+!data/therapeutic-areas.json
 !data/raw/

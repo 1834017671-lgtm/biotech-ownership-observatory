@@ -18,6 +18,14 @@ def mapped(p):
  return t,note
 def prepare():
  d=json.loads((BASE/'data/holdings.json').read_text());funds=[]
+ areas_src=json.loads((BASE/'data/therapeutic-areas.json').read_text()) if (BASE/'data/therapeutic-areas.json').exists() else {'areas':[],'tickers':{},'nameContains':{},'note':''}
+ tick_map={k.upper():v for k,v in areas_src.get('tickers',{}).items()};name_map=areas_src.get('nameContains',{})
+ def area_of(ticker,name):
+  if ticker and ticker.upper() in tick_map:return tick_map[ticker.upper()]
+  up=(name or '').upper()
+  for frag,aid in name_map.items():
+   if frag in up:return aid
+  return 'unclassified'
  for f in d['funds']:
   histories=[]
   for r in f['filings']:
@@ -26,7 +34,7 @@ def prepare():
     if not equity(p):continue
     t,note=mapped(p);key=t or p['cusip']
     bio=any(w in p['name'].upper() for w in ['PHARMA','THERAPEUT','BIOSCIEN','BIOTECH','BIOLOG','ONCOLOGY','MEDICINES','BIOPHARM','IMMUNO','GENETIC']) or t in {'KOD','CYTK','GMAB','BLTE','ABVX','TSHA','GHRS','SVRA','NGNE','BIOA','PHVS','CABA','ANRO','DBVT','SRRK','ABSI','ANNX','RGNX','STTK','QURE','REPL','QTTB','IVA','HROW','IRON','MGTX','SLGL','RZLT','NUVB','UPB','EQ','BYSI','CMPS','INCY','ONC','BEIGENE','BPMC','AXSM','FOLD','HALO','NBIX','IONS','UTHR','VRTX','AMGN','BMRN','ACAD','ALNY','ARWR','BCRX','LGND','VCEL','ITCI','CORT','INSM','INVA','PCRX','RPRX','SGRY','ELAN','ZTS','SWTX','AKRO','AKBA','SGMO','IOVA','PTLA','SRPT','KPTI','RARE','BLUE','EDIT','NTLA','BEAM','DNLI','FULC','PRTA','PRAX','SEPN','LQDA','ASND','ARGX','ZYME','ANAB','PCVX','CELC','XOMA','EXEL','CRNX','CRSP','ALKS','NAMS','VIR','ROIV','ERAS','XNCR','NUVL','NKTR','AKTS','KARD','SNDX','AGIO','ZLAB','EYPT','TRAX','ALMS','COAG','MANE','SAGE','MRNA','BNTX','GILD','REGN','BIIB','ABBV','LLY','PFE','BMY','MRK','NVO','AZN','NVS','SNY'}
-    if key not in merged:merged[key]={'key':key,'ticker':t,'name':p['name'].title(),'value':0,'shares':0,'cusips':[],'mappingNote':note,'category':'Adjacent healthcare' if t in ADJACENT else 'Biotech / biopharma' if bio else 'Unclassified equity'}
+    if key not in merged:merged[key]={'key':key,'ticker':t,'name':p['name'].title(),'value':0,'shares':0,'cusips':[],'mappingNote':note,'category':'Adjacent healthcare' if t in ADJACENT else 'Biotech / biopharma' if bio else 'Unclassified equity','therapeuticArea':area_of(t,p['name'])}
     a=merged[key];a['value']+=p['value'];a['shares']+=(p['shares'] or 0);a['cusips'].append(p['cusip'])
    positions=sorted(merged.values(),key=lambda p:-p['value'])
    for i,p in enumerate(positions):p.update(rank=i+1,weight=p['value']/r['reportedTotal']*100,equityWeight=p['value']/equity_total*100 if equity_total else None)
@@ -42,7 +50,7 @@ def prepare():
   p=BASE/'dist'/name
   return hashlib.sha1(p.read_bytes()).hexdigest()[:12] if p.exists() else None
  appHash=asset('app.js');styleHash=asset('style.css')
- payload={'retrieved':d['retrieved'],'built':built,'build':built,'app':appHash,'style':styleHash,'funds':funds,'market':market,'owners':owners,'selection':selection,'errors':d['errors'],'refreshLog':log[-30:],'expectedFunds':len(funds),'version':2}
+ payload={'retrieved':d['retrieved'],'built':built,'build':built,'app':appHash,'style':styleHash,'funds':funds,'market':market,'owners':owners,'selection':selection,'therapeuticAreas':{'note':areas_src.get('note'),'areas':areas_src.get('areas',[])},'errors':d['errors'],'refreshLog':log[-30:],'expectedFunds':len(funds),'version':2}
  # The browser polls version.json every second, so it is written last and every file is replaced atomically.
  def write(name,text):
   tmp=BASE/'dist'/(name+'.tmp');tmp.write_text(text);os.replace(tmp,BASE/'dist'/name)
