@@ -14,14 +14,16 @@ Open http://127.0.0.1:8765/ . The static site also contains a downloadable JSON 
 
 ## Healthcare proxy baskets
 
-The **Healthcare proxies** tab builds four equal-weight equity baskets (no broad ETFs such as XLV/XBI):
+The **Healthcare proxies** tab builds equal-weight equity baskets (no broad ETFs such as XLV/XBI as constituents):
 
 - US Pharma
 - EU Pharma (liquid US ADRs/ORDs)
-- Life Science Tools
-- SMID Biotech
+- Life Science Tools (instruments, reagents, sequencing, labs)
+- SMID Biotech (XBI-style liquid biotech names reconstructed by ticker, 30+ names)
+- CXO / CDMO / CRO (outsourced development and manufacturing)
+- Hospitals / providers / insurance
 
-Constituents and inclusion rules live in `data/healthcare-proxies.json`. `scripts/proxies.py` averages completed daily member returns for 1D / 5D / 1M / 3M / YTD and a relative-return rotation matrix. Edit the JSON to change membership; the next `prepare.py` / daily refresh rebuilds the stats.
+A name can sit in more than one basket when the business mix is genuinely dual (for example Thermo Fisher in tools and CXO). Constituents and inclusion rules live in `data/healthcare-proxies.json`. `scripts/proxies.py` averages completed daily member returns for 1D / 5D / 1M / 3M / YTD and a relative-return rotation matrix. Edit the JSON to change membership; the next `prepare.py` / daily refresh rebuilds the stats.
 
 ## Public website and daily updates
 
