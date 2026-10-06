@@ -10,6 +10,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 1,
     "weight": 17.47519623669735,
     "equityWeight": 17.53601926659648
@@ -25,6 +26,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 2,
     "weight": 12.56904077014767,
     "equityWeight": 12.612787754857383
@@ -40,6 +42,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 12,
     "weight": 3.735736970171123,
     "equityWeight": 3.735817469065714
@@ -55,6 +58,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 45,
     "weight": 0.13251017661575365,
     "equityWeight": 0.1325147541844401
@@ -70,6 +74,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 2,
     "weight": 10.012325242705032,
     "equityWeight": 10.012671118830776
@@ -85,6 +90,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 14,
     "weight": 3.157922653105876,
     "equityWeight": 3.1579907010666424
@@ -100,6 +106,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "pulmonary",
     "rank": 4,
     "weight": 6.78840658502788,
     "equityWeight": 6.788552863855991
@@ -115,6 +122,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 10,
     "weight": 3.6834757118479966,
     "equityWeight": 3.6835427057723455
@@ -130,6 +138,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 2,
     "weight": 4.448196135638361,
     "equityWeight": 6.785301663004518
@@ -145,6 +154,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 25,
     "weight": 1.8294346405053947,
     "equityWeight": 1.829467913700468
@@ -160,6 +170,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 4,
     "weight": 2.627309103680991,
     "equityWeight": 4.007711055635628
@@ -175,6 +186,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 17,
     "weight": 2.581931617018173,
     "equityWeight": 2.581987253333775
@@ -190,6 +202,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "hematology",
     "rank": 16,
     "weight": 1.6369777931180778,
     "equityWeight": 1.6715372415413532
@@ -205,6 +218,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 14,
     "weight": 1.6402559217698687,
     "equityWeight": 1.640269879431229
@@ -220,6 +234,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 15,
     "weight": 1.2986314670864862,
     "equityWeight": 1.3031513991937254
@@ -235,6 +250,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 12,
     "weight": 2.479124963363453,
     "equityWeight": 2.6923489342009472
@@ -250,6 +266,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 14,
     "weight": 1.601871221906831,
     "equityWeight": 1.6018905799971803
@@ -265,6 +282,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 4,
     "weight": 6.563713928731525,
     "equityWeight": 6.8869370788262385
@@ -280,6 +298,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 6,
     "weight": 5.039611004423809,
     "equityWeight": 5.039702663320131
@@ -295,6 +314,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rna",
     "rank": 41,
     "weight": 0.9208531362806012,
     "equityWeight": 0.9317719294589959
@@ -310,6 +330,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rna",
     "rank": 18,
     "weight": 2.5572344474132613,
     "equityWeight": 2.5572895515460927
@@ -325,6 +346,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "cv",
     "rank": 12,
     "weight": 2.4000155605854467,
     "equityWeight": 2.4078517082148787
@@ -340,6 +362,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 20,
     "weight": 1.388448643430159,
     "equityWeight": 1.3884750502870504
@@ -355,6 +378,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 5,
     "weight": 6.635076817311488,
     "equityWeight": 6.635157000046996
@@ -370,6 +394,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 33,
     "weight": 0.38260759024924074,
     "equityWeight": 0.3826208074418296
@@ -385,6 +410,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 9,
     "weight": 2.7874955568443305,
     "equityWeight": 3.0272417899328974
@@ -400,6 +426,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "oncology",
     "rank": 42,
     "weight": 0.36233221141643956,
     "equityWeight": 0.3623384878638071
@@ -415,6 +442,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 8,
     "weight": 2.6327486562705538,
     "equityWeight": 2.6327710594905045
@@ -430,6 +458,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 14,
     "weight": 3.095105681421039,
     "equityWeight": 3.0951357810533175
@@ -445,6 +474,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 20,
     "weight": 2.1221333050448528,
     "equityWeight": 2.1221790334745023
@@ -460,6 +490,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 19,
     "weight": 0.8421932576496418,
     "equityWeight": 0.8422175352285229
@@ -475,6 +506,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 5,
     "weight": 4.10265000294686,
     "equityWeight": 4.239098035151672
@@ -490,6 +522,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 3,
     "weight": 2.639268068271682,
     "equityWeight": 4.025953322804313
@@ -505,6 +538,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 21,
     "weight": 0.7113921112406807,
     "equityWeight": 0.7113984018958834
@@ -520,6 +554,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 30,
     "weight": 0.6340625416576605,
     "equityWeight": 0.6340735251144028
@@ -535,6 +570,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 4,
     "weight": 5.642252921718128,
     "equityWeight": 5.642447833542676
@@ -550,6 +586,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 47,
     "weight": 0.11827811385097511,
     "equityWeight": 0.11828219977255548
@@ -565,6 +602,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 5,
     "weight": 4.469917894564899,
     "equityWeight": 4.470046747156975
@@ -580,6 +618,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 18,
     "weight": 2.055773104993934,
     "equityWeight": 2.0558441217477577
@@ -595,6 +634,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 23,
     "weight": 0.8411138428785983,
     "equityWeight": 1.2830394575308517
@@ -610,6 +650,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 5,
     "weight": 9.08925541406362,
     "equityWeight": 9.089316650625602
@@ -625,6 +666,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 34,
     "weight": 0.5623318172366715,
     "equityWeight": 0.5623379894008252
@@ -640,6 +682,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 23,
     "weight": 1.6482513012510271,
     "equityWeight": 1.6482814040983305
@@ -655,6 +698,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 7,
     "weight": 2.4990351370265564,
     "equityWeight": 2.4991071757446472
@@ -670,6 +714,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 6,
     "weight": 4.43570312666843,
     "equityWeight": 4.435746847919832
@@ -685,6 +730,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 4,
     "weight": 6.051652598083726,
     "equityWeight": 6.0518270467295405
@@ -700,6 +746,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 24,
     "weight": 1.3092115989929778,
     "equityWeight": 1.3092568257534618
@@ -715,6 +762,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 6,
     "weight": 1.9581851153879268,
     "equityWeight": 1.9581984956487515
@@ -730,6 +778,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "hematology",
     "rank": 9,
     "weight": 4.2106179478747245,
     "equityWeight": 4.210763403819023
@@ -745,6 +794,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "gene_cell",
     "rank": 46,
     "weight": 0.4417275209174142,
     "equityWeight": 0.6738134719964765
@@ -760,6 +810,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 1,
     "weight": 11.751377405902126,
     "equityWeight": 11.751630628465344
@@ -775,6 +826,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 1,
     "weight": 10.35624373029274,
     "equityWeight": 10.356601487094666
@@ -790,6 +842,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 8,
     "weight": 5.045349970495998,
     "equityWeight": 5.045458689364241
@@ -805,6 +858,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 2,
     "weight": 15.917436555255021,
     "equityWeight": 15.917895401034235
@@ -820,6 +874,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 14,
     "weight": 0.08541180104106735,
     "equityWeight": 0.08541238465911576
@@ -835,6 +890,7 @@
     ],
     "mappingNote": "Issuer-name correction: provider ticker AGLE \u2192 SYRE; original CUSIP retained.",
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 44,
     "weight": 0.5532378392648163,
     "equityWeight": 0.6008205834382108
@@ -850,6 +906,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 21,
     "weight": 2.394419689424049,
     "equityWeight": 2.3944632383935773
@@ -865,6 +922,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 11,
     "weight": 2.551975484178761,
     "equityWeight": 2.5519833277696624
@@ -880,6 +938,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 3,
     "weight": 11.589405564336742,
     "equityWeight": 11.589739647642704
@@ -895,6 +954,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 23,
     "weight": 0.7129028622196291,
     "equityWeight": 0.7129182240860608
@@ -910,6 +970,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 9,
     "weight": 4.8930231324630205,
     "equityWeight": 4.893128568942226
@@ -925,6 +986,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 44,
     "weight": 0.8190805536701996,
     "equityWeight": 0.8217548847221994
@@ -940,6 +1002,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "cv",
     "rank": 34,
     "weight": 0.37887685534973564,
     "equityWeight": 0.37888994366395695
@@ -955,6 +1018,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 32,
     "weight": 0.2821723749721751,
     "equityWeight": 0.28218050904595127
@@ -970,6 +1034,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 29,
     "weight": 0.5125182274952534,
     "equityWeight": 0.5125244211105815
@@ -985,6 +1050,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 3,
     "weight": 7.477275288907159,
     "equityWeight": 7.477436411705717
@@ -1000,6 +1066,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 31,
     "weight": 0.421849394377368,
     "equityWeight": 0.4218639671794532
@@ -1015,6 +1082,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 14,
     "weight": 2.5411202817427916,
     "equityWeight": 2.5411484047884016
@@ -1030,6 +1098,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 13,
     "weight": 3.00059376387455,
     "equityWeight": 3.0006483377518727
@@ -1045,6 +1114,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 10,
     "weight": 1.6999204088136428,
     "equityWeight": 1.6999694117609376
@@ -1060,6 +1130,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 46,
     "weight": 0.1244960053501502,
     "equityWeight": 0.12450030606900991
@@ -1075,6 +1146,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "psychedelics",
     "rank": 5,
     "weight": 5.945193413827659,
     "equityWeight": 5.945610066120204
@@ -1090,6 +1162,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 26,
     "weight": 0.24365663972630894,
     "equityWeight": 0.24366189012009049
@@ -1105,6 +1178,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "psychedelics",
     "rank": 10,
     "weight": 4.832523354571794,
     "equityWeight": 4.832627487381795
@@ -1120,6 +1194,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 44,
     "weight": 0.7555124735944022,
     "equityWeight": 0.7555312806740867
@@ -1135,6 +1210,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 28,
     "weight": 1.288265485009668,
     "equityWeight": 1.2882796250348336
@@ -1150,6 +1226,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 9,
     "weight": 2.9366664303568406,
     "equityWeight": 2.9368722384299306
@@ -1165,6 +1242,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 11,
     "weight": 1.543029647458343,
     "equityWeight": 2.353745499008179
@@ -1180,6 +1258,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 40,
     "weight": 0.5657254216410144,
     "equityWeight": 0.5657271604189914
@@ -1195,6 +1274,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 30,
     "weight": 0.05504556733963004,
     "equityWeight": 0.055046054093248906
@@ -1210,6 +1290,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 41,
     "weight": 0.3097315478788823,
     "equityWeight": 0.30973743865251535
@@ -1225,6 +1306,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 3,
     "weight": 7.715792192794517,
     "equityWeight": 7.715867228199329
@@ -1240,6 +1322,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 45,
     "weight": 0.7093392841105658,
     "equityWeight": 0.7093569417944636
@@ -1255,6 +1338,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 1,
     "weight": 10.805588195300242,
     "equityWeight": 10.805706797630886
@@ -1270,6 +1354,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 2,
     "weight": 4.083639143900564,
     "equityWeight": 4.271739925329677
@@ -1285,6 +1370,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "tools",
     "rank": 50,
     "weight": 0.352038423191609,
     "equityWeight": 0.3520395051947043
@@ -1300,6 +1386,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 11,
     "weight": 4.693125236197763,
     "equityWeight": 4.693226365211049
@@ -1315,6 +1402,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 12,
     "weight": 1.2499774120260017,
     "equityWeight": 1.2499897326378906
@@ -1330,6 +1418,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "id",
     "rank": 5,
     "weight": 2.43424185551416,
     "equityWeight": 3.7132052649483875
@@ -1345,6 +1434,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 30,
     "weight": 0.5199445820383753,
     "equityWeight": 0.5199540386306594
@@ -1360,6 +1450,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 11,
     "weight": 3.5669019705008562,
     "equityWeight": 3.578255021847629
@@ -1375,6 +1466,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 43,
     "weight": 0.2076775760724481,
     "equityWeight": 0.20768475030157815
@@ -1390,6 +1482,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "hematology",
     "rank": 49,
     "weight": 0.15848836514270292,
     "equityWeight": 0.15849137942745667
@@ -1405,6 +1498,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 4,
     "weight": 8.662611235504682,
     "equityWeight": 8.662696619984393
@@ -1420,6 +1514,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 16,
     "weight": 2.257923666400449,
     "equityWeight": 2.2580016664524876
@@ -1435,6 +1530,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 39,
     "weight": 1.0504418899150003,
     "equityWeight": 1.0538716250636782
@@ -1450,6 +1546,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 8,
     "weight": 3.8577795446592997,
     "equityWeight": 3.8578175695100416
@@ -1465,6 +1562,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 45,
     "weight": 0.5292292086298035,
     "equityWeight": 0.5747470243974017
@@ -1480,6 +1578,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 35,
     "weight": 0.6606856921456566,
     "equityWeight": 0.6610504950423618
@@ -1495,6 +1594,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 24,
     "weight": 1.662730452782325,
     "equityWeight": 1.6681593347903965
@@ -1510,6 +1610,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 47,
     "weight": 0.05681753557687635,
     "equityWeight": 0.05870720223589504
@@ -1525,6 +1626,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 31,
     "weight": 0.34737861273222315,
     "equityWeight": 0.34738493074768534
@@ -1540,6 +1642,7 @@
     ],
     "mappingNote": "Issuer-name correction: provider ticker 2X10.SG \u2192 ABVX; original CUSIP retained.",
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 1,
     "weight": 4.6706759723931075,
     "equityWeight": 7.124673570241767
@@ -1555,6 +1658,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 48,
     "weight": 0.4214726980070548,
     "equityWeight": 0.642916659134199
@@ -1570,6 +1674,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 40,
     "weight": 0.6939637521644144,
     "equityWeight": 0.7536500160843383
@@ -1585,6 +1690,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 10,
     "weight": 3.0936268956802024,
     "equityWeight": 3.093647738209817
@@ -1600,6 +1706,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "gene_cell",
     "rank": 34,
     "weight": 0.2032217615435245,
     "equityWeight": 0.20322761973854261
@@ -1615,6 +1722,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 18,
     "weight": 2.3709250296776547,
     "equityWeight": 2.3709683310808343
@@ -1630,6 +1738,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 19,
     "weight": 0.9427906702212429,
     "equityWeight": 0.9428011042590213
@@ -1645,6 +1754,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 25,
     "weight": 1.1793267543435426,
     "equityWeight": 1.1793674942275245
@@ -1660,6 +1770,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 31,
     "weight": 1.2909143584278484,
     "equityWeight": 1.295129245887631
@@ -1675,6 +1786,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 35,
     "weight": 0.568649789357936,
     "equityWeight": 0.5701833231410507
@@ -1690,6 +1802,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 22,
     "weight": 0.9406641427146203,
     "equityWeight": 1.4348940058539599
@@ -1705,6 +1818,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 43,
     "weight": 0.47738893785001524,
     "equityWeight": 0.7282115840039969
@@ -1720,6 +1834,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 38,
     "weight": 0.48707641548534986,
     "equityWeight": 0.488389962332784
@@ -1735,6 +1850,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 28,
     "weight": 1.0135147475116428,
     "equityWeight": 1.0135332578441758
@@ -1750,6 +1866,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 41,
     "weight": 0.5238241967562116,
     "equityWeight": 0.7990441709382605
@@ -1765,6 +1882,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 38,
     "weight": 0.15950265917836914,
     "equityWeight": 0.1595072570997545
@@ -1780,6 +1898,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 13,
     "weight": 1.6672107996119876,
     "equityWeight": 1.7098577836402697
@@ -1795,6 +1914,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "gene_cell",
     "rank": 20,
     "weight": 1.268877712684727,
     "equityWeight": 1.2729164089943041
@@ -1810,6 +1930,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 40,
     "weight": 0.5280259951259139,
     "equityWeight": 0.8054536161596906
@@ -1825,6 +1946,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 15,
     "weight": 1.2241239250399172,
     "equityWeight": 1.867285041176577
@@ -1840,6 +1962,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 27,
     "weight": 0.7643861282985914,
     "equityWeight": 0.764412534044132
@@ -1855,6 +1978,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 39,
     "weight": 0.38215688065016895,
     "equityWeight": 0.38216386017459913
@@ -1870,6 +1994,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "pulmonary",
     "rank": 8,
     "weight": 4.685664858411702,
     "equityWeight": 4.685826724868142
@@ -1885,6 +2010,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 2,
     "weight": 15.770106639239264,
     "equityWeight": 15.770297215825552
@@ -1900,6 +2026,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 30,
     "weight": 0.42820546124319137,
     "equityWeight": 0.4282202536158288
@@ -1915,6 +2042,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "renal",
     "rank": 12,
     "weight": 1.433136459327669,
     "equityWeight": 2.1861138547553978
@@ -1930,6 +2058,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 32,
     "weight": 0.5336076842404603,
     "equityWeight": 0.5336178329066142
@@ -1945,6 +2074,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 22,
     "weight": 0.720030233313664,
     "equityWeight": 0.720045748763043
@@ -1960,6 +2090,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 25,
     "weight": 0.11718721098398167,
     "equityWeight": 0.11718721098398167
@@ -1975,6 +2106,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 21,
     "weight": 1.2218867515186578,
     "equityWeight": 1.3590353935366137
@@ -1990,6 +2122,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "diversified",
     "rank": 4,
     "weight": 3.3472991469771576,
     "equityWeight": 3.9963199377473155
@@ -2005,6 +2138,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 23,
     "weight": 1.3706399551757662,
     "equityWeight": 1.3868919866919491
@@ -2020,6 +2154,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 42,
     "weight": 0.06934201950224281,
     "equityWeight": 0.06934401839778484
@@ -2035,6 +2170,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 33,
     "weight": 0.21987665768263132,
     "equityWeight": 0.21988299598189048
@@ -2050,6 +2186,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 10,
     "weight": 1.9532492449687446,
     "equityWeight": 2.3319723031351023
@@ -2065,6 +2202,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 26,
     "weight": 1.3300544600713378,
     "equityWeight": 1.3458252589027109
@@ -2080,6 +2218,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 18,
     "weight": 1.2476180173496279,
     "equityWeight": 1.489523504921778
@@ -2095,6 +2234,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 20,
     "weight": 1.150646322779996,
     "equityWeight": 1.7552019221761874
@@ -2110,6 +2250,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 22,
     "weight": 1.1329093898859246,
     "equityWeight": 1.3525735775814614
@@ -2125,6 +2266,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "pulmonary",
     "rank": 44,
     "weight": 0.04932411548889327,
     "equityWeight": 0.04932553733606866
@@ -2140,6 +2282,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "medtech",
     "rank": 22,
     "weight": 1.393549737824566,
     "equityWeight": 1.4100734165433797
@@ -2155,6 +2298,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 14,
     "weight": 2.612619832586726,
     "equityWeight": 2.612710085630233
@@ -2170,6 +2314,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 5,
     "weight": 5.924502907304395,
     "equityWeight": 5.924630570450608
@@ -2185,6 +2330,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 30,
     "weight": 0.7636427479288344,
     "equityWeight": 0.9117083967891244
@@ -2200,6 +2346,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 26,
     "weight": 1.5299536151232511,
     "equityWeight": 1.5349489753997339
@@ -2215,6 +2362,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 32,
     "weight": 0.6924245049591452,
     "equityWeight": 0.8266813729666124
@@ -2230,6 +2378,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 27,
     "weight": 1.4941233196871093,
     "equityWeight": 1.499001692603487
@@ -2245,6 +2394,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 50,
     "weight": 0.05402656835949914,
     "equityWeight": 0.05402843470919299
@@ -2260,6 +2410,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 17,
     "weight": 2.094462207655468,
     "equityWeight": 2.0945345609256965
@@ -2275,6 +2426,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 16,
     "weight": 2.611435618291155,
     "equityWeight": 2.611491890368725
@@ -2290,6 +2442,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 42,
     "weight": 0.5133409284159121,
     "equityWeight": 0.6128745884403102
@@ -2305,6 +2458,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 43,
     "weight": 0.05348783952366997,
     "equityWeight": 0.05348938139690563
@@ -2320,6 +2474,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "pulmonary",
     "rank": 31,
     "weight": 0.31628288341092275,
     "equityWeight": 0.31629200077511554
@@ -2335,6 +2490,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 29,
     "weight": 0.7289438196853236,
     "equityWeight": 0.7289949056790782
@@ -2350,6 +2506,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 18,
     "weight": 0.9505376132529291,
     "equityWeight": 0.9505481330275511
@@ -2365,6 +2522,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rna",
     "rank": 25,
     "weight": 1.561484275107056,
     "equityWeight": 1.5665825842604306
@@ -2380,6 +2538,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "dermatology",
     "rank": 25,
     "weight": 1.2138389488584989,
     "equityWeight": 1.318238510985321
@@ -2395,6 +2554,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 15,
     "weight": 2.6391163385865926,
     "equityWeight": 2.63917320713747
@@ -2410,6 +2570,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 17,
     "weight": 2.489087754542964,
     "equityWeight": 2.489133214011762
@@ -2425,6 +2586,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 16,
     "weight": 1.2184137887939115,
     "equityWeight": 1.858574769465403
@@ -2440,6 +2602,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 1,
     "weight": 4.521680911768409,
     "equityWeight": 4.536444382364058
@@ -2455,6 +2618,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "psychedelics",
     "rank": 21,
     "weight": 1.493101367792239,
     "equityWeight": 1.4931335416338607
@@ -2470,6 +2634,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 44,
     "weight": 0.19473138854753957,
     "equityWeight": 0.19612042826508258
@@ -2485,6 +2650,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 13,
     "weight": 1.7103831318281428,
     "equityWeight": 1.7103976862328754
@@ -2500,6 +2666,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 40,
     "weight": 0.7168506254813172,
     "equityWeight": 0.7255558565753251
@@ -2515,6 +2682,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 34,
     "weight": 0.8723135797387944,
     "equityWeight": 0.9473393118160629
@@ -2530,6 +2698,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 35,
     "weight": 0.6212197281975147,
     "equityWeight": 0.9476118242760203
@@ -2545,6 +2714,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 35,
     "weight": 0.19137116236762158,
     "equityWeight": 0.19137667895000662
@@ -2560,6 +2730,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "gene_cell",
     "rank": 11,
     "weight": 2.6825636384631704,
     "equityWeight": 2.682596056368287
@@ -2575,6 +2746,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 7,
     "weight": 5.055974841029241,
     "equityWeight": 5.056149499856984
@@ -2590,6 +2762,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 11,
     "weight": 2.1894941232514205,
     "equityWeight": 2.1895357651646816
@@ -2605,6 +2778,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 20,
     "weight": 0.5352939147176667,
     "equityWeight": 0.5352991909318658
@@ -2620,6 +2794,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 34,
     "weight": 0.5226741939784016,
     "equityWeight": 0.5226832479265894
@@ -2635,6 +2810,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "pulmonary",
     "rank": 27,
     "weight": 0.6122720965419561,
     "equityWeight": 0.6137032898695957
@@ -2650,6 +2826,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "renal",
     "rank": 23,
     "weight": 1.315014964392208,
     "equityWeight": 1.3150603916301526
@@ -2665,6 +2842,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "cv",
     "rank": 40,
     "weight": 0.05966569192681142,
     "equityWeight": 0.05966619964851003
@@ -2680,6 +2858,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 24,
     "weight": 1.9711890790240876,
     "equityWeight": 1.9712249304053286
@@ -2695,6 +2874,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 48,
     "weight": 0.7331902168961341,
     "equityWeight": 0.7355841125334823
@@ -2710,6 +2890,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 7,
     "weight": 4.343486852710876,
     "equityWeight": 4.343569461337613
@@ -2725,6 +2906,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 26,
     "weight": 1.6703487159187558,
     "equityWeight": 1.6703790957079185
@@ -2740,6 +2922,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 24,
     "weight": 0.862768108664069,
     "equityWeight": 0.8627785349347763
@@ -2755,6 +2938,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 10,
     "weight": 4.187819012377749,
     "equityWeight": 4.187963680732023
@@ -2770,6 +2954,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 13,
     "weight": 2.379336361505159,
     "equityWeight": 2.38710499071533
@@ -2785,6 +2970,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 9,
     "weight": 2.8984066853831987,
     "equityWeight": 2.8984352540145384
@@ -2800,6 +2986,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 19,
     "weight": 1.1580802737417768,
     "equityWeight": 1.7665417098756402
@@ -2815,6 +3002,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 7,
     "weight": 6.569776592919048,
     "equityWeight": 6.569849301845146
@@ -2830,6 +3018,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 11,
     "weight": 4.497930264561377,
     "equityWeight": 4.497970038587505
@@ -2845,6 +3034,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 37,
     "weight": 0.5859662611566784,
     "equityWeight": 0.607707687558292
@@ -2860,6 +3050,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 13,
     "weight": 2.1969638202512902,
     "equityWeight": 2.197001876839559
@@ -2875,6 +3066,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 10,
     "weight": 1.4176844685319263,
     "equityWeight": 1.6119221569442632
@@ -2890,6 +3082,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 29,
     "weight": 0.36304470718610726,
     "equityWeight": 0.3630551725352846
@@ -2905,6 +3098,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 15,
     "weight": 2.762670075792165,
     "equityWeight": 2.7627205318332906
@@ -2920,6 +3114,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "tools",
     "rank": 37,
     "weight": 1.0692783880871435,
     "equityWeight": 1.0727696251622763
@@ -2935,6 +3130,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 16,
     "weight": 2.5996712628983656,
     "equityWeight": 2.5997187420097165
@@ -2950,6 +3146,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 24,
     "weight": 0.3963149833915678,
     "equityWeight": 0.39632352331777987
@@ -2965,6 +3162,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "id",
     "rank": 9,
     "weight": 3.4875353848963564,
     "equityWeight": 3.4875990795193044
@@ -2980,6 +3178,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 16,
     "weight": 1.993921191403489,
     "equityWeight": 1.9939295781526503
@@ -2995,6 +3194,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 4,
     "weight": 5.336133686421332,
     "equityWeight": 5.336231142930197
@@ -3010,6 +3210,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 20,
     "weight": 1.4015295497584175,
     "equityWeight": 1.418147847165788
@@ -3025,6 +3226,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 32,
     "weight": 0.4204676407108846,
     "equityWeight": 0.42048216578024106
@@ -3040,6 +3242,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 42,
     "weight": 0.2185934300376666,
     "equityWeight": 0.21860098135535372
@@ -3055,6 +3258,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 25,
     "weight": 0.2892386641649041,
     "equityWeight": 0.2892448967752095
@@ -3070,6 +3274,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 6,
     "weight": 6.833640196841792,
     "equityWeight": 6.8336862367661215
@@ -3085,6 +3290,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "dermatology",
     "rank": 39,
     "weight": 0.23511252912002933,
     "equityWeight": 0.23678961181057864
@@ -3100,6 +3306,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 10,
     "weight": 2.612417552534248,
     "equityWeight": 2.69930267168518
@@ -3115,6 +3322,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 38,
     "weight": 0.5901910633135597,
     "equityWeight": 0.9002805364869995
@@ -3130,6 +3338,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 14,
     "weight": 2.190766635238379,
     "equityWeight": 2.197919576684798
@@ -3145,6 +3354,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 1,
     "weight": 5.441967012037488,
     "equityWeight": 5.692635156651745
@@ -3160,6 +3370,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 29,
     "weight": 1.2258020783548889,
     "equityWeight": 1.2403367298035048
@@ -3175,6 +3386,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "dermatology",
     "rank": 8,
     "weight": 1.7130521538464,
     "equityWeight": 1.7131015353374235
@@ -3190,6 +3402,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 38,
     "weight": 0.7637465290532561,
     "equityWeight": 0.7933167088023855
@@ -3205,6 +3418,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 5,
     "weight": 2.576839872688586,
     "equityWeight": 2.576857480211659
@@ -3220,6 +3434,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 36,
     "weight": 0.4393023881089361,
     "equityWeight": 0.4393099978610657
@@ -3235,6 +3450,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 19,
     "weight": 1.7646376074658914,
     "equityWeight": 1.764698566933769
@@ -3250,6 +3466,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 22,
     "weight": 1.7026131930421007,
     "equityWeight": 1.759239573461994
@@ -3265,6 +3482,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 49,
     "weight": 0.5609827639782915,
     "equityWeight": 0.5748311486901634
@@ -3280,6 +3498,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 42,
     "weight": 0.5164979842141667,
     "equityWeight": 0.7878687279880751
@@ -3295,6 +3514,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 18,
     "weight": 2.028813699867018,
     "equityWeight": 2.035437858445763
@@ -3310,6 +3530,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 20,
     "weight": 1.885697262667801,
     "equityWeight": 1.8918541403053257
@@ -3325,6 +3546,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 24,
     "weight": 1.640398137156424,
     "equityWeight": 1.640428096577419
@@ -3340,6 +3562,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 24,
     "weight": 0.4602515317687777,
     "equityWeight": 0.4602527382978214
@@ -3355,6 +3578,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "gene_cell",
     "rank": 27,
     "weight": 1.0518674093690072,
     "equityWeight": 1.0518866201556052
@@ -3370,6 +3594,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 45,
     "weight": 0.4473299187436839,
     "equityWeight": 0.682359398958383
@@ -3385,6 +3610,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 45,
     "weight": 0.019857760781242743,
     "equityWeight": 0.01985833321322245
@@ -3400,6 +3626,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 30,
     "weight": 0.347510813671748,
     "equityWeight": 0.3475208312313928
@@ -3415,6 +3642,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 40,
     "weight": 0.11914656468745646,
     "equityWeight": 0.11914999927933469
@@ -3430,6 +3658,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 34,
     "weight": 0.7563692813441695,
     "equityWeight": 0.7563830952989736
@@ -3445,6 +3674,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 49,
     "weight": 0.23497744743697593,
     "equityWeight": 0.23498151779985
@@ -3460,6 +3690,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 48,
     "weight": 0.8099587530252775,
     "equityWeight": 0.8472671118201442
@@ -3475,6 +3706,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 40,
     "weight": 0.36444160350652904,
     "equityWeight": 0.36444825948789134
@@ -3490,6 +3722,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 38,
     "weight": 0.1549625920825352,
     "equityWeight": 0.155324818989616
@@ -3505,6 +3738,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 19,
     "weight": 0.3781760156383303,
     "equityWeight": 0.3786593518323398
@@ -3520,6 +3754,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 41,
     "weight": 0.640230150267005,
     "equityWeight": 0.6952949077549085
@@ -3535,6 +3770,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 39,
     "weight": 0.14524991152086428,
     "equityWeight": 0.14525409858381258
@@ -3550,6 +3786,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 16,
     "weight": 2.049492898947306,
     "equityWeight": 2.0561845759453106
@@ -3565,6 +3802,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 23,
     "weight": 0.5851633701182337,
     "equityWeight": 0.5851802383960872
@@ -3580,6 +3818,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 17,
     "weight": 1.993710884348178,
     "equityWeight": 1.9937192702127546
@@ -3595,6 +3834,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 21,
     "weight": 1.2766804997555117,
     "equityWeight": 1.2766994172166444
@@ -3610,6 +3850,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Biotech / biopharma",
+    "therapeuticArea": "psychedelics",
     "rank": 31,
     "weight": 0.672718692831301,
     "equityWeight": 1.0261686144258535
@@ -3625,6 +3866,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 28,
     "weight": 0.8874185606706848,
     "equityWeight": 0.9169327810547211
@@ -3640,6 +3882,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "tools",
     "rank": 34,
     "weight": 0.7651905370237393,
     "equityWeight": 0.7651937555366486
@@ -3655,6 +3898,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 12,
     "weight": 2.1507323973765193,
     "equityWeight": 2.150773302081852
@@ -3670,6 +3914,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 37,
     "weight": 0.673076046797526,
     "equityWeight": 0.6730788778622618
@@ -3685,6 +3930,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 44,
     "weight": 0.8546121167866927,
     "equityWeight": 0.8647454731095414
@@ -3700,6 +3946,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 33,
     "weight": 0.6336769048633456,
     "equityWeight": 0.7204973080863556
@@ -3715,6 +3962,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 21,
     "weight": 1.6777253018440883,
     "equityWeight": 1.677783258923328
@@ -3730,6 +3978,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 26,
     "weight": 0.7622493196318794,
     "equityWeight": 1.1627391010670904
@@ -3745,6 +3994,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 35,
     "weight": 0.6161081179800931,
     "equityWeight": 0.6161193702743178
@@ -3760,6 +4010,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 15,
     "weight": 1.5957618220244538,
     "equityWeight": 1.5957811062847014
@@ -3775,6 +4026,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 23,
     "weight": 0.9739339259209846,
     "equityWeight": 0.9770338490365593
@@ -3790,6 +4042,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 6,
     "weight": 3.4401969121181986,
     "equityWeight": 3.440296081342295
@@ -3805,6 +4058,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 18,
     "weight": 0.6396914236337562,
     "equityWeight": 0.6396977288595014
@@ -3820,6 +4074,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 17,
     "weight": 1.1993440885006474,
     "equityWeight": 1.8294857488450673
@@ -3835,6 +4090,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 47,
     "weight": 0.42933760264777937,
     "equityWeight": 0.6549138258307217
@@ -3850,6 +4106,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 25,
     "weight": 0.8279915247182291,
     "equityWeight": 0.8280015307252818
@@ -3865,6 +4122,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 24,
     "weight": 1.2358728436404152,
     "equityWeight": 1.342167491576886
@@ -3880,6 +4138,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 48,
     "weight": 0.14120810685956536,
     "equityWeight": 0.14128607604677954
@@ -3895,6 +4154,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "rna",
     "rank": 29,
     "weight": 0.4034200805263472,
     "equityWeight": 0.40342191534598165
@@ -3910,6 +4170,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 48,
     "weight": 0.40035171084878307,
     "equityWeight": 0.43478506244673826
@@ -3925,6 +4186,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 21,
     "weight": 1.3023215375726103,
     "equityWeight": 1.302346306381044
@@ -3940,6 +4202,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 15,
     "weight": 2.368964268882966,
     "equityWeight": 2.369130291134032
@@ -3955,6 +4218,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 15,
     "weight": 2.32590594679143,
     "equityWeight": 2.3259862952937227
@@ -3970,6 +4234,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 21,
     "weight": 1.2062759462616228,
     "equityWeight": 1.2063604847456495
@@ -3985,6 +4250,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 31,
     "weight": 0.6339953852496146,
     "equityWeight": 0.6340398170472603
@@ -4000,6 +4266,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "id",
     "rank": 38,
     "weight": 0.15213077069743836,
     "equityWeight": 0.15213260914809767
@@ -4015,6 +4282,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 38,
     "weight": 0.266954808364584,
     "equityWeight": 0.2669640303277771
@@ -4030,6 +4298,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 31,
     "weight": 0.8026664231577024,
     "equityWeight": 0.8026810826606275
@@ -4045,6 +4314,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "ii",
     "rank": 11,
     "weight": 1.648834717771575,
     "equityWeight": 1.6488822480914382
@@ -4060,6 +4330,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 37,
     "weight": 0.1674512792625554,
     "equityWeight": 0.16746301461825164
@@ -4075,6 +4346,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 38,
     "weight": 0.13944176098415775,
     "equityWeight": 0.13945153337091565
@@ -4090,6 +4362,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "ii",
     "rank": 40,
     "weight": 0.1315541784021208,
     "equityWeight": 0.13156339800966083
@@ -4105,6 +4378,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "cv",
     "rank": 21,
     "weight": 0.6195941650211949,
     "equityWeight": 0.6196120258222391
@@ -4120,6 +4394,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 42,
     "weight": 0.10974827247448979,
     "equityWeight": 0.10975596387595421
@@ -4135,6 +4410,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "psychedelics",
     "rank": 9,
     "weight": 1.6016393477947022,
     "equityWeight": 2.443149042609663
@@ -4150,6 +4426,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 22,
     "weight": 2.3372899760889685,
     "equityWeight": 2.337332486000826
@@ -4165,6 +4442,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 25,
     "weight": 0.7745314994817781,
     "equityWeight": 1.1814744024835777
@@ -4180,6 +4458,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 18,
     "weight": 0.9661692454549867,
     "equityWeight": 0.986566758693609
@@ -4195,6 +4474,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "psychedelics",
     "rank": 40,
     "weight": 0.3932106580347601,
     "equityWeight": 0.39321746936955665
@@ -4210,6 +4490,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 44,
     "weight": 0.11295772075609534,
     "equityWeight": 0.1129597837600906
@@ -4225,6 +4506,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 10,
     "weight": 2.661880016156757,
     "equityWeight": 2.6619306423610327
@@ -4240,6 +4522,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 13,
     "weight": 2.68032576224441,
     "equityWeight": 2.6804183541916253
@@ -4255,6 +4538,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 8,
     "weight": 2.485097238815305,
     "equityWeight": 2.485134062226045
@@ -4270,6 +4554,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 6,
     "weight": 2.4265924277129076,
     "equityWeight": 3.7015367877504
@@ -4285,6 +4570,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "dermatology",
     "rank": 11,
     "weight": 2.2369906880787216,
     "equityWeight": 2.237023835122484
@@ -4300,6 +4586,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "medtech",
     "rank": 15,
     "weight": 2.763246265821823,
     "equityWeight": 2.763273138150285
@@ -4315,6 +4602,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 17,
     "weight": 1.5915001452457098,
     "equityWeight": 1.5915237276080523
@@ -4330,6 +4618,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 20,
     "weight": 1.304661405199693,
     "equityWeight": 1.3046807372733238
@@ -4345,6 +4634,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "oncology",
     "rank": 13,
     "weight": 1.9304509149350404,
     "equityWeight": 1.9712060914003757
@@ -4360,6 +4650,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "dermatology",
     "rank": 33,
     "weight": 0.8491446698959573,
     "equityWeight": 0.8491572522619383
@@ -4375,6 +4666,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "neuro",
     "rank": 11,
     "weight": 2.4918547745858626,
     "equityWeight": 2.5747301552028254
@@ -4390,6 +4682,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 35,
     "weight": 0.7803984797960289,
     "equityWeight": 0.7804100435019932
@@ -4405,6 +4698,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 12,
     "weight": 1.1571964226582603,
     "equityWeight": 1.1572002469328377
@@ -4420,6 +4714,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "medtech",
     "rank": 22,
     "weight": 1.772166412271569,
     "equityWeight": 1.7779526071023615
@@ -4435,6 +4730,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 22,
     "weight": 0.5890068076887969,
     "equityWeight": 0.5890237867599368
@@ -4450,6 +4746,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "medtech",
     "rank": 50,
     "weight": 0.7786286592310404,
     "equityWeight": 0.814493889748095
@@ -4465,6 +4762,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 33,
     "weight": 0.8280503845196763,
     "equityWeight": 0.8601102339332442
@@ -4480,6 +4778,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 1,
     "weight": 10.889243439546581,
     "equityWeight": 10.889349336487447
@@ -4495,6 +4794,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 13,
     "weight": 2.0897579445091146,
     "equityWeight": 2.186016474831752
@@ -4510,6 +4810,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 14,
     "weight": 2.0491434899801035,
     "equityWeight": 2.1435312353570057
@@ -4525,6 +4826,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "tools",
     "rank": 15,
     "weight": 2.008750972361087,
     "equityWeight": 2.1012781556608098
@@ -4540,6 +4842,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 45,
     "weight": 0.8492064377347288,
     "equityWeight": 0.8592756975266196
@@ -4555,6 +4858,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 24,
     "weight": 1.4979631740085246,
     "equityWeight": 1.5669624253267747
@@ -4570,6 +4874,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "tools",
     "rank": 26,
     "weight": 0.4770666884461462,
     "equityWeight": 0.4770804406628199
@@ -4585,6 +4890,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 41,
     "weight": 0.9716028024713416,
     "equityWeight": 1.0163568171977773
@@ -4600,6 +4906,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 3,
     "weight": 4.14914821150521,
     "equityWeight": 4.162695347805367
@@ -4615,6 +4922,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 8,
     "weight": 2.8149921200127976,
     "equityWeight": 2.92398092692017
@@ -4630,6 +4938,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 12,
     "weight": 1.8809272710755096,
     "equityWeight": 1.9537516380414561
@@ -4645,6 +4954,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 28,
     "weight": 0.5304340078426347,
     "equityWeight": 0.5304385215396483
@@ -4660,6 +4970,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 7,
     "weight": 5.061925252110033,
     "equityWeight": 5.062034328147921
@@ -4675,6 +4986,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "services",
     "rank": 21,
     "weight": 1.2690926757592635,
     "equityWeight": 1.3182284781661484
@@ -4690,6 +5002,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 22,
     "weight": 1.2380467111421833,
     "equityWeight": 1.2859804985882277
@@ -4705,6 +5018,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 21,
     "weight": 1.8630729904066945,
     "equityWeight": 1.8691559988825532
@@ -4720,6 +5034,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 34,
     "weight": 1.0900594710500147,
     "equityWeight": 1.102984587387913
@@ -4735,6 +5050,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 2,
     "weight": 12.325632298112204,
     "equityWeight": 12.32576870815221
@@ -4750,6 +5066,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 17,
     "weight": 0.8769443390168167,
     "equityWeight": 0.8769696183516622
@@ -4765,6 +5082,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 34,
     "weight": 1.159673104858895,
     "equityWeight": 1.163459484331093
@@ -4780,6 +5098,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 40,
     "weight": 0.2521700441332121,
     "equityWeight": 0.25217875535620765
@@ -4795,6 +5114,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "neuro",
     "rank": 19,
     "weight": 2.1907588348096065,
     "equityWeight": 2.1907988457464294
@@ -4810,6 +5130,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "gene_cell",
     "rank": 37,
     "weight": 0.2984587919604045,
     "equityWeight": 0.29846910222981293
@@ -4825,6 +5146,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 5,
     "weight": 5.628573560419943,
     "equityWeight": 5.628767999690477
@@ -4840,6 +5162,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 32,
     "weight": 0.6577430524880034,
     "equityWeight": 1.0033246942776801
@@ -4855,6 +5178,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 7,
     "weight": 1.9447925449846872,
     "equityWeight": 1.944805833734202
@@ -4870,6 +5194,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 14,
     "weight": 1.0851305407556517,
     "equityWeight": 1.0851618213935104
@@ -4885,6 +5210,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 39,
     "weight": 0.5766160224268294,
     "equityWeight": 0.879573098079303
@@ -4900,6 +5226,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 1,
     "weight": 10.053561039283093,
     "equityWeight": 10.548638019186534
@@ -4915,6 +5242,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 9,
     "weight": 2.430067490529884,
     "equityWeight": 2.481012658227848
@@ -4930,6 +5258,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 12,
     "weight": 2.210821464587317,
     "equityWeight": 2.210859761222627
@@ -4945,6 +5274,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 49,
     "weight": 0.41360779336633,
     "equityWeight": 0.6309194924376763
@@ -4960,6 +5290,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 18,
     "weight": 0.5737740491943918,
     "equityWeight": 0.5745073737673183
@@ -4975,6 +5306,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 24,
     "weight": 0.941235460105814,
     "equityWeight": 0.9875856048104055
@@ -4990,6 +5322,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 39,
     "weight": 0.25631530513266215,
     "equityWeight": 0.25632415955384397
@@ -5005,6 +5338,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "dermatology",
     "rank": 45,
     "weight": 0.22441952504206733,
     "equityWeight": 0.22442379326927867
@@ -5020,6 +5354,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 39,
     "weight": 0.059079910950461494,
     "equityWeight": 0.05908062491188259
@@ -5035,6 +5370,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 48,
     "weight": 0.12811275562338129,
     "equityWeight": 0.12902659754281748
@@ -5050,6 +5386,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 33,
     "weight": 0.2583356155704435,
     "equityWeight": 0.2710570797221379
@@ -5065,6 +5402,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "id",
     "rank": 32,
     "weight": 0.26288944127484365,
     "equityWeight": 0.2628916783170928
@@ -5080,6 +5418,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 36,
     "weight": 0.12112888303909507,
     "equityWeight": 0.12709374676844967
@@ -5095,6 +5434,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 37,
     "weight": 0.11636002937613855,
     "equityWeight": 0.12209005595079417
@@ -5110,6 +5450,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "hematology",
     "rank": 26,
     "weight": 1.0951779560547064,
     "equityWeight": 1.095215789015508
@@ -5125,6 +5466,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "id",
     "rank": 18,
     "weight": 0.8473178410770592,
     "equityWeight": 0.8473422663803224
@@ -5140,6 +5482,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 48,
     "weight": 0.16500902930857414,
     "equityWeight": 0.1650121676096149
@@ -5155,6 +5498,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 22,
     "weight": 1.5463205281615215,
     "equityWeight": 1.5463739458582575
@@ -5170,6 +5514,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 32,
     "weight": 0.6782498307922037,
     "equityWeight": 0.7711771938432784
@@ -5185,6 +5530,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "rare",
     "rank": 29,
     "weight": 0.4227154096660423,
     "equityWeight": 0.42271900673797574
@@ -5200,6 +5546,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "pulmonary",
     "rank": 1,
     "weight": 17.67272062033252,
     "equityWeight": 17.67305673719684
@@ -5215,6 +5562,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 5,
     "weight": 3.975714421467503,
     "equityWeight": 4.077412556743976
@@ -5230,6 +5578,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 9,
     "weight": 2.254215775841062,
     "equityWeight": 2.311878252722191
@@ -5245,6 +5594,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ophthalmology",
     "rank": 36,
     "weight": 0.41868097831698037,
     "equityWeight": 0.4186889411960755
@@ -5260,6 +5610,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 19,
     "weight": 0.9876718605489188,
     "equityWeight": 1.012936347842197
@@ -5275,6 +5626,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 24,
     "weight": 0.2659822195543504,
     "equityWeight": 0.27278600193854646
@@ -5290,6 +5642,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 25,
     "weight": 0.06143841152069007,
     "equityWeight": 0.0630099962029964
@@ -5305,6 +5658,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "womens",
     "rank": 2,
     "weight": 9.376352811402468,
     "equityWeight": 9.376531139933398
@@ -5320,6 +5674,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 22,
     "weight": 1.3446911824926155,
     "equityWeight": 1.4603450513852283
@@ -5335,6 +5690,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 34,
     "weight": 0.34038085058959067,
     "equityWeight": 0.34038496398095996
@@ -5350,6 +5706,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 21,
     "weight": 0.4648148301213624,
     "equityWeight": 0.47455944403077693
@@ -5365,6 +5722,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 21,
     "weight": 0.4560306605052149,
     "equityWeight": 0.45603515544786233
@@ -5380,6 +5738,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "metabolic",
     "rank": 3,
     "weight": 3.0834343470233647,
     "equityWeight": 3.083455416101806
@@ -5395,6 +5754,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 29,
     "weight": 0.01541279300716233,
     "equityWeight": 0.01573591461901216
@@ -5410,6 +5770,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 15,
     "weight": 1.631485420540379,
     "equityWeight": 1.6508303640265884
@@ -5425,6 +5786,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 18,
     "weight": 1.3737256004466987,
     "equityWeight": 1.3737597967938608
@@ -5440,6 +5802,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 15,
     "weight": 1.078564668239273,
     "equityWeight": 1.0785957596052675
@@ -5455,6 +5818,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 27,
     "weight": 1.109132724979598,
     "equityWeight": 1.1091603347786
@@ -5470,6 +5834,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 2,
     "weight": 14.736320176739767,
     "equityWeight": 14.75515425561679
@@ -5485,6 +5850,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 47,
     "weight": 0.6613601664968118,
     "equityWeight": 0.6613766298296967
@@ -5500,6 +5866,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 4,
     "weight": 6.580094684247356,
     "equityWeight": 6.580150677176327
@@ -5515,6 +5882,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 6,
     "weight": 5.461886797456689,
     "equityWeight": 5.46200449199811
@@ -5530,6 +5898,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 6,
     "weight": 3.6561253940588587,
     "equityWeight": 3.6561565056430108
@@ -5545,6 +5914,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 11,
     "weight": 2.0150685905181605,
     "equityWeight": 2.015085737625896
@@ -5560,6 +5930,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 28,
     "weight": 0.70363961929552,
     "equityWeight": 1.0733355574656067
@@ -5575,6 +5946,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 19,
     "weight": 1.9410614101276928,
     "equityWeight": 2.1080077430569273
@@ -5590,6 +5962,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 33,
     "weight": 0.3442076175488819,
     "equityWeight": 0.3442117771854796
@@ -5605,6 +5978,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 13,
     "weight": 1.4265644157237758,
     "equityWeight": 2.1760888250500843
@@ -5620,6 +5994,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 39,
     "weight": 0.06081695947237909,
     "equityWeight": 0.0608174769907212
@@ -5635,6 +6010,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 41,
     "weight": 0.03033339707017426,
     "equityWeight": 0.030333655190433784
@@ -5650,6 +6026,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 42,
     "weight": 0.018069894954344735,
     "equityWeight": 0.01807004871905379
@@ -5665,6 +6042,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 43,
     "weight": 0.013364714550720342,
     "equityWeight": 0.013364828276973302
@@ -5680,6 +6058,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 25,
     "weight": 1.1271360239745085,
     "equityWeight": 1.1351760051817081
@@ -5695,6 +6074,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "ii",
     "rank": 26,
     "weight": 1.0882263974598392,
     "equityWeight": 1.0882470944001827
@@ -5710,6 +6090,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 49,
     "weight": 0.005124510224935252,
     "equityWeight": 0.005161063901712699
@@ -5725,6 +6106,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 6,
     "weight": 4.002973743991248,
     "equityWeight": 4.136106692193705
@@ -5740,6 +6122,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "diversified",
     "rank": 28,
     "weight": 0.4045218043017675,
     "equityWeight": 0.40453346529516043
@@ -5755,6 +6138,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 5,
     "weight": 4.4421163348071095,
     "equityWeight": 4.824172785299479
@@ -5770,6 +6154,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 45,
     "weight": 0.025385809515112774,
     "equityWeight": 0.02538627314899368
@@ -5785,6 +6170,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 23,
     "weight": 0.5812391884647482,
     "equityWeight": 0.5812443282115448
@@ -5800,6 +6186,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "metabolic",
     "rank": 25,
     "weight": 0.4694900547692342,
     "equityWeight": 0.4694942063475396
@@ -5815,6 +6202,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 28,
     "weight": 0.24344952221995014,
     "equityWeight": 0.24345167498068415
@@ -5830,6 +6218,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 30,
     "weight": 0.6865092105575032,
     "equityWeight": 1.047204742332085
@@ -5845,6 +6234,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 15,
     "weight": 0.12444574483136302,
     "equityWeight": 0.12444658325312802
@@ -5860,6 +6250,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 32,
     "weight": 0.00392393100513427,
     "equityWeight": 0.003923965703434409
@@ -5875,6 +6266,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 14,
     "weight": 1.52822111020017,
     "equityWeight": 1.53017428688104
@@ -5890,6 +6282,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 16,
     "weight": 0.8674683609776572,
     "equityWeight": 0.8685770480405077
@@ -5905,6 +6298,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 26,
     "weight": 1.3937539950689435,
     "equityWeight": 1.3937794499032035
@@ -5920,6 +6314,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 31,
     "weight": 0.2541448178757853,
     "equityWeight": 0.25495373249993875
@@ -5935,6 +6330,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 32,
     "weight": 0.037523139269216015,
     "equityWeight": 0.03764257123856607
@@ -5950,6 +6346,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 2,
     "weight": 8.062360395678533,
     "equityWeight": 8.062438801428833
@@ -5965,6 +6362,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "tools",
     "rank": 6,
     "weight": 4.551761863518257,
     "equityWeight": 4.551806129004612
@@ -5980,6 +6378,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 9,
     "weight": 3.322240962756986,
     "equityWeight": 3.322273271260027
@@ -5995,6 +6394,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "tools",
     "rank": 12,
     "weight": 3.107869505097932,
     "equityWeight": 3.10789972885728
@@ -6010,6 +6410,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "medtech",
     "rank": 13,
     "weight": 3.1032502165291516,
     "equityWeight": 3.103280395366322
@@ -6025,6 +6426,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 20,
     "weight": 1.812037501329565,
     "equityWeight": 1.812055123235916
@@ -6040,6 +6442,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 22,
     "weight": 1.5494674142620535,
     "equityWeight": 1.549482482697253
@@ -6055,6 +6458,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "unclassified",
     "rank": 23,
     "weight": 1.3522967285104315,
     "equityWeight": 1.3523098794779425
@@ -6070,6 +6474,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 27,
     "weight": 1.1414505173907097,
     "equityWeight": 1.141461617897243
@@ -6085,6 +6490,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 28,
     "weight": 0.96567443132607,
     "equityWeight": 0.965683822425527
@@ -6100,6 +6506,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "medtech",
     "rank": 29,
     "weight": 0.8648402242786161,
     "equityWeight": 0.864848634774221
@@ -6115,6 +6522,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 30,
     "weight": 0.8372460530914285,
     "equityWeight": 0.83725419523613
@@ -6130,6 +6538,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 27,
     "weight": 0.44327646647161223,
     "equityWeight": 0.443289244630643
@@ -6145,6 +6554,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 37,
     "weight": 0.0017073618393653003,
     "equityWeight": 0.0017073805793995996
@@ -6160,6 +6570,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "gene_cell",
     "rank": 8,
     "weight": 3.5137777037786977,
     "equityWeight": 3.513820166634217
@@ -6175,6 +6586,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 13,
     "weight": 2.3333879374934545,
     "equityWeight": 2.3334161357243084
@@ -6190,6 +6602,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 30,
     "weight": 0.5049989661015584,
     "equityWeight": 0.5050050688490691
@@ -6205,6 +6618,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 37,
     "weight": 0.2196698507158068,
     "equityWeight": 0.21967250535418165
@@ -6220,6 +6634,7 @@
     ],
     "mappingNote": "Ticker requires review; position retained by CUSIP.",
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 31,
     "weight": 0.6150082806956236,
     "equityWeight": 0.6150189340876843
@@ -6235,6 +6650,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 36,
     "weight": 0.6009649052871552,
     "equityWeight": 0.9167150114137428
@@ -6250,6 +6666,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "neuro",
     "rank": 47,
     "weight": 0.2560651670787559,
     "equityWeight": 0.25606960273060575
@@ -6265,6 +6682,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "id",
     "rank": 48,
     "weight": 0.23565526699689032,
     "equityWeight": 0.23565934910119568
@@ -6280,6 +6698,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 7,
     "weight": 4.306171363048703,
     "equityWeight": 4.3062138075485645
@@ -6295,6 +6714,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 13,
     "weight": 0.9230678247041798,
     "equityWeight": 0.9230769230769231
@@ -6310,6 +6730,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 14,
     "weight": 0.8542361075746102,
     "equityWeight": 0.8542445274959957
@@ -6325,6 +6746,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "gene_cell",
     "rank": 12,
     "weight": 0.9078860873892092,
     "equityWeight": 0.9078922040423484
@@ -6340,6 +6762,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 17,
     "weight": 0.6475766800113679,
     "equityWeight": 0.6475830629594644
@@ -6355,6 +6778,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 22,
     "weight": 0.39418068079332247,
     "equityWeight": 0.3941845661012773
@@ -6370,6 +6794,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 26,
     "weight": 0.11460282704950303,
     "equityWeight": 0.11702229205827067
@@ -6385,6 +6810,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 2,
     "weight": 8.872250989544312,
     "equityWeight": 8.872442171740195
@@ -6400,6 +6826,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "tools",
     "rank": 18,
     "weight": 1.462708107917947,
     "equityWeight": 1.4800518152709188
@@ -6415,6 +6842,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 24,
     "weight": 1.359142161636668,
     "equityWeight": 1.3752578608489092
@@ -6430,6 +6858,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 28,
     "weight": 1.270077163923356,
     "equityWeight": 1.2851367964826739
@@ -6445,6 +6874,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "medtech",
     "rank": 31,
     "weight": 1.1722601144116263,
     "equityWeight": 1.1861599049821843
@@ -6460,6 +6890,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 35,
     "weight": 1.015667030763462,
     "equityWeight": 1.0277100567467512
@@ -6475,6 +6906,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 40,
     "weight": 0.9633263288317471,
     "equityWeight": 0.9747487376105242
@@ -6490,6 +6922,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 43,
     "weight": 0.8668821501903571,
     "equityWeight": 0.8771609954644273
@@ -6505,6 +6938,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 43,
     "weight": 0.9589210781438269,
     "equityWeight": 0.9620519941498364
@@ -6520,6 +6954,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 47,
     "weight": 0.0032873710163455394,
     "equityWeight": 0.0032874310552653686
@@ -6535,6 +6970,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 22,
     "weight": 0.5652840622073133,
     "equityWeight": 0.5772181919642857
@@ -6550,6 +6986,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 42,
     "weight": 0.2355036069765318,
     "equityWeight": 0.2355079080980385
@@ -6565,6 +7002,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "dermatology",
     "rank": 8,
     "weight": 3.357236397622856,
     "equityWeight": 3.3573002487861823
@@ -6580,6 +7018,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 34,
     "weight": 0.6504168399459583,
     "equityWeight": 0.9921492513274948
@@ -6595,6 +7034,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 19,
     "weight": 1.3887203377704038,
     "equityWeight": 1.3887467497946404
@@ -6610,6 +7050,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 44,
     "weight": 0.16332328337833243,
     "equityWeight": 0.16332892538686986
@@ -6625,6 +7066,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 11,
     "weight": 0.8770767025305125,
     "equityWeight": 0.8770826955875279
@@ -6640,6 +7082,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "gene_cell",
     "rank": 9,
     "weight": 1.3287343064356767,
     "equityWeight": 1.328743385664932
@@ -6655,6 +7098,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 39,
     "weight": 0.37557214299816516,
     "equityWeight": 0.37557928599180734
@@ -6670,6 +7114,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 40,
     "weight": 0.36760244235098927,
     "equityWeight": 0.36760943376916955
@@ -6685,6 +7130,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 43,
     "weight": 0.2772187918296078,
     "equityWeight": 0.2772240642442542
@@ -6700,6 +7146,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 44,
     "weight": 0.24660789616204573,
     "equityWeight": 0.2466125863891226
@@ -6715,6 +7162,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 22,
     "weight": 1.6945484430645603,
     "equityWeight": 1.6945793914599847
@@ -6730,6 +7178,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 25,
     "weight": 0.4826717015698841,
     "equityWeight": 0.48268561536010046
@@ -6745,6 +7194,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 41,
     "weight": 0.27422153228015705,
     "equityWeight": 0.2742265405267195
@@ -6760,6 +7210,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 43,
     "weight": 0.20555200438316135,
     "equityWeight": 0.20555575848339847
@@ -6775,6 +7226,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 46,
     "weight": 0.021824490914071775,
     "equityWeight": 0.02182488950578953
@@ -6790,6 +7242,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "unclassified",
     "rank": 9,
     "weight": 1.7128920106142933,
     "equityWeight": 1.7129413874889299
@@ -6805,6 +7258,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "ophthalmology",
     "rank": 13,
     "weight": 0.8556246493045764,
     "equityWeight": 0.8556304138594804
@@ -6820,6 +7274,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "services",
     "rank": 15,
     "weight": 2.092898742561375,
     "equityWeight": 2.099732141389907
@@ -6835,6 +7290,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 48,
     "weight": 0.11413285285152505,
     "equityWeight": 0.1141367955749192
@@ -6850,6 +7306,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 45,
     "weight": 0.816930735944031,
     "equityWeight": 0.8195980477544246
@@ -6865,6 +7322,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 50,
     "weight": 0.6579465964802366,
     "equityWeight": 0.6600948186613642
@@ -6880,6 +7338,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 30,
     "weight": 1.0538853447577,
     "equityWeight": 1.144527656596554
@@ -6895,6 +7354,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 32,
     "weight": 0.9453788063033569,
     "equityWeight": 1.0266887144380923
@@ -6910,6 +7370,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 39,
     "weight": 0.7082026369998982,
     "equityWeight": 0.7691135554288875
@@ -6925,6 +7386,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 49,
     "weight": 0.09285384638768139,
     "equityWeight": 0.09285705402705291
@@ -6940,6 +7402,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 18,
     "weight": 1.1636826715680466,
     "equityWeight": 1.7750876368375468
@@ -6955,6 +7418,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 24,
     "weight": 0.7812112815054074,
     "equityWeight": 1.1916637769381586
@@ -6970,6 +7434,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 27,
     "weight": 0.706009864529711,
     "equityWeight": 1.0769511419494904
@@ -6985,6 +7450,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "ophthalmology",
     "rank": 33,
     "weight": 0.6532180388590932,
     "equityWeight": 0.9964222148084481
@@ -7000,6 +7466,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "unclassified",
     "rank": 50,
     "weight": 0.3796701911495043,
     "equityWeight": 0.5791508964184349
@@ -7015,6 +7482,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "diversified",
     "rank": 1,
     "weight": 13.271005282677342,
     "equityWeight": 13.271152155334075
@@ -7030,6 +7498,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 10,
     "weight": 0.9089182219586224,
     "equityWeight": 0.9089244325884461
@@ -7045,6 +7514,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 35,
     "weight": 0.3593941286523204,
     "equityWeight": 0.3594065439350664
@@ -7060,6 +7530,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 11,
     "weight": 3.0442796779961254,
     "equityWeight": 3.044384842744092
@@ -7075,6 +7546,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "medtech",
     "rank": 28,
     "weight": 0.7315003910362876,
     "equityWeight": 0.731525660742884
@@ -7090,6 +7562,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 36,
     "weight": 0.3052293849261729,
     "equityWeight": 0.30523992908595216
@@ -7105,6 +7578,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 12,
     "weight": 1.4553816933865649,
     "equityWeight": 1.455423647111013
@@ -7120,6 +7594,7 @@
     ],
     "mappingNote": null,
     "category": "Biotech / biopharma",
+    "therapeuticArea": "oncology",
     "rank": 13,
     "weight": 1.4464136723885845,
     "equityWeight": 1.446455367595364
@@ -7135,6 +7610,7 @@
     ],
     "mappingNote": null,
     "category": "Adjacent healthcare",
+    "therapeuticArea": "tools",
     "rank": 19,
     "weight": 2.4606005556034396,
     "equityWeight": 2.4606535774372404
@@ -7150,6 +7626,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 20,
     "weight": 0.6798080202933504,
     "equityWeight": 0.6798276168558813
@@ -7165,6 +7642,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "services",
     "rank": 36,
     "weight": 0.1695916828010973,
     "equityWeight": 0.16959657155485947
@@ -7180,6 +7658,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 37,
     "weight": 0.1695916828010973,
     "equityWeight": 0.16959657155485947
@@ -7195,6 +7674,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 41,
     "weight": 0.09464465017511663,
     "equityWeight": 0.09464737845979408
@@ -7210,6 +7690,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "services",
     "rank": 13,
     "weight": 3.4068833829486764,
     "equityWeight": 3.4069567955975106
@@ -7225,6 +7706,7 @@
     ],
     "mappingNote": null,
     "category": "Unclassified equity",
+    "therapeuticArea": "unclassified",
     "rank": 27,
     "weight": 0.06795865461754196,
     "equityWeight": 0.06796011901308646
