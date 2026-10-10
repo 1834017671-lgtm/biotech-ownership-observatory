@@ -75,6 +75,15 @@ function render(){
  document.querySelector('[data-reset]')?.addEventListener('click',()=>{Object.assign(state,{query:'',fund:'all',changeStatus:'all',changeDepth:10,changeLimit:50,sectorArea:null,proxyId:null});render();document.querySelector('[data-status="all"]')?.focus();});
  document.querySelector('[data-period]')?.addEventListener('click',e=>{state.period=e.currentTarget.dataset.period;render();});
  bindNames();
+ document.querySelector('.tabs button.active')?.scrollIntoView({inline:'nearest',block:'nearest',behavior:'auto'});
+ requestAnimationFrame(()=>{
+  document.querySelectorAll('.tablewrap').forEach(w=>{
+   if(w.previousElementSibling?.classList.contains('scrollhint'))return;
+   if(w.scrollWidth<=w.clientWidth+8)return;
+   const h=document.createElement('div');h.className='scrollhint';h.textContent='Swipe sideways to see more columns';
+   w.before(h);
+  });
+ });
  if(refocus)document.querySelector(refocus)?.focus();
  if(announcement&&announcement!==lastAnnouncement)document.getElementById('announcer').textContent=lastAnnouncement=announcement;
 }
