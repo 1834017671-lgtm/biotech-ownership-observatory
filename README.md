@@ -2,15 +2,21 @@
 
 A private, static research dashboard built around 50 US-based healthcare specialist managers selected by reported 13F value from a researched pool of 60. The default candidate set is the union of each manager's five largest eligible company equity positions. All selected managers' holdings, including smaller positions, contribute to ownership and concentration metrics.
 
+## Open on phone or desktop
+
+Published site: https://1834017671-lgtm.github.io/biotech-ownership-observatory/
+
+The dashboard is built for phone browsers as well as desktop: tabs and tables scroll sideways, the company column stays pinned, and filters use full-width touch-friendly controls.
+
 ## Run locally
 
-Requires Python 3 and curl; no Python packages or paid API keys are required.
+Requires Python 3 and curl; no Python packages or paid API keys are required. Build the browser snapshot first if `dist/data.js` is missing: `python3 scripts/prepare.py`.
 
 ```sh
-python3 -m http.server 8765 --bind 127.0.0.1 --directory dist
+python3 -m http.server 8765 --bind 0.0.0.0 --directory dist
 ```
 
-Open http://127.0.0.1:8765/ . The static site also contains a downloadable JSON snapshot and a CSV export of the current screen.
+On this machine open http://127.0.0.1:8765/ . On a phone on the same Wi‑Fi, open `http://<your-computer-ip>:8765/` (find the IP with `hostname -I` or System Settings → Network). Binding `0.0.0.0` allows LAN access; use `--bind 127.0.0.1` if you only want local-machine access. The static site also contains a downloadable JSON snapshot and a CSV export of the current screen.
 
 ## Healthcare proxy baskets
 
