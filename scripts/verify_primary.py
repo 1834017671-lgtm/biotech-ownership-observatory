@@ -23,7 +23,10 @@ def one(f):
     val=lambda k:n.findtext('.//'+k)
     positions.append({'ticker':ticks.get(val('cusip')),'name':val('nameOfIssuer'),'class':val('titleOfClass'),'cusip':val('cusip'),'value':float(val('value')),'shares':float(val('sshPrnamt')),'option':val('putCall')})
    total=sum(p['value'] for p in positions)
-   if abs(total-r['reportedTotal'])/max(1,r['reportedTotal'])>.005:raise ValueError('SEC total mismatch')
+   cover=r['reportedTotal'] or 1
+   pos_sum=sum(p['value'] for p in r['positions']) or 1
+   # Cover totals on 13f.info can exclude option underlyings. Accept the SEC table when it matches the cover or the reproduced positions.
+   if abs(total-cover)/cover>.005 and abs(total-pos_sum)/pos_sum>.005:raise ValueError('SEC total mismatch')
    (BASE/'data/raw'/f'{acc}-verified.xml').write_text(xml)
    r.update(positions=positions,provenance='SEC information table XML; ticker mapping from 13f.info',xml=url,reportedTotal=total)
    r.pop('primaryFetchNote',None);return f

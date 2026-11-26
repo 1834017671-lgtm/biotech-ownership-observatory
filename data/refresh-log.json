@@ -1445,5 +1445,384 @@
     "XOMA"
    ]
   }
+ },
+ {
+  "run": "2026-11-26T00:35:18+00:00",
+  "newFilings": [
+   {
+    "fund": "Baker Bros",
+    "accession": "0001104659-26-128308",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "RTW Investments",
+    "accession": "0001493215-26-000214",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "RA Capital",
+    "accession": "0001104659-26-128411",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Avoro Capital",
+    "accession": "0001104659-26-127608",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Deerfield Management",
+    "accession": "0001213900-26-120609",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Deep Track",
+    "accession": "0001856083-26-000006",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Perceptive Advisors",
+    "accession": "0001012975-26-001063",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "OrbiMed Advisors",
+    "accession": "0001172661-26-005349",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Paradigm Biocapital",
+    "accession": "0001855655-26-000020",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Frazier Life Sciences",
+    "accession": "0001892134-26-000007",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Vestal Point",
+    "accession": "0001974915-26-000008",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "TCG Crossover",
+    "accession": "0001214659-26-014306",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "BVF Partners",
+    "accession": "0000921895-26-003162",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "VR Adviser",
+    "accession": "0001615982-26-000019",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Soleus",
+    "accession": "0001802630-26-000008",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Braidwell",
+    "accession": "0001420506-26-002894",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Integral Health",
+    "accession": "0001172661-26-005192",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Logos Global",
+    "accession": "0001172661-26-005476",
+    "form": "13F-HR/A",
+    "filed": "11/19/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Affinity Asset",
+    "accession": "0001011438-26-000687",
+    "form": "13F-HR",
+    "filed": "11/13/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Tang Capital",
+    "accession": "0001214659-26-014410",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "ADAR1 Capital",
+    "accession": "0001940272-26-000033",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Caligan Partners",
+    "accession": "0001420506-26-002879",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "EcoR1 Capital",
+    "accession": "0000935836-26-000577",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Rock Springs",
+    "accession": "0001172661-26-005279",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Casdin",
+    "accession": "0000919574-26-008113",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Cormorant",
+    "accession": "0001583977-26-000011",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Sofinnova Investments",
+    "accession": "0001104659-26-128032",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Kynam",
+    "accession": "0001907884-26-000017",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Bain Capital Life Sciences",
+    "accession": "0001193125-26-462089",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Commodore",
+    "accession": "0001831942-26-000052",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "First Light Asset",
+    "accession": "0001999371-26-025524",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Bioimpact",
+    "accession": "0001193125-26-463462",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Fairmount",
+    "accession": "0001104659-26-128188",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Redmile",
+    "accession": "0000905148-26-004923",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Boxer Capital Management",
+    "accession": "0001213900-26-120704",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Samsara",
+    "accession": "0001744967-26-000014",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "PFM Health",
+    "accession": "0001442756-26-000007",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Octagon Capital Advisors",
+    "accession": "0001839435-26-000006",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Opaleye",
+    "accession": "0001420506-26-002880",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Vivo Capital",
+    "accession": "0001213900-26-119459",
+    "form": "13F-HR",
+    "filed": "11/13/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "SR One Capital",
+    "accession": "0001012975-26-001062",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Parkman",
+    "accession": "0001420506-26-002809",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Silverarc",
+    "accession": "0001420506-26-002577",
+    "form": "13F-HR",
+    "filed": "11/12/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "First Turn",
+    "accession": "0001993440-26-000005",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Ikarian",
+    "accession": "0001420506-26-002881",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Tri Locum",
+    "accession": "0001826434-26-000007",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Decheng",
+    "accession": "0001104659-26-127247",
+    "form": "13F-HR",
+    "filed": "11/13/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Palo Alto Investors",
+    "accession": "0002073679-26-000180",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Avidity",
+    "accession": "0001791827-26-000008",
+    "form": "13F-HR",
+    "filed": "11/16/2026",
+    "period": "2026-09-30"
+   },
+   {
+    "fund": "Eagle Health",
+    "accession": "0001172661-26-005032",
+    "form": "13F-HR",
+    "filed": "11/13/2026",
+    "period": "2026-09-30"
+   }
+  ],
+  "amendments": [
+   {
+    "fund": "Logos Global",
+    "accession": "0001172661-26-005476",
+    "form": "13F-HR/A",
+    "filed": "11/19/2026",
+    "period": "2026-09-30"
+   }
+  ],
+  "errors": [],
+  "note": "Collected Q3 2026 13F-HR for all 50 managers from 13f.info and reconciled each information table to SEC XML. Broader holders refreshed for the top-50 candidate set. Prices refreshed through the 2026-11-25 session.",
+  "prices": {
+   "withPrices": 525,
+   "carriedForward": [
+    "BLFS",
+    "RLYB",
+    "SLP"
+   ],
+   "missing": [
+    "EXAS",
+    "HOLX",
+    "MASI"
+   ]
+  }
  }
 ]

@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Eagle Health Investments LP 13F Filings"><link href="https://13f.info/manager/0001842545-eagle-health-investments-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001842545-eagle-health-investments-lp"><meta name="description" content="Eagle Health Investments LP reported 27 holdings with total value $603 M as of Q2 2026. Top holdings included ARGX, ICLR, GH, INSM, and BMRN"><meta property="og:description" content="Eagle Health Investments LP reported 27 holdings with total value $603 M as of Q2 2026. Top holdings included ARGX, ICLR, GH, INSM, and BMRN"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"E","item":"https://13f.info/managers/E","@type":"ListItem","position":1},{"name":"Eagle Health Investments LP","item":"https://13f.info/manager/0001842545-eagle-health-investments-lp","identifier":"0001842545","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001842545","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Eagle Health Investments LP 13F Filings"><link href="https://13f.info/manager/0001842545-eagle-health-investments-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001842545-eagle-health-investments-lp"><meta name="description" content="Eagle Health Investments LP reported 23 holdings with total value $582M excluding options as of Q3 2026. Top holdings included ARGX, GH, ICLR, ISRG, and UTHR"><meta property="og:description" content="Eagle Health Investments LP reported 23 holdings with total value $582M excluding options as of Q3 2026. Top holdings included ARGX, GH, ICLR, ISRG, and UTHR"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"E","item":"https://13f.info/managers/E","@type":"ListItem","position":1},{"name":"Eagle Health Investments LP","item":"https://13f.info/manager/0001842545-eagle-health-investments-lp","identifier":"0001842545","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001842545","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,7 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000117266126003205-eagle-health-investments-lp-q2-2026">Q2 2026</a>
+        <a href="/13f/000117266126005032-eagle-health-investments-lp-q3-2026">Q3 2026</a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +100,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[156338000.0,246407000.0,291495000.0,315319000.0,410447000.0,405857000.0,428914000.0,435729000.0,433464536.0,513669855.0,534847946.0,453827035.0,492132419.0,524797238.99999994,559577171.0,518746024.0,407920073.0,385097512.0,405166711.0,380922704.0,455055852.0,476295751.0,603308468.0,581741346.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +140,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,405 +148,468 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000117266126003205-eagle-health-investments-lp-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">603,308</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, ICLR, GH, INSM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ARGX, ICLR, GH, INSM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-10">8/10/2026</td>
-          <td class="px-3 py-2 text-center">000117266126003205</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000117266126002258-eagle-health-investments-lp-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">571,789</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, ARGX, ICLR, INSM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, ARGX, ICLR, INSM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000117266126002258</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000117266126000509-eagle-health-investments-lp-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">30</td>
-          <td class="px-3 py-2 text-right">455,055</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, ICLR, NTRA, INSM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ARGX, ICLR, NTRA, INSM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-06">2/6/2026</td>
-          <td class="px-3 py-2 text-center">000117266126000509</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000117266125004632-eagle-health-investments-lp-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">23</td>
-          <td class="px-3 py-2 text-right">380,922</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, INSM, NTRA, ICLR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ARGX, INSM, NTRA, ICLR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-07">11/7/2025</td>
-          <td class="px-3 py-2 text-center">000117266125004632</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000117266125003039-eagle-health-investments-lp-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">21</td>
-          <td class="px-3 py-2 text-right">405,166</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ARGX, NTRA, ILMN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INSM, ARGX, NTRA, ILMN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-12">8/12/2025</td>
-          <td class="px-3 py-2 text-center">000117266125003039</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000117266125001685-eagle-health-investments-lp-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">20</td>
-          <td class="px-3 py-2 text-right">385,097</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, NTRA, ICLR, INSM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ARGX, NTRA, ICLR, INSM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-12">5/12/2025</td>
-          <td class="px-3 py-2 text-center">000117266125001685</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000117266125000676-eagle-health-investments-lp-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">18</td>
-          <td class="px-3 py-2 text-right">407,920</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, ARGX, ILMN, ICLR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, ARGX, ILMN, ICLR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-12">2/12/2025</td>
-          <td class="px-3 py-2 text-center">000117266125000676</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000117266124004568-eagle-health-investments-lp-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">25</td>
-          <td class="px-3 py-2 text-right">528,001</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, ILMN, ARGX, ICLR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, ILMN, ARGX, ICLR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-12">11/12/2024</td>
-          <td class="px-3 py-2 text-center">000117266124004568</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000117266124003270-eagle-health-investments-lp-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">26</td>
-          <td class="px-3 py-2 text-right">570,217</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="UTHR, NTRA, ICLR, UNH">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              UTHR, NTRA, ICLR, UNH
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-13">8/13/2024</td>
-          <td class="px-3 py-2 text-center">000117266124003270</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000117266124002255-eagle-health-investments-lp-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">538,224</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, ICLR, ILMN, UTHR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, ICLR, ILMN, UTHR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-14">5/14/2024</td>
-          <td class="px-3 py-2 text-center">000117266124002255</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000117266124000664-eagle-health-investments-lp-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">22</td>
-          <td class="px-3 py-2 text-right">492,132</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICLR, ILMN, NTRA, IQV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ICLR, ILMN, NTRA, IQV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-12">2/12/2024</td>
-          <td class="px-3 py-2 text-center">000117266124000664</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000117266123003510-eagle-health-investments-lp-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">23</td>
-          <td class="px-3 py-2 text-right">453,827</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICLR, DHR, IQV, UTHR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ICLR, DHR, IQV, UTHR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-10-27">10/27/2023</td>
-          <td class="px-3 py-2 text-center">000117266123003510</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000117266123003066-eagle-health-investments-lp-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">534,847</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="IQV, ICLR, DHR, UTHR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              IQV, ICLR, DHR, UTHR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000117266123003066</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000117266123002041-eagle-health-investments-lp-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">513,669</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ILMN, IQV, NTRA, ISRG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ILMN, IQV, NTRA, ISRG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-12">5/12/2023</td>
-          <td class="px-3 py-2 text-center">000117266123002041</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000117266123000774-eagle-health-investments-lp-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">433,464</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="IQV, ALNY, UTHR, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              IQV, ALNY, UTHR, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-13">2/13/2023</td>
-          <td class="px-3 py-2 text-center">000117266123000774</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000117266122002438-eagle-health-investments-lp-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">435,729</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ILMN, IQV, ALNY, UTHR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ILMN, IQV, ALNY, UTHR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
-          <td class="px-3 py-2 text-center">000117266122002438</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000184254522000007-eagle-health-investments-lp-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">428,914</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, HUM, UTHR, IQV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, HUM, UTHR, IQV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-11">8/11/2022</td>
-          <td class="px-3 py-2 text-center">000184254522000007</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000184254522000005-eagle-health-investments-lp-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">405,857</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="HUM, SGEN, AZN, UTHR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              HUM, SGEN, AZN, UTHR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-12">5/12/2022</td>
-          <td class="px-3 py-2 text-center">000184254522000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000184254522000003-eagle-health-investments-lp-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">410,447</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="HUM, AZN, UTHR, IQV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              HUM, AZN, UTHR, IQV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-10">2/10/2022</td>
-          <td class="px-3 py-2 text-center">000184254522000003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000184254521000005-eagle-health-investments-lp-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">315,319</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AZN, HUM, IQV, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AZN, HUM, IQV, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-10-20">10/20/2021</td>
-          <td class="px-3 py-2 text-center">000184254521000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000184254521000004-eagle-health-investments-lp-q2-2021">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">29</td>
-          <td class="px-3 py-2 text-right">291,495</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AZN, HUM, IQV, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AZN, HUM, IQV, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-07-19">7/19/2021</td>
-          <td class="px-3 py-2 text-center">000184254521000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000184254521000003-eagle-health-investments-lp-q1-2021">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">25</td>
-          <td class="px-3 py-2 text-right">254,771</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="IQV, VRTX, HUM, AGIO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              IQV, VRTX, HUM, AGIO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-04-23">4/23/2021</td>
-          <td class="px-3 py-2 text-center">000184254521000003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000184254521000002-eagle-health-investments-lp-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">24</td>
-          <td class="px-3 py-2 text-right">156,338</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="IQV, HUM, VRTX, TMO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              IQV, HUM, VRTX, TMO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-04">2/4/2021</td>
-          <td class="px-3 py-2 text-center">000184254521000002</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000117266126005032-eagle-health-investments-lp-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">23</td>
+            <td class="px-3 py-2 text-right" data-order="581741.346">
+              581,741
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, GH, ICLR, ISRG">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARGX, GH, ICLR, ISRG
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-13">11/13/2026</td>
+            <td class="px-3 py-2 text-center">000117266126005032</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000117266126003205-eagle-health-investments-lp-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="603308.468">
+              603,308
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, ICLR, GH, INSM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARGX, ICLR, GH, INSM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-10">8/10/2026</td>
+            <td class="px-3 py-2 text-center">000117266126003205</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000117266126002258-eagle-health-investments-lp-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="476295.751">
+              476,296
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, ARGX, ICLR, INSM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, ARGX, ICLR, INSM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000117266126002258</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000117266126000509-eagle-health-investments-lp-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">30</td>
+            <td class="px-3 py-2 text-right" data-order="455055.852">
+              455,056
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, ICLR, NTRA, INSM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARGX, ICLR, NTRA, INSM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-06">2/6/2026</td>
+            <td class="px-3 py-2 text-center">000117266126000509</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000117266125004632-eagle-health-investments-lp-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">23</td>
+            <td class="px-3 py-2 text-right" data-order="380922.704">
+              380,923
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, INSM, NTRA, ICLR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARGX, INSM, NTRA, ICLR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-07">11/7/2025</td>
+            <td class="px-3 py-2 text-center">000117266125004632</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000117266125003039-eagle-health-investments-lp-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">21</td>
+            <td class="px-3 py-2 text-right" data-order="405166.711">
+              405,167
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ARGX, NTRA, ILMN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INSM, ARGX, NTRA, ILMN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-12">8/12/2025</td>
+            <td class="px-3 py-2 text-center">000117266125003039</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000117266125001685-eagle-health-investments-lp-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">20</td>
+            <td class="px-3 py-2 text-right" data-order="385097.512">
+              385,098
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARGX, NTRA, ICLR, INSM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARGX, NTRA, ICLR, INSM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-12">5/12/2025</td>
+            <td class="px-3 py-2 text-center">000117266125001685</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000117266125000676-eagle-health-investments-lp-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">18</td>
+            <td class="px-3 py-2 text-right" data-order="407920.073">
+              407,920
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, ARGX, ILMN, ICLR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, ARGX, ILMN, ICLR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-12">2/12/2025</td>
+            <td class="px-3 py-2 text-center">000117266125000676</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000117266124004568-eagle-health-investments-lp-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">25</td>
+            <td class="px-3 py-2 text-right" data-order="518746.024">
+              518,746
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, ILMN, ARGX, ICLR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, ILMN, ARGX, ICLR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-12">11/12/2024</td>
+            <td class="px-3 py-2 text-center">000117266124004568</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000117266124003270-eagle-health-investments-lp-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">26</td>
+            <td class="px-3 py-2 text-right" data-order="559577.171">
+              559,577
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="UTHR, NTRA, ICLR, UNH">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                UTHR, NTRA, ICLR, UNH
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-13">8/13/2024</td>
+            <td class="px-3 py-2 text-center">000117266124003270</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000117266124002255-eagle-health-investments-lp-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="524797.239">
+              524,797
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, ICLR, ILMN, UTHR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, ICLR, ILMN, UTHR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-14">5/14/2024</td>
+            <td class="px-3 py-2 text-center">000117266124002255</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000117266124000664-eagle-health-investments-lp-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">22</td>
+            <td class="px-3 py-2 text-right" data-order="492132.419">
+              492,132
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICLR, ILMN, NTRA, IQV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ICLR, ILMN, NTRA, IQV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-12">2/12/2024</td>
+            <td class="px-3 py-2 text-center">000117266124000664</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000117266123003510-eagle-health-investments-lp-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">23</td>
+            <td class="px-3 py-2 text-right" data-order="453827.035">
+              453,827
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICLR, DHR, IQV, UTHR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ICLR, DHR, IQV, UTHR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-10-27">10/27/2023</td>
+            <td class="px-3 py-2 text-center">000117266123003510</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000117266123003066-eagle-health-investments-lp-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="534847.946">
+              534,848
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="IQV, ICLR, DHR, UTHR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                IQV, ICLR, DHR, UTHR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000117266123003066</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000117266123002041-eagle-health-investments-lp-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="513669.855">
+              513,670
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ILMN, IQV, NTRA, ISRG">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ILMN, IQV, NTRA, ISRG
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-12">5/12/2023</td>
+            <td class="px-3 py-2 text-center">000117266123002041</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000117266123000774-eagle-health-investments-lp-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="433464.536">
+              433,465
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="IQV, ALNY, UTHR, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                IQV, ALNY, UTHR, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-13">2/13/2023</td>
+            <td class="px-3 py-2 text-center">000117266123000774</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000117266122002438-eagle-health-investments-lp-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="435729.0">
+              435,729
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ILMN, IQV, ALNY, UTHR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ILMN, IQV, ALNY, UTHR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
+            <td class="px-3 py-2 text-center">000117266122002438</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000184254522000007-eagle-health-investments-lp-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="428914.0">
+              428,914
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, HUM, UTHR, IQV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, HUM, UTHR, IQV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-11">8/11/2022</td>
+            <td class="px-3 py-2 text-center">000184254522000007</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000184254522000005-eagle-health-investments-lp-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="405857.0">
+              405,857
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="HUM, SGEN, AZN, UTHR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                HUM, SGEN, AZN, UTHR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-12">5/12/2022</td>
+            <td class="px-3 py-2 text-center">000184254522000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000184254522000003-eagle-health-investments-lp-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="410447.0">
+              410,447
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="HUM, AZN, UTHR, IQV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                HUM, AZN, UTHR, IQV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-10">2/10/2022</td>
+            <td class="px-3 py-2 text-center">000184254522000003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000184254521000005-eagle-health-investments-lp-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="315319.0">
+              315,319
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AZN, HUM, IQV, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AZN, HUM, IQV, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-10-20">10/20/2021</td>
+            <td class="px-3 py-2 text-center">000184254521000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000184254521000004-eagle-health-investments-lp-q2-2021">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">29</td>
+            <td class="px-3 py-2 text-right" data-order="291495.0">
+              291,495
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AZN, HUM, IQV, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AZN, HUM, IQV, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-07-19">7/19/2021</td>
+            <td class="px-3 py-2 text-center">000184254521000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000184254521000003-eagle-health-investments-lp-q1-2021">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">25</td>
+            <td class="px-3 py-2 text-right" data-order="246407.0">
+              246,407
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="IQV, VRTX, HUM, AGIO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                IQV, VRTX, HUM, AGIO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-04-23">4/23/2021</td>
+            <td class="px-3 py-2 text-center">000184254521000003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000184254521000002-eagle-health-investments-lp-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">24</td>
+            <td class="px-3 py-2 text-right" data-order="156338.0">
+              156,338
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="IQV, HUM, VRTX, TMO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                IQV, HUM, VRTX, TMO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-04">2/4/2021</td>
+            <td class="px-3 py-2 text-center">000184254521000002</td>
+          </tr>
     </tbody>
   </table>
 </div>
 
 
-<script>
-  var holdingsChartData = {"labels":["2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[156338000.0,254771000.0,291495000.0,315319000.0,410447000.0,405857000.0,428914000.0,435729000.0,433464536.0,513669855.0,534847946.0,453827035.0,492132419.0,538224759.0,570217141.0,528001084.00000006,407920073.0,385097512.0,405166711.0,380922704.0,455055852.0,571789551.0,603308468.0]};
-</script>
+
 
       </div>
 
@@ -635,7 +704,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

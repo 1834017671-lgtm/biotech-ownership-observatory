@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Affinity Asset Advisors, LLC 13F Filings"><link href="https://13f.info/manager/0001773195-affinity-asset-advisors-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001773195-affinity-asset-advisors-llc"><meta name="description" content="Affinity Asset Advisors, LLC reported 113 holdings with total value $2.21 B as of Q2 2026. Top holdings included ROIV, APGE, AGLE, XENE, and ERAS"><meta property="og:description" content="Affinity Asset Advisors, LLC reported 113 holdings with total value $2.21 B as of Q2 2026. Top holdings included ROIV, APGE, AGLE, XENE, and ERAS"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"A","item":"https://13f.info/managers/A","@type":"ListItem","position":1},{"name":"Affinity Asset Advisors, LLC","item":"https://13f.info/manager/0001773195-affinity-asset-advisors-llc","identifier":"0001773195","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001773195","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Affinity Asset Advisors, LLC 13F Filings"><link href="https://13f.info/manager/0001773195-affinity-asset-advisors-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001773195-affinity-asset-advisors-llc"><meta name="description" content="Affinity Asset Advisors, LLC reported 121 holdings with total value $1.76B excluding options as of Q3 2026. Top holdings included IWM puts, ROIV, SYRE, XBI puts, and ERAS"><meta property="og:description" content="Affinity Asset Advisors, LLC reported 121 holdings with total value $1.76B excluding options as of Q3 2026. Top holdings included IWM puts, ROIV, SYRE, XBI puts, and ERAS"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"A","item":"https://13f.info/managers/A","@type":"ListItem","position":1},{"name":"Affinity Asset Advisors, LLC","item":"https://13f.info/manager/0001773195-affinity-asset-advisors-llc","identifier":"0001773195","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001773195","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,15 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000101143826000516-affinity-asset-advisors-llc-q2-2026">Q2 2026</a>
+        <a href="/13f/000101143826000687-affinity-asset-advisors-llc-q3-2026">Q3 2026</a>
+      </dd>
+    </div>
+    <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">
+        13D/G filings
+      </dt>
+      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <a href="#beneficial-ownership">13G on 19 securities<span aria-hidden="true"> ↓</span></a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +108,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[162553000.0,204020000.0,209935000.0,251208000.0,234412000.0,252212000.0,182632000.0,216938000.0,218191273.0,260222252.0,254100684.0,306067020.0,501546141.0,615079245.0,634889218.0,644524697.0,640106162.0,638754394.0,676265606.0,1074794555.0,1391738675.0,1705088311.0,2044832098.0,1762875477.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +148,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,397 +156,462 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000101143826000516-affinity-asset-advisors-llc-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">113</td>
-          <td class="px-3 py-2 text-right">2,212,480</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ROIV, APGE, AGLE, XENE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ROIV, APGE, AGLE, XENE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-13">8/13/2026</td>
-          <td class="px-3 py-2 text-center">000101143826000516</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000131586326000411-affinity-asset-advisors-llc-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">105</td>
-          <td class="px-3 py-2 text-right">1,936,321</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, APGE, XENE, ERAS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, APGE, XENE, ERAS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-14">5/14/2026</td>
-          <td class="px-3 py-2 text-center">000131586326000411</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000131586326000153-affinity-asset-advisors-llc-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">95</td>
-          <td class="px-3 py-2 text-right">1,755,015</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, APGE, INSM, 2X10.SG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, APGE, INSM, 2X10.SG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-13">2/13/2026</td>
-          <td class="px-3 py-2 text-center">000131586326000153</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000199937125017685-affinity-asset-advisors-llc-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">96</td>
-          <td class="px-3 py-2 text-right">1,147,980</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="I9SA.HA, INSM, SPY, XENE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              I9SA.HA, INSM, SPY, XENE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-13">11/13/2025</td>
-          <td class="px-3 py-2 text-center">000199937125017685</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000199937125011256-affinity-asset-advisors-llc-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">91</td>
-          <td class="px-3 py-2 text-right">732,191</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="I9SA.HA, INSM, XENE, ACLX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              I9SA.HA, INSM, XENE, ACLX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-13">8/13/2025</td>
-          <td class="px-3 py-2 text-center">000199937125011256</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000199937125006074-affinity-asset-advisors-llc-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">98</td>
-          <td class="px-3 py-2 text-right">1,047,782</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, IWM puts, XENE, APGE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, IWM puts, XENE, APGE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-14">5/14/2025</td>
-          <td class="px-3 py-2 text-center">000199937125006074</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000183988225008942-affinity-asset-advisors-llc-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">85</td>
-          <td class="px-3 py-2 text-right">746,014</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, XENE, APGE, ACLX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, XENE, APGE, ACLX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-13">2/13/2025</td>
-          <td class="px-3 py-2 text-center">000183988225008942</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000183988224038904-affinity-asset-advisors-llc-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">86</td>
-          <td class="px-3 py-2 text-right">732,761</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XENE, SAVA puts, APGE, NUVL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XENE, SAVA puts, APGE, NUVL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-13">11/13/2024</td>
-          <td class="px-3 py-2 text-center">000183988224038904</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000199937124010146-affinity-asset-advisors-llc-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">98</td>
-          <td class="px-3 py-2 text-right">867,505</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, XENE, APGE, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, XENE, APGE, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000199937124010146</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000199937124006067-affinity-asset-advisors-llc-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">95</td>
-          <td class="px-3 py-2 text-right">807,766</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, MRNA puts, APGE, XENE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, MRNA puts, APGE, XENE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-14">5/14/2024</td>
-          <td class="px-3 py-2 text-center">000199937124006067</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000199937124002152-affinity-asset-advisors-llc-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">82</td>
-          <td class="px-3 py-2 text-right">547,527</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="IMGN, CERE, CBAY, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              IMGN, CERE, CBAY, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-13">2/13/2024</td>
-          <td class="px-3 py-2 text-center">000199937124002152</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000199937123000200-affinity-asset-advisors-llc-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">81</td>
-          <td class="px-3 py-2 text-right">355,501</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, TEVA, CBAY, BRIDGEBIO PHARMA INC">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, TEVA, CBAY, BRIDGEBIO PHARMA INC
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000199937123000200</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000138713123010013-affinity-asset-advisors-llc-q2-2023-restatement">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">70</td>
-          <td class="px-3 py-2 text-right">286,310</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MDGL, CERE, ESTA, KDNY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MDGL, CERE, ESTA, KDNY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-21">8/21/2023</td>
-          <td class="px-3 py-2 text-center">000138713123010013</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000138713123006541-affinity-asset-advisors-llc-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">74</td>
-          <td class="px-3 py-2 text-right">303,007</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, MDGL, SPY calls, RXDX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KDNY, MDGL, SPY calls, RXDX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000138713123006541</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000138713123001890-affinity-asset-advisors-llc-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">63</td>
-          <td class="px-3 py-2 text-right">254,989</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, MDGL, BMY puts, ESTA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KDNY, MDGL, BMY puts, ESTA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-13">2/13/2023</td>
-          <td class="px-3 py-2 text-center">000138713123001890</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000138713122011394-affinity-asset-advisors-llc-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">64</td>
-          <td class="px-3 py-2 text-right">358,275</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, ESTA, KDNY, GLOBAL BLOOD THERAPEUTICS IN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, ESTA, KDNY, GLOBAL BLOOD THERAPEUTICS IN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
-          <td class="px-3 py-2 text-center">000138713122011394</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000138713122008717-affinity-asset-advisors-llc-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">54</td>
-          <td class="px-3 py-2 text-right">237,227</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ESTA, KURA, KDNY, NARI">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ESTA, KURA, KDNY, NARI
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-12">8/12/2022</td>
-          <td class="px-3 py-2 text-center">000138713122008717</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000138713122006128-affinity-asset-advisors-llc-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">59</td>
-          <td class="px-3 py-2 text-right">625,043</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, NARI, MORF, KURA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, NARI, MORF, KURA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-13">5/13/2022</td>
-          <td class="px-3 py-2 text-center">000138713122006128</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000138713122001676-affinity-asset-advisors-llc-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">55</td>
-          <td class="px-3 py-2 text-right">275,380</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MORF, SWTX, SAVA puts, VINC">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MORF, SWTX, SAVA puts, VINC
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-11">2/11/2022</td>
-          <td class="px-3 py-2 text-center">000138713122001676</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000138713121011032-affinity-asset-advisors-llc-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">73</td>
-          <td class="px-3 py-2 text-right">395,981</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, SPY puts, BBIO, VINC">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, SPY puts, BBIO, VINC
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-11-12">11/12/2021</td>
-          <td class="px-3 py-2 text-center">000138713121011032</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000138713121008523-affinity-asset-advisors-llc-q2-2021">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">69</td>
-          <td class="px-3 py-2 text-right">279,334</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BBIO, XBI puts, ARKG puts, MORF">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BBIO, XBI puts, ARKG puts, MORF
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-13">8/13/2021</td>
-          <td class="px-3 py-2 text-center">000138713121008523</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000138713121005632-affinity-asset-advisors-llc-q1-2021">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">72</td>
-          <td class="px-3 py-2 text-right">294,465</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, BBIO, ARKG puts, MORF">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, BBIO, ARKG puts, MORF
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-05-14">5/14/2021</td>
-          <td class="px-3 py-2 text-center">000138713121005632</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000138713121002218-affinity-asset-advisors-llc-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">62</td>
-          <td class="px-3 py-2 text-right">188,660</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="EIDOS THERAPEUTICS INC, SPY puts, CRIS, BBIO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              EIDOS THERAPEUTICS INC, SPY puts, CRIS, BBIO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-12">2/12/2021</td>
-          <td class="px-3 py-2 text-center">000138713121002218</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000101143826000687-affinity-asset-advisors-llc-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">121</td>
+            <td class="px-3 py-2 text-right" data-order="1762875.477">
+              1,762,875
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="IWM puts, ROIV, SYRE, XBI puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                IWM puts, ROIV, SYRE, XBI puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-13">11/13/2026</td>
+            <td class="px-3 py-2 text-center">000101143826000687</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000101143826000516-affinity-asset-advisors-llc-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">113</td>
+            <td class="px-3 py-2 text-right" data-order="2044832.098">
+              2,044,832
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ROIV, APGE, SYRE, XENE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ROIV, APGE, SYRE, XENE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-13">8/13/2026</td>
+            <td class="px-3 py-2 text-center">000101143826000516</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000131586326000411-affinity-asset-advisors-llc-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">105</td>
+            <td class="px-3 py-2 text-right" data-order="1705088.311">
+              1,705,088
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, APGE, XENE, ERAS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, APGE, XENE, ERAS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-14">5/14/2026</td>
+            <td class="px-3 py-2 text-center">000131586326000411</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000131586326000153-affinity-asset-advisors-llc-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">95</td>
+            <td class="px-3 py-2 text-right" data-order="1391738.675">
+              1,391,739
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, APGE, INSM, ABVX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, APGE, INSM, ABVX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-13">2/13/2026</td>
+            <td class="px-3 py-2 text-center">000131586326000153</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000199937125017685-affinity-asset-advisors-llc-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">96</td>
+            <td class="px-3 py-2 text-right" data-order="1074794.555">
+              1,074,795
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRNA, INSM, SPY, XENE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                VRNA, INSM, SPY, XENE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-13">11/13/2025</td>
+            <td class="px-3 py-2 text-center">000199937125017685</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000199937125011256-affinity-asset-advisors-llc-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">91</td>
+            <td class="px-3 py-2 text-right" data-order="676265.606">
+              676,266
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRNA, INSM, XENE, ACLX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                VRNA, INSM, XENE, ACLX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-13">8/13/2025</td>
+            <td class="px-3 py-2 text-center">000199937125011256</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000199937125006074-affinity-asset-advisors-llc-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">98</td>
+            <td class="px-3 py-2 text-right" data-order="638754.394">
+              638,754
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, IWM puts, XENE, APGE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, IWM puts, XENE, APGE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-14">5/14/2025</td>
+            <td class="px-3 py-2 text-center">000199937125006074</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000183988225008942-affinity-asset-advisors-llc-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">85</td>
+            <td class="px-3 py-2 text-right" data-order="640106.162">
+              640,106
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, XENE, APGE, ACLX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, XENE, APGE, ACLX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-13">2/13/2025</td>
+            <td class="px-3 py-2 text-center">000183988225008942</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000183988224038904-affinity-asset-advisors-llc-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">86</td>
+            <td class="px-3 py-2 text-right" data-order="644524.697">
+              644,525
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XENE, FLNA puts, APGE, NUVL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XENE, FLNA puts, APGE, NUVL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-13">11/13/2024</td>
+            <td class="px-3 py-2 text-center">000183988224038904</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000199937124010146-affinity-asset-advisors-llc-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">98</td>
+            <td class="px-3 py-2 text-right" data-order="634889.218">
+              634,889
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, XENE, APGE, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, XENE, APGE, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000199937124010146</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000199937124006067-affinity-asset-advisors-llc-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">95</td>
+            <td class="px-3 py-2 text-right" data-order="615079.245">
+              615,079
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, MRNA puts, APGE, XENE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, MRNA puts, APGE, XENE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-14">5/14/2024</td>
+            <td class="px-3 py-2 text-center">000199937124006067</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000199937124002152-affinity-asset-advisors-llc-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">82</td>
+            <td class="px-3 py-2 text-right" data-order="501546.141">
+              501,546
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="IMGN, CERE, CBAY, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                IMGN, CERE, CBAY, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-13">2/13/2024</td>
+            <td class="px-3 py-2 text-center">000199937124002152</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000199937123000200-affinity-asset-advisors-llc-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">81</td>
+            <td class="px-3 py-2 text-right" data-order="306067.02">
+              306,067
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, TEVA, CBAY, BRIDGEBIO PHARMA INC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, TEVA, CBAY, BRIDGEBIO PHARMA INC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000199937123000200</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000138713123010013-affinity-asset-advisors-llc-q2-2023-restatement">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">70</td>
+            <td class="px-3 py-2 text-right" data-order="254100.684">
+              254,101
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MDGL, CERE, ESTA, KDNY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MDGL, CERE, ESTA, KDNY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-21">8/21/2023</td>
+            <td class="px-3 py-2 text-center">000138713123010013</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000138713123006541-affinity-asset-advisors-llc-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">74</td>
+            <td class="px-3 py-2 text-right" data-order="260222.252">
+              260,222
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, MDGL, SPY calls, RXDX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KDNY, MDGL, SPY calls, RXDX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000138713123006541</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000138713123001890-affinity-asset-advisors-llc-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">63</td>
+            <td class="px-3 py-2 text-right" data-order="218191.273">
+              218,191
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, MDGL, BMY puts, ESTA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KDNY, MDGL, BMY puts, ESTA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-13">2/13/2023</td>
+            <td class="px-3 py-2 text-center">000138713123001890</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000138713122011394-affinity-asset-advisors-llc-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">64</td>
+            <td class="px-3 py-2 text-right" data-order="216938.0">
+              216,938
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, ESTA, KDNY, GBT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, ESTA, KDNY, GBT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
+            <td class="px-3 py-2 text-center">000138713122011394</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000138713122008717-affinity-asset-advisors-llc-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">54</td>
+            <td class="px-3 py-2 text-right" data-order="182632.0">
+              182,632
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ESTA, KURA, KDNY, NARI">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ESTA, KURA, KDNY, NARI
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-12">8/12/2022</td>
+            <td class="px-3 py-2 text-center">000138713122008717</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000138713122006128-affinity-asset-advisors-llc-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">59</td>
+            <td class="px-3 py-2 text-right" data-order="252212.0">
+              252,212
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, NARI, MORF, KURA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, NARI, MORF, KURA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-13">5/13/2022</td>
+            <td class="px-3 py-2 text-center">000138713122006128</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000138713122001676-affinity-asset-advisors-llc-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">55</td>
+            <td class="px-3 py-2 text-right" data-order="234412.0">
+              234,412
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MORF, SWTX, FLNA puts, VINC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MORF, SWTX, FLNA puts, VINC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-11">2/11/2022</td>
+            <td class="px-3 py-2 text-center">000138713122001676</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000138713121011032-affinity-asset-advisors-llc-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">73</td>
+            <td class="px-3 py-2 text-right" data-order="251208.0">
+              251,208
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, SPY puts, BBIO, VINC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, SPY puts, BBIO, VINC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-11-12">11/12/2021</td>
+            <td class="px-3 py-2 text-center">000138713121011032</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000138713121008523-affinity-asset-advisors-llc-q2-2021">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">69</td>
+            <td class="px-3 py-2 text-right" data-order="209935.0">
+              209,935
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BBIO, XBI puts, ARKG puts, MORF">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BBIO, XBI puts, ARKG puts, MORF
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-13">8/13/2021</td>
+            <td class="px-3 py-2 text-center">000138713121008523</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000138713121005632-affinity-asset-advisors-llc-q1-2021">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">72</td>
+            <td class="px-3 py-2 text-right" data-order="204020.0">
+              204,020
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, BBIO, ARKG puts, MORF">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, BBIO, ARKG puts, MORF
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-05-14">5/14/2021</td>
+            <td class="px-3 py-2 text-center">000138713121005632</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000138713121002218-affinity-asset-advisors-llc-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">62</td>
+            <td class="px-3 py-2 text-right" data-order="162553.0">
+              162,553
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="EIDX, SPY puts, CRIS, BBIO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                EIDX, SPY puts, CRIS, BBIO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-12">2/12/2021</td>
+            <td class="px-3 py-2 text-center">000138713121002218</td>
+          </tr>
     </tbody>
   </table>
 </div>
@@ -547,9 +626,28 @@
     </ul>
   </details>
 
-<script>
-  var holdingsChartData = {"labels":["2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[188660000.0,294465000.0,279334000.0,395981000.0,275380000.0,625043000.0,237227000.0,358275000.0,254989593.0,303007210.0,286310058.0,355501523.0,547527586.0,807766692.0,867505798.0,732761256.0,746014464.0,1047782894.0,732191133.0,1147980949.0,1755015212.0,1936321061.0,2212480490.0]};
-</script>
+
+<div id="beneficial-ownership" class="w-full md:max-w-3xl lg:max-w-5xl mt-12 md:mt-16">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 sm:px-0">
+    <h2 class="text-2xl">13D and 13G Filings</h2>
+
+    <a class="mb-2 px-3 py-1 rounded bg-white shadow text-sm whitespace-nowrap text-indigo-600 hover:text-indigo-900 hover:bg-gray-50" href="/manager/0001773195-affinity-asset-advisors-llc/13dg-filings">All 13D and 13G filings</a>
+  </div>
+
+
+    <p class="bg-white shadow px-3 sm:px-4 py-2 text-gray-900 ">
+      19
+      
+      securities
+      where the latest filing
+        since 12/18/2024
+      is a <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-gray-200 text-gray-700" title="Schedule 13G, the short form. The filer certifies it doesn&#39;t hold the shares to change or influence control">13G</span>,
+      the newest
+      filed 11/13/2026.
+      <a class="whitespace-nowrap" href="/manager/0001773195-affinity-asset-advisors-llc/13dg-filings">View all</a>
+    </p>
+</div>
+
 
       </div>
 
@@ -644,7 +742,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

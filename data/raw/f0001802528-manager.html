@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Fairmount Funds Management LLC 13F Filings"><link href="https://13f.info/manager/0001802528-fairmount-funds-management-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001802528-fairmount-funds-management-llc"><meta name="description" content="Fairmount Funds Management LLC reported 12 holdings with total value $1.51 B as of Q2 2026. Top holdings included ORKA, DNTH, GLTO, COGT, and JBIO"><meta property="og:description" content="Fairmount Funds Management LLC reported 12 holdings with total value $1.51 B as of Q2 2026. Top holdings included ORKA, DNTH, GLTO, COGT, and JBIO"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"F","item":"https://13f.info/managers/F","@type":"ListItem","position":1},{"name":"Fairmount Funds Management LLC","item":"https://13f.info/manager/0001802528-fairmount-funds-management-llc","identifier":"0001802528","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001802528","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Fairmount Funds Management LLC 13F Filings"><link href="https://13f.info/manager/0001802528-fairmount-funds-management-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001802528-fairmount-funds-management-llc"><meta name="description" content="Fairmount Funds Management LLC reported 12 holdings with total value $1.59B as of Q3 2026. Top holdings included ORKA, KRSA, DNTH, DMRA, and COGT"><meta property="og:description" content="Fairmount Funds Management LLC reported 12 holdings with total value $1.59B as of Q3 2026. Top holdings included ORKA, KRSA, DNTH, DMRA, and COGT"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"F","item":"https://13f.info/managers/F","@type":"ListItem","position":1},{"name":"Fairmount Funds Management LLC","item":"https://13f.info/manager/0001802528-fairmount-funds-management-llc","identifier":"0001802528","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001802528","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,15 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000110465926096405-fairmount-funds-management-llc-q2-2026">Q2 2026</a>
+        <a href="/13f/000110465926128188-fairmount-funds-management-llc-q3-2026">Q3 2026</a>
+      </dd>
+    </div>
+    <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">
+        13D/G filings
+      </dt>
+      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <a href="#beneficial-ownership">13D on 12 securities, 13G on 5 securities<span aria-hidden="true"> ↓</span></a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +108,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2019&quot;,&quot;Q1 2020&quot;,&quot;Q2 2020&quot;,&quot;Q3 2020&quot;,&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[164989000.0,164882000.0,224208000.0,236102000.0,279600000.0,237245000.0,243235000.0,274991000.0,303335000.0,422935000.0,436929000.0,542122000.0,630363234.0,581468614.0,709301537.0,831172751.0,946456168.0,917385636.0,885124128.0,1233275095.0,1005884370.0,644620652.0,771902136.0,1111423463.0,1313784318.0,1384339432.0,1512967797.0,1594519847.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +148,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,473 +156,2013 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000110465926096405-fairmount-funds-management-llc-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">12</td>
-          <td class="px-3 py-2 text-right">1,512,967</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ORKA, DNTH, GLTO, COGT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ORKA, DNTH, GLTO, COGT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000110465926096405</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000110465926062419-fairmount-funds-management-llc-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">12</td>
-          <td class="px-3 py-2 text-right">1,384,339</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GLTO, DNTH, COGT, AGLE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GLTO, DNTH, COGT, AGLE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000110465926062419</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000110465926016303-fairmount-funds-management-llc-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">13</td>
-          <td class="px-3 py-2 text-right">1,313,784</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="COGT, APGE, AGLE, VRDN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              COGT, APGE, AGLE, VRDN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
-          <td class="px-3 py-2 text-center">000110465926016303</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000110465925112427-fairmount-funds-management-llc-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">17</td>
-          <td class="px-3 py-2 text-right">1,111,423</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, COGT, AXSM, APGE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              DNTH, COGT, AXSM, APGE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925112427</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000110465925078521-fairmount-funds-management-llc-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">17</td>
-          <td class="px-3 py-2 text-right">771,902</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, AXSM, ELVN, SRRK">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, AXSM, ELVN, SRRK
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925078521</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000110465925049337-fairmount-funds-management-llc-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">15</td>
-          <td class="px-3 py-2 text-right">644,620</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, APGE, AGLE, ELVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, APGE, AGLE, ELVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000110465925049337</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000110465925014003-fairmount-funds-management-llc-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">17</td>
-          <td class="px-3 py-2 text-right">1,005,884</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, AGLE, APGE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, NUVL, AGLE, APGE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925014003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000110465924118833-fairmount-funds-management-llc-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">15</td>
-          <td class="px-3 py-2 text-right">1,233,275</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, APGE, AGLE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, NUVL, APGE, AGLE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924118833</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000110465924089572-fairmount-funds-management-llc-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">13</td>
-          <td class="px-3 py-2 text-right">885,124</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, AGLE, APGE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, NUVL, AGLE, APGE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924089572</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000110465924061870-fairmount-funds-management-llc-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">15</td>
-          <td class="px-3 py-2 text-right">917,385</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, APGE, DNTH">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, NUVL, APGE, DNTH
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
-          <td class="px-3 py-2 text-center">000110465924061870</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000110465924023531-fairmount-funds-management-llc-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">16</td>
-          <td class="px-3 py-2 text-right">946,456</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, IMGN, NUVL, APGE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, IMGN, NUVL, APGE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924023531</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000110465923118043-fairmount-funds-management-llc-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">20</td>
-          <td class="px-3 py-2 text-right">831,172</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, IMGN, APGE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, NUVL, IMGN, APGE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923118043</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000110465923091264-fairmount-funds-management-llc-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">17</td>
-          <td class="px-3 py-2 text-right">709,301</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, IMGN, ELVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, NUVL, IMGN, ELVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923091264</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000110465923060312-fairmount-funds-management-llc-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">16</td>
-          <td class="px-3 py-2 text-right">581,468</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, I9SA.HA, 49BA.SG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, NUVL, I9SA.HA, 49BA.SG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000110465923060312</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000110465923021407-fairmount-funds-management-llc-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">16</td>
-          <td class="px-3 py-2 text-right">630,363</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, I9SA.HA, 49BA.SG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, NUVL, I9SA.HA, 49BA.SG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923021407</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000110465922116268-fairmount-funds-management-llc-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">568,894</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, COGT, NUVL, BCRX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AXSM, COGT, NUVL, BCRX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-09">11/9/2022</td>
-          <td class="px-3 py-2 text-center">000110465922116268</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000110465922091338-fairmount-funds-management-llc-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">436,929</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BIOHAVEN PHARMACTL HLDG CO, AXSM, BCRX, GLOBAL BLOOD THERAPEUTICS IN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BIOHAVEN PHARMACTL HLDG CO, AXSM, BCRX, GLOBAL BLOOD THERAPEUTICS IN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
-          <td class="px-3 py-2 text-center">000110465922091338</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000180252822000004-fairmount-funds-management-llc-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">22</td>
-          <td class="px-3 py-2 text-right">422,935</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, GLOBAL BLOOD THERAPEUTICS IN, ARGX, AXSM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INSM, GLOBAL BLOOD THERAPEUTICS IN, ARGX, AXSM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
-          <td class="px-3 py-2 text-center">000180252822000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000180252822000002-fairmount-funds-management-llc-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">20</td>
-          <td class="px-3 py-2 text-right">303,335</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ZGNX, INSM, ENTA, ARGX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ZGNX, INSM, ENTA, ARGX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
-          <td class="px-3 py-2 text-center">000180252822000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000180252821000008-fairmount-funds-management-llc-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">20</td>
-          <td class="px-3 py-2 text-right">274,991</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ZGNX, NUVL, ALLK">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INSM, ZGNX, NUVL, ALLK
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
-          <td class="px-3 py-2 text-center">000180252821000008</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000180252821000007-fairmount-funds-management-llc-q2-2021">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">19</td>
-          <td class="px-3 py-2 text-right">243,235</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ZGNX, AXSM, ARGX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INSM, ZGNX, AXSM, ARGX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-13">8/13/2021</td>
-          <td class="px-3 py-2 text-center">000180252821000007</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000180252821000005-fairmount-funds-management-llc-q1-2021">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">21</td>
-          <td class="px-3 py-2 text-right">237,245</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ZGNX, IOVA, ALLK">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INSM, ZGNX, IOVA, ALLK
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-05-14">5/14/2021</td>
-          <td class="px-3 py-2 text-center">000180252821000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000180252821000002-fairmount-funds-management-llc-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">18</td>
-          <td class="px-3 py-2 text-right">279,600</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, FOLD, IOVA, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INSM, FOLD, IOVA, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-12">2/12/2021</td>
-          <td class="px-3 py-2 text-center">000180252821000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-09-30">
-            <a href="/13f/000180252820000011-fairmount-funds-management-llc-q3-2020">Q3 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">17</td>
-          <td class="px-3 py-2 text-right">236,102</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ACAD, TRIL, FOLD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INSM, ACAD, TRIL, FOLD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-11-12">11/12/2020</td>
-          <td class="px-3 py-2 text-center">000180252820000011</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-06-30">
-            <a href="/13f/000180252820000008-fairmount-funds-management-llc-q2-2020">Q2 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">14</td>
-          <td class="px-3 py-2 text-right">224,208</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ACAD, INSM, ZGNX, FOLD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ACAD, INSM, ZGNX, FOLD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-08-04">8/4/2020</td>
-          <td class="px-3 py-2 text-center">000180252820000008</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-03-31">
-            <a href="/13f/000180252820000006-fairmount-funds-management-llc-q1-2020">Q1 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">14</td>
-          <td class="px-3 py-2 text-right">164,882</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ACAD, ZGNX, INSM, IOVA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ACAD, ZGNX, INSM, IOVA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-05-08">5/8/2020</td>
-          <td class="px-3 py-2 text-center">000180252820000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-12-31">
-            <a href="/13f/000180252820000004-fairmount-funds-management-llc-q4-2019">Q4 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">15</td>
-          <td class="px-3 py-2 text-right">164,989</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ZGNX, INSM, ACAD, AMRN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ZGNX, INSM, ACAD, AMRN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-02-12">2/12/2020</td>
-          <td class="px-3 py-2 text-center">000180252820000004</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000110465926128188-fairmount-funds-management-llc-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">12</td>
+            <td class="px-3 py-2 text-right" data-order="1594519.847">
+              1,594,520
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ORKA, KRSA, DNTH, DMRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ORKA, KRSA, DNTH, DMRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000110465926128188</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000110465926096405-fairmount-funds-management-llc-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">12</td>
+            <td class="px-3 py-2 text-right" data-order="1512967.797">
+              1,512,968
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ORKA, DNTH, DMRA, COGT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ORKA, DNTH, DMRA, COGT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000110465926096405</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000110465926062419-fairmount-funds-management-llc-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">12</td>
+            <td class="px-3 py-2 text-right" data-order="1384339.432">
+              1,384,339
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DMRA, DNTH, COGT, SYRE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DMRA, DNTH, COGT, SYRE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000110465926062419</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000110465926016303-fairmount-funds-management-llc-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">13</td>
+            <td class="px-3 py-2 text-right" data-order="1313784.318">
+              1,313,784
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="COGT, APGE, SYRE, VRDN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                COGT, APGE, SYRE, VRDN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
+            <td class="px-3 py-2 text-center">000110465926016303</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000110465925112427-fairmount-funds-management-llc-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">17</td>
+            <td class="px-3 py-2 text-right" data-order="1111423.463">
+              1,111,423
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, COGT, AXSM, APGE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DNTH, COGT, AXSM, APGE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925112427</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000110465925078521-fairmount-funds-management-llc-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">17</td>
+            <td class="px-3 py-2 text-right" data-order="771902.136">
+              771,902
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, AXSM, ELVN, SRRK">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, AXSM, ELVN, SRRK
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925078521</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000110465925049337-fairmount-funds-management-llc-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">15</td>
+            <td class="px-3 py-2 text-right" data-order="644620.652">
+              644,621
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, APGE, SYRE, ELVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, APGE, SYRE, ELVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000110465925049337</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000110465925014003-fairmount-funds-management-llc-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">17</td>
+            <td class="px-3 py-2 text-right" data-order="1005884.37">
+              1,005,884
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, SYRE, APGE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, NUVL, SYRE, APGE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925014003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000110465924118833-fairmount-funds-management-llc-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">15</td>
+            <td class="px-3 py-2 text-right" data-order="1233275.095">
+              1,233,275
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, APGE, SYRE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, NUVL, APGE, SYRE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924118833</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000110465924089572-fairmount-funds-management-llc-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">13</td>
+            <td class="px-3 py-2 text-right" data-order="885124.128">
+              885,124
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, SYRE, APGE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, NUVL, SYRE, APGE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924089572</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000110465924061870-fairmount-funds-management-llc-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">15</td>
+            <td class="px-3 py-2 text-right" data-order="917385.636">
+              917,386
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, APGE, DNTH">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, NUVL, APGE, DNTH
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
+            <td class="px-3 py-2 text-center">000110465924061870</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000110465924023531-fairmount-funds-management-llc-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">16</td>
+            <td class="px-3 py-2 text-right" data-order="946456.168">
+              946,456
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, IMGN, NUVL, APGE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, IMGN, NUVL, APGE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924023531</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000110465923118043-fairmount-funds-management-llc-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">20</td>
+            <td class="px-3 py-2 text-right" data-order="831172.751">
+              831,173
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, IMGN, APGE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, NUVL, IMGN, APGE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923118043</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000110465923091264-fairmount-funds-management-llc-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">17</td>
+            <td class="px-3 py-2 text-right" data-order="709301.537">
+              709,302
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, IMGN, ELVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, NUVL, IMGN, ELVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923091264</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000110465923060312-fairmount-funds-management-llc-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">16</td>
+            <td class="px-3 py-2 text-right" data-order="581468.614">
+              581,469
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, VRNA, ONC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, NUVL, VRNA, ONC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000110465923060312</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000110465923021407-fairmount-funds-management-llc-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">16</td>
+            <td class="px-3 py-2 text-right" data-order="630363.234">
+              630,363
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, NUVL, VRNA, ONC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, NUVL, VRNA, ONC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923021407</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000110465922116268-fairmount-funds-management-llc-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="542122.0">
+              542,122
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AXSM, COGT, NUVL, BCRX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AXSM, COGT, NUVL, BCRX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-09">11/9/2022</td>
+            <td class="px-3 py-2 text-center">000110465922116268</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000110465922091338-fairmount-funds-management-llc-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="436929.0">
+              436,929
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BHVN, AXSM, BCRX, GBT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BHVN, AXSM, BCRX, GBT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
+            <td class="px-3 py-2 text-center">000110465922091338</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000180252822000004-fairmount-funds-management-llc-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">22</td>
+            <td class="px-3 py-2 text-right" data-order="422935.0">
+              422,935
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, GBT, ARGX, AXSM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INSM, GBT, ARGX, AXSM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
+            <td class="px-3 py-2 text-center">000180252822000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000180252822000002-fairmount-funds-management-llc-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">20</td>
+            <td class="px-3 py-2 text-right" data-order="303335.0">
+              303,335
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ZGNX, INSM, ENTA, ARGX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ZGNX, INSM, ENTA, ARGX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
+            <td class="px-3 py-2 text-center">000180252822000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000180252821000008-fairmount-funds-management-llc-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">20</td>
+            <td class="px-3 py-2 text-right" data-order="274991.0">
+              274,991
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ZGNX, NUVL, ALLK">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INSM, ZGNX, NUVL, ALLK
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
+            <td class="px-3 py-2 text-center">000180252821000008</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000180252821000007-fairmount-funds-management-llc-q2-2021">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">19</td>
+            <td class="px-3 py-2 text-right" data-order="243235.0">
+              243,235
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ZGNX, AXSM, ARGX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INSM, ZGNX, AXSM, ARGX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-13">8/13/2021</td>
+            <td class="px-3 py-2 text-center">000180252821000007</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000180252821000005-fairmount-funds-management-llc-q1-2021">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">21</td>
+            <td class="px-3 py-2 text-right" data-order="237245.0">
+              237,245
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ZGNX, IOVA, ALLK">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INSM, ZGNX, IOVA, ALLK
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-05-14">5/14/2021</td>
+            <td class="px-3 py-2 text-center">000180252821000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000180252821000002-fairmount-funds-management-llc-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">18</td>
+            <td class="px-3 py-2 text-right" data-order="279600.0">
+              279,600
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, FOLD, IOVA, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INSM, FOLD, IOVA, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-12">2/12/2021</td>
+            <td class="px-3 py-2 text-center">000180252821000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-09-30">
+              <a href="/13f/000180252820000011-fairmount-funds-management-llc-q3-2020">Q3 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">17</td>
+            <td class="px-3 py-2 text-right" data-order="236102.0">
+              236,102
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INSM, ACAD, TRIL, FOLD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INSM, ACAD, TRIL, FOLD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-11-12">11/12/2020</td>
+            <td class="px-3 py-2 text-center">000180252820000011</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-06-30">
+              <a href="/13f/000180252820000008-fairmount-funds-management-llc-q2-2020">Q2 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">14</td>
+            <td class="px-3 py-2 text-right" data-order="224208.0">
+              224,208
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ACAD, INSM, ZGNX, FOLD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ACAD, INSM, ZGNX, FOLD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-08-04">8/4/2020</td>
+            <td class="px-3 py-2 text-center">000180252820000008</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-03-31">
+              <a href="/13f/000180252820000006-fairmount-funds-management-llc-q1-2020">Q1 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">14</td>
+            <td class="px-3 py-2 text-right" data-order="164882.0">
+              164,882
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ACAD, ZGNX, INSM, IOVA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ACAD, ZGNX, INSM, IOVA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-05-08">5/8/2020</td>
+            <td class="px-3 py-2 text-center">000180252820000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-12-31">
+              <a href="/13f/000180252820000004-fairmount-funds-management-llc-q4-2019">Q4 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">15</td>
+            <td class="px-3 py-2 text-right" data-order="164989.0">
+              164,989
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ZGNX, INSM, ACAD, AMRN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ZGNX, INSM, ACAD, AMRN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-02-12">2/12/2020</td>
+            <td class="px-3 py-2 text-center">000180252820000004</td>
+          </tr>
     </tbody>
   </table>
 </div>
 
 
-<script>
-  var holdingsChartData = {"labels":["2019-12-31","2020-03-31","2020-06-30","2020-09-30","2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[164989000.0,164882000.0,224208000.0,236102000.0,279600000.0,237245000.0,243235000.0,274991000.0,303335000.0,422935000.0,436929000.0,568894000.0,630363234.0,581468614.0,709301537.0,831172751.0,946456168.0,917385636.0,885124128.0,1233275095.0,1005884370.0,644620652.0,771902136.0,1111423463.0,1313784318.0,1384339432.0,1512967797.0]};
-</script>
+
+<div id="beneficial-ownership" class="w-full md:max-w-3xl lg:max-w-5xl mt-12 md:mt-16">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 sm:px-0">
+    <h2 class="text-2xl">13D and 13G Filings</h2>
+
+    <a class="mb-2 px-3 py-1 rounded bg-white shadow text-sm whitespace-nowrap text-indigo-600 hover:text-indigo-900 hover:bg-gray-50" href="/manager/0001802528-fairmount-funds-management-llc/13dg-filings">All 13D and 13G filings</a>
+  </div>
+
+    <p class="text-sm text-gray-500 px-4 sm:px-0 mb-2">
+      Each security where the latest filing since 12/18/2024
+      is a 13D, newest first.
+    </p>
+
+    <table class="table-fixed w-full sm:table-auto bg-white shadow">
+  <thead>
+    <tr class="border-b border-gray-200">
+      <th class="sm:w-full text-sm font-medium text-gray-500 uppercase text-left px-3 sm:px-4 py-2">Issuer</th>
+        <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden lg:table-cell">Symbol</th>
+        <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden lg:table-cell">CUSIP</th>
+      <th class="w-20 sm:w-auto text-sm font-medium text-gray-500 uppercase text-right px-2 sm:px-4 py-2 sm:whitespace-nowrap">% of Class</th>
+      <th class="text-sm font-medium text-gray-500 uppercase text-right px-4 py-2 hidden sm:table-cell">Shares</th>
+      <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden sm:table-cell">Form</th>
+      <th class="w-32 sm:w-auto text-sm font-medium text-gray-500 uppercase text-right pl-2 pr-3 sm:px-4 py-2">Filed</th>
+    </tr>
+  </thead>
+
+
+    <tbody>
+      
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, par value $0.0001 per share" href="/cusip/587157108">Mentari Therapeutics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden">587157108</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_618406">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell"></td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">587157108</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="19.99">
+    20.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    10,555,507
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1728328/000119312526458677/0001193125-26-458677-index.html">11/12/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 11/6/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_618406">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,555,507
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_618406">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,555,507
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_618406">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Peter Evan Harwin
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,555,507
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_618406">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Tomas Kiselak
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,555,507
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock" href="/cusip/98973P309">Alaunos Therapeutics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">TCRT</span> · 98973P309</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_225994">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          5 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">TCRT</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">98973P309</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="19.99">
+    20.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    858,789
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1107421/000168316826007898/0001683168-26-007898-index.html">10/15/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 10/13/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_225994">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        858,789
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_225994">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="3.98">
+        4.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        171,000
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_225994">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Co-Invest VII L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        858,789
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_225994">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Harwin Peter Evan
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        858,789
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_225994">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Kiselak Tomas
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        858,789
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.0001 par value" href="/cusip/00773J202">Spyre Therapeutics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">SYRE</span> · 00773J202</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_196835">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons; figures for Harwin Peter Evan
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">SYRE</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">00773J202</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="9.99">
+    10.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    10,185,961
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1636282/000110465926115087/0001104659-26-115087-index.html">10/9/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 10/7/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_196835">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.19">
+        9.2%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        9,354,200
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_196835">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.19">
+        9.2%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        9,354,200
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_196835">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Harwin Peter Evan
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,185,961
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_196835">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Kiselak Tomas
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,185,961
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, no par value" href="/cusip/23255M303">Korsana Biosciences, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">KRSA</span> · 23255M303</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_55711">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          5 Reporting Persons; figures for Tomas Kiselak
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">KRSA</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">23255M303</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="19.99">
+    20.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    9,106,420
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1755237/000119312526389417/0001193125-26-389417-index.html">9/11/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 9/8/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_55711">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        9,103,729
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_55711">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.17">
+        15.2%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        6,911,174
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_55711">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Co-Invest VI L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.81">
+        4.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,192,555
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_55711">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Peter Evan Harwin
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        9,103,729
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_55711">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Tomas Kiselak
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        9,106,420
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Ordinary Shares, $0.001 par value" href="/cusip/G2545C104">Crescent Biopharma, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">CBIO</span> · G2545C104</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_52287">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons; figures for Peter Harwin
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">CBIO</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">G2545C104</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="16.52">
+    16.5%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    6,602,408
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1253689/000110465926085114/0001104659-26-085114-index.html">7/20/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 7/16/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52287">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.50">
+        16.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        6,593,385
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52287">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.50">
+        16.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        6,593,385
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52287">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Peter Harwin
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.52">
+        16.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        6,602,408
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52287">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Tomas Kiselak
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.50">
+        16.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        6,593,385
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.001 par value per share" href="/cusip/687604108">Oruka Therapeutics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">ORKA</span> · 687604108</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_56022">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          5 Reporting Persons; figures for Harwin Peter Evan
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">ORKA</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">687604108</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="19.50">
+    19.5%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    14,572,917
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/907654/000110465926080010/0001104659-26-080010-index.html">7/1/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 7/1/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56022">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.47">
+        19.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        14,553,895
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56022">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.03">
+        16.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        11,980,587
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56022">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Co-Invest III L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.03">
+        4.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,573,308
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56022">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Harwin Peter Evan
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.50">
+        19.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        14,572,917
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56022">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Kiselak Tomas
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.47">
+        19.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        14,533,895
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.0001 par value per share" href="/cusip/008064206">Jade Biosciences, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">JBIO</span> · 008064206</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_47611">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          5 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">JBIO</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">008064206</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="19.99">
+    20.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    14,069,494
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1798749/000110465926071942/0001104659-26-071942-index.html">6/9/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 6/5/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_47611">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        14,069,494
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_47611">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.22">
+        16.2%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        11,413,677
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_47611">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Co-Invest IV L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.36">
+        4.4%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,655,817
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_47611">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Peter Evan Harwin
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        14,069,494
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_47611">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Tomas Kiselak
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        14,063,511
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.01 par value per share" href="/cusip/92790C104">Viridian Therapeutics, Inc.\DE</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">VRDN</span> · 92790C104</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_46099">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          2 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">VRDN</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">92790C104</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="14.04">
+    14.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    17,201,800
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1590750/000110465926060292/0001104659-26-060292-index.html">5/13/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 5/11/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_46099">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="14.04">
+        14.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        17,201,800
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_46099">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II GP LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="14.04">
+        14.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        17,201,800
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.001 par value" href="/cusip/19240Q201">Cogent Biosciences, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">COGT</span> · 19240Q201</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_38396">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          2 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">COGT</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">19240Q201</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="8.6">
+    8.6%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    15,356,918
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1622229/000110465926038056/0001104659-26-038056-index.html">3/31/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 3/31/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_38396">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="8.6">
+        8.6%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        15,356,918
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_38396">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II GP LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="8.6">
+        8.6%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        15,356,918
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, par value $0.00001 per share" href="/cusip/36322Q206">Galecto, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">DMRA</span> · 36322Q206</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_39410">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          5 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">DMRA</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">36322Q206</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="19.99">
+    20.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    8,713,000
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1800315/000119312526047007/0001193125-26-047007-index.html">2/11/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 2/9/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_39410">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        8,713,000
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_39410">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="13.32">
+        13.3%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        5,809,000
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_39410">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Co-Invest V L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="6.66">
+        6.7%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,904,000
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_39410">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Peter Evan Harwin
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        8,713,000
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_39410">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Tomas Kiselak
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="19.99">
+        20.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        8,713,000
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+    </tbody>
+
+    <tbody>
+  <tr class="bg-gray-100 border-y border-gray-200">
+    <td colspan="3" class="text-sm font-semibold text-gray-900 px-3 sm:px-4 py-1.5">
+      Under 5%, checked the &quot;5 percent or less&quot; box, or amended by a later filing (2)
+    </td>
+    <td colspan="2" class="hidden sm:table-cell"></td>
+      <td colspan="2" class="hidden lg:table-cell"></td>
+  </tr>
+</tbody>
+
+
+    <tbody>
+      
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.00001 par value" href="/cusip/03770N101">Apogee Therapeutics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">APGE</span> · 03770N101</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_56023">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">APGE</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">03770N101</td>
+
+  <td class="text-gray-500 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="0.0">
+    0%
+
+  </td>
+
+  <td class="text-gray-500 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    0
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1802528/000110465926105122/0001104659-26-105122-index.html">9/3/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 9/3/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56023">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.0">
+        0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        0
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56023">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.0">
+        0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        0
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56023">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Peter Evan Harwin
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.0">
+        0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        0
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_56023">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Tomas Kiselak
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.0">
+        0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        0
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.001 par value" href="/cusip/252828108">Dianthus Therapeutics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">DNTH</span> · 252828108</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_28971">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">DNTH</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">252828108</td>
+
+  <td class="text-gray-500 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="4.9">
+    4.9%
+
+  </td>
+
+  <td class="text-gray-500 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    2,139,635
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1690585/000110465925116119/0001104659-25-116119-index.html">11/25/2025<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 11/21/2025</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28971">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Funds Management LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,139,635
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28971">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Fairmount Healthcare Fund II L.P.
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,139,635
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28971">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Peter Evan Harwin
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,139,635
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28971">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Tomas Kiselak
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,139,635
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+    <p class="bg-white shadow px-3 sm:px-4 py-2 text-gray-900 mt-6">
+      5
+      other
+      securities
+      where the latest filing
+      is a <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-gray-200 text-gray-700" title="Schedule 13G, the short form. The filer certifies it doesn&#39;t hold the shares to change or influence control">13G</span>,
+      the newest
+      filed 5/15/2026.
+      <a class="whitespace-nowrap" href="/manager/0001802528-fairmount-funds-management-llc/13dg-filings">View all</a>
+    </p>
+</div>
+
 
       </div>
 
@@ -703,7 +2257,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

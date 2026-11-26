@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Sofinnova Investments, Inc. 13F Filings"><link href="https://13f.info/manager/0001631134-sofinnova-investments-inc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001631134-sofinnova-investments-inc"><meta name="description" content="Sofinnova Investments, Inc. reported 57 holdings with total value $1.93 B as of Q2 2026. Top holdings included NTRA, VERA, GMAB, JAZZ, and RAPP"><meta property="og:description" content="Sofinnova Investments, Inc. reported 57 holdings with total value $1.93 B as of Q2 2026. Top holdings included NTRA, VERA, GMAB, JAZZ, and RAPP"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"S","item":"https://13f.info/managers/S","@type":"ListItem","position":1},{"name":"Sofinnova Investments, Inc.","item":"https://13f.info/manager/0001631134-sofinnova-investments-inc","identifier":"0001631134","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001631134","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Sofinnova Investments, Inc. 13F Filings"><link href="https://13f.info/manager/0001631134-sofinnova-investments-inc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001631134-sofinnova-investments-inc"><meta name="description" content="Sofinnova Investments, Inc. reported 67 holdings with total value $2.03B excluding options as of Q3 2026. Top holdings included NTRA, GMAB, IWM puts, JAZZ, and VERA"><meta property="og:description" content="Sofinnova Investments, Inc. reported 67 holdings with total value $2.03B excluding options as of Q3 2026. Top holdings included NTRA, GMAB, IWM puts, JAZZ, and VERA"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"S","item":"https://13f.info/managers/S","@type":"ListItem","position":1},{"name":"Sofinnova Investments, Inc.","item":"https://13f.info/manager/0001631134-sofinnova-investments-inc","identifier":"0001631134","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001631134","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,15 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000110465926096982-sofinnova-investments-inc-q2-2026">Q2 2026</a>
+        <a href="/13f/000110465926128032-sofinnova-investments-inc-q3-2026">Q3 2026</a>
+      </dd>
+    </div>
+    <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">
+        13D/G filings
+      </dt>
+      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <a href="#beneficial-ownership">13G on 1 security<span aria-hidden="true"> ↓</span></a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -103,12 +116,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q1 2018&quot;,&quot;Q2 2018&quot;,&quot;Q3 2018&quot;,&quot;Q4 2018&quot;,&quot;Q1 2019&quot;,&quot;Q2 2019&quot;,&quot;Q3 2019&quot;,&quot;Q4 2019&quot;,&quot;Q1 2020&quot;,&quot;Q2 2020&quot;,&quot;Q3 2020&quot;,&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[581135000.0,870969000.0,1114095000.0,802715000.0,979598000.0,1055355000.0,1055403000.0,1358396000.0,1054283000.0,1457655000.0,1276327000.0,1612852000.0,1585588000.0,1645845000.0,1559794000.0,1560318000.0,1190129000.0,1124066000.0,1572701000.0,1645620641.0,1474876999.0,1514807979.0,1439213323.0,1785185211.0,1694515067.0,1586926722.0,1208353607.0,1364403097.0,1326074961.0,1469701421.0,1630150121.0,2319284145.0,1995928525.0,1872026913.0,2026692126.999999]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -142,7 +156,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -150,601 +164,690 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000110465926096982-sofinnova-investments-inc-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">57</td>
-          <td class="px-3 py-2 text-right">1,934,262</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, VERA, GMAB, JAZZ">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, VERA, GMAB, JAZZ
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000110465926096982</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000110465926062256-sofinnova-investments-inc-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">74</td>
-          <td class="px-3 py-2 text-right">2,631,154</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, IWM puts, XBI puts, BMY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, IWM puts, XBI puts, BMY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000110465926062256</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000110465926015127-sofinnova-investments-inc-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">60</td>
-          <td class="px-3 py-2 text-right">2,319,284</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, JAZZ, AZN, VERA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, JAZZ, AZN, VERA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-13">2/13/2026</td>
-          <td class="px-3 py-2 text-center">000110465926015127</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000110465925111551-sofinnova-investments-inc-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">62</td>
-          <td class="px-3 py-2 text-right">1,828,830</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, GILD, VERA, UTHR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, GILD, VERA, UTHR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-13">11/13/2025</td>
-          <td class="px-3 py-2 text-center">000110465925111551</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000110465925078481-sofinnova-investments-inc-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">63</td>
-          <td class="px-3 py-2 text-right">1,635,018</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, GILD, LLY, JAZZ">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, GILD, LLY, JAZZ
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925078481</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000110465925049266-sofinnova-investments-inc-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">64</td>
-          <td class="px-3 py-2 text-right">1,531,129</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, SYK, QQQ puts, IWM puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, SYK, QQQ puts, IWM puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000110465925049266</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000110465925013863-sofinnova-investments-inc-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">61</td>
-          <td class="px-3 py-2 text-right">1,372,864</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, VERA, GILD, ABBV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, VERA, GILD, ABBV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925013863</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000110465924117589-sofinnova-investments-inc-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">60</td>
-          <td class="px-3 py-2 text-right">1,259,985</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, VERA, NVO, AZN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, VERA, NVO, AZN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-13">11/13/2024</td>
-          <td class="px-3 py-2 text-center">000110465924117589</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000110465924087771-sofinnova-investments-inc-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">81</td>
-          <td class="px-3 py-2 text-right">1,924,168</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="QQQ puts, NTRA, VERA, ASND">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              QQQ puts, NTRA, VERA, ASND
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-09">8/9/2024</td>
-          <td class="px-3 py-2 text-center">000110465924087771</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000110465924089526-sofinnova-investments-inc-q1-2024-restatement">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">72</td>
-          <td class="px-3 py-2 text-right">1,795,503</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, VERA, ASND, AVTE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, VERA, ASND, AVTE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924089526</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000110465924090054-sofinnova-investments-inc-q4-2023-restatement">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">62</td>
-          <td class="px-3 py-2 text-right">1,787,596</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, RYZB, NTRA, ASND">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, RYZB, NTRA, ASND
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-15">8/15/2024</td>
-          <td class="px-3 py-2 text-center">000110465924090054</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000110465923118095-sofinnova-investments-inc-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">66</td>
-          <td class="px-3 py-2 text-right">1,585,234</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, AZN, MRK">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, NTRA, AZN, MRK
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923118095</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000110465923091230-sofinnova-investments-inc-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">52</td>
-          <td class="px-3 py-2 text-right">1,526,768</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, AZN, ISRG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, NTRA, AZN, ISRG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923091230</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000110465923058987-sofinnova-investments-inc-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">52</td>
-          <td class="px-3 py-2 text-right">1,563,601</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, MRK, SPY puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, NTRA, MRK, SPY puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-11">5/11/2023</td>
-          <td class="px-3 py-2 text-center">000110465923058987</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000110465923020042-sofinnova-investments-inc-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">51</td>
-          <td class="px-3 py-2 text-right">1,685,205</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, AVTE, ASND">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, NTRA, AVTE, ASND
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-13">2/13/2023</td>
-          <td class="px-3 py-2 text-center">000110465923020042</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000110465922115835-sofinnova-investments-inc-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">59</td>
-          <td class="px-3 py-2 text-right">1,718,697</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, CINC, NTRA, VERA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, CINC, NTRA, VERA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-08">11/8/2022</td>
-          <td class="px-3 py-2 text-center">000110465922115835</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000110465922091098-sofinnova-investments-inc-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">58</td>
-          <td class="px-3 py-2 text-right">1,200,782</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, CINC, AVTE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, NTRA, CINC, AVTE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
-          <td class="px-3 py-2 text-center">000110465922091098</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000110465922060547-sofinnova-investments-inc-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">62</td>
-          <td class="px-3 py-2 text-right">1,317,585</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, CINC, VERA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, NTRA, CINC, VERA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
-          <td class="px-3 py-2 text-center">000110465922060547</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000110465922022072-sofinnova-investments-inc-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">71</td>
-          <td class="px-3 py-2 text-right">1,712,054</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, VERA, RHHBY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, KRTX, VERA, RHHBY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
-          <td class="px-3 py-2 text-center">000110465922022072</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000110465921138952-sofinnova-investments-inc-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">70</td>
-          <td class="px-3 py-2 text-right">1,688,544</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, ASND, AVTE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, KRTX, ASND, AVTE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
-          <td class="px-3 py-2 text-center">000110465921138952</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000110465921106048-sofinnova-investments-inc-q2-2021">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">67</td>
-          <td class="px-3 py-2 text-right">1,735,092</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, AVTE, YMAB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, KRTX, AVTE, YMAB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-16">8/16/2021</td>
-          <td class="px-3 py-2 text-center">000110465921106048</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000110465921066745-sofinnova-investments-inc-q1-2021">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">64</td>
-          <td class="px-3 py-2 text-right">1,663,412</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, BOLT, ASND">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, KRTX, BOLT, ASND
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-05-14">5/14/2021</td>
-          <td class="px-3 py-2 text-center">000110465921066745</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000110465921023887-sofinnova-investments-inc-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">68</td>
-          <td class="px-3 py-2 text-right">1,679,836</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, ASND, YMAB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, KRTX, ASND, YMAB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-16">2/16/2021</td>
-          <td class="px-3 py-2 text-center">000110465921023887</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-09-30">
-            <a href="/13f/000110465920124556-sofinnova-investments-inc-q3-2020">Q3 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">68</td>
-          <td class="px-3 py-2 text-right">1,348,554</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, ASND, KRTX, YMAB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NTRA, ASND, KRTX, YMAB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-11-13">11/13/2020</td>
-          <td class="px-3 py-2 text-center">000110465920124556</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-06-30">
-            <a href="/13f/000110465920094764-sofinnova-investments-inc-q2-2020">Q2 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">77</td>
-          <td class="px-3 py-2 text-right">1,586,248</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, ASND, NTRA, YMAB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, ASND, NTRA, YMAB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-08-13">8/13/2020</td>
-          <td class="px-3 py-2 text-center">000110465920094764</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-03-31">
-            <a href="/13f/000110465920060328-sofinnova-investments-inc-q1-2020">Q1 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">64</td>
-          <td class="px-3 py-2 text-right">1,081,089</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, ASND, NXTC, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRTX, ASND, NXTC, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-05-13">5/13/2020</td>
-          <td class="px-3 py-2 text-center">000110465920060328</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-12-31">
-            <a href="/13f/000110465920020437-sofinnova-investments-inc-q4-2019">Q4 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">59</td>
-          <td class="px-3 py-2 text-right">1,387,368</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, NXTC, KRTX, AMRN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, NXTC, KRTX, AMRN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-02-14">2/14/2020</td>
-          <td class="px-3 py-2 text-center">000110465920020437</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-09-30">
-            <a href="/13f/000110465919064122-sofinnova-investments-inc-q3-2019">Q3 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">72</td>
-          <td class="px-3 py-2 text-right">1,106,014</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, NTRA, AMRN, NXTC">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, NTRA, AMRN, NXTC
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-11-14">11/14/2019</td>
-          <td class="px-3 py-2 text-center">000110465919064122</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-06-30">
-            <a href="/13f/000114420419039265-sofinnova-investments-inc-q2-2019">Q2 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">69</td>
-          <td class="px-3 py-2 text-right">1,088,301</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, AMRN, NTRA, PRNB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, AMRN, NTRA, PRNB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-08-13">8/13/2019</td>
-          <td class="px-3 py-2 text-center">000114420419039265</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-03-31">
-            <a href="/13f/000114420419026474-sofinnova-investments-inc-q1-2019">Q1 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">67</td>
-          <td class="px-3 py-2 text-right">1,037,476</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, AMRN, PRNB, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, AMRN, PRNB, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-05-15">5/15/2019</td>
-          <td class="px-3 py-2 text-center">000114420419026474</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-12-31">
-            <a href="/13f/000114420419009466-sofinnova-investments-inc-q4-2018-restatement">Q4 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">59</td>
-          <td class="px-3 py-2 text-right">802,715</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, AMRN, OBSV, PRNB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, AMRN, OBSV, PRNB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-02-22">2/22/2019</td>
-          <td class="px-3 py-2 text-center">000114420419009466</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-09-30">
-            <a href="/13f/000114420418060046-sofinnova-ventures-inc-q3-2018">Q3 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">66</td>
-          <td class="px-3 py-2 text-right">1,121,747</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, Nucana Biomed, OBSV, AMRN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, Nucana Biomed, OBSV, AMRN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2018-11-15">11/15/2018</td>
-          <td class="px-3 py-2 text-center">000114420418060046</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-06-30">
-            <a href="/13f/000114420418060047-sofinnova-ventures-inc-q2-2018-new-holdings">Q2 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">62</td>
-          <td class="px-3 py-2 text-right">882,720</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, Nucana Biomed, OBSV, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, Nucana Biomed, OBSV, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
-            NEW HOLDINGS
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2018-11-15">11/15/2018</td>
-          <td class="px-3 py-2 text-center">000114420418060047</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-06-30">
-            <a href="/13f/000114420418044317-sofinnova-ventures-inc-q2-2018">Q2 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">59</td>
-          <td class="px-3 py-2 text-right">685,310</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, Nucana Biomed, OBSV, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, Nucana Biomed, OBSV, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2018-08-14">8/14/2018</td>
-          <td class="px-3 py-2 text-center">000114420418044317</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-03-31">
-            <a href="/13f/000114420418028628-sofinnova-ventures-inc-q1-2018">Q1 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">55</td>
-          <td class="px-3 py-2 text-right">581,834</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, NCNA, OBSV, BOLD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, NCNA, OBSV, BOLD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2018-05-15">5/15/2018</td>
-          <td class="px-3 py-2 text-center">000114420418028628</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000110465926128032-sofinnova-investments-inc-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">67</td>
+            <td class="px-3 py-2 text-right" data-order="2026692.126999999">
+              2,026,692
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, GMAB, IWM puts, JAZZ">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, GMAB, IWM puts, JAZZ
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000110465926128032</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000110465926096982-sofinnova-investments-inc-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">57</td>
+            <td class="px-3 py-2 text-right" data-order="1872026.913">
+              1,872,027
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, VERA, GMAB, JAZZ">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, VERA, GMAB, JAZZ
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000110465926096982</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000110465926062256-sofinnova-investments-inc-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">74</td>
+            <td class="px-3 py-2 text-right" data-order="1995928.525">
+              1,995,929
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, IWM puts, XBI puts, BMY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, IWM puts, XBI puts, BMY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000110465926062256</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000110465926015127-sofinnova-investments-inc-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">60</td>
+            <td class="px-3 py-2 text-right" data-order="2319284.145">
+              2,319,284
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, JAZZ, AZN, VERA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, JAZZ, AZN, VERA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-13">2/13/2026</td>
+            <td class="px-3 py-2 text-center">000110465926015127</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000110465925111551-sofinnova-investments-inc-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">62</td>
+            <td class="px-3 py-2 text-right" data-order="1630150.121">
+              1,630,150
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, GILD, VERA, UTHR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, GILD, VERA, UTHR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-13">11/13/2025</td>
+            <td class="px-3 py-2 text-center">000110465925111551</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000110465925078481-sofinnova-investments-inc-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">63</td>
+            <td class="px-3 py-2 text-right" data-order="1469701.421">
+              1,469,701
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, GILD, LLY, JAZZ">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, GILD, LLY, JAZZ
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925078481</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000110465925049266-sofinnova-investments-inc-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">64</td>
+            <td class="px-3 py-2 text-right" data-order="1326074.961">
+              1,326,075
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, SYK, QQQ puts, IWM puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, SYK, QQQ puts, IWM puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000110465925049266</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000110465925013863-sofinnova-investments-inc-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">61</td>
+            <td class="px-3 py-2 text-right" data-order="1364403.097">
+              1,364,403
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, VERA, GILD, ABBV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, VERA, GILD, ABBV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925013863</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000110465924117589-sofinnova-investments-inc-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">60</td>
+            <td class="px-3 py-2 text-right" data-order="1208353.607">
+              1,208,354
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, VERA, NVO, AZN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, VERA, NVO, AZN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-13">11/13/2024</td>
+            <td class="px-3 py-2 text-center">000110465924117589</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000110465924087771-sofinnova-investments-inc-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">81</td>
+            <td class="px-3 py-2 text-right" data-order="1586926.722">
+              1,586,927
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="QQQ puts, NTRA, VERA, ASND">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                QQQ puts, NTRA, VERA, ASND
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-09">8/9/2024</td>
+            <td class="px-3 py-2 text-center">000110465924087771</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000110465924089526-sofinnova-investments-inc-q1-2024-restatement">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">72</td>
+            <td class="px-3 py-2 text-right" data-order="1694515.067">
+              1,694,515
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, VERA, ASND, AVTE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, VERA, ASND, AVTE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924089526</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000110465924090054-sofinnova-investments-inc-q4-2023-restatement">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">62</td>
+            <td class="px-3 py-2 text-right" data-order="1785185.211">
+              1,785,185
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, RYZB, NTRA, ASND">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, RYZB, NTRA, ASND
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-15">8/15/2024</td>
+            <td class="px-3 py-2 text-center">000110465924090054</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000110465923118095-sofinnova-investments-inc-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">66</td>
+            <td class="px-3 py-2 text-right" data-order="1439213.323">
+              1,439,213
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, AZN, MRK">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, NTRA, AZN, MRK
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923118095</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000110465923091230-sofinnova-investments-inc-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">52</td>
+            <td class="px-3 py-2 text-right" data-order="1514807.979">
+              1,514,808
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, AZN, ISRG">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, NTRA, AZN, ISRG
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923091230</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000110465923058987-sofinnova-investments-inc-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">52</td>
+            <td class="px-3 py-2 text-right" data-order="1474876.999">
+              1,474,877
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, MRK, SPY puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, NTRA, MRK, SPY puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-11">5/11/2023</td>
+            <td class="px-3 py-2 text-center">000110465923058987</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000110465923020042-sofinnova-investments-inc-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">51</td>
+            <td class="px-3 py-2 text-right" data-order="1645620.641">
+              1,645,621
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, AVTE, ASND">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, NTRA, AVTE, ASND
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-13">2/13/2023</td>
+            <td class="px-3 py-2 text-center">000110465923020042</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000110465922115835-sofinnova-investments-inc-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">59</td>
+            <td class="px-3 py-2 text-right" data-order="1572701.0">
+              1,572,701
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, CINC, NTRA, VERA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, CINC, NTRA, VERA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-08">11/8/2022</td>
+            <td class="px-3 py-2 text-center">000110465922115835</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000110465922091098-sofinnova-investments-inc-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">58</td>
+            <td class="px-3 py-2 text-right" data-order="1124066.0">
+              1,124,066
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, CINC, AVTE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, NTRA, CINC, AVTE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
+            <td class="px-3 py-2 text-center">000110465922091098</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000110465922060547-sofinnova-investments-inc-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">62</td>
+            <td class="px-3 py-2 text-right" data-order="1190129.0">
+              1,190,129
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, NTRA, CINC, VERA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, NTRA, CINC, VERA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
+            <td class="px-3 py-2 text-center">000110465922060547</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000110465922022072-sofinnova-investments-inc-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">71</td>
+            <td class="px-3 py-2 text-right" data-order="1560318.0">
+              1,560,318
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, VERA, RHHBY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, KRTX, VERA, RHHBY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
+            <td class="px-3 py-2 text-center">000110465922022072</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000110465921138952-sofinnova-investments-inc-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">70</td>
+            <td class="px-3 py-2 text-right" data-order="1559794.0">
+              1,559,794
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, ASND, AVTE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, KRTX, ASND, AVTE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
+            <td class="px-3 py-2 text-center">000110465921138952</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000110465921106048-sofinnova-investments-inc-q2-2021">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">67</td>
+            <td class="px-3 py-2 text-right" data-order="1645845.0">
+              1,645,845
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, AVTE, YMAB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, KRTX, AVTE, YMAB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-16">8/16/2021</td>
+            <td class="px-3 py-2 text-center">000110465921106048</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000110465921066745-sofinnova-investments-inc-q1-2021">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">64</td>
+            <td class="px-3 py-2 text-right" data-order="1585588.0">
+              1,585,588
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, BOLT, ASND">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, KRTX, BOLT, ASND
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-05-14">5/14/2021</td>
+            <td class="px-3 py-2 text-center">000110465921066745</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000110465921023887-sofinnova-investments-inc-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">68</td>
+            <td class="px-3 py-2 text-right" data-order="1612852.0">
+              1,612,852
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, KRTX, ASND, YMAB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, KRTX, ASND, YMAB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-16">2/16/2021</td>
+            <td class="px-3 py-2 text-center">000110465921023887</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-09-30">
+              <a href="/13f/000110465920124556-sofinnova-investments-inc-q3-2020">Q3 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">68</td>
+            <td class="px-3 py-2 text-right" data-order="1276327.0">
+              1,276,327
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NTRA, ASND, KRTX, YMAB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NTRA, ASND, KRTX, YMAB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-11-13">11/13/2020</td>
+            <td class="px-3 py-2 text-center">000110465920124556</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-06-30">
+              <a href="/13f/000110465920094764-sofinnova-investments-inc-q2-2020">Q2 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">77</td>
+            <td class="px-3 py-2 text-right" data-order="1457655.0">
+              1,457,655
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, ASND, NTRA, YMAB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, ASND, NTRA, YMAB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-08-13">8/13/2020</td>
+            <td class="px-3 py-2 text-center">000110465920094764</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-03-31">
+              <a href="/13f/000110465920060328-sofinnova-investments-inc-q1-2020">Q1 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">64</td>
+            <td class="px-3 py-2 text-right" data-order="1054283.0">
+              1,054,283
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRTX, ASND, NXTC, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRTX, ASND, NXTC, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-05-13">5/13/2020</td>
+            <td class="px-3 py-2 text-center">000110465920060328</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-12-31">
+              <a href="/13f/000110465920020437-sofinnova-investments-inc-q4-2019">Q4 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">59</td>
+            <td class="px-3 py-2 text-right" data-order="1358396.0">
+              1,358,396
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, NXTC, KRTX, AMRN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, NXTC, KRTX, AMRN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-02-14">2/14/2020</td>
+            <td class="px-3 py-2 text-center">000110465920020437</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-09-30">
+              <a href="/13f/000110465919064122-sofinnova-investments-inc-q3-2019">Q3 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">72</td>
+            <td class="px-3 py-2 text-right" data-order="1055403.0">
+              1,055,403
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, NTRA, AMRN, NXTC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, NTRA, AMRN, NXTC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-11-14">11/14/2019</td>
+            <td class="px-3 py-2 text-center">000110465919064122</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-06-30">
+              <a href="/13f/000114420419039265-sofinnova-investments-inc-q2-2019">Q2 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">69</td>
+            <td class="px-3 py-2 text-right" data-order="1055355.0">
+              1,055,355
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, AMRN, NTRA, PRNB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, AMRN, NTRA, PRNB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-08-13">8/13/2019</td>
+            <td class="px-3 py-2 text-center">000114420419039265</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-03-31">
+              <a href="/13f/000114420419026474-sofinnova-investments-inc-q1-2019">Q1 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">67</td>
+            <td class="px-3 py-2 text-right" data-order="979598.0">
+              979,598
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, AMRN, PRNB, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, AMRN, PRNB, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-05-15">5/15/2019</td>
+            <td class="px-3 py-2 text-center">000114420419026474</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-12-31">
+              <a href="/13f/000114420419009466-sofinnova-investments-inc-q4-2018-restatement">Q4 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">59</td>
+            <td class="px-3 py-2 text-right" data-order="802715.0">
+              802,715
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, AMRN, OBSVF, PRNB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, AMRN, OBSVF, PRNB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-02-22">2/22/2019</td>
+            <td class="px-3 py-2 text-center">000114420419009466</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-09-30">
+              <a href="/13f/000114420418060046-sofinnova-ventures-inc-q3-2018">Q3 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">66</td>
+            <td class="px-3 py-2 text-right" data-order="1114095.0">
+              1,114,095
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, Nucana Biomed, OBSVF, AMRN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, Nucana Biomed, OBSVF, AMRN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2018-11-15">11/15/2018</td>
+            <td class="px-3 py-2 text-center">000114420418060046</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-06-30">
+              <a href="/13f/000114420418060047-sofinnova-ventures-inc-q2-2018-new-holdings">Q2 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">62</td>
+            <td class="px-3 py-2 text-right" data-order="870969.0">
+              870,969
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, Nucana Biomed, OBSVF, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, Nucana Biomed, OBSVF, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
+              NEW HOLDINGS
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2018-11-15">11/15/2018</td>
+            <td class="px-3 py-2 text-center">000114420418060047</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-06-30">
+              <a href="/13f/000114420418044317-sofinnova-ventures-inc-q2-2018">Q2 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">59</td>
+            <td class="px-3 py-2 text-right" data-order="684100.0">
+              684,100
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, Nucana Biomed, OBSVF, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, Nucana Biomed, OBSVF, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2018-08-14">8/14/2018</td>
+            <td class="px-3 py-2 text-center">000114420418044317</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-03-31">
+              <a href="/13f/000114420418028628-sofinnova-ventures-inc-q1-2018">Q1 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">55</td>
+            <td class="px-3 py-2 text-right" data-order="581135.0">
+              581,135
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, NCNA, OBSVF, BOLD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, NCNA, OBSVF, BOLD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2018-05-15">5/15/2018</td>
+            <td class="px-3 py-2 text-center">000114420418028628</td>
+          </tr>
     </tbody>
   </table>
 </div>
@@ -761,9 +864,28 @@
     </ul>
   </details>
 
-<script>
-  var holdingsChartData = {"labels":["2018-03-31","2018-06-30","2018-09-30","2018-12-31","2019-03-31","2019-06-30","2019-09-30","2019-12-31","2020-03-31","2020-06-30","2020-09-30","2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[581834000.0,882720000.0,1121747000.0,802715000.0,1037476000.0,1088301000.0,1106014000.0,1387368000.0,1081089000.0,1586248000.0,1348554000.0,1679836000.0,1663412000.0,1735092000.0,1688544000.0,1712054000.0,1317585000.0,1200782000.0,1718697000.0,1685205763.0,1563601999.0,1526768979.0,1585234552.0,1787596851.0,1795503055.0,1924168403.0,1259985107.0,1372864097.0,1531129746.0,1635018721.0,1828830662.0,2319284145.0,2631154214.0,1934262135.0]};
-</script>
+
+<div id="beneficial-ownership" class="w-full md:max-w-3xl lg:max-w-5xl mt-12 md:mt-16">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 sm:px-0">
+    <h2 class="text-2xl">13D and 13G Filings</h2>
+
+    <a class="mb-2 px-3 py-1 rounded bg-white shadow text-sm whitespace-nowrap text-indigo-600 hover:text-indigo-900 hover:bg-gray-50" href="/manager/0001631134-sofinnova-investments-inc/13dg-filings">All 13D and 13G filings</a>
+  </div>
+
+
+    <p class="bg-white shadow px-3 sm:px-4 py-2 text-gray-900 ">
+      1
+      
+      security
+      where the latest filing
+        since 12/18/2024
+      is a <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-gray-200 text-gray-700" title="Schedule 13G, the short form. The filer certifies it doesn&#39;t hold the shares to change or influence control">13G</span>,
+      
+      filed 2/12/2025.
+      <a class="whitespace-nowrap" href="/manager/0001631134-sofinnova-investments-inc/13dg-filings">View all</a>
+    </p>
+</div>
+
 
       </div>
 
@@ -858,7 +980,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

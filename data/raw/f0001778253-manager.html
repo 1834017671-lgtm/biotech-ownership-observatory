@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Ikarian Capital, LLC 13F Filings"><link href="https://13f.info/manager/0001778253-ikarian-capital-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001778253-ikarian-capital-llc"><meta name="description" content="Ikarian Capital, LLC reported 156 holdings with total value $928 M as of Q2 2026. Top holdings included XBI puts, 2X10.SG calls, 2X10.SG, KOD, and 2X10.SG puts"><meta property="og:description" content="Ikarian Capital, LLC reported 156 holdings with total value $928 M as of Q2 2026. Top holdings included XBI puts, 2X10.SG calls, 2X10.SG, KOD, and 2X10.SG puts"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"I","item":"https://13f.info/managers/I","@type":"ListItem","position":1},{"name":"Ikarian Capital, LLC","item":"https://13f.info/manager/0001778253-ikarian-capital-llc","identifier":"0001778253","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001778253","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Ikarian Capital, LLC 13F Filings"><link href="https://13f.info/manager/0001778253-ikarian-capital-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001778253-ikarian-capital-llc"><meta name="description" content="Ikarian Capital, LLC reported 172 holdings with total value $504M excluding options as of Q3 2026. Top holdings included MRNA puts, BMY puts, KOD, XBI puts, and PRAX calls"><meta property="og:description" content="Ikarian Capital, LLC reported 172 holdings with total value $504M excluding options as of Q3 2026. Top holdings included MRNA puts, BMY puts, KOD, XBI puts, and PRAX calls"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"I","item":"https://13f.info/managers/I","@type":"ListItem","position":1},{"name":"Ikarian Capital, LLC","item":"https://13f.info/manager/0001778253-ikarian-capital-llc","identifier":"0001778253","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001778253","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,15 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000142050626001820-ikarian-capital-llc-q2-2026">Q2 2026</a>
+        <a href="/13f/000142050626002881-ikarian-capital-llc-q3-2026">Q3 2026</a>
+      </dd>
+    </div>
+    <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">
+        13D/G filings
+      </dt>
+      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <a href="#beneficial-ownership">13G on 27 securities<span aria-hidden="true"> ↓</span></a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +108,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2019&quot;,&quot;Q1 2020&quot;,&quot;Q2 2020&quot;,&quot;Q3 2020&quot;,&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[108688000.0,267795000.0,328885000.0,359650000.0,547468000.0,671645000.0,559754000.0,436726000.0,349430000.0,328694000.0,241192000.0,200342000.0,240986685.0,240918683.0,283484639.0,269354151.0,365557823.0,367671754.0,320471642.0,322013952.0,350200332.0,306936404.0,302227365.0,494311982.0,772561388.0,699010508.0,610874335.0,504115491.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +148,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,465 +156,538 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000142050626001820-ikarian-capital-llc-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">156</td>
-          <td class="px-3 py-2 text-right">928,174</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, 2X10.SG calls, 2X10.SG, KOD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, 2X10.SG calls, 2X10.SG, KOD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000142050626001820</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000142050626001165-ikarian-capital-llc-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">161</td>
-          <td class="px-3 py-2 text-right">1,231,685</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, TERN, TERN puts, QQQ puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, TERN, TERN puts, QQQ puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000142050626001165</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000142050626000592-ikarian-capital-llc-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">174</td>
-          <td class="px-3 py-2 text-right">1,280,884</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, CDTX puts, AMGN puts, TERN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, CDTX puts, AMGN puts, TERN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
-          <td class="px-3 py-2 text-center">000142050626000592</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000142050625003413-ikarian-capital-llc-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">169</td>
-          <td class="px-3 py-2 text-right">990,387</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="UTHR puts, XBI puts, GMAB, BMY puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              UTHR puts, XBI puts, GMAB, BMY puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000142050625003413</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000142050625002181-ikarian-capital-llc-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">133</td>
-          <td class="px-3 py-2 text-right">520,629</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CDTX puts, CDTX, RARE calls, ALNY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CDTX puts, CDTX, RARE calls, ALNY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000142050625002181</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000142050625001276-ikarian-capital-llc-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">160</td>
-          <td class="px-3 py-2 text-right">811,473</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, LLY puts, CORT puts, TARS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, LLY puts, CORT puts, TARS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000142050625001276</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000142050625000610-ikarian-capital-llc-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">171</td>
-          <td class="px-3 py-2 text-right">735,256</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, XBI calls, TSN puts, TARS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, XBI calls, TSN puts, TARS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000142050625000610</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000142050624002562-ikarian-capital-llc-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">145</td>
-          <td class="px-3 py-2 text-right">717,153</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, AMGN calls, VRTX puts, VRTX calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, AMGN calls, VRTX puts, VRTX calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000142050624002562</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000142050624001556-ikarian-capital-llc-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">113</td>
-          <td class="px-3 py-2 text-right">574,070</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALNY calls, ALNY puts, INSM calls, SRPT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ALNY calls, ALNY puts, INSM calls, SRPT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000142050624001556</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000142050624001013-ikarian-capital-llc-q1-2024-restatement">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">137</td>
-          <td class="px-3 py-2 text-right">912,049</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRYS puts, XBI puts, CRNX, TARS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRYS puts, XBI puts, CRNX, TARS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-16">5/16/2024</td>
-          <td class="px-3 py-2 text-center">000142050624001013</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000142050624000473-ikarian-capital-llc-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">136</td>
-          <td class="px-3 py-2 text-right">1,067,984</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRYS puts, CYTK calls, XBI puts, LLY puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KRYS puts, CYTK calls, XBI puts, LLY puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000142050624000473</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000142050623002207-ikarian-capital-llc-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">140</td>
-          <td class="px-3 py-2 text-right">831,354</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, SRPT puts, QQQ puts, XBI puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, SRPT puts, QQQ puts, XBI puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000142050623002207</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000142050623001546-ikarian-capital-llc-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">122</td>
-          <td class="px-3 py-2 text-right">627,923</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SLRN, ARGX puts, BBIO calls, BMEA calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SLRN, ARGX puts, BBIO calls, BMEA calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000142050623001546</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000142050623001082-ikarian-capital-llc-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">117</td>
-          <td class="px-3 py-2 text-right">440,740</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRPT puts, SRPT calls, ITCI calls, RXDX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRPT puts, SRPT calls, ITCI calls, RXDX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000142050623001082</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000142050623000695-ikarian-capital-llc-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">86</td>
-          <td class="px-3 py-2 text-right">414,502</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MDGL puts, RXDX, IMVT, KRYS puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MDGL puts, RXDX, IMVT, KRYS puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
-          <td class="px-3 py-2 text-center">000142050623000695</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000142050622002295-ikarian-capital-llc-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">104</td>
-          <td class="px-3 py-2 text-right">501,838</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="RLMD puts, RLMD calls, SPY puts, SGEN calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              RLMD puts, RLMD calls, SPY puts, SGEN calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
-          <td class="px-3 py-2 text-center">000142050622002295</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000142050622001577-ikarian-capital-llc-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">139</td>
-          <td class="px-3 py-2 text-right">548,432</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALNY calls, XBI puts, AMGN calls, BIIB calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ALNY calls, XBI puts, AMGN calls, BIIB calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-12">8/12/2022</td>
-          <td class="px-3 py-2 text-center">000142050622001577</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000142050622000935-ikarian-capital-llc-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">196</td>
-          <td class="px-3 py-2 text-right">760,463</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI calls, NBIX calls, BMRN calls, AMGN calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI calls, NBIX calls, BMRN calls, AMGN calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-13">5/13/2022</td>
-          <td class="px-3 py-2 text-center">000142050622000935</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000142050622000377-ikarian-capital-llc-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">186</td>
-          <td class="px-3 py-2 text-right">671,295</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, BCYC, SRPT calls, ALNY calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, BCYC, SRPT calls, ALNY calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
-          <td class="px-3 py-2 text-center">000142050622000377</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000142050621001587-ikarian-capital-llc-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">209</td>
-          <td class="px-3 py-2 text-right">1,420,104</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, XBI puts, RETA puts, BIIB calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, XBI puts, RETA puts, BIIB calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
-          <td class="px-3 py-2 text-center">000142050621001587</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000142050621001327-ikarian-capital-llc-q2-2021-restatement">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">211</td>
-          <td class="px-3 py-2 text-right">1,237,007</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BIIB calls, ALNY puts, NTLA calls, BIIB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BIIB calls, ALNY puts, NTLA calls, BIIB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-18">8/18/2021</td>
-          <td class="px-3 py-2 text-center">000142050621001327</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000142050621001325-ikarian-capital-llc-q1-2021-restatement">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">292</td>
-          <td class="px-3 py-2 text-right">2,971,249</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, ARKK puts, XBI puts, BIIB calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, ARKK puts, XBI puts, BIIB calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-18">8/18/2021</td>
-          <td class="px-3 py-2 text-center">000142050621001325</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000142050621000255-ikarian-capital-llc-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">230</td>
-          <td class="px-3 py-2 text-right">2,268,048</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MRNA puts, SRPT puts, XBI puts, BIIB calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MRNA puts, SRPT puts, XBI puts, BIIB calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-12">2/12/2021</td>
-          <td class="px-3 py-2 text-center">000142050621000255</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-09-30">
-            <a href="/13f/000142050620001296-ikarian-capital-llc-q3-2020">Q3 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">174</td>
-          <td class="px-3 py-2 text-right">1,381,817</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, MRTX puts, MRNA puts, SRPT puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI puts, MRTX puts, MRNA puts, SRPT puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
-          <td class="px-3 py-2 text-center">000142050620001296</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-06-30">
-            <a href="/13f/000142050620000923-ikarian-capital-llc-q2-2020">Q2 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">164</td>
-          <td class="px-3 py-2 text-right">1,256,564</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, BPMC puts, QQQ calls, CHEMOCENTRYX INC puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, BPMC puts, QQQ calls, CHEMOCENTRYX INC puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
-          <td class="px-3 py-2 text-center">000142050620000923</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-03-31">
-            <a href="/13f/000142050620000607-ikarian-capital-llc-q1-2020">Q1 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">151</td>
-          <td class="px-3 py-2 text-right">1,329,726</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, TLT puts, SPY calls, REGN puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPY puts, TLT puts, SPY calls, REGN puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
-          <td class="px-3 py-2 text-center">000142050620000607</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-12-31">
-            <a href="/13f/000142050620000073-ikarian-capital-llc-q4-2019">Q4 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">114</td>
-          <td class="px-3 py-2 text-right">617,185</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT puts, XBI puts, GILD calls, ITCI puts">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ICPT puts, XBI puts, GILD calls, ITCI puts
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-01-31">1/31/2020</td>
-          <td class="px-3 py-2 text-center">000142050620000073</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000142050626002881-ikarian-capital-llc-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">172</td>
+            <td class="px-3 py-2 text-right" data-order="504115.491">
+              504,115
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MRNA puts, BMY puts, KOD, XBI puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MRNA puts, BMY puts, KOD, XBI puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000142050626002881</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000142050626001820-ikarian-capital-llc-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">156</td>
+            <td class="px-3 py-2 text-right" data-order="610874.335">
+              610,874
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, ABVX calls, ABVX, KOD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, ABVX calls, ABVX, KOD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000142050626001820</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000142050626001165-ikarian-capital-llc-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">161</td>
+            <td class="px-3 py-2 text-right" data-order="699010.508">
+              699,011
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, TERN, TERN puts, QQQ puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, TERN, TERN puts, QQQ puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000142050626001165</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000142050626000592-ikarian-capital-llc-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">174</td>
+            <td class="px-3 py-2 text-right" data-order="772561.388">
+              772,561
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, CDTX puts, AMGN puts, TERN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, CDTX puts, AMGN puts, TERN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
+            <td class="px-3 py-2 text-center">000142050626000592</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000142050625003413-ikarian-capital-llc-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">169</td>
+            <td class="px-3 py-2 text-right" data-order="494311.982">
+              494,312
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="UTHR puts, XBI puts, GMAB, BMY puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                UTHR puts, XBI puts, GMAB, BMY puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000142050625003413</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000142050625002181-ikarian-capital-llc-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">133</td>
+            <td class="px-3 py-2 text-right" data-order="302227.365">
+              302,227
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CDTX puts, CDTX, RARE calls, ALNY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CDTX puts, CDTX, RARE calls, ALNY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000142050625002181</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000142050625001276-ikarian-capital-llc-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">160</td>
+            <td class="px-3 py-2 text-right" data-order="306936.404">
+              306,936
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, LLY puts, CORT puts, TARS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, LLY puts, CORT puts, TARS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000142050625001276</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000142050625000610-ikarian-capital-llc-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">171</td>
+            <td class="px-3 py-2 text-right" data-order="350200.332">
+              350,200
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, XBI calls, TSN puts, TARS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, XBI calls, TSN puts, TARS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000142050625000610</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000142050624002562-ikarian-capital-llc-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">145</td>
+            <td class="px-3 py-2 text-right" data-order="322013.952">
+              322,014
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, AMGN calls, VRTX calls, VRTX puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, AMGN calls, VRTX calls, VRTX puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000142050624002562</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000142050624001556-ikarian-capital-llc-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">113</td>
+            <td class="px-3 py-2 text-right" data-order="320471.642">
+              320,472
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALNY puts, ALNY calls, INSM calls, SRPT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ALNY puts, ALNY calls, INSM calls, SRPT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000142050624001556</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000142050624001013-ikarian-capital-llc-q1-2024-restatement">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">137</td>
+            <td class="px-3 py-2 text-right" data-order="367671.754">
+              367,672
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRYS puts, XBI puts, CRNX, TARS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRYS puts, XBI puts, CRNX, TARS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-16">5/16/2024</td>
+            <td class="px-3 py-2 text-center">000142050624001013</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000142050624000473-ikarian-capital-llc-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">136</td>
+            <td class="px-3 py-2 text-right" data-order="365557.823">
+              365,558
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KRYS puts, CYTK calls, XBI puts, LLY puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KRYS puts, CYTK calls, XBI puts, LLY puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000142050624000473</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000142050623002207-ikarian-capital-llc-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">140</td>
+            <td class="px-3 py-2 text-right" data-order="269354.151">
+              269,354
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, SRPT puts, QQQ puts, XBI puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, SRPT puts, QQQ puts, XBI puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000142050623002207</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000142050623001546-ikarian-capital-llc-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">122</td>
+            <td class="px-3 py-2 text-right" data-order="283484.639">
+              283,485
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SLRN, ARGX puts, BBIO calls, BMEA calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SLRN, ARGX puts, BBIO calls, BMEA calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000142050623001546</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000142050623001082-ikarian-capital-llc-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">117</td>
+            <td class="px-3 py-2 text-right" data-order="240918.683">
+              240,919
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRPT puts, SRPT calls, ITCI calls, RXDX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRPT puts, SRPT calls, ITCI calls, RXDX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000142050623001082</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000142050623000695-ikarian-capital-llc-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">86</td>
+            <td class="px-3 py-2 text-right" data-order="240986.685">
+              240,987
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MDGL puts, RXDX, IMVT, KRYS puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MDGL puts, RXDX, IMVT, KRYS puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
+            <td class="px-3 py-2 text-center">000142050623000695</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000142050622002295-ikarian-capital-llc-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">104</td>
+            <td class="px-3 py-2 text-right" data-order="200342.0">
+              200,342
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="RLMD puts, RLMD calls, SPY puts, SGEN calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                RLMD puts, RLMD calls, SPY puts, SGEN calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
+            <td class="px-3 py-2 text-center">000142050622002295</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000142050622001577-ikarian-capital-llc-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">139</td>
+            <td class="px-3 py-2 text-right" data-order="241192.0">
+              241,192
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALNY calls, XBI puts, AMGN calls, BIIB calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ALNY calls, XBI puts, AMGN calls, BIIB calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-12">8/12/2022</td>
+            <td class="px-3 py-2 text-center">000142050622001577</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000142050622000935-ikarian-capital-llc-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">196</td>
+            <td class="px-3 py-2 text-right" data-order="328694.0">
+              328,694
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI calls, NBIX calls, BMRN calls, AMGN calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI calls, NBIX calls, BMRN calls, AMGN calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-13">5/13/2022</td>
+            <td class="px-3 py-2 text-center">000142050622000935</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000142050622000377-ikarian-capital-llc-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">186</td>
+            <td class="px-3 py-2 text-right" data-order="349430.0">
+              349,430
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, BCYC, SRPT calls, ALNY calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, BCYC, SRPT calls, ALNY calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
+            <td class="px-3 py-2 text-center">000142050622000377</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000142050621001587-ikarian-capital-llc-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">209</td>
+            <td class="px-3 py-2 text-right" data-order="436726.0">
+              436,726
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, XBI puts, RETA puts, BIIB calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, XBI puts, RETA puts, BIIB calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
+            <td class="px-3 py-2 text-center">000142050621001587</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000142050621001327-ikarian-capital-llc-q2-2021-restatement">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">211</td>
+            <td class="px-3 py-2 text-right" data-order="559754.0">
+              559,754
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BIIB calls, ALNY puts, NTLA calls, BIIB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BIIB calls, ALNY puts, NTLA calls, BIIB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-18">8/18/2021</td>
+            <td class="px-3 py-2 text-center">000142050621001327</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000142050621001325-ikarian-capital-llc-q1-2021-restatement">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">292</td>
+            <td class="px-3 py-2 text-right" data-order="671645.0">
+              671,645
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, ARKK puts, XBI puts, BIIB calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, ARKK puts, XBI puts, BIIB calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-18">8/18/2021</td>
+            <td class="px-3 py-2 text-center">000142050621001325</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000142050621000255-ikarian-capital-llc-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">230</td>
+            <td class="px-3 py-2 text-right" data-order="547468.0">
+              547,468
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MRNA puts, SRPT puts, XBI puts, BIIB calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MRNA puts, SRPT puts, XBI puts, BIIB calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-12">2/12/2021</td>
+            <td class="px-3 py-2 text-center">000142050621000255</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-09-30">
+              <a href="/13f/000142050620001296-ikarian-capital-llc-q3-2020">Q3 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">174</td>
+            <td class="px-3 py-2 text-right" data-order="359650.0">
+              359,650
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI puts, MRTX puts, MRNA puts, SRPT puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI puts, MRTX puts, MRNA puts, SRPT puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
+            <td class="px-3 py-2 text-center">000142050620001296</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-06-30">
+              <a href="/13f/000142050620000923-ikarian-capital-llc-q2-2020">Q2 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">164</td>
+            <td class="px-3 py-2 text-right" data-order="328885.0">
+              328,885
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, BPMC puts, QQQ calls, CCXI puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, BPMC puts, QQQ calls, CCXI puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
+            <td class="px-3 py-2 text-center">000142050620000923</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-03-31">
+              <a href="/13f/000142050620000607-ikarian-capital-llc-q1-2020">Q1 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">151</td>
+            <td class="px-3 py-2 text-right" data-order="267795.0">
+              267,795
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPY puts, TLT puts, SPY calls, REGN puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPY puts, TLT puts, SPY calls, REGN puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
+            <td class="px-3 py-2 text-center">000142050620000607</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-12-31">
+              <a href="/13f/000142050620000073-ikarian-capital-llc-q4-2019">Q4 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">114</td>
+            <td class="px-3 py-2 text-right" data-order="108688.0">
+              108,688
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT puts, XBI puts, GILD calls, ITCI puts">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ICPT puts, XBI puts, GILD calls, ITCI puts
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-01-31">1/31/2020</td>
+            <td class="px-3 py-2 text-center">000142050620000073</td>
+          </tr>
     </tbody>
   </table>
 </div>
@@ -617,9 +704,28 @@
     </ul>
   </details>
 
-<script>
-  var holdingsChartData = {"labels":["2019-12-31","2020-03-31","2020-06-30","2020-09-30","2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[617185000.0,1329726000.0,1256564000.0,1381817000.0,2268048000.0,2971249000.0,1237007000.0,1420104000.0,671295000.0,760463000.0,548432000.0,501838000.0,414502576.0,440740642.0,627923144.0,831354550.0,1067984222.0000001,912049481.0,574070830.0,717153554.0,735256871.0,811473237.0,520629177.0,990387589.0,1280884395.0,1231685555.0,928174362.0]};
-</script>
+
+<div id="beneficial-ownership" class="w-full md:max-w-3xl lg:max-w-5xl mt-12 md:mt-16">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 sm:px-0">
+    <h2 class="text-2xl">13D and 13G Filings</h2>
+
+    <a class="mb-2 px-3 py-1 rounded bg-white shadow text-sm whitespace-nowrap text-indigo-600 hover:text-indigo-900 hover:bg-gray-50" href="/manager/0001778253-ikarian-capital-llc/13dg-filings">All 13D and 13G filings</a>
+  </div>
+
+
+    <p class="bg-white shadow px-3 sm:px-4 py-2 text-gray-900 ">
+      27
+      
+      securities
+      where the latest filing
+        since 12/18/2024
+      is a <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-gray-200 text-gray-700" title="Schedule 13G, the short form. The filer certifies it doesn&#39;t hold the shares to change or influence control">13G</span>,
+      the newest
+      filed 11/16/2026.
+      <a class="whitespace-nowrap" href="/manager/0001778253-ikarian-capital-llc/13dg-filings">View all</a>
+    </p>
+</div>
+
 
       </div>
 
@@ -714,7 +820,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

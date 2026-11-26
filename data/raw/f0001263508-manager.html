@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Baker Bros. Advisors LP 13F Filings"><link href="https://13f.info/manager/0001263508-baker-bros-advisors-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001263508-baker-bros-advisors-lp"><meta name="description" content="Baker Bros. Advisors LP reported 84 holdings with total value $20.0 B as of Q2 2026. Top holdings included INCY, 49BA.SG, RVMD, MDGL, and ACAD"><meta property="og:description" content="Baker Bros. Advisors LP reported 84 holdings with total value $20.0 B as of Q2 2026. Top holdings included INCY, 49BA.SG, RVMD, MDGL, and ACAD"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"B","item":"https://13f.info/managers/B","@type":"ListItem","position":1},{"name":"BAKER BROS. ADVISORS LP","item":"https://13f.info/manager/0001263508-baker-bros-advisors-lp","identifier":"0001263508","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001263508","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Baker Bros. Advisors LP 13F Filings"><link href="https://13f.info/manager/0001263508-baker-bros-advisors-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001263508-baker-bros-advisors-lp"><meta name="description" content="Baker Bros. Advisors LP reported 80 holdings with total value $21.0B as of Q3 2026. Top holdings included INCY, ONC, RVMD, KOD, and MDGL"><meta property="og:description" content="Baker Bros. Advisors LP reported 80 holdings with total value $21.0B as of Q3 2026. Top holdings included INCY, ONC, RVMD, KOD, and MDGL"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"B","item":"https://13f.info/managers/B","@type":"ListItem","position":1},{"name":"BAKER BROS. ADVISORS LP","item":"https://13f.info/manager/0001263508-baker-bros-advisors-lp","identifier":"0001263508","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001263508","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,15 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000110465926097191-baker-bros-advisors-lp-q2-2026">Q2 2026</a>
+        <a href="/13f/000110465926128308-baker-bros-advisors-lp-q3-2026">Q3 2026</a>
+      </dd>
+    </div>
+    <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">
+        13D/G filings
+      </dt>
+      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <a href="#beneficial-ownership">13D on 12 securities, 13G on 19 securities<span aria-hidden="true"> ↓</span></a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +108,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2013&quot;,&quot;Q1 2014&quot;,&quot;Q2 2014&quot;,&quot;Q3 2014&quot;,&quot;Q4 2014&quot;,&quot;Q1 2015&quot;,&quot;Q2 2015&quot;,&quot;Q3 2015&quot;,&quot;Q4 2015&quot;,&quot;Q1 2016&quot;,&quot;Q2 2016&quot;,&quot;Q3 2016&quot;,&quot;Q4 2016&quot;,&quot;Q1 2017&quot;,&quot;Q2 2017&quot;,&quot;Q3 2017&quot;,&quot;Q4 2017&quot;,&quot;Q1 2018&quot;,&quot;Q2 2018&quot;,&quot;Q3 2018&quot;,&quot;Q4 2018&quot;,&quot;Q1 2019&quot;,&quot;Q2 2019&quot;,&quot;Q3 2019&quot;,&quot;Q4 2019&quot;,&quot;Q1 2020&quot;,&quot;Q2 2020&quot;,&quot;Q3 2020&quot;,&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[7095729000.0,7867925000.0,8164077000.0,7828989000.0,9797208000.0,12022854000.0,11400413000.0,10823762000.0,12071272000.0,9482104000.0,9537918000.0,11019928000.0,10200965000.0,12220691000.0,11438426000.0,12330918000.0,11537077000.0,11797988000.0,13308803000.0,15181170000.0,12212527000.0,15621759000.0,14714211000.0,14699689000.0,18809854000.0,16236233000.0,22670991000.0,25025928000.0,26543637000.0,23065323000.0,22769898000.0,22771634000.0,20553592000.0,17403462000.0,17626987000.0,15269446000.0,16651382602.0,18379748932.0,17279240811.0,17351037330.0,8788600529.0,7971707022.0,7825077664.0,9648757562.0,9361492374.0,9036702464.0,10307840459.0,13838782047.0,17078624105.0,17415689929.0,19955238553.0,21044442318.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +148,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,881 +156,2559 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000110465926097191-baker-bros-advisors-lp-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">84</td>
-          <td class="px-3 py-2 text-right">19,955,238</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, 49BA.SG, RVMD, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, 49BA.SG, RVMD, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000110465926097191</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000110465926062547-baker-bros-advisors-lp-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">84</td>
-          <td class="px-3 py-2 text-right">17,415,689</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, 49BA.SG, INSM, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, 49BA.SG, INSM, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000110465926062547</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000110465926016374-baker-bros-advisors-lp-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">86</td>
-          <td class="px-3 py-2 text-right">17,078,624</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, 49BA.SG, MDGL, INSM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, 49BA.SG, MDGL, INSM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
-          <td class="px-3 py-2 text-center">000110465926016374</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000110465925112595-baker-bros-advisors-lp-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">91</td>
-          <td class="px-3 py-2 text-right">13,838,782</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="49BA.SG, INCY, MDGL, INSM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              49BA.SG, INCY, MDGL, INSM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925112595</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000110465925078573-baker-bros-advisors-lp-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">89</td>
-          <td class="px-3 py-2 text-right">10,307,840</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="49BA.SG, INCY, ACAD, INSM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              49BA.SG, INCY, ACAD, INSM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925078573</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000110465925049518-baker-bros-advisors-lp-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">89</td>
-          <td class="px-3 py-2 text-right">9,036,702</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="49BA.SG, INCY, ACAD, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              49BA.SG, INCY, ACAD, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000110465925049518</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000110465925014085-baker-bros-advisors-lp-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">95</td>
-          <td class="px-3 py-2 text-right">9,361,492</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, 49BA.SG, ACAD, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, 49BA.SG, ACAD, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925014085</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000110465924118899-baker-bros-advisors-lp-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">93</td>
-          <td class="px-3 py-2 text-right">9,648,757</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="49BA.SG, INCY, ACAD, SMMT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              49BA.SG, INCY, ACAD, SMMT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924118899</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000110465924089606-baker-bros-advisors-lp-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">95</td>
-          <td class="px-3 py-2 text-right">7,825,077</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, 49BA.SG, ACAD, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, 49BA.SG, ACAD, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924089606</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000110465924061996-baker-bros-advisors-lp-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">87</td>
-          <td class="px-3 py-2 text-right">7,971,707</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, 49BA.SG, ACAD, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, 49BA.SG, ACAD, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
-          <td class="px-3 py-2 text-center">000110465924061996</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000110465924024053-baker-bros-advisors-lp-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">84</td>
-          <td class="px-3 py-2 text-right">8,788,600</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, 49BA.SG, ACAD, MDGL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, 49BA.SG, ACAD, MDGL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924024053</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000110465923118157-baker-bros-advisors-lp-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">101</td>
-          <td class="px-3 py-2 text-right">17,351,037</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, 49BA.SG, INCY, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, 49BA.SG, INCY, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923118157</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000110465923091343-baker-bros-advisors-lp-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">107</td>
-          <td class="px-3 py-2 text-right">17,279,240</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923091343</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000110465923060720-baker-bros-advisors-lp-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">105</td>
-          <td class="px-3 py-2 text-right">18,379,748</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000110465923060720</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000110465923021551-baker-bros-advisors-lp-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">113</td>
-          <td class="px-3 py-2 text-right">16,651,382</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, BMRN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, BMRN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923021551</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000110465922118527-baker-bros-advisors-lp-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">115</td>
-          <td class="px-3 py-2 text-right">15,269,446</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
-          <td class="px-3 py-2 text-center">000110465922118527</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000110465922091286-baker-bros-advisors-lp-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">117</td>
-          <td class="px-3 py-2 text-right">17,626,987</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, BMRN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, BMRN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
-          <td class="px-3 py-2 text-center">000110465922091286</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000110465922061288-baker-bros-advisors-lp-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">118</td>
-          <td class="px-3 py-2 text-right">17,403,462</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
-          <td class="px-3 py-2 text-center">000110465922061288</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000110465922022725-baker-bros-advisors-lp-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">121</td>
-          <td class="px-3 py-2 text-right">20,553,592</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, 49BA.SG, INCY, KOD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, 49BA.SG, INCY, KOD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
-          <td class="px-3 py-2 text-center">000110465922022725</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000110465921139109-baker-bros-advisors-lp-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">122</td>
-          <td class="px-3 py-2 text-right">22,771,634</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, 49BA.SG, INCY, KOD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, 49BA.SG, INCY, KOD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
-          <td class="px-3 py-2 text-center">000110465921139109</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000110465921106314-baker-bros-advisors-lp-q2-2021">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">120</td>
-          <td class="px-3 py-2 text-right">22,769,898</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, 49BA.SG, INCY, KOD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, 49BA.SG, INCY, KOD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-16">8/16/2021</td>
-          <td class="px-3 py-2 text-center">000110465921106314</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000110465921068025-baker-bros-advisors-lp-q1-2021">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">126</td>
-          <td class="px-3 py-2 text-right">23,065,323</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, 49BA.SG, INCY, KOD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, 49BA.SG, INCY, KOD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-05-17">5/17/2021</td>
-          <td class="px-3 py-2 text-center">000110465921068025</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000110465921023833-baker-bros-advisors-lp-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">126</td>
-          <td class="px-3 py-2 text-right">26,543,637</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, 49BA.SG, INCY, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, 49BA.SG, INCY, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-16">2/16/2021</td>
-          <td class="px-3 py-2 text-center">000110465921023833</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-09-30">
-            <a href="/13f/000110465920125767-baker-bros-advisors-lp-q3-2020">Q3 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">120</td>
-          <td class="px-3 py-2 text-right">25,025,928</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, 49BA.SG, INCY, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, 49BA.SG, INCY, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
-          <td class="px-3 py-2 text-center">000110465920125767</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-06-30">
-            <a href="/13f/000110465920095518-baker-bros-advisors-lp-q2-2020">Q2 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">114</td>
-          <td class="px-3 py-2 text-right">22,670,991</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
-          <td class="px-3 py-2 text-center">000110465920095518</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-03-31">
-            <a href="/13f/000110465920062575-baker-bros-advisors-lp-q1-2020">Q1 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">110</td>
-          <td class="px-3 py-2 text-right">16,236,233</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ACAD, 49BA.SG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, ACAD, 49BA.SG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
-          <td class="px-3 py-2 text-center">000110465920062575</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-12-31">
-            <a href="/13f/000110465920021838-baker-bros-advisors-lp-q4-2019">Q4 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">99</td>
-          <td class="px-3 py-2 text-right">18,809,854</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-02-14">2/14/2020</td>
-          <td class="px-3 py-2 text-center">000110465920021838</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-09-30">
-            <a href="/13f/000110465919064169-baker-bros-advisors-lp-q3-2019">Q3 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">109</td>
-          <td class="px-3 py-2 text-right">14,699,689</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ACAD, 49BA.SG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, ACAD, 49BA.SG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-11-14">11/14/2019</td>
-          <td class="px-3 py-2 text-center">000110465919064169</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-06-30">
-            <a href="/13f/000114420419040033-baker-bros-advisors-lp-q2-2019">Q2 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">103</td>
-          <td class="px-3 py-2 text-right">14,714,211</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ALXN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ALXN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-08-14">8/14/2019</td>
-          <td class="px-3 py-2 text-center">000114420419040033</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-03-31">
-            <a href="/13f/000114420419026555-baker-bros-advisors-lp-q1-2019">Q1 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">96</td>
-          <td class="px-3 py-2 text-right">15,621,759</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ALXN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ALXN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-05-15">5/15/2019</td>
-          <td class="px-3 py-2 text-center">000114420419026555</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-12-31">
-            <a href="/13f/000114420419007156-baker-bros-advisors-lp-q4-2018">Q4 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">93</td>
-          <td class="px-3 py-2 text-right">12,212,527</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ALXN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ALXN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-02-13">2/13/2019</td>
-          <td class="px-3 py-2 text-center">000114420419007156</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-09-30">
-            <a href="/13f/000114420418059891-baker-bros-advisors-lp-q3-2018">Q3 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">97</td>
-          <td class="px-3 py-2 text-right">15,181,170</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ALXN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ALXN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2018-11-14">11/14/2018</td>
-          <td class="px-3 py-2 text-center">000114420418059891</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-06-30">
-            <a href="/13f/000114420418044607-baker-bros-advisors-lp-q2-2018">Q2 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">119</td>
-          <td class="px-3 py-2 text-right">13,308,803</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, 49BA.SG, ALXN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, 49BA.SG, ALXN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2018-08-14">8/14/2018</td>
-          <td class="px-3 py-2 text-center">000114420418044607</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-03-31">
-            <a href="/13f/000114420418028818-baker-bros-advisors-lp-q1-2018">Q1 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">114</td>
-          <td class="px-3 py-2 text-right">11,797,988</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, 49BA.SG, ALXN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, 49BA.SG, ALXN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2018-05-15">5/15/2018</td>
-          <td class="px-3 py-2 text-center">000114420418028818</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2017-12-31">
-            <a href="/13f/000114420418008839-baker-bros-advisors-lp-q4-2017">Q4 2017</a>
-          </td>
-          <td class="px-3 py-2 text-right">123</td>
-          <td class="px-3 py-2 text-right">11,537,077</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ALXN, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2018-02-14">2/14/2018</td>
-          <td class="px-3 py-2 text-center">000114420418008839</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2017-09-30">
-            <a href="/13f/000114420417058963-baker-bros-advisors-lp-q3-2017">Q3 2017</a>
-          </td>
-          <td class="px-3 py-2 text-right">121</td>
-          <td class="px-3 py-2 text-right">12,330,918</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ALXN, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2017-11-14">11/14/2017</td>
-          <td class="px-3 py-2 text-center">000114420417058963</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2017-06-30">
-            <a href="/13f/000114420417043086-baker-bros-advisors-lp-q2-2017">Q2 2017</a>
-          </td>
-          <td class="px-3 py-2 text-right">120</td>
-          <td class="px-3 py-2 text-right">11,438,426</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ALXN, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2017-08-14">8/14/2017</td>
-          <td class="px-3 py-2 text-center">000114420417043086</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2017-03-31">
-            <a href="/13f/000114420417027430-baker-bros-advisors-lp-q1-2017">Q1 2017</a>
-          </td>
-          <td class="px-3 py-2 text-right">119</td>
-          <td class="px-3 py-2 text-right">12,220,691</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ACAD, ALXN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ACAD, ALXN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2017-05-15">5/15/2017</td>
-          <td class="px-3 py-2 text-center">000114420417027430</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2016-12-31">
-            <a href="/13f/000114420417008836-baker-bros-advisors-lp-q4-2016">Q4 2016</a>
-          </td>
-          <td class="px-3 py-2 text-right">133</td>
-          <td class="px-3 py-2 text-right">10,200,965</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, Incyte Corporation, ALXN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, Incyte Corporation, ALXN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2017-02-14">2/14/2017</td>
-          <td class="px-3 py-2 text-center">000114420417008836</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2016-09-30">
-            <a href="/13f/000114420416134352-baker-bros-advisors-lp-q3-2016">Q3 2016</a>
-          </td>
-          <td class="px-3 py-2 text-right">134</td>
-          <td class="px-3 py-2 text-right">11,019,928</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ABBV, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, INCY, ABBV, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2016-11-14">11/14/2016</td>
-          <td class="px-3 py-2 text-center">000114420416134352</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2016-06-30">
-            <a href="/13f/000114420416119409-baker-bros-advisors-lp-q2-2016">Q2 2016</a>
-          </td>
-          <td class="px-3 py-2 text-right">135</td>
-          <td class="px-3 py-2 text-right">9,537,918</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ABBV, ACAD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ABBV, ACAD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2016-08-15">8/15/2016</td>
-          <td class="px-3 py-2 text-center">000114420416119409</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2016-03-31">
-            <a href="/13f/000114420416102596-baker-bros-advisors-lp-q1-2016">Q1 2016</a>
-          </td>
-          <td class="px-3 py-2 text-right">134</td>
-          <td class="px-3 py-2 text-right">9,482,104</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ABBV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ALXN, ABBV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2016-05-16">5/16/2016</td>
-          <td class="px-3 py-2 text-center">000114420416102596</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2015-12-31">
-            <a href="/13f/000114420416082790-baker-bros-advisors-lp-q4-2015">Q4 2015</a>
-          </td>
-          <td class="px-3 py-2 text-right">133</td>
-          <td class="px-3 py-2 text-right">12,071,272</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, Incyte Corporation">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ALXN, Incyte Corporation
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2016-02-16">2/16/2016</td>
-          <td class="px-3 py-2 text-center">000114420416082790</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2015-09-30">
-            <a href="/13f/000114420415065993-baker-bros-advisors-lp-q3-2015">Q3 2015</a>
-          </td>
-          <td class="px-3 py-2 text-right">133</td>
-          <td class="px-3 py-2 text-right">10,823,762</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ABBV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ALXN, ABBV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2015-11-16">11/16/2015</td>
-          <td class="px-3 py-2 text-center">000114420415065993</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2015-06-30">
-            <a href="/13f/000114420415049845-baker-bros-advisors-lp-q2-2015">Q2 2015</a>
-          </td>
-          <td class="px-3 py-2 text-right">126</td>
-          <td class="px-3 py-2 text-right">11,400,413</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ABBV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, SGEN, ALXN, ABBV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2015-08-14">8/14/2015</td>
-          <td class="px-3 py-2 text-center">000114420415049845</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2015-03-31">
-            <a href="/13f/000114420415031569-baker-bros-advisors-lp-q1-2015">Q1 2015</a>
-          </td>
-          <td class="px-3 py-2 text-right">130</td>
-          <td class="px-3 py-2 text-right">12,022,854</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="PCYC, INCY, GEVA, SGEN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              PCYC, INCY, GEVA, SGEN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2015-05-15">5/15/2015</td>
-          <td class="px-3 py-2 text-center">000114420415031569</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2014-12-31">
-            <a href="/13f/000114420415010112-baker-bros-advisors-lp-q4-2014">Q4 2014</a>
-          </td>
-          <td class="px-3 py-2 text-right">121</td>
-          <td class="px-3 py-2 text-right">9,797,208</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="PCYC, INCY, GEVA, SGEN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              PCYC, INCY, GEVA, SGEN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2015-02-17">2/17/2015</td>
-          <td class="px-3 py-2 text-center">000114420415010112</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2014-09-30">
-            <a href="/13f/000114420414068894-baker-bros-advisors-lp-q3-2014">Q3 2014</a>
-          </td>
-          <td class="px-3 py-2 text-right">110</td>
-          <td class="px-3 py-2 text-right">7,940,514</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="PCYC, SGEN, Salix 2.75% 5/15/15, GEVA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              PCYC, SGEN, Salix 2.75% 5/15/15, GEVA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2014-11-14">11/14/2014</td>
-          <td class="px-3 py-2 text-center">000114420414068894</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2014-06-30">
-            <a href="/13f/000114420414050184-baker-bros-advisors-lp-q2-2014">Q2 2014</a>
-          </td>
-          <td class="px-3 py-2 text-right">107</td>
-          <td class="px-3 py-2 text-right">8,164,077</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GEVA, PCYC, SGEN, INCY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GEVA, PCYC, SGEN, INCY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2014-08-14">8/14/2014</td>
-          <td class="px-3 py-2 text-center">000114420414050184</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2014-03-31">
-            <a href="/13f/000114420414031196-baker-bros-advisors-lp-q1-2014">Q1 2014</a>
-          </td>
-          <td class="px-3 py-2 text-right">108</td>
-          <td class="px-3 py-2 text-right">7,867,925</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, GEVA, PCYC, INCY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, GEVA, PCYC, INCY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2014-05-15">5/15/2014</td>
-          <td class="px-3 py-2 text-center">000114420414031196</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2013-12-31">
-            <a href="/13f/000114420414009842-baker-bros-advisors-lp-q4-2013">Q4 2013</a>
-          </td>
-          <td class="px-3 py-2 text-right">95</td>
-          <td class="px-3 py-2 text-right">7,095,729</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="PCYC, SGEN, INCY, GEVA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              PCYC, SGEN, INCY, GEVA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2014-02-14">2/14/2014</td>
-          <td class="px-3 py-2 text-center">000114420414009842</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000110465926128308-baker-bros-advisors-lp-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">80</td>
+            <td class="px-3 py-2 text-right" data-order="21044442.318">
+              21,044,442
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, ONC, RVMD, KOD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, ONC, RVMD, KOD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000110465926128308</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000110465926097191-baker-bros-advisors-lp-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">84</td>
+            <td class="px-3 py-2 text-right" data-order="19955238.553">
+              19,955,239
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, ONC, RVMD, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, ONC, RVMD, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000110465926097191</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000110465926062547-baker-bros-advisors-lp-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">84</td>
+            <td class="px-3 py-2 text-right" data-order="17415689.929">
+              17,415,690
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, ONC, INSM, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, ONC, INSM, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000110465926062547</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000110465926016374-baker-bros-advisors-lp-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">86</td>
+            <td class="px-3 py-2 text-right" data-order="17078624.105">
+              17,078,624
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, ONC, MDGL, INSM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, ONC, MDGL, INSM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
+            <td class="px-3 py-2 text-center">000110465926016374</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000110465925112595-baker-bros-advisors-lp-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">91</td>
+            <td class="px-3 py-2 text-right" data-order="13838782.047">
+              13,838,782
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ONC, INCY, MDGL, INSM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ONC, INCY, MDGL, INSM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925112595</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000110465925078573-baker-bros-advisors-lp-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">89</td>
+            <td class="px-3 py-2 text-right" data-order="10307840.459">
+              10,307,840
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ONC, INCY, ACAD, INSM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ONC, INCY, ACAD, INSM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925078573</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000110465925049518-baker-bros-advisors-lp-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">89</td>
+            <td class="px-3 py-2 text-right" data-order="9036702.464">
+              9,036,702
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ONC, INCY, ACAD, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ONC, INCY, ACAD, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000110465925049518</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000110465925014085-baker-bros-advisors-lp-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">95</td>
+            <td class="px-3 py-2 text-right" data-order="9361492.374">
+              9,361,492
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, ONC, ACAD, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, ONC, ACAD, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925014085</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000110465924118899-baker-bros-advisors-lp-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">93</td>
+            <td class="px-3 py-2 text-right" data-order="9648757.562">
+              9,648,758
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ONC, INCY, ACAD, SMMT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ONC, INCY, ACAD, SMMT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924118899</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000110465924089606-baker-bros-advisors-lp-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">95</td>
+            <td class="px-3 py-2 text-right" data-order="7825077.664">
+              7,825,078
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, ONC, ACAD, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, ONC, ACAD, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924089606</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000110465924061996-baker-bros-advisors-lp-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">87</td>
+            <td class="px-3 py-2 text-right" data-order="7971707.022">
+              7,971,707
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, ONC, ACAD, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, ONC, ACAD, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
+            <td class="px-3 py-2 text-center">000110465924061996</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000110465924024053-baker-bros-advisors-lp-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">84</td>
+            <td class="px-3 py-2 text-right" data-order="8788600.529">
+              8,788,601
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, ONC, ACAD, MDGL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, ONC, ACAD, MDGL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924024053</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000110465923118157-baker-bros-advisors-lp-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">101</td>
+            <td class="px-3 py-2 text-right" data-order="17351037.33">
+              17,351,037
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, ONC, INCY, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, ONC, INCY, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923118157</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000110465923091343-baker-bros-advisors-lp-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">107</td>
+            <td class="px-3 py-2 text-right" data-order="17279240.811">
+              17,279,241
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923091343</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000110465923060720-baker-bros-advisors-lp-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">105</td>
+            <td class="px-3 py-2 text-right" data-order="18379748.932">
+              18,379,749
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000110465923060720</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000110465923021551-baker-bros-advisors-lp-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">113</td>
+            <td class="px-3 py-2 text-right" data-order="16651382.602">
+              16,651,383
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, BMRN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, BMRN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923021551</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000110465922118527-baker-bros-advisors-lp-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">115</td>
+            <td class="px-3 py-2 text-right" data-order="15269446.0">
+              15,269,446
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
+            <td class="px-3 py-2 text-center">000110465922118527</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000110465922091286-baker-bros-advisors-lp-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">117</td>
+            <td class="px-3 py-2 text-right" data-order="17626987.0">
+              17,626,987
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, BMRN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, BMRN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
+            <td class="px-3 py-2 text-center">000110465922091286</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000110465922061288-baker-bros-advisors-lp-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">118</td>
+            <td class="px-3 py-2 text-right" data-order="17403462.0">
+              17,403,462
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
+            <td class="px-3 py-2 text-center">000110465922061288</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000110465922022725-baker-bros-advisors-lp-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">121</td>
+            <td class="px-3 py-2 text-right" data-order="20553592.0">
+              20,553,592
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, ONC, INCY, KOD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, ONC, INCY, KOD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
+            <td class="px-3 py-2 text-center">000110465922022725</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000110465921139109-baker-bros-advisors-lp-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">122</td>
+            <td class="px-3 py-2 text-right" data-order="22771634.0">
+              22,771,634
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, ONC, INCY, KOD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, ONC, INCY, KOD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
+            <td class="px-3 py-2 text-center">000110465921139109</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000110465921106314-baker-bros-advisors-lp-q2-2021">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">120</td>
+            <td class="px-3 py-2 text-right" data-order="22769898.0">
+              22,769,898
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, ONC, INCY, KOD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, ONC, INCY, KOD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-16">8/16/2021</td>
+            <td class="px-3 py-2 text-center">000110465921106314</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000110465921068025-baker-bros-advisors-lp-q1-2021">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">126</td>
+            <td class="px-3 py-2 text-right" data-order="23065323.0">
+              23,065,323
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, ONC, INCY, KOD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, ONC, INCY, KOD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-05-17">5/17/2021</td>
+            <td class="px-3 py-2 text-center">000110465921068025</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000110465921023833-baker-bros-advisors-lp-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">126</td>
+            <td class="px-3 py-2 text-right" data-order="26543637.0">
+              26,543,637
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, ONC, INCY, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, ONC, INCY, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-16">2/16/2021</td>
+            <td class="px-3 py-2 text-center">000110465921023833</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-09-30">
+              <a href="/13f/000110465920125767-baker-bros-advisors-lp-q3-2020">Q3 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">120</td>
+            <td class="px-3 py-2 text-right" data-order="25025928.0">
+              25,025,928
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, ONC, INCY, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, ONC, INCY, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
+            <td class="px-3 py-2 text-center">000110465920125767</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-06-30">
+              <a href="/13f/000110465920095518-baker-bros-advisors-lp-q2-2020">Q2 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">114</td>
+            <td class="px-3 py-2 text-right" data-order="22670991.0">
+              22,670,991
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
+            <td class="px-3 py-2 text-center">000110465920095518</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-03-31">
+              <a href="/13f/000110465920062575-baker-bros-advisors-lp-q1-2020">Q1 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">110</td>
+            <td class="px-3 py-2 text-right" data-order="16236233.0">
+              16,236,233
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ACAD, ONC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ACAD, ONC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
+            <td class="px-3 py-2 text-center">000110465920062575</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-12-31">
+              <a href="/13f/000110465920021838-baker-bros-advisors-lp-q4-2019">Q4 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">99</td>
+            <td class="px-3 py-2 text-right" data-order="18809854.0">
+              18,809,854
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-02-14">2/14/2020</td>
+            <td class="px-3 py-2 text-center">000110465920021838</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-09-30">
+              <a href="/13f/000110465919064169-baker-bros-advisors-lp-q3-2019">Q3 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">109</td>
+            <td class="px-3 py-2 text-right" data-order="14699689.0">
+              14,699,689
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ACAD, ONC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ACAD, ONC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-11-14">11/14/2019</td>
+            <td class="px-3 py-2 text-center">000110465919064169</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-06-30">
+              <a href="/13f/000114420419040033-baker-bros-advisors-lp-q2-2019">Q2 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">103</td>
+            <td class="px-3 py-2 text-right" data-order="14714211.0">
+              14,714,211
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ALXN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ALXN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-08-14">8/14/2019</td>
+            <td class="px-3 py-2 text-center">000114420419040033</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-03-31">
+              <a href="/13f/000114420419026555-baker-bros-advisors-lp-q1-2019">Q1 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">96</td>
+            <td class="px-3 py-2 text-right" data-order="15621759.0">
+              15,621,759
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ALXN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ALXN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-05-15">5/15/2019</td>
+            <td class="px-3 py-2 text-center">000114420419026555</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-12-31">
+              <a href="/13f/000114420419007156-baker-bros-advisors-lp-q4-2018">Q4 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">93</td>
+            <td class="px-3 py-2 text-right" data-order="12212527.0">
+              12,212,527
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ALXN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ALXN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-02-13">2/13/2019</td>
+            <td class="px-3 py-2 text-center">000114420419007156</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-09-30">
+              <a href="/13f/000114420418059891-baker-bros-advisors-lp-q3-2018">Q3 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">97</td>
+            <td class="px-3 py-2 text-right" data-order="15181170.0">
+              15,181,170
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ALXN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ALXN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2018-11-14">11/14/2018</td>
+            <td class="px-3 py-2 text-center">000114420418059891</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-06-30">
+              <a href="/13f/000114420418044607-baker-bros-advisors-lp-q2-2018">Q2 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">119</td>
+            <td class="px-3 py-2 text-right" data-order="13308803.0">
+              13,308,803
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ONC, ALXN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ONC, ALXN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2018-08-14">8/14/2018</td>
+            <td class="px-3 py-2 text-center">000114420418044607</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-03-31">
+              <a href="/13f/000114420418028818-baker-bros-advisors-lp-q1-2018">Q1 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">114</td>
+            <td class="px-3 py-2 text-right" data-order="11797988.0">
+              11,797,988
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ONC, ALXN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ONC, ALXN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2018-05-15">5/15/2018</td>
+            <td class="px-3 py-2 text-center">000114420418028818</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2017-12-31">
+              <a href="/13f/000114420418008839-baker-bros-advisors-lp-q4-2017">Q4 2017</a>
+            </td>
+            <td class="px-3 py-2 text-right">123</td>
+            <td class="px-3 py-2 text-right" data-order="11537077.0">
+              11,537,077
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ALXN, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2018-02-14">2/14/2018</td>
+            <td class="px-3 py-2 text-center">000114420418008839</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2017-09-30">
+              <a href="/13f/000114420417058963-baker-bros-advisors-lp-q3-2017">Q3 2017</a>
+            </td>
+            <td class="px-3 py-2 text-right">121</td>
+            <td class="px-3 py-2 text-right" data-order="12330918.0">
+              12,330,918
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ALXN, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2017-11-14">11/14/2017</td>
+            <td class="px-3 py-2 text-center">000114420417058963</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2017-06-30">
+              <a href="/13f/000114420417043086-baker-bros-advisors-lp-q2-2017">Q2 2017</a>
+            </td>
+            <td class="px-3 py-2 text-right">120</td>
+            <td class="px-3 py-2 text-right" data-order="11438426.0">
+              11,438,426
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ALXN, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2017-08-14">8/14/2017</td>
+            <td class="px-3 py-2 text-center">000114420417043086</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2017-03-31">
+              <a href="/13f/000114420417027430-baker-bros-advisors-lp-q1-2017">Q1 2017</a>
+            </td>
+            <td class="px-3 py-2 text-right">119</td>
+            <td class="px-3 py-2 text-right" data-order="12220691.0">
+              12,220,691
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ACAD, ALXN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ACAD, ALXN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2017-05-15">5/15/2017</td>
+            <td class="px-3 py-2 text-center">000114420417027430</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2016-12-31">
+              <a href="/13f/000114420417008836-baker-bros-advisors-lp-q4-2016">Q4 2016</a>
+            </td>
+            <td class="px-3 py-2 text-right">133</td>
+            <td class="px-3 py-2 text-right" data-order="10200965.0">
+              10,200,965
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, Incyte Corporation, ALXN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, Incyte Corporation, ALXN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2017-02-14">2/14/2017</td>
+            <td class="px-3 py-2 text-center">000114420417008836</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2016-09-30">
+              <a href="/13f/000114420416134352-baker-bros-advisors-lp-q3-2016">Q3 2016</a>
+            </td>
+            <td class="px-3 py-2 text-right">134</td>
+            <td class="px-3 py-2 text-right" data-order="11019928.0">
+              11,019,928
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, INCY, ABBV, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, INCY, ABBV, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2016-11-14">11/14/2016</td>
+            <td class="px-3 py-2 text-center">000114420416134352</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2016-06-30">
+              <a href="/13f/000114420416119409-baker-bros-advisors-lp-q2-2016">Q2 2016</a>
+            </td>
+            <td class="px-3 py-2 text-right">135</td>
+            <td class="px-3 py-2 text-right" data-order="9537918.0">
+              9,537,918
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ABBV, ACAD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ABBV, ACAD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2016-08-15">8/15/2016</td>
+            <td class="px-3 py-2 text-center">000114420416119409</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2016-03-31">
+              <a href="/13f/000114420416102596-baker-bros-advisors-lp-q1-2016">Q1 2016</a>
+            </td>
+            <td class="px-3 py-2 text-right">134</td>
+            <td class="px-3 py-2 text-right" data-order="9482104.0">
+              9,482,104
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ABBV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ALXN, ABBV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2016-05-16">5/16/2016</td>
+            <td class="px-3 py-2 text-center">000114420416102596</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2015-12-31">
+              <a href="/13f/000114420416082790-baker-bros-advisors-lp-q4-2015">Q4 2015</a>
+            </td>
+            <td class="px-3 py-2 text-right">133</td>
+            <td class="px-3 py-2 text-right" data-order="12071272.0">
+              12,071,272
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, Incyte Corporation">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ALXN, Incyte Corporation
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2016-02-16">2/16/2016</td>
+            <td class="px-3 py-2 text-center">000114420416082790</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2015-09-30">
+              <a href="/13f/000114420415065993-baker-bros-advisors-lp-q3-2015">Q3 2015</a>
+            </td>
+            <td class="px-3 py-2 text-right">133</td>
+            <td class="px-3 py-2 text-right" data-order="10823762.0">
+              10,823,762
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ABBV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ALXN, ABBV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2015-11-16">11/16/2015</td>
+            <td class="px-3 py-2 text-center">000114420415065993</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2015-06-30">
+              <a href="/13f/000114420415049845-baker-bros-advisors-lp-q2-2015">Q2 2015</a>
+            </td>
+            <td class="px-3 py-2 text-right">126</td>
+            <td class="px-3 py-2 text-right" data-order="11400413.0">
+              11,400,413
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, SGEN, ALXN, ABBV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, SGEN, ALXN, ABBV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2015-08-14">8/14/2015</td>
+            <td class="px-3 py-2 text-center">000114420415049845</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2015-03-31">
+              <a href="/13f/000114420415031569-baker-bros-advisors-lp-q1-2015">Q1 2015</a>
+            </td>
+            <td class="px-3 py-2 text-right">130</td>
+            <td class="px-3 py-2 text-right" data-order="12022854.0">
+              12,022,854
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="PCYC, INCY, GEVA, SGEN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                PCYC, INCY, GEVA, SGEN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2015-05-15">5/15/2015</td>
+            <td class="px-3 py-2 text-center">000114420415031569</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2014-12-31">
+              <a href="/13f/000114420415010112-baker-bros-advisors-lp-q4-2014">Q4 2014</a>
+            </td>
+            <td class="px-3 py-2 text-right">121</td>
+            <td class="px-3 py-2 text-right" data-order="9797208.0">
+              9,797,208
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="PCYC, INCY, GEVA, SGEN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                PCYC, INCY, GEVA, SGEN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2015-02-17">2/17/2015</td>
+            <td class="px-3 py-2 text-center">000114420415010112</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2014-09-30">
+              <a href="/13f/000114420414068894-baker-bros-advisors-lp-q3-2014">Q3 2014</a>
+            </td>
+            <td class="px-3 py-2 text-right">110</td>
+            <td class="px-3 py-2 text-right" data-order="7828989.0">
+              7,828,989
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="PCYC, SGEN, Salix 2.75% 5/15/15, GEVA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                PCYC, SGEN, Salix 2.75% 5/15/15, GEVA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2014-11-14">11/14/2014</td>
+            <td class="px-3 py-2 text-center">000114420414068894</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2014-06-30">
+              <a href="/13f/000114420414050184-baker-bros-advisors-lp-q2-2014">Q2 2014</a>
+            </td>
+            <td class="px-3 py-2 text-right">107</td>
+            <td class="px-3 py-2 text-right" data-order="8164077.0">
+              8,164,077
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GEVA, PCYC, SGEN, INCY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GEVA, PCYC, SGEN, INCY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2014-08-14">8/14/2014</td>
+            <td class="px-3 py-2 text-center">000114420414050184</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2014-03-31">
+              <a href="/13f/000114420414031196-baker-bros-advisors-lp-q1-2014">Q1 2014</a>
+            </td>
+            <td class="px-3 py-2 text-right">108</td>
+            <td class="px-3 py-2 text-right" data-order="7867925.0">
+              7,867,925
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, GEVA, PCYC, INCY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, GEVA, PCYC, INCY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2014-05-15">5/15/2014</td>
+            <td class="px-3 py-2 text-center">000114420414031196</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2013-12-31">
+              <a href="/13f/000114420414009842-baker-bros-advisors-lp-q4-2013">Q4 2013</a>
+            </td>
+            <td class="px-3 py-2 text-right">95</td>
+            <td class="px-3 py-2 text-right" data-order="7095729.0">
+              7,095,729
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="PCYC, SGEN, INCY, GEVA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                PCYC, SGEN, INCY, GEVA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2014-02-14">2/14/2014</td>
+            <td class="px-3 py-2 text-center">000114420414009842</td>
+          </tr>
     </tbody>
   </table>
 </div>
 
 
-<script>
-  var holdingsChartData = {"labels":["2013-12-31","2014-03-31","2014-06-30","2014-09-30","2014-12-31","2015-03-31","2015-06-30","2015-09-30","2015-12-31","2016-03-31","2016-06-30","2016-09-30","2016-12-31","2017-03-31","2017-06-30","2017-09-30","2017-12-31","2018-03-31","2018-06-30","2018-09-30","2018-12-31","2019-03-31","2019-06-30","2019-09-30","2019-12-31","2020-03-31","2020-06-30","2020-09-30","2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[7095729000.0,7867925000.0,8164077000.0,7940514000.0,9797208000.0,12022854000.0,11400413000.0,10823762000.0,12071272000.0,9482104000.0,9537918000.0,11019928000.0,10200965000.0,12220691000.0,11438426000.0,12330918000.0,11537077000.0,11797988000.0,13308803000.0,15181170000.0,12212527000.0,15621759000.0,14714211000.0,14699689000.0,18809854000.0,16236233000.0,22670991000.0,25025928000.0,26543637000.0,23065323000.0,22769898000.0,22771634000.0,20553592000.0,17403462000.0,17626987000.0,15269446000.0,16651382602.0,18379748932.0,17279240811.0,17351037330.0,8788600529.0,7971707022.0,7825077664.0,9648757562.0,9361492374.0,9036702464.0,10307840459.0,13838782047.0,17078624105.0,17415689929.0,19955238553.0]};
-</script>
+
+<div id="beneficial-ownership" class="w-full md:max-w-3xl lg:max-w-5xl mt-12 md:mt-16">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 sm:px-0">
+    <h2 class="text-2xl">13D and 13G Filings</h2>
+
+    <a class="mb-2 px-3 py-1 rounded bg-white shadow text-sm whitespace-nowrap text-indigo-600 hover:text-indigo-900 hover:bg-gray-50" href="/manager/0001263508-baker-bros-advisors-lp/13dg-filings">All 13D and 13G filings</a>
+  </div>
+
+    <p class="text-sm text-gray-500 px-4 sm:px-0 mb-2">
+      Each security where the latest filing since 12/18/2024
+      is a 13D, newest first.
+    </p>
+
+    <table class="table-fixed w-full sm:table-auto bg-white shadow">
+  <thead>
+    <tr class="border-b border-gray-200">
+      <th class="sm:w-full text-sm font-medium text-gray-500 uppercase text-left px-3 sm:px-4 py-2">Issuer</th>
+        <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden lg:table-cell">Symbol</th>
+        <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden lg:table-cell">CUSIP</th>
+      <th class="w-20 sm:w-auto text-sm font-medium text-gray-500 uppercase text-right px-2 sm:px-4 py-2 sm:whitespace-nowrap">% of Class</th>
+      <th class="text-sm font-medium text-gray-500 uppercase text-right px-4 py-2 hidden sm:table-cell">Shares</th>
+      <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden sm:table-cell">Form</th>
+      <th class="w-32 sm:w-auto text-sm font-medium text-gray-500 uppercase text-right pl-2 pr-3 sm:px-4 py-2">Filed</th>
+    </tr>
+  </thead>
+
+
+    <tbody>
+      
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.0001 par value per share" href="/cusip/558868105">Madrigal Pharmaceuticals, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">MDGL</span> · 558868105</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_502247">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">MDGL</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">558868105</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="9.99">
+    10.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    2,330,144
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1157601/000110465926124003/0001104659-26-124003-index.html">11/6/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 11/6/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_502247">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,330,144
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_502247">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,330,144
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_502247">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,330,144
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_502247">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,330,144
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.0001 par value per share" href="/cusip/50015M109">Kodiak Sciences Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">KOD</span> · 50015M109</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_107618">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">KOD</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">50015M109</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="35.0">
+    35.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    22,049,297
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465926112371/0001104659-26-112371-index.html">9/30/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 9/28/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_107618">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="35.0">
+        35.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        22,049,297
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_107618">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="35.0">
+        35.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        22,049,297
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_107618">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="35.0">
+        35.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        22,049,297
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_107618">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="35.0">
+        35.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        22,049,297
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Ordinary Shares, par value $0.0001 per share" href="/cusip/07725L102">BeOne Medicines Ltd.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">ONC</span> · 07725L102</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_52311">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          5 Reporting Persons; figures for Julian C. Baker
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">ONC</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">07725L102</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="7.8">
+    7.8%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    115,912,814
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465926108269/0001104659-26-108269-index.html">9/16/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 9/14/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52311">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="7.8">
+        7.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        115,457,154
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52311">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="7.8">
+        7.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        115,457,154
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52311">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="7.8">
+        7.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        115,912,814
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52311">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="7.8">
+        7.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        115,912,814
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52311">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        FBB3 LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.01">
+        &lt;0.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        144,517
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.001 par value per share" href="/cusip/76029N106">Replimune Group, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">REPL</span> · 76029N106</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_52310">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">REPL</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">76029N106</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="11.8">
+    11.8%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    11,075,336
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465926094196/0001104659-26-094196-index.html">8/11/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 8/9/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52310">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="11.8">
+        11.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        11,075,336
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52310">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="11.8">
+        11.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        11,075,336
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52310">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="11.8">
+        11.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        11,075,336
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_52310">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="11.8">
+        11.8%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        11,075,336
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Class A Ordinary Shares, nominal value $0.000273235 per share" href="/cusip/G52694109">Kiniksa Pharmaceuticals International, plc</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">KNSA</span> · G52694109</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_43345">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          5 Reporting Persons; figures for Julian C. Baker
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">KNSA</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">G52694109</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="7.0">
+    7.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    3,253,341
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465926066339/0001104659-26-066339-index.html">5/26/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 5/21/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43345">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="6.9">
+        6.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        3,231,181
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43345">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="6.9">
+        6.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        3,231,181
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43345">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="7.0">
+        7.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        3,253,341
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43345">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="7.0">
+        7.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        3,253,341
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43345">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        FBB3 LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.02">
+        &lt;0.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        7,320
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.001 par value per share" href="/cusip/45337C102">Incyte Corp</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">INCY</span> · 45337C102</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_43344">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          7 Reporting Persons; figures for Felix J. Baker
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">INCY</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">45337C102</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="15.6">
+    15.6%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    31,225,572
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/879169/000110465926058726/0001104659-26-058726-index.html">5/11/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 5/7/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43344">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.4">
+        15.4%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        30,865,077
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43344">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.4">
+        15.4%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        30,865,077
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43344">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.6">
+        15.6%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        31,223,155
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43344">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.6">
+        15.6%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        31,225,572
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43344">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        FBB2, LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.01">
+        &lt;0.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        14,755
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43344">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        FBB3 LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.02">
+        &lt;0.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        31,140
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43344">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        FBB Associates
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.02">
+        &lt;0.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        33,410
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.0001 par value per share" href="/cusip/74065P101">Prelude Therapeutics Inc</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">PRLD</span> · 74065P101</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_43343">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">PRLD</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">74065P101</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="15.5">
+    15.5%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    10,295,301
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465926046848/0001104659-26-046848-index.html">4/22/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 4/20/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43343">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.5">
+        15.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,295,301
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43343">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.5">
+        15.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,295,301
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43343">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.5">
+        15.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,295,301
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_43343">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="15.5">
+        15.5%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        10,295,301
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.0001 par value per share" href="/cusip/004225108">ACADIA Pharmaceuticals Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">ACAD</span> · 004225108</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_34570">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          5 Reporting Persons; figures for Julian C. Baker
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">ACAD</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">004225108</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="25.4">
+    25.4%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    43,294,373
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1070494/000110465926020778/0001104659-26-020778-index.html">2/26/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 2/24/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_34570">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="25.3">
+        25.3%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        43,151,054
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_34570">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="25.3">
+        25.3%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        43,151,054
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_34570">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="25.4">
+        25.4%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        43,294,373
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_34570">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="25.4">
+        25.4%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        43,294,373
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_34570">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        FBB3 LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0.02">
+        &lt;0.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        40,443
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Ordinary shares, nominal value 0.10 euro per share" href="/cusip/23306J309">DBV Technologies S.A.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">DBVT</span> · 23306J309</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_35661">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">DBVT</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">23306J309</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="9.99">
+    10.0%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    25,586,190
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465926003806/0001104659-26-003806-index.html">1/14/2026<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 1/12/2026</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_35661">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        25,586,190
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_35661">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        25,586,190
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_35661">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        25,586,190
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_35661">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="9.99">
+        10.0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        25,586,190
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-gray-50">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.0001 par value per share" href="/cusip/501575104">Kymera Therapeutics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">KYMR</span> · 501575104</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_26124">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">KYMR</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">501575104</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="10.9">
+    10.9%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    8,676,797
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465925120356/0001104659-25-120356-index.html">12/11/2025<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 12/9/2025</div>
+  </td>
+</tr>
+
+    <tr class="bg-gray-50 text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_26124">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="10.9">
+        10.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        8,676,797
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_26124">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="10.9">
+        10.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        8,676,797
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_26124">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="10.9">
+        10.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        8,676,797
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-gray-50 text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_26124">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="10.9">
+        10.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        8,676,797
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Class A Common Stock, $0.0001 par value per share" href="/cusip/81749D107">Sera Prognostics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">SERA</span> · 81749D107</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_3276">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">SERA</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">81749D107</td>
+
+  <td class="text-gray-900 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="16.1">
+    16.1%
+
+  </td>
+
+  <td class="text-gray-900 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    5,498,170
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465925014220/0001104659-25-014220-index.html">2/14/2025<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 2/12/2025</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_3276">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.1">
+        16.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        5,498,170
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_3276">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.1">
+        16.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        5,498,170
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_3276">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.1">
+        16.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        5,498,170
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_3276">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="16.1">
+        16.1%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        5,498,170
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+    </tbody>
+
+    <tbody>
+  <tr class="bg-gray-100 border-y border-gray-200">
+    <td colspan="3" class="text-sm font-semibold text-gray-900 px-3 sm:px-4 py-1.5">
+      Under 5%, checked the &quot;5 percent or less&quot; box, or amended by a later filing (1)
+    </td>
+    <td colspan="2" class="hidden sm:table-cell"></td>
+      <td colspan="2" class="hidden lg:table-cell"></td>
+  </tr>
+</tbody>
+
+
+    <tbody>
+      
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.01 par value per share" href="/cusip/449585108">IGM Biosciences, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">IGMS</span> · 449585108</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_18979">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          4 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">IGMS</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">449585108</td>
+
+  <td class="text-gray-500 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="0">
+    0%
+
+  </td>
+
+  <td class="text-gray-500 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    0
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1263508/000110465925079905/0001104659-25-079905-index.html">8/18/2025<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 8/14/2025</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_18979">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0">
+        0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        0
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_18979">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Baker Bros. Advisors (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0">
+        0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        0
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_18979">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Julian C. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0">
+        0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        0
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_18979">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Felix J. Baker
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="0">
+        0%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        0
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+    <p class="bg-white shadow px-3 sm:px-4 py-2 text-gray-900 mt-6">
+      19
+      other
+      securities
+      where the latest filing
+      is a <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-gray-200 text-gray-700" title="Schedule 13G, the short form. The filer certifies it doesn&#39;t hold the shares to change or influence control">13G</span>,
+      the newest
+      filed 11/16/2026.
+      <a class="whitespace-nowrap" href="/manager/0001263508-baker-bros-advisors-lp/13dg-filings">View all</a>
+    </p>
+</div>
+
 
       </div>
 
@@ -1111,7 +2803,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

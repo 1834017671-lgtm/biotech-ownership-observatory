@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Frazier Life Sciences Management, L.P. 13F Filings"><link href="https://13f.info/manager/0001892134-frazier-life-sciences-management-l-p" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001892134-frazier-life-sciences-management-l-p"><meta name="description" content="Frazier Life Sciences Management, L.P. reported 41 holdings with total value $4.59 B as of Q2 2026. Top holdings included MIRM, NAMS, ERAS, MBX, and ARQT"><meta property="og:description" content="Frazier Life Sciences Management, L.P. reported 41 holdings with total value $4.59 B as of Q2 2026. Top holdings included MIRM, NAMS, ERAS, MBX, and ARQT"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"F","item":"https://13f.info/managers/F","@type":"ListItem","position":1},{"name":"Frazier Life Sciences Management, L.P.","item":"https://13f.info/manager/0001892134-frazier-life-sciences-management-l-p","identifier":"0001892134","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001892134","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Frazier Life Sciences Management, L.P. 13F Filings"><link href="https://13f.info/manager/0001892134-frazier-life-sciences-management-l-p" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001892134-frazier-life-sciences-management-l-p"><meta name="description" content="Frazier Life Sciences Management, L.P. reported 44 holdings with total value $4.03B as of Q3 2026. Top holdings included MIRM, NAMS, ERAS, MBX, and ARQT"><meta property="og:description" content="Frazier Life Sciences Management, L.P. reported 44 holdings with total value $4.03B as of Q3 2026. Top holdings included MIRM, NAMS, ERAS, MBX, and ARQT"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"F","item":"https://13f.info/managers/F","@type":"ListItem","position":1},{"name":"Frazier Life Sciences Management, L.P.","item":"https://13f.info/manager/0001892134-frazier-life-sciences-management-l-p","identifier":"0001892134","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001892134","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,7 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000189213426000003-frazier-life-sciences-management-l-p-q2-2026">Q2 2026</a>
+        <a href="/13f/000189213426000007-frazier-life-sciences-management-l-p-q3-2026">Q3 2026</a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +100,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[1173379000.0,1059640000.0,1298702000.0,1608432541.0,1381154391.0,1674511029.0,1504093441.0,1870349025.0,2369980836.0,2137654637.9999998,2495000226.0,2409201023.0,2187908599.0,2500738743.0,3337397700.0,3723154080.0,3886526658.0,4592076814.0,4030605205.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +140,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,312 +148,367 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000189213426000003-frazier-life-sciences-management-l-p-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">41</td>
-          <td class="px-3 py-2 text-right">4,592,076</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, ERAS, MBX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MIRM, NAMS, ERAS, MBX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000189213426000003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000189213426000002-frazier-life-sciences-management-l-p-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">38</td>
-          <td class="px-3 py-2 text-right">3,886,526</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, ERAS, BBIO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MIRM, NAMS, ERAS, BBIO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000189213426000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000189213426000001-frazier-life-sciences-management-l-p-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">40</td>
-          <td class="px-3 py-2 text-right">3,723,154</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, MIRM, ARQT, BBIO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NAMS, MIRM, ARQT, BBIO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-13">2/13/2026</td>
-          <td class="px-3 py-2 text-center">000189213426000001</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000189213425000012-frazier-life-sciences-management-l-p-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">47</td>
-          <td class="px-3 py-2 text-right">3,337,397</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, I9SA.HA, BBIO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MIRM, NAMS, I9SA.HA, BBIO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000189213425000012</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000189213425000006-frazier-life-sciences-management-l-p-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">49</td>
-          <td class="px-3 py-2 text-right">2,500,738</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, I9SA.HA, NAMS, BBIO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MIRM, I9SA.HA, NAMS, BBIO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000189213425000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000189213425000005-frazier-life-sciences-management-l-p-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">47</td>
-          <td class="px-3 py-2 text-right">2,187,908</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, MIRM, I9SA.HA, ARQT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NAMS, MIRM, I9SA.HA, ARQT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000189213425000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000189213425000001-frazier-life-sciences-management-l-p-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">50</td>
-          <td class="px-3 py-2 text-right">2,409,201</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, MIRM, I9SA.HA, KRYS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NAMS, MIRM, I9SA.HA, KRYS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-18">2/18/2025</td>
-          <td class="px-3 py-2 text-center">000189213425000001</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000189213424000006-frazier-life-sciences-management-l-p-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">53</td>
-          <td class="px-3 py-2 text-right">2,495,000</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, PHAT, KRYS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MIRM, NAMS, PHAT, KRYS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-15">11/15/2024</td>
-          <td class="px-3 py-2 text-center">000189213424000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000189213424000004-frazier-life-sciences-management-l-p-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">49</td>
-          <td class="px-3 py-2 text-right">2,137,654</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, MIRM, KRYS, HLVX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NAMS, MIRM, KRYS, HLVX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-15">8/15/2024</td>
-          <td class="px-3 py-2 text-center">000189213424000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000189213424000003-frazier-life-sciences-management-l-p-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">50</td>
-          <td class="px-3 py-2 text-right">2,369,980</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, KRYS, MIRM, HLVX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NAMS, KRYS, MIRM, HLVX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
-          <td class="px-3 py-2 text-center">000189213424000003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000189213424000002-frazier-life-sciences-management-l-p-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">49</td>
-          <td class="px-3 py-2 text-right">1,870,349</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, HLVX, NAMS, KRYS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MIRM, HLVX, NAMS, KRYS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000189213424000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000189213423000001-frazier-life-sciences-management-l-p-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">52</td>
-          <td class="px-3 py-2 text-right">1,505,659</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, HLVX, KRYS, NAMS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MIRM, HLVX, KRYS, NAMS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000189213423000001</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000142050623001580-frazier-life-sciences-management-l-p-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">48</td>
-          <td class="px-3 py-2 text-right">1,674,511</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="HLVX, KDNY, PHAT, NAMS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              HLVX, KDNY, PHAT, NAMS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000142050623001580</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000142050623001125-frazier-life-sciences-management-l-p-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">49</td>
-          <td class="px-3 py-2 text-right">1,381,154</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="HLVX, NAMS, KDNY, ARQT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              HLVX, NAMS, KDNY, ARQT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000142050623001125</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000142050623000277-frazier-life-sciences-management-l-p-q4-2022-restatement">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">44</td>
-          <td class="px-3 py-2 text-right">1,608,432</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="HLVX, IMAGO BIOSCIENCES INC, ARQT, KDNY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              HLVX, IMAGO BIOSCIENCES INC, ARQT, KDNY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-07">2/7/2023</td>
-          <td class="px-3 py-2 text-center">000142050623000277</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000142050622002171-frazier-life-sciences-management-l-p-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">43</td>
-          <td class="px-3 py-2 text-right">1,298,702</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="HLVX, ARQT, PHAT, KDNY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              HLVX, ARQT, PHAT, KDNY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
-          <td class="px-3 py-2 text-center">000142050622002171</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000142050622001455-frazier-life-sciences-management-l-p-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">41</td>
-          <td class="px-3 py-2 text-right">1,059,640</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARQT, HLVX, KRYS, MIRM">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ARQT, HLVX, KRYS, MIRM
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-10">8/10/2022</td>
-          <td class="px-3 py-2 text-center">000142050622001455</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000142050622000953-frazier-life-sciences-management-l-p-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">42</td>
-          <td class="px-3 py-2 text-right">1,173,379</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARQT, PHAT, MIRM, SRRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ARQT, PHAT, MIRM, SRRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
-          <td class="px-3 py-2 text-center">000142050622000953</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000189213426000007-frazier-life-sciences-management-l-p-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">44</td>
+            <td class="px-3 py-2 text-right" data-order="4030605.205">
+              4,030,605
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, ERAS, MBX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MIRM, NAMS, ERAS, MBX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000189213426000007</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000189213426000003-frazier-life-sciences-management-l-p-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">41</td>
+            <td class="px-3 py-2 text-right" data-order="4592076.814">
+              4,592,077
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, ERAS, MBX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MIRM, NAMS, ERAS, MBX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000189213426000003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000189213426000002-frazier-life-sciences-management-l-p-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">38</td>
+            <td class="px-3 py-2 text-right" data-order="3886526.658">
+              3,886,527
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, ERAS, BBIO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MIRM, NAMS, ERAS, BBIO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000189213426000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000189213426000001-frazier-life-sciences-management-l-p-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">40</td>
+            <td class="px-3 py-2 text-right" data-order="3723154.08">
+              3,723,154
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, MIRM, ARQT, BBIO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NAMS, MIRM, ARQT, BBIO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-13">2/13/2026</td>
+            <td class="px-3 py-2 text-center">000189213426000001</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000189213425000012-frazier-life-sciences-management-l-p-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">47</td>
+            <td class="px-3 py-2 text-right" data-order="3337397.7">
+              3,337,398
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, VRNA, BBIO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MIRM, NAMS, VRNA, BBIO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000189213425000012</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000189213425000006-frazier-life-sciences-management-l-p-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">49</td>
+            <td class="px-3 py-2 text-right" data-order="2500738.743">
+              2,500,739
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, VRNA, NAMS, BBIO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MIRM, VRNA, NAMS, BBIO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000189213425000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000189213425000005-frazier-life-sciences-management-l-p-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">47</td>
+            <td class="px-3 py-2 text-right" data-order="2187908.599">
+              2,187,909
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, MIRM, VRNA, ARQT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NAMS, MIRM, VRNA, ARQT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000189213425000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000189213425000001-frazier-life-sciences-management-l-p-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">50</td>
+            <td class="px-3 py-2 text-right" data-order="2409201.023">
+              2,409,201
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, MIRM, VRNA, KRYS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NAMS, MIRM, VRNA, KRYS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-18">2/18/2025</td>
+            <td class="px-3 py-2 text-center">000189213425000001</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000189213424000006-frazier-life-sciences-management-l-p-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">53</td>
+            <td class="px-3 py-2 text-right" data-order="2495000.226">
+              2,495,000
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, NAMS, PHAT, KRYS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MIRM, NAMS, PHAT, KRYS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-15">11/15/2024</td>
+            <td class="px-3 py-2 text-center">000189213424000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000189213424000004-frazier-life-sciences-management-l-p-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">49</td>
+            <td class="px-3 py-2 text-right" data-order="2137654.638">
+              2,137,655
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, MIRM, KRYS, HLVX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NAMS, MIRM, KRYS, HLVX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-15">8/15/2024</td>
+            <td class="px-3 py-2 text-center">000189213424000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000189213424000003-frazier-life-sciences-management-l-p-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">50</td>
+            <td class="px-3 py-2 text-right" data-order="2369980.836">
+              2,369,981
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NAMS, KRYS, MIRM, HLVX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NAMS, KRYS, MIRM, HLVX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
+            <td class="px-3 py-2 text-center">000189213424000003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000189213424000002-frazier-life-sciences-management-l-p-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">49</td>
+            <td class="px-3 py-2 text-right" data-order="1870349.025">
+              1,870,349
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, HLVX, NAMS, KRYS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MIRM, HLVX, NAMS, KRYS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000189213424000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000189213423000001-frazier-life-sciences-management-l-p-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">52</td>
+            <td class="px-3 py-2 text-right" data-order="1504093.441">
+              1,504,093
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MIRM, HLVX, KRYS, NAMS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MIRM, HLVX, KRYS, NAMS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000189213423000001</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000142050623001580-frazier-life-sciences-management-l-p-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">48</td>
+            <td class="px-3 py-2 text-right" data-order="1674511.029">
+              1,674,511
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="HLVX, KDNY, PHAT, NAMS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                HLVX, KDNY, PHAT, NAMS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000142050623001580</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000142050623001125-frazier-life-sciences-management-l-p-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">49</td>
+            <td class="px-3 py-2 text-right" data-order="1381154.391">
+              1,381,154
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="HLVX, NAMS, KDNY, ARQT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                HLVX, NAMS, KDNY, ARQT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000142050623001125</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000142050623000277-frazier-life-sciences-management-l-p-q4-2022-restatement">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">44</td>
+            <td class="px-3 py-2 text-right" data-order="1608432.541">
+              1,608,433
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="HLVX, IMGO, ARQT, KDNY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                HLVX, IMGO, ARQT, KDNY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-07">2/7/2023</td>
+            <td class="px-3 py-2 text-center">000142050623000277</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000142050622002171-frazier-life-sciences-management-l-p-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">43</td>
+            <td class="px-3 py-2 text-right" data-order="1298702.0">
+              1,298,702
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="HLVX, ARQT, PHAT, KDNY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                HLVX, ARQT, PHAT, KDNY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
+            <td class="px-3 py-2 text-center">000142050622002171</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000142050622001455-frazier-life-sciences-management-l-p-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">41</td>
+            <td class="px-3 py-2 text-right" data-order="1059640.0">
+              1,059,640
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARQT, HLVX, KRYS, MIRM">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARQT, HLVX, KRYS, MIRM
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-10">8/10/2022</td>
+            <td class="px-3 py-2 text-center">000142050622001455</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000142050622000953-frazier-life-sciences-management-l-p-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">42</td>
+            <td class="px-3 py-2 text-right" data-order="1173379.0">
+              1,173,379
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARQT, PHAT, MIRM, SRRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARQT, PHAT, MIRM, SRRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
+            <td class="px-3 py-2 text-center">000142050622000953</td>
+          </tr>
     </tbody>
   </table>
 </div>
@@ -462,9 +523,7 @@
     </ul>
   </details>
 
-<script>
-  var holdingsChartData = {"labels":["2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[1173379000.0,1059640000.0,1298702000.0,1608432541.0,1381154391.0,1674511029.0,1505659440.999999,1870349025.0,2369980836.0,2137654637.9999998,2495000226.0,2409201023.0,2187908599.0,2500738743.0,3337397700.0,3723154080.0,3886526658.0,4592076814.0]};
-</script>
+
 
       </div>
 
@@ -559,7 +618,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

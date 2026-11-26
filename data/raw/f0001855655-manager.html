@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Paradigm Biocapital Advisors LP 13F Filings"><link href="https://13f.info/manager/0001855655-paradigm-biocapital-advisors-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001855655-paradigm-biocapital-advisors-lp"><meta name="description" content="Paradigm Biocapital Advisors LP reported 28 holdings with total value $5.34 B as of Q2 2026. Top holdings included RVMD, NUVL, EWTX, GMAB, and AGLE"><meta property="og:description" content="Paradigm Biocapital Advisors LP reported 28 holdings with total value $5.34 B as of Q2 2026. Top holdings included RVMD, NUVL, EWTX, GMAB, and AGLE"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"P","item":"https://13f.info/managers/P","@type":"ListItem","position":1},{"name":"Paradigm Biocapital Advisors LP","item":"https://13f.info/manager/0001855655-paradigm-biocapital-advisors-lp","identifier":"0001855655","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001855655","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Paradigm Biocapital Advisors LP 13F Filings"><link href="https://13f.info/manager/0001855655-paradigm-biocapital-advisors-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001855655-paradigm-biocapital-advisors-lp"><meta name="description" content="Paradigm Biocapital Advisors LP reported 30 holdings with total value $5.03B as of Q3 2026. Top holdings included RVMD, GMAB, EWTX, SYRE, and INSM"><meta property="og:description" content="Paradigm Biocapital Advisors LP reported 30 holdings with total value $5.03B as of Q3 2026. Top holdings included RVMD, GMAB, EWTX, SYRE, and INSM"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"P","item":"https://13f.info/managers/P","@type":"ListItem","position":1},{"name":"Paradigm Biocapital Advisors LP","item":"https://13f.info/manager/0001855655-paradigm-biocapital-advisors-lp","identifier":"0001855655","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001855655","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,15 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000185565526000014-paradigm-biocapital-advisors-lp-q2-2026">Q2 2026</a>
+        <a href="/13f/000185565526000020-paradigm-biocapital-advisors-lp-q3-2026">Q3 2026</a>
+      </dd>
+    </div>
+    <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">
+        13D/G filings
+      </dt>
+      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <a href="#beneficial-ownership">13G on 29 securities<span aria-hidden="true"> ↓</span></a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +108,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[350154000.0,378175000.0,501530000.0,710089000.0,851901577.0,1055174719.0,1235711357.0,1466160918.0,2133792483.0,2840751736.0,2613016030.0,2857488790.0,2874091779.0,2172397711.0,2342122068.0,3379723926.0,3734934903.0,4894261608.0,5340558034.0,5028958519.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +148,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,337 +156,413 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000185565526000014-paradigm-biocapital-advisors-lp-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">5,340,558</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="RVMD, NUVL, EWTX, GMAB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              RVMD, NUVL, EWTX, GMAB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000185565526000014</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000185565526000011-paradigm-biocapital-advisors-lp-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">35</td>
-          <td class="px-3 py-2 text-right">4,894,261</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ACLX, RVMD, NUVL, PCVX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ACLX, RVMD, NUVL, PCVX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000185565526000011</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000185565526000003-paradigm-biocapital-advisors-lp-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">30</td>
-          <td class="px-3 py-2 text-right">3,917,829</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, RVMD, ACLX, GMAB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, RVMD, ACLX, GMAB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
-          <td class="px-3 py-2 text-center">000185565526000003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000185565525000014-paradigm-biocapital-advisors-lp-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">36</td>
-          <td class="px-3 py-2 text-right">3,516,196</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, MRUS, ACLX, RVMD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, MRUS, ACLX, RVMD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000185565525000014</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000185565525000010-paradigm-biocapital-advisors-lp-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">2,342,122</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, MRUS, RVMD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, ACLX, MRUS, RVMD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000185565525000010</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000185565525000007-paradigm-biocapital-advisors-lp-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">2,183,397</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, RVMD, 49BA.SG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, ACLX, RVMD, 49BA.SG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000185565525000007</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000185565525000004-paradigm-biocapital-advisors-lp-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">2,874,091</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, ARGX, RVMD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, ACLX, ARGX, RVMD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000185565525000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000185565524000014-paradigm-biocapital-advisors-lp-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">33</td>
-          <td class="px-3 py-2 text-right">2,955,926</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, ARGX, RVMD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, ACLX, ARGX, RVMD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000185565524000014</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000185565524000009-paradigm-biocapital-advisors-lp-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">35</td>
-          <td class="px-3 py-2 text-right">2,613,016</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ARGX, ACLX, RVMD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, ARGX, ACLX, RVMD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000185565524000009</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000185565524000005-paradigm-biocapital-advisors-lp-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">34</td>
-          <td class="px-3 py-2 text-right">2,840,751</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, ARGX, IRON">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, ACLX, ARGX, IRON
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
-          <td class="px-3 py-2 text-center">000185565524000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000185565524000002-paradigm-biocapital-advisors-lp-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">30</td>
-          <td class="px-3 py-2 text-right">2,135,928</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, ARGX, IRON">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NUVL, ACLX, ARGX, IRON
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000185565524000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000185565523000011-paradigm-biocapital-advisors-lp-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">31</td>
-          <td class="px-3 py-2 text-right">1,473,652</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="LEGN, ARGX, ACLX, OLMA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              LEGN, ARGX, ACLX, OLMA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000185565523000011</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000185565523000008-paradigm-biocapital-advisors-lp-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">30</td>
-          <td class="px-3 py-2 text-right">1,294,170</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="LEGN, INCY, IMCR, ACLX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              LEGN, INCY, IMCR, ACLX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000185565523000008</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000185565523000006-paradigm-biocapital-advisors-lp-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">25</td>
-          <td class="px-3 py-2 text-right">1,055,174</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BIIB, INCY, LEGN, ARGX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BIIB, INCY, LEGN, ARGX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000185565523000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000185565523000003-paradigm-biocapital-advisors-lp-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">23</td>
-          <td class="px-3 py-2 text-right">851,901</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, BIIB, MRTX, HZNP">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              INCY, BIIB, MRTX, HZNP
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
-          <td class="px-3 py-2 text-center">000185565523000003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000185565522000011-paradigm-biocapital-advisors-lp-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">750,139</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GLOBAL BLOOD THERAPEUTICS IN, MRTX, INCY, ASND">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GLOBAL BLOOD THERAPEUTICS IN, MRTX, INCY, ASND
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
-          <td class="px-3 py-2 text-center">000185565522000011</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000185565522000008-paradigm-biocapital-advisors-lp-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">23</td>
-          <td class="px-3 py-2 text-right">501,530</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="LEGN, GLOBAL BLOOD THERAPEUTICS IN, MRTX, SRRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              LEGN, GLOBAL BLOOD THERAPEUTICS IN, MRTX, SRRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
-          <td class="px-3 py-2 text-center">000185565522000008</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000185565522000006-paradigm-biocapital-advisors-lp-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">25</td>
-          <td class="px-3 py-2 text-right">378,175</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, GLOBAL BLOOD THERAPEUTICS IN, ARVN, LEGN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ASND, GLOBAL BLOOD THERAPEUTICS IN, ARVN, LEGN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
-          <td class="px-3 py-2 text-center">000185565522000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000185565522000004-paradigm-biocapital-advisors-lp-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">24</td>
-          <td class="px-3 py-2 text-right">350,154</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MRTX, ASND, ZNTL, VRDN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MRTX, ASND, ZNTL, VRDN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
-          <td class="px-3 py-2 text-center">000185565522000004</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000185565526000020-paradigm-biocapital-advisors-lp-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">30</td>
+            <td class="px-3 py-2 text-right" data-order="5028958.519">
+              5,028,959
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="RVMD, GMAB, EWTX, SYRE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                RVMD, GMAB, EWTX, SYRE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000185565526000020</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000185565526000014-paradigm-biocapital-advisors-lp-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="5340558.034">
+              5,340,558
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="RVMD, NUVL, EWTX, GMAB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                RVMD, NUVL, EWTX, GMAB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000185565526000014</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000185565526000011-paradigm-biocapital-advisors-lp-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">35</td>
+            <td class="px-3 py-2 text-right" data-order="4894261.608">
+              4,894,262
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ACLX, RVMD, NUVL, PCVX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ACLX, RVMD, NUVL, PCVX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000185565526000011</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000185565526000003-paradigm-biocapital-advisors-lp-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">30</td>
+            <td class="px-3 py-2 text-right" data-order="3734934.903">
+              3,734,935
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, RVMD, ACLX, GMAB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, RVMD, ACLX, GMAB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
+            <td class="px-3 py-2 text-center">000185565526000003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000185565525000014-paradigm-biocapital-advisors-lp-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">36</td>
+            <td class="px-3 py-2 text-right" data-order="3379723.926">
+              3,379,724
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, MRUS, ACLX, RVMD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, MRUS, ACLX, RVMD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000185565525000014</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000185565525000010-paradigm-biocapital-advisors-lp-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="2342122.068">
+              2,342,122
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, MRUS, RVMD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, ACLX, MRUS, RVMD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000185565525000010</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000185565525000007-paradigm-biocapital-advisors-lp-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="2172397.711">
+              2,172,398
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, RVMD, ONC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, ACLX, RVMD, ONC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000185565525000007</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000185565525000004-paradigm-biocapital-advisors-lp-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="2874091.779">
+              2,874,092
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, ARGX, RVMD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, ACLX, ARGX, RVMD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000185565525000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000185565524000014-paradigm-biocapital-advisors-lp-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">33</td>
+            <td class="px-3 py-2 text-right" data-order="2857488.79">
+              2,857,489
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, ARGX, RVMD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, ACLX, ARGX, RVMD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000185565524000014</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000185565524000009-paradigm-biocapital-advisors-lp-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">35</td>
+            <td class="px-3 py-2 text-right" data-order="2613016.03">
+              2,613,016
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ARGX, ACLX, RVMD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, ARGX, ACLX, RVMD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000185565524000009</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000185565524000005-paradigm-biocapital-advisors-lp-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">34</td>
+            <td class="px-3 py-2 text-right" data-order="2840751.736">
+              2,840,752
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, ARGX, IRON">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, ACLX, ARGX, IRON
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
+            <td class="px-3 py-2 text-center">000185565524000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000185565524000002-paradigm-biocapital-advisors-lp-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">30</td>
+            <td class="px-3 py-2 text-right" data-order="2133792.483">
+              2,133,792
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NUVL, ACLX, ARGX, IRON">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NUVL, ACLX, ARGX, IRON
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000185565524000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000185565523000011-paradigm-biocapital-advisors-lp-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">31</td>
+            <td class="px-3 py-2 text-right" data-order="1466160.918">
+              1,466,161
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="LEGN, ARGX, ACLX, OLMA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                LEGN, ARGX, ACLX, OLMA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000185565523000011</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000185565523000008-paradigm-biocapital-advisors-lp-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">30</td>
+            <td class="px-3 py-2 text-right" data-order="1235711.357">
+              1,235,711
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="LEGN, INCY, IMCR, ACLX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                LEGN, INCY, IMCR, ACLX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000185565523000008</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000185565523000006-paradigm-biocapital-advisors-lp-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">25</td>
+            <td class="px-3 py-2 text-right" data-order="1055174.719">
+              1,055,175
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BIIB, INCY, LEGN, ARGX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BIIB, INCY, LEGN, ARGX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000185565523000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000185565523000003-paradigm-biocapital-advisors-lp-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">23</td>
+            <td class="px-3 py-2 text-right" data-order="851901.577">
+              851,902
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="INCY, BIIB, MRTX, HZNP">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                INCY, BIIB, MRTX, HZNP
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
+            <td class="px-3 py-2 text-center">000185565523000003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000185565522000011-paradigm-biocapital-advisors-lp-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="710089.0">
+              710,089
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GBT, MRTX, INCY, ASND">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GBT, MRTX, INCY, ASND
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
+            <td class="px-3 py-2 text-center">000185565522000011</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000185565522000008-paradigm-biocapital-advisors-lp-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">23</td>
+            <td class="px-3 py-2 text-right" data-order="501530.0">
+              501,530
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="LEGN, GBT, MRTX, SRRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                LEGN, GBT, MRTX, SRRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
+            <td class="px-3 py-2 text-center">000185565522000008</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000185565522000006-paradigm-biocapital-advisors-lp-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">25</td>
+            <td class="px-3 py-2 text-right" data-order="378175.0">
+              378,175
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ASND, GBT, ARVN, LEGN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ASND, GBT, ARVN, LEGN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
+            <td class="px-3 py-2 text-center">000185565522000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000185565522000004-paradigm-biocapital-advisors-lp-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">24</td>
+            <td class="px-3 py-2 text-right" data-order="350154.0">
+              350,154
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MRTX, ASND, ZNTL, VRDN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MRTX, ASND, ZNTL, VRDN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
+            <td class="px-3 py-2 text-center">000185565522000004</td>
+          </tr>
     </tbody>
   </table>
 </div>
 
 
-<script>
-  var holdingsChartData = {"labels":["2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[350154000.0,378175000.0,501530000.0,750139000.0,851901577.0,1055174719.0,1294170857.0,1473652622.0,2135928483.0,2840751736.0,2613016030.0,2955926726.0,2874091779.0,2183397711.0,2342122068.0,3516196926.0,3917829903.0,4894261608.0,5340558034.0]};
-</script>
+
+<div id="beneficial-ownership" class="w-full md:max-w-3xl lg:max-w-5xl mt-12 md:mt-16">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 sm:px-0">
+    <h2 class="text-2xl">13D and 13G Filings</h2>
+
+    <a class="mb-2 px-3 py-1 rounded bg-white shadow text-sm whitespace-nowrap text-indigo-600 hover:text-indigo-900 hover:bg-gray-50" href="/manager/0001855655-paradigm-biocapital-advisors-lp/13dg-filings">All 13D and 13G filings</a>
+  </div>
+
+
+    <p class="bg-white shadow px-3 sm:px-4 py-2 text-gray-900 ">
+      29
+      
+      securities
+      where the latest filing
+        since 12/18/2024
+      is a <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-gray-200 text-gray-700" title="Schedule 13G, the short form. The filer certifies it doesn&#39;t hold the shares to change or influence control">13G</span>,
+      the newest
+      filed 11/16/2026.
+      <a class="whitespace-nowrap" href="/manager/0001855655-paradigm-biocapital-advisors-lp/13dg-filings">View all</a>
+    </p>
+</div>
+
 
       </div>
 
@@ -567,7 +657,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">
