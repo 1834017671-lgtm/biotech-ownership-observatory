@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Samsara Biocapital, LLC 13F Filings"><link href="https://13f.info/manager/0001744967-samsara-biocapital-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001744967-samsara-biocapital-llc"><meta name="description" content="Samsara Biocapital, LLC reported 24 holdings with total value $1.22 B as of Q2 2026. Top holdings included SRRK, ALMS, MLYS, SEPN, and ALAMAR BIOSCIENCES INC"><meta property="og:description" content="Samsara Biocapital, LLC reported 24 holdings with total value $1.22 B as of Q2 2026. Top holdings included SRRK, ALMS, MLYS, SEPN, and ALAMAR BIOSCIENCES INC"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"S","item":"https://13f.info/managers/S","@type":"ListItem","position":1},{"name":"SAMSARA BIOCAPITAL, LLC","item":"https://13f.info/manager/0001744967-samsara-biocapital-llc","identifier":"0001744967","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001744967","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Samsara Biocapital, LLC 13F Filings"><link href="https://13f.info/manager/0001744967-samsara-biocapital-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001744967-samsara-biocapital-llc"><meta name="description" content="Samsara Biocapital, LLC reported 27 holdings with total value $1.05B as of Q3 2026. Top holdings included SRRK, MLYS, SEPN, ALMR, and SGP"><meta property="og:description" content="Samsara Biocapital, LLC reported 27 holdings with total value $1.05B as of Q3 2026. Top holdings included SRRK, MLYS, SEPN, ALMR, and SGP"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"S","item":"https://13f.info/managers/S","@type":"ListItem","position":1},{"name":"SAMSARA BIOCAPITAL, LLC","item":"https://13f.info/manager/0001744967-samsara-biocapital-llc","identifier":"0001744967","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001744967","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,7 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000174496726000010-samsara-biocapital-llc-q2-2026">Q2 2026</a>
+        <a href="/13f/000174496726000014-samsara-biocapital-llc-q3-2026">Q3 2026</a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +100,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2018&quot;,&quot;Q1 2019&quot;,&quot;Q2 2019&quot;,&quot;Q3 2019&quot;,&quot;Q4 2019&quot;,&quot;Q1 2020&quot;,&quot;Q2 2020&quot;,&quot;Q3 2020&quot;,&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[104187000.0,127246000.0,151361000.0,146925000.0,208709000.0,173758000.0,310856000.0,358514000.0,994430000.0,496668000.0,760817000.0,602408000.0,501995000.0,395488000.0,373940000.0,428436000.0,461241770.0,483843138.0,569734207.0,326684744.0,642800728.0,646373019.0,477799472.0,520276874.0,728583411.0,560807077.0,488945395.0,765928969.0,969256994.0,1029103106.0,1217462122.0,1051599250.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +140,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,550 +148,633 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000174496726000010-samsara-biocapital-llc-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">24</td>
-          <td class="px-3 py-2 text-right">1,217,462</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, ALMS, MLYS, SEPN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRRK, ALMS, MLYS, SEPN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000174496726000010</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000174496726000005-samsara-biocapital-llc-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">22</td>
-          <td class="px-3 py-2 text-right">1,029,103</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, MLYS, ALMS, SEPN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRRK, MLYS, ALMS, SEPN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000174496726000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000174496726000002-samsara-biocapital-llc-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">21</td>
-          <td class="px-3 py-2 text-right">969,256</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, MLYS, KLRS, SEPN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRRK, MLYS, KLRS, SEPN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
-          <td class="px-3 py-2 text-center">000174496726000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000174496725000004-samsara-biocapital-llc-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">765,928</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MLYS, SRRK, KLRS, SEPN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MLYS, SRRK, KLRS, SEPN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000174496725000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000141588925021908-samsara-biocapital-llc-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">29</td>
-          <td class="px-3 py-2 text-right">488,945</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, MLYS, SEPN, KLRS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRRK, MLYS, SEPN, KLRS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000141588925021908</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000141588925013106-samsara-biocapital-llc-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">37</td>
-          <td class="px-3 py-2 text-right">560,807</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, KALARIS THERAPEUTICS INC, MLYS, NGNE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRRK, KALARIS THERAPEUTICS INC, MLYS, NGNE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000141588925013106</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000110465925014316-samsara-biocapital-llc-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">43</td>
-          <td class="px-3 py-2 text-right">728,583</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, CRGX, SEPTERNA INC, MLYS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRRK, CRGX, SEPTERNA INC, MLYS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925014316</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000110465924118933-samsara-biocapital-llc-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">42</td>
-          <td class="px-3 py-2 text-right">520,276</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CRGX, MLYS, SRRK, NGNE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CRGX, MLYS, SRRK, NGNE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924118933</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000110465924089652-samsara-biocapital-llc-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">40</td>
-          <td class="px-3 py-2 text-right">477,799</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CRGX, MLYS, SRRK, NGNE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CRGX, MLYS, SRRK, NGNE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924089652</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000110465924061946-samsara-biocapital-llc-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">39</td>
-          <td class="px-3 py-2 text-right">646,373</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, CRGX, MLYS, NGNE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRRK, CRGX, MLYS, NGNE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
-          <td class="px-3 py-2 text-center">000110465924061946</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000110465924023801-samsara-biocapital-llc-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">41</td>
-          <td class="px-3 py-2 text-right">642,800</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, RYZB, CRGX, MLYS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SRRK, RYZB, CRGX, MLYS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924023801</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000110465923118112-samsara-biocapital-llc-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">41</td>
-          <td class="px-3 py-2 text-right">326,684</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="MLYS, RYZB, SRRK, SLRN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              MLYS, RYZB, SRRK, SLRN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923118112</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000110465923091467-samsara-biocapital-llc-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">47</td>
-          <td class="px-3 py-2 text-right">569,734</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, MLYS, SLRN, SRRK">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KDNY, MLYS, SLRN, SRRK
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923091467</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000110465923091466-samsara-biocapital-llc-q1-2023-restatement">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">56</td>
-          <td class="px-3 py-2 text-right">483,843</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, MLYS, SRRK, ACLX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KDNY, MLYS, SRRK, ACLX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923091466</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000110465923022435-samsara-biocapital-llc-q4-2022-new-holdings">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">1</td>
-          <td class="px-3 py-2 text-right">3,164</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SYRS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SYRS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
-            NEW HOLDINGS
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-15">2/15/2023</td>
-          <td class="px-3 py-2 text-center">000110465923022435</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000110465923021783-samsara-biocapital-llc-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">54</td>
-          <td class="px-3 py-2 text-right">461,482</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, SRRK, ACLX, GRPH">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KDNY, SRRK, ACLX, GRPH
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923021783</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000110465922118511-samsara-biocapital-llc-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">56</td>
-          <td class="px-3 py-2 text-right">428,862</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, NKTX, SRRK, GRPH">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KDNY, NKTX, SRRK, GRPH
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
-          <td class="px-3 py-2 text-center">000110465922118511</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000110465922091195-samsara-biocapital-llc-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">57</td>
-          <td class="px-3 py-2 text-right">375,143</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, NKTX, SRRK, GRPH">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KDNY, NKTX, SRRK, GRPH
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
-          <td class="px-3 py-2 text-center">000110465922091195</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000110465922061327-samsara-biocapital-llc-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">57</td>
-          <td class="px-3 py-2 text-right">397,211</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, GRPH, NKTX, TIL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              KDNY, GRPH, NKTX, TIL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
-          <td class="px-3 py-2 text-center">000110465922061327</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000110465922022413-samsara-biocapital-llc-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">51</td>
-          <td class="px-3 py-2 text-right">515,460</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GRPH, KDNY, TIL, NKTX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GRPH, KDNY, TIL, NKTX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
-          <td class="px-3 py-2 text-center">000110465922022413</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000110465921139230-samsara-biocapital-llc-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">48</td>
-          <td class="px-3 py-2 text-right">637,339</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GRPH, NKTX, KDNY, TIL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GRPH, NKTX, KDNY, TIL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
-          <td class="px-3 py-2 text-center">000110465921139230</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000110465921106652-samsara-biocapital-llc-q2-2021">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">50</td>
-          <td class="px-3 py-2 text-right">810,068</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GRPH, NKTX, KDNY, NVAX calls">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GRPH, NKTX, KDNY, NVAX calls
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-16">8/16/2021</td>
-          <td class="px-3 py-2 text-center">000110465921106652</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000110465921068346-samsara-biocapital-llc-q1-2021">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">44</td>
-          <td class="px-3 py-2 text-right">542,203</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="NKTX, KDNY, Forma Therapeutics Holdings, Inc., TIL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              NKTX, KDNY, Forma Therapeutics Holdings, Inc., TIL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-05-17">5/17/2021</td>
-          <td class="px-3 py-2 text-center">000110465921068346</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000110465921024479-samsara-biocapital-llc-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">43</td>
-          <td class="px-3 py-2 text-right">994,430</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="JYAC, NKTX, KDNY, Forma Therapeutics Holdings, Inc.">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              JYAC, NKTX, KDNY, Forma Therapeutics Holdings, Inc.
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-17">2/17/2021</td>
-          <td class="px-3 py-2 text-center">000110465921024479</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-09-30">
-            <a href="/13f/000110465920125923-samsara-biocapital-llc-q3-2020">Q3 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">36</td>
-          <td class="px-3 py-2 text-right">358,514</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="Forma Therapeutics Holdings, Inc., NKTX, ISEE, SWTX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              Forma Therapeutics Holdings, Inc., NKTX, ISEE, SWTX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
-          <td class="px-3 py-2 text-center">000110465920125923</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-06-30">
-            <a href="/13f/000110465920095488-samsara-biocapital-llc-q2-2020">Q2 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">32</td>
-          <td class="px-3 py-2 text-right">310,856</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="Forma Therapeutics Holdings, Inc., SWTX, ODT, PRNB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              Forma Therapeutics Holdings, Inc., SWTX, ODT, PRNB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
-          <td class="px-3 py-2 text-center">000110465920095488</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-03-31">
-            <a href="/13f/000110465920062544-samsara-biocapital-llc-q1-2020">Q1 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">173,758</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, PRNB, SWTX, ODT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ICPT, PRNB, SWTX, ODT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
-          <td class="px-3 py-2 text-center">000110465920062544</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-12-31">
-            <a href="/13f/000110465920022343-samsara-biocapital-llc-q4-2019">Q4 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">19</td>
-          <td class="px-3 py-2 text-right">208,709</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, SWTX, ALLK, ODT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ICPT, SWTX, ALLK, ODT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-02-18">2/18/2020</td>
-          <td class="px-3 py-2 text-center">000110465920022343</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-09-30">
-            <a href="/13f/000110465919064283-samsara-biocapital-llc-q3-2019">Q3 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">18</td>
-          <td class="px-3 py-2 text-right">146,925</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, ALLK, SYRS, SWTX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ICPT, ALLK, SYRS, SWTX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-11-14">11/14/2019</td>
-          <td class="px-3 py-2 text-center">000110465919064283</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-06-30">
-            <a href="/13f/000110465919045918-samsara-biocapital-llc-q2-2019">Q2 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">21</td>
-          <td class="px-3 py-2 text-right">151,361</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, ODT, ALLK, SYRS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ICPT, ODT, ALLK, SYRS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-08-14">8/14/2019</td>
-          <td class="px-3 py-2 text-center">000110465919045918</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-03-31">
-            <a href="/13f/000110465919029784-samsara-biocapital-llc-q1-2019">Q1 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">18</td>
-          <td class="px-3 py-2 text-right">127,246</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, ALLK, ODT, PRNB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ICPT, ALLK, ODT, PRNB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-05-15">5/15/2019</td>
-          <td class="px-3 py-2 text-center">000110465919029784</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2018-12-31">
-            <a href="/13f/000110465919008738-samsara-biocapital-llc-q4-2018">Q4 2018</a>
-          </td>
-          <td class="px-3 py-2 text-right">17</td>
-          <td class="px-3 py-2 text-right">104,187</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALLK, ICPT, PRNB, STRO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ALLK, ICPT, PRNB, STRO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2019-02-14">2/14/2019</td>
-          <td class="px-3 py-2 text-center">000110465919008738</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000174496726000014-samsara-biocapital-llc-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="1051599.25">
+              1,051,599
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, MLYS, SEPN, ALMR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, MLYS, SEPN, ALMR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000174496726000014</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000174496726000010-samsara-biocapital-llc-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">24</td>
+            <td class="px-3 py-2 text-right" data-order="1217462.122">
+              1,217,462
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, ALMS, MLYS, SEPN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, ALMS, MLYS, SEPN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000174496726000010</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000174496726000005-samsara-biocapital-llc-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">22</td>
+            <td class="px-3 py-2 text-right" data-order="1029103.106">
+              1,029,103
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, MLYS, ALMS, SEPN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, MLYS, ALMS, SEPN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000174496726000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000174496726000002-samsara-biocapital-llc-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">21</td>
+            <td class="px-3 py-2 text-right" data-order="969256.994">
+              969,257
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, MLYS, KLRS, SEPN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, MLYS, KLRS, SEPN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
+            <td class="px-3 py-2 text-center">000174496726000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000174496725000004-samsara-biocapital-llc-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="765928.969">
+              765,929
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MLYS, SRRK, KLRS, SEPN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MLYS, SRRK, KLRS, SEPN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000174496725000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000141588925021908-samsara-biocapital-llc-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">29</td>
+            <td class="px-3 py-2 text-right" data-order="488945.395">
+              488,945
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, MLYS, SEPN, KLRS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, MLYS, SEPN, KLRS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000141588925021908</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000141588925013106-samsara-biocapital-llc-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">37</td>
+            <td class="px-3 py-2 text-right" data-order="560807.077">
+              560,807
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, KLRS, MLYS, NGNE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, KLRS, MLYS, NGNE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000141588925013106</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000110465925014316-samsara-biocapital-llc-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">43</td>
+            <td class="px-3 py-2 text-right" data-order="728583.411">
+              728,583
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, CRGX, SEPN, MLYS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, CRGX, SEPN, MLYS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925014316</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000110465924118933-samsara-biocapital-llc-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">42</td>
+            <td class="px-3 py-2 text-right" data-order="520276.874">
+              520,277
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CRGX, MLYS, SRRK, NGNE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CRGX, MLYS, SRRK, NGNE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924118933</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000110465924089652-samsara-biocapital-llc-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">40</td>
+            <td class="px-3 py-2 text-right" data-order="477799.472">
+              477,799
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CRGX, MLYS, SRRK, NGNE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CRGX, MLYS, SRRK, NGNE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924089652</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000110465924061946-samsara-biocapital-llc-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">39</td>
+            <td class="px-3 py-2 text-right" data-order="646373.019">
+              646,373
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, CRGX, MLYS, NGNE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, CRGX, MLYS, NGNE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
+            <td class="px-3 py-2 text-center">000110465924061946</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000110465924023801-samsara-biocapital-llc-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">41</td>
+            <td class="px-3 py-2 text-right" data-order="642800.728">
+              642,801
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SRRK, RYZB, CRGX, MLYS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SRRK, RYZB, CRGX, MLYS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924023801</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000110465923118112-samsara-biocapital-llc-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">41</td>
+            <td class="px-3 py-2 text-right" data-order="326684.744">
+              326,685
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="MLYS, RYZB, SRRK, SLRN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                MLYS, RYZB, SRRK, SLRN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923118112</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000110465923091467-samsara-biocapital-llc-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">47</td>
+            <td class="px-3 py-2 text-right" data-order="569734.207">
+              569,734
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, MLYS, SLRN, SRRK">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KDNY, MLYS, SLRN, SRRK
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923091467</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000110465923091466-samsara-biocapital-llc-q1-2023-restatement">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">56</td>
+            <td class="px-3 py-2 text-right" data-order="483843.138">
+              483,843
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, MLYS, SRRK, ACLX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KDNY, MLYS, SRRK, ACLX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923091466</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000110465923022435-samsara-biocapital-llc-q4-2022-new-holdings">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">1</td>
+            <td class="px-3 py-2 text-right" data-order="3164.406">
+              3,164
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SYRS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SYRS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
+              NEW HOLDINGS
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-15">2/15/2023</td>
+            <td class="px-3 py-2 text-center">000110465923022435</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000110465923021783-samsara-biocapital-llc-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">54</td>
+            <td class="px-3 py-2 text-right" data-order="461241.77">
+              461,242
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, SRRK, ACLX, GRPH">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KDNY, SRRK, ACLX, GRPH
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923021783</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000110465922118511-samsara-biocapital-llc-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">56</td>
+            <td class="px-3 py-2 text-right" data-order="428436.0">
+              428,436
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, NKTX, SRRK, GRPH">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KDNY, NKTX, SRRK, GRPH
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
+            <td class="px-3 py-2 text-center">000110465922118511</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000110465922091195-samsara-biocapital-llc-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">57</td>
+            <td class="px-3 py-2 text-right" data-order="373940.0">
+              373,940
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, NKTX, SRRK, GRPH">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KDNY, NKTX, SRRK, GRPH
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
+            <td class="px-3 py-2 text-center">000110465922091195</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000110465922061327-samsara-biocapital-llc-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">57</td>
+            <td class="px-3 py-2 text-right" data-order="395488.0">
+              395,488
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KDNY, GRPH, NKTX, TIL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KDNY, GRPH, NKTX, TIL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
+            <td class="px-3 py-2 text-center">000110465922061327</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000110465922022413-samsara-biocapital-llc-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">51</td>
+            <td class="px-3 py-2 text-right" data-order="501995.0">
+              501,995
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GRPH, KDNY, TIL, NKTX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GRPH, KDNY, TIL, NKTX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
+            <td class="px-3 py-2 text-center">000110465922022413</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000110465921139230-samsara-biocapital-llc-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">48</td>
+            <td class="px-3 py-2 text-right" data-order="602408.0">
+              602,408
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GRPH, NKTX, KDNY, TIL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GRPH, NKTX, KDNY, TIL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
+            <td class="px-3 py-2 text-center">000110465921139230</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000110465921106652-samsara-biocapital-llc-q2-2021">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">50</td>
+            <td class="px-3 py-2 text-right" data-order="760817.0">
+              760,817
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GRPH, NKTX, KDNY, NVAX calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GRPH, NKTX, KDNY, NVAX calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-16">8/16/2021</td>
+            <td class="px-3 py-2 text-center">000110465921106652</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000110465921068346-samsara-biocapital-llc-q1-2021">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">44</td>
+            <td class="px-3 py-2 text-right" data-order="496668.0">
+              496,668
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="NKTX, KDNY, FMTX, TIL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                NKTX, KDNY, FMTX, TIL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-05-17">5/17/2021</td>
+            <td class="px-3 py-2 text-center">000110465921068346</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000110465921024479-samsara-biocapital-llc-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">43</td>
+            <td class="px-3 py-2 text-right" data-order="994430.0">
+              994,430
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="JYAC, NKTX, KDNY, FMTX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                JYAC, NKTX, KDNY, FMTX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-17">2/17/2021</td>
+            <td class="px-3 py-2 text-center">000110465921024479</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-09-30">
+              <a href="/13f/000110465920125923-samsara-biocapital-llc-q3-2020">Q3 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">36</td>
+            <td class="px-3 py-2 text-right" data-order="358514.0">
+              358,514
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="FMTX, NKTX, ISEE, SWTX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                FMTX, NKTX, ISEE, SWTX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
+            <td class="px-3 py-2 text-center">000110465920125923</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-06-30">
+              <a href="/13f/000110465920095488-samsara-biocapital-llc-q2-2020">Q2 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">32</td>
+            <td class="px-3 py-2 text-right" data-order="310856.0">
+              310,856
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="FMTX, SWTX, ODTC, PRNB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                FMTX, SWTX, ODTC, PRNB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
+            <td class="px-3 py-2 text-center">000110465920095488</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-03-31">
+              <a href="/13f/000110465920062544-samsara-biocapital-llc-q1-2020">Q1 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="173758.0">
+              173,758
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, PRNB, SWTX, ODTC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ICPT, PRNB, SWTX, ODTC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
+            <td class="px-3 py-2 text-center">000110465920062544</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-12-31">
+              <a href="/13f/000110465920022343-samsara-biocapital-llc-q4-2019">Q4 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">19</td>
+            <td class="px-3 py-2 text-right" data-order="208709.0">
+              208,709
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, SWTX, ALLK, ODTC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ICPT, SWTX, ALLK, ODTC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-02-18">2/18/2020</td>
+            <td class="px-3 py-2 text-center">000110465920022343</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-09-30">
+              <a href="/13f/000110465919064283-samsara-biocapital-llc-q3-2019">Q3 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">18</td>
+            <td class="px-3 py-2 text-right" data-order="146925.0">
+              146,925
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, ALLK, SYRS, SWTX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ICPT, ALLK, SYRS, SWTX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-11-14">11/14/2019</td>
+            <td class="px-3 py-2 text-center">000110465919064283</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-06-30">
+              <a href="/13f/000110465919045918-samsara-biocapital-llc-q2-2019">Q2 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">21</td>
+            <td class="px-3 py-2 text-right" data-order="151361.0">
+              151,361
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, ODTC, ALLK, SYRS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ICPT, ODTC, ALLK, SYRS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-08-14">8/14/2019</td>
+            <td class="px-3 py-2 text-center">000110465919045918</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-03-31">
+              <a href="/13f/000110465919029784-samsara-biocapital-llc-q1-2019">Q1 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">18</td>
+            <td class="px-3 py-2 text-right" data-order="127246.0">
+              127,246
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ICPT, ALLK, ODTC, PRNB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ICPT, ALLK, ODTC, PRNB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-05-15">5/15/2019</td>
+            <td class="px-3 py-2 text-center">000110465919029784</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2018-12-31">
+              <a href="/13f/000110465919008738-samsara-biocapital-llc-q4-2018">Q4 2018</a>
+            </td>
+            <td class="px-3 py-2 text-right">17</td>
+            <td class="px-3 py-2 text-right" data-order="104187.0">
+              104,187
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALLK, ICPT, PRNB, STRO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ALLK, ICPT, PRNB, STRO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2019-02-14">2/14/2019</td>
+            <td class="px-3 py-2 text-center">000110465919008738</td>
+          </tr>
     </tbody>
   </table>
 </div>
@@ -700,9 +789,7 @@
     </ul>
   </details>
 
-<script>
-  var holdingsChartData = {"labels":["2018-12-31","2019-03-31","2019-06-30","2019-09-30","2019-12-31","2020-03-31","2020-06-30","2020-09-30","2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[104187000.0,127246000.0,151361000.0,146925000.0,208709000.0,173758000.0,310856000.0,358514000.0,994430000.0,542203000.0,810068000.0,637339000.0,515460000.0,397211000.0,375143000.0,428862000.0,461482322.0,483843138.0,569734206.9999999,326684744.0,642800728.0,646373019.0,477799472.0,520276874.0,728583411.0,560807076.9999999,488945395.0,765928969.0,969256994.0,1029103105.9999989,1217462122.0]};
-</script>
+
 
       </div>
 
@@ -797,7 +884,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

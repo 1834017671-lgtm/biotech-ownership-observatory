@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Decheng Capital LLC 13F Filings"><link href="https://13f.info/manager/0002010850-decheng-capital-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0002010850-decheng-capital-llc"><meta name="description" content="Decheng Capital LLC reported 14 holdings with total value $732 M as of Q2 2026. Top holdings included CGON, NUVB, AARD, ACRS, and UPB"><meta property="og:description" content="Decheng Capital LLC reported 14 holdings with total value $732 M as of Q2 2026. Top holdings included CGON, NUVB, AARD, ACRS, and UPB"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"D","item":"https://13f.info/managers/D","@type":"ListItem","position":1},{"name":"Decheng Capital LLC","item":"https://13f.info/manager/0002010850-decheng-capital-llc","identifier":"0002010850","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0002010850","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Decheng Capital LLC 13F Filings"><link href="https://13f.info/manager/0002010850-decheng-capital-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0002010850-decheng-capital-llc"><meta name="description" content="Decheng Capital LLC reported 11 holdings with total value $685M as of Q3 2026. Top holdings included CGON, NUVB, ACRS, AARD, and UPB"><meta property="og:description" content="Decheng Capital LLC reported 11 holdings with total value $685M as of Q3 2026. Top holdings included CGON, NUVB, ACRS, AARD, and UPB"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"D","item":"https://13f.info/managers/D","@type":"ListItem","position":1},{"name":"Decheng Capital LLC","item":"https://13f.info/manager/0002010850-decheng-capital-llc","identifier":"0002010850","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0002010850","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,7 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000110465926096837-decheng-capital-llc-q2-2026">Q2 2026</a>
+        <a href="/13f/000110465926127247-decheng-capital-llc-q3-2026">Q3 2026</a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +100,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[357920713.0,745647011.0,326315057.0,422193498.0,466229449.0,356489453.0,395968030.0,573195689.0,743406873.0,661316235.0,731749074.0,685065734.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -142,201 +148,240 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000110465926096837-decheng-capital-llc-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">14</td>
-          <td class="px-3 py-2 text-right">731,749</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, AARD, ACRS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, NUVB, AARD, ACRS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000110465926096837</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000110465926060145-decheng-capital-llc-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">14</td>
-          <td class="px-3 py-2 text-right">661,316</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, UPB, ACRS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, NUVB, UPB, ACRS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-13">5/13/2026</td>
-          <td class="px-3 py-2 text-center">000110465926060145</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000110465926014146-decheng-capital-llc-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">19</td>
-          <td class="px-3 py-2 text-right">743,406</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, UPB, AARD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, NUVB, UPB, AARD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-12">2/12/2026</td>
-          <td class="px-3 py-2 text-center">000110465926014146</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000110465925112117-decheng-capital-llc-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">23</td>
-          <td class="px-3 py-2 text-right">573,195</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, UPB, AARD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, NUVB, UPB, AARD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925112117</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000110465925077492-decheng-capital-llc-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">25</td>
-          <td class="px-3 py-2 text-right">395,968</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, AARD, NUVB, UPB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, AARD, NUVB, UPB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-13">8/13/2025</td>
-          <td class="px-3 py-2 text-center">000110465925077492</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000110465925045686-decheng-capital-llc-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">356,489</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, AARDVARK THERAPEUTICS INC, UPB">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, NUVB, AARDVARK THERAPEUTICS INC, UPB
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-07">5/7/2025</td>
-          <td class="px-3 py-2 text-center">000110465925045686</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000110465925013870-decheng-capital-llc-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">466,229</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, Upstream Bio Inc., NAMS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, NUVB, Upstream Bio Inc., NAMS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925013870</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000110465924119361-decheng-capital-llc-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">26</td>
-          <td class="px-3 py-2 text-right">422,193</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, PHAT, RCUS">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, NUVB, PHAT, RCUS
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924119361</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000110465924089453-decheng-capital-llc-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">24</td>
-          <td class="px-3 py-2 text-right">326,315</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, RCUS, ZNTL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, NUVB, RCUS, ZNTL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924089453</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000110465924060707-decheng-capital-llc-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">22</td>
-          <td class="px-3 py-2 text-right">745,647</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALPN, CG ONCOLOGY INC, ZNTL, ILMN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ALPN, CG ONCOLOGY INC, ZNTL, ILMN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-13">5/13/2024</td>
-          <td class="px-3 py-2 text-center">000110465924060707</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000110465924014002-decheng-capital-llc-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">24</td>
-          <td class="px-3 py-2 text-right">357,920</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALPN, ZNTL, PACB, TXG">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ALPN, ZNTL, PACB, TXG
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-12">2/12/2024</td>
-          <td class="px-3 py-2 text-center">000110465924014002</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000110465926127247-decheng-capital-llc-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">11</td>
+            <td class="px-3 py-2 text-right" data-order="685065.734">
+              685,066
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, ACRS, AARD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, ACRS, AARD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-13">11/13/2026</td>
+            <td class="px-3 py-2 text-center">000110465926127247</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000110465926096837-decheng-capital-llc-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">14</td>
+            <td class="px-3 py-2 text-right" data-order="731749.074">
+              731,749
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, AARD, ACRS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, AARD, ACRS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000110465926096837</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000110465926060145-decheng-capital-llc-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">14</td>
+            <td class="px-3 py-2 text-right" data-order="661316.235">
+              661,316
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, UPB, ACRS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, UPB, ACRS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-13">5/13/2026</td>
+            <td class="px-3 py-2 text-center">000110465926060145</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000110465926014146-decheng-capital-llc-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">19</td>
+            <td class="px-3 py-2 text-right" data-order="743406.873">
+              743,407
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, UPB, AARD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, UPB, AARD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-12">2/12/2026</td>
+            <td class="px-3 py-2 text-center">000110465926014146</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000110465925112117-decheng-capital-llc-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">23</td>
+            <td class="px-3 py-2 text-right" data-order="573195.689">
+              573,196
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, UPB, AARD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, UPB, AARD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925112117</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000110465925077492-decheng-capital-llc-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">25</td>
+            <td class="px-3 py-2 text-right" data-order="395968.03">
+              395,968
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, AARD, NUVB, UPB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, AARD, NUVB, UPB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-13">8/13/2025</td>
+            <td class="px-3 py-2 text-center">000110465925077492</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000110465925045686-decheng-capital-llc-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="356489.453">
+              356,489
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, AARD, UPB">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, AARD, UPB
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-07">5/7/2025</td>
+            <td class="px-3 py-2 text-center">000110465925045686</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000110465925013870-decheng-capital-llc-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="466229.449">
+              466,229
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, UPB, NAMS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, UPB, NAMS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925013870</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000110465924119361-decheng-capital-llc-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">26</td>
+            <td class="px-3 py-2 text-right" data-order="422193.498">
+              422,193
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, PHAT, RCUS">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, PHAT, RCUS
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924119361</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000110465924089453-decheng-capital-llc-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">24</td>
+            <td class="px-3 py-2 text-right" data-order="326315.057">
+              326,315
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, NUVB, RCUS, ZNTL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, NUVB, RCUS, ZNTL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924089453</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000110465924060707-decheng-capital-llc-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">22</td>
+            <td class="px-3 py-2 text-right" data-order="745647.011">
+              745,647
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALPN, CGON, ZNTL, ILMN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ALPN, CGON, ZNTL, ILMN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-13">5/13/2024</td>
+            <td class="px-3 py-2 text-center">000110465924060707</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000110465924014002-decheng-capital-llc-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">24</td>
+            <td class="px-3 py-2 text-right" data-order="357920.713">
+              357,921
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ALPN, ZNTL, PACB, TXG">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ALPN, ZNTL, PACB, TXG
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-12">2/12/2024</td>
+            <td class="px-3 py-2 text-center">000110465924014002</td>
+          </tr>
     </tbody>
   </table>
 </div>
 
 
-<script>
-  var holdingsChartData = {"labels":["2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[357920713.0,745647011.0,326315057.0,422193497.9999999,466229449.0,356489453.0,395968030.0,573195689.0,743406873.0,661316235.0,731749074.0]};
-</script>
+
 
       </div>
 
@@ -431,7 +476,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

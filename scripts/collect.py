@@ -68,9 +68,11 @@ def main():
         for n in nodes:
          val=lambda k:n.findtext('.//'+k)
          primary.append({'ticker':ticks.get(val('cusip')),'name':val('nameOfIssuer'),'class':val('titleOfClass'),'cusip':val('cusip'),'value':float(val('value')),'shares':float(val('sshPrnamt')),'option':val('putCall')})
-        # Current schema reports dollars. Reject units mismatches.
+        # Current schema reports dollars. 13f.info's cover total can exclude option underlyings, so also accept a table that matches the reproduced positions. Reject a thousands-vs-dollars mismatch, which is far from both.
         total=sum(p['value'] for p in primary)
-        if abs(total-rec['reportedTotal'])/max(1,rec['reportedTotal'])<.005:
+        pos_sum=sum(p['value'] for p in positions) or 1
+        cover=rec['reportedTotal'] or 1
+        if abs(total-cover)/cover<.005 or abs(total-pos_sum)/pos_sum<.005:
          rec['positions']=primary;rec['provenance']='SEC information table XML; ticker mapping from 13f.info';rec['xml']=xmlurl;rec['reportedTotal']=total
         break
       except Exception as e:rec['primaryFetchNote']=str(e)

@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Braidwell LP 13F Filings"><link href="https://13f.info/manager/0001920938-braidwell-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001920938-braidwell-lp"><meta name="description" content="Braidwell LP reported 86 holdings with total value $2.70 B as of Q2 2026. Top holdings included CAI, HNGE, GKOS, EWTX, and AGLE"><meta property="og:description" content="Braidwell LP reported 86 holdings with total value $2.70 B as of Q2 2026. Top holdings included CAI, HNGE, GKOS, EWTX, and AGLE"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"B","item":"https://13f.info/managers/B","@type":"ListItem","position":1},{"name":"BRAIDWELL LP","item":"https://13f.info/manager/0001920938-braidwell-lp","identifier":"0001920938","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001920938","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Braidwell LP 13F Filings"><link href="https://13f.info/manager/0001920938-braidwell-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001920938-braidwell-lp"><meta name="description" content="Braidwell LP reported 88 holdings with total value $2.41B as of Q3 2026. Top holdings included KOD, CAI, EWTX, ATEC, and IRTC"><meta property="og:description" content="Braidwell LP reported 88 holdings with total value $2.41B as of Q3 2026. Top holdings included KOD, CAI, EWTX, ATEC, and IRTC"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"B","item":"https://13f.info/managers/B","@type":"ListItem","position":1},{"name":"BRAIDWELL LP","item":"https://13f.info/manager/0001920938-braidwell-lp","identifier":"0001920938","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001920938","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,15 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000142050626001823-braidwell-lp-q2-2026">Q2 2026</a>
+        <a href="/13f/000142050626002894-braidwell-lp-q3-2026">Q3 2026</a>
+      </dd>
+    </div>
+    <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">
+        13D/G filings
+      </dt>
+      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <a href="#beneficial-ownership">13G on 3 securities<span aria-hidden="true"> ↓</span></a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +108,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[2984124707.0,3032008157.0,3060428640.0,3164360709.0,2722670757.0,3102773641.0,3187767909.0,3527985574.0,3372652431.0,2844802567.0,2923924032.0,3370348920.0,3126999740.0,2997744331.0,2703471368.0,2409466201.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -142,269 +156,337 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000142050626001823-braidwell-lp-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">86</td>
-          <td class="px-3 py-2 text-right">2,703,471</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CAI, HNGE, GKOS, EWTX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CAI, HNGE, GKOS, EWTX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000142050626001823</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000142050626001145-braidwell-lp-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">88</td>
-          <td class="px-3 py-2 text-right">2,997,744</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CAI, GUARDANT HEALTH INC, REPLIGEN CORP, NEOGENOMICS INC">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CAI, GUARDANT HEALTH INC, REPLIGEN CORP, NEOGENOMICS INC
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000142050626001145</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000142050626000586-braidwell-lp-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">73</td>
-          <td class="px-3 py-2 text-right">3,126,999</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CAI, GUARDANT HEALTH INC, EWTX, REPLIGEN CORP">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CAI, GUARDANT HEALTH INC, EWTX, REPLIGEN CORP
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
-          <td class="px-3 py-2 text-center">000142050626000586</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000142050625003410-braidwell-lp-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">73</td>
-          <td class="px-3 py-2 text-right">3,370,348</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, CARIS LIFE SCIENCES INC, NOVOCURE LTD, XENE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, CARIS LIFE SCIENCES INC, NOVOCURE LTD, XENE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000142050625003410</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000142050625002183-braidwell-lp-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">55</td>
-          <td class="px-3 py-2 text-right">2,923,924</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, CARIS LIFE SCIENCES INC, NBIX, NOVOCURE LTD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, CARIS LIFE SCIENCES INC, NBIX, NOVOCURE LTD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000142050625002183</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000142050625001293-braidwell-lp-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">64</td>
-          <td class="px-3 py-2 text-right">2,844,802</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, NOVOCURE LTD, NBIX, BRIDGEBIO PHARMA INC">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, NOVOCURE LTD, NBIX, BRIDGEBIO PHARMA INC
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000142050625001293</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000192093825000002-braidwell-lp-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">73</td>
-          <td class="px-3 py-2 text-right">3,372,652</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, NOVOCURE LTD, NBIX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, NOVOCURE LTD, NBIX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000192093825000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000192093824000006-braidwell-lp-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">81</td>
-          <td class="px-3 py-2 text-right">3,527,985</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, DEXCOM INC, NOVOCURE LTD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, DEXCOM INC, NOVOCURE LTD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000192093824000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000142050624001566-braidwell-lp-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">75</td>
-          <td class="px-3 py-2 text-right">3,187,767</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, DEXCOM INC, NOVOCURE LTD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, DEXCOM INC, NOVOCURE LTD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000142050624001566</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000192093824000004-braidwell-lp-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">70</td>
-          <td class="px-3 py-2 text-right">3,102,773</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BRIDGEBIO PHARMA INC, GUARDANT HEALTH INC, EXACT SCIENCES CORP, NOVOCURE LTD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BRIDGEBIO PHARMA INC, GUARDANT HEALTH INC, EXACT SCIENCES CORP, NOVOCURE LTD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
-          <td class="px-3 py-2 text-center">000192093824000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000142050624000478-braidwell-lp-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">72</td>
-          <td class="px-3 py-2 text-right">2,722,670</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BRIDGEBIO PHARMA INC, GUARDANT HEALTH INC, ASCENDIS PHARMA A/S, EXACT SCIENCES CORP">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BRIDGEBIO PHARMA INC, GUARDANT HEALTH INC, ASCENDIS PHARMA A/S, EXACT SCIENCES CORP
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000142050624000478</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000142050623002213-braidwell-lp-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">86</td>
-          <td class="px-3 py-2 text-right">3,164,360</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, NOVOCURE LTD, ASCENDIS PHARMA A/S">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, NOVOCURE LTD, ASCENDIS PHARMA A/S
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000142050623002213</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000142050623001695-braidwell-lp-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">81</td>
-          <td class="px-3 py-2 text-right">3,060,428</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, EXACT SCIENCES CORP, NOVOCURE LTD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, EXACT SCIENCES CORP, NOVOCURE LTD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000142050623001695</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000090514823000454-braidwell-lp-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">81</td>
-          <td class="px-3 py-2 text-right">3,032,008</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, EXACT SCIENCES CORP, BRIDGEBIO PHARMA INC, NANOSTRING TECHNOLOGIES INC">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, EXACT SCIENCES CORP, BRIDGEBIO PHARMA INC, NANOSTRING TECHNOLOGIES INC
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000090514823000454</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000142050623000696-braidwell-lp-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">88</td>
-          <td class="px-3 py-2 text-right">2,984,124</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, EXACT SCIENCES CORP, NANOSTRING TECHNOLOGIES INC, NOVOCURE LTD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              GUARDANT HEALTH INC, EXACT SCIENCES CORP, NANOSTRING TECHNOLOGIES INC, NOVOCURE LTD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
-          <td class="px-3 py-2 text-center">000142050623000696</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000142050626002894-braidwell-lp-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">88</td>
+            <td class="px-3 py-2 text-right" data-order="2409466.201">
+              2,409,466
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="KOD, CAI, EWTX, ATEC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                KOD, CAI, EWTX, ATEC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000142050626002894</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000142050626001823-braidwell-lp-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">86</td>
+            <td class="px-3 py-2 text-right" data-order="2703471.368">
+              2,703,471
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CAI, HNGE, GKOS, EWTX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CAI, HNGE, GKOS, EWTX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000142050626001823</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000142050626001145-braidwell-lp-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">88</td>
+            <td class="px-3 py-2 text-right" data-order="2997744.331">
+              2,997,744
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CAI, GUARDANT HEALTH INC, REPLIGEN CORP, NEOGENOMICS INC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CAI, GUARDANT HEALTH INC, REPLIGEN CORP, NEOGENOMICS INC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000142050626001145</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000142050626000586-braidwell-lp-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">73</td>
+            <td class="px-3 py-2 text-right" data-order="3126999.74">
+              3,127,000
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CAI, GUARDANT HEALTH INC, EWTX, REPLIGEN CORP">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CAI, GUARDANT HEALTH INC, EWTX, REPLIGEN CORP
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
+            <td class="px-3 py-2 text-center">000142050626000586</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000142050625003410-braidwell-lp-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">73</td>
+            <td class="px-3 py-2 text-right" data-order="3370348.92">
+              3,370,349
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, CAI, NOVOCURE LTD, XENE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, CAI, NOVOCURE LTD, XENE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000142050625003410</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000142050625002183-braidwell-lp-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">55</td>
+            <td class="px-3 py-2 text-right" data-order="2923924.032">
+              2,923,924
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, CAI, NBIX, NOVOCURE LTD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, CAI, NBIX, NOVOCURE LTD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000142050625002183</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000142050625001293-braidwell-lp-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">64</td>
+            <td class="px-3 py-2 text-right" data-order="2844802.567">
+              2,844,803
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, NOVOCURE LTD, NBIX, BRIDGEBIO PHARMA INC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, NOVOCURE LTD, NBIX, BRIDGEBIO PHARMA INC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000142050625001293</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000192093825000002-braidwell-lp-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">73</td>
+            <td class="px-3 py-2 text-right" data-order="3372652.431">
+              3,372,652
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, NOVOCURE LTD, NBIX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, NOVOCURE LTD, NBIX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000192093825000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000192093824000006-braidwell-lp-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">81</td>
+            <td class="px-3 py-2 text-right" data-order="3527985.574">
+              3,527,986
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, DEXCOM INC, NOVOCURE LTD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, DEXCOM INC, NOVOCURE LTD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000192093824000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000142050624001566-braidwell-lp-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">75</td>
+            <td class="px-3 py-2 text-right" data-order="3187767.909">
+              3,187,768
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, DEXCOM INC, NOVOCURE LTD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, DEXCOM INC, NOVOCURE LTD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000142050624001566</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000192093824000004-braidwell-lp-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">70</td>
+            <td class="px-3 py-2 text-right" data-order="3102773.641">
+              3,102,774
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BRIDGEBIO PHARMA INC, GUARDANT HEALTH INC, EXACT SCIENCES CORP, NOVOCURE LTD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BRIDGEBIO PHARMA INC, GUARDANT HEALTH INC, EXACT SCIENCES CORP, NOVOCURE LTD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
+            <td class="px-3 py-2 text-center">000192093824000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000142050624000478-braidwell-lp-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">72</td>
+            <td class="px-3 py-2 text-right" data-order="2722670.757">
+              2,722,671
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BRIDGEBIO PHARMA INC, GUARDANT HEALTH INC, ASCENDIS PHARMA A/S, EXACT SCIENCES CORP">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BRIDGEBIO PHARMA INC, GUARDANT HEALTH INC, ASCENDIS PHARMA A/S, EXACT SCIENCES CORP
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000142050624000478</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000142050623002213-braidwell-lp-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">86</td>
+            <td class="px-3 py-2 text-right" data-order="3164360.709">
+              3,164,361
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, NOVOCURE LTD, ASCENDIS PHARMA A/S">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, NOVOCURE LTD, ASCENDIS PHARMA A/S
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000142050623002213</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000142050623001695-braidwell-lp-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">81</td>
+            <td class="px-3 py-2 text-right" data-order="3060428.64">
+              3,060,429
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, EXACT SCIENCES CORP, NOVOCURE LTD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, BRIDGEBIO PHARMA INC, EXACT SCIENCES CORP, NOVOCURE LTD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000142050623001695</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000090514823000454-braidwell-lp-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">81</td>
+            <td class="px-3 py-2 text-right" data-order="3032008.157">
+              3,032,008
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, EXACT SCIENCES CORP, BRIDGEBIO PHARMA INC, NANOSTRING TECHNOLOGIES INC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, EXACT SCIENCES CORP, BRIDGEBIO PHARMA INC, NANOSTRING TECHNOLOGIES INC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000090514823000454</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000142050623000696-braidwell-lp-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">88</td>
+            <td class="px-3 py-2 text-right" data-order="2984124.707">
+              2,984,125
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="GUARDANT HEALTH INC, EXACT SCIENCES CORP, NANOSTRING TECHNOLOGIES INC, NOVOCURE LTD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                GUARDANT HEALTH INC, EXACT SCIENCES CORP, NANOSTRING TECHNOLOGIES INC, NOVOCURE LTD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
+            <td class="px-3 py-2 text-center">000142050623000696</td>
+          </tr>
     </tbody>
   </table>
 </div>
 
 
-<script>
-  var holdingsChartData = {"labels":["2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[2984124707.0,3032008157.0,3060428640.0,3164360709.0,2722670757.0,3102773641.0,3187767909.0,3527985574.0,3372652431.0,2844802567.0,2923924032.0,3370348920.0,3126999739.999999,2997744331.0,2703471368.0]};
-</script>
+
+<div id="beneficial-ownership" class="w-full md:max-w-3xl lg:max-w-5xl mt-12 md:mt-16">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 sm:px-0">
+    <h2 class="text-2xl">13D and 13G Filings</h2>
+
+    <a class="mb-2 px-3 py-1 rounded bg-white shadow text-sm whitespace-nowrap text-indigo-600 hover:text-indigo-900 hover:bg-gray-50" href="/manager/0001920938-braidwell-lp/13dg-filings">All 13D and 13G filings</a>
+  </div>
+
+
+    <p class="bg-white shadow px-3 sm:px-4 py-2 text-gray-900 ">
+      3
+      
+      securities
+      where the latest filing
+        since 12/18/2024
+      is a <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-gray-200 text-gray-700" title="Schedule 13G, the short form. The filer certifies it doesn&#39;t hold the shares to change or influence control">13G</span>,
+      the newest
+      filed 8/14/2026.
+      <a class="whitespace-nowrap" href="/manager/0001920938-braidwell-lp/13dg-filings">View all</a>
+    </p>
+</div>
+
 
       </div>
 
@@ -499,7 +581,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

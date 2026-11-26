@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Venrock Adviser, LLC 13F Filings"><link href="https://13f.info/manager/0001615982-venrock-adviser-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001615982-venrock-adviser-llc"><meta name="description" content="Venrock Adviser, LLC reported 33 holdings with total value $3.30 B as of Q2 2026. Top holdings included APGE, ORKA, ERAS, AGLE, and DNTH"><meta property="og:description" content="Venrock Adviser, LLC reported 33 holdings with total value $3.30 B as of Q2 2026. Top holdings included APGE, ORKA, ERAS, AGLE, and DNTH"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"V","item":"https://13f.info/managers/V","@type":"ListItem","position":1},{"name":"Venrock Adviser, LLC","item":"https://13f.info/manager/0001615982-venrock-adviser-llc","identifier":"0001615982","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001615982","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Venrock Adviser, LLC 13F Filings"><link href="https://13f.info/manager/0001615982-venrock-adviser-llc" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001615982-venrock-adviser-llc"><meta name="description" content="Venrock Adviser, LLC reported 34 holdings with total value $2.06B as of Q3 2026. Top holdings included ORKA, ERAS, SYRE, KRSA, and SVRA"><meta property="og:description" content="Venrock Adviser, LLC reported 34 holdings with total value $2.06B as of Q3 2026. Top holdings included ORKA, ERAS, SYRE, KRSA, and SVRA"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"V","item":"https://13f.info/managers/V","@type":"ListItem","position":1},{"name":"Venrock Adviser, LLC","item":"https://13f.info/manager/0001615982-venrock-adviser-llc","identifier":"0001615982","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001615982","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,7 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000161598226000015-venrock-adviser-llc-q2-2026">Q2 2026</a>
+        <a href="/13f/000161598226000019-venrock-adviser-llc-q3-2026">Q3 2026</a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -103,12 +108,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q1 2020&quot;,&quot;Q2 2020&quot;,&quot;Q3 2020&quot;,&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[369181000.0,417632000.0,511173000.0,680145000.0,921764000.0,824402000.0,778548000.0,731539000.0,617244000.0,507777000.0,648091000.0,593604538.0,512168605.0,625361199.0,949945221.0,1458067955.0,2102200301.0,1570242514.0,1909252051.0,1457403476.0,1175247364.0,1334436576.0,1776690536.0,2024517832.0,2679121858.0,3298051614.0,2058215412.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -150,448 +156,519 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000161598226000015-venrock-adviser-llc-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">33</td>
-          <td class="px-3 py-2 text-right">3,298,051</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, ORKA, ERAS, AGLE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, ORKA, ERAS, AGLE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000161598226000015</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000161598226000011-venrock-adviser-llc-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">33</td>
-          <td class="px-3 py-2 text-right">2,679,121</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, ERAS, ORKA, AGLE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, ERAS, ORKA, AGLE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
-          <td class="px-3 py-2 text-center">000161598226000011</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000161598226000005-vr-adviser-llc-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">2,024,517</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, ORKA, VRDN, AGLE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, ORKA, VRDN, AGLE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
-          <td class="px-3 py-2 text-center">000161598226000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000161598225000006-vr-adviser-llc-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">33</td>
-          <td class="px-3 py-2 text-right">1,776,690</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, MTSR, OCUL, CDTX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, MTSR, OCUL, CDTX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000161598225000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000141588925021914-vr-adviser-llc-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">31</td>
-          <td class="px-3 py-2 text-right">1,334,436</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, OCUL, MTSR, ELVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, OCUL, MTSR, ELVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000141588925021914</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000141588925013093-vr-adviser-llc-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">37</td>
-          <td class="px-3 py-2 text-right">1,175,247</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, METSERA INC, OCUL, ELVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, METSERA INC, OCUL, ELVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000141588925013093</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000110465925014110-vr-adviser-llc-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">37</td>
-          <td class="px-3 py-2 text-right">1,457,403</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, OCUL, ELVN, PRAX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, OCUL, ELVN, PRAX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000110465925014110</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000110465924118950-vr-adviser-llc-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">38</td>
-          <td class="px-3 py-2 text-right">1,909,252</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, OCUL, ELVN, VRDN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, OCUL, ELVN, VRDN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924118950</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000110465924089632-vr-adviser-llc-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">35</td>
-          <td class="px-3 py-2 text-right">1,570,242</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, ELVN, FDMT, OCUL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, ELVN, FDMT, OCUL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924089632</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000110465924061948-vr-adviser-llc-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">38</td>
-          <td class="px-3 py-2 text-right">2,102,200</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, FDMT, OCUL, AGLE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, FDMT, OCUL, AGLE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
-          <td class="px-3 py-2 text-center">000110465924061948</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000110465924023659-vr-adviser-llc-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">36</td>
-          <td class="px-3 py-2 text-right">1,458,067</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="RYZB, APGE, PHVS, VRDN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              RYZB, APGE, PHVS, VRDN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000110465924023659</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000110465923118127-vr-adviser-llc-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">37</td>
-          <td class="px-3 py-2 text-right">949,945</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, RYZB, VRDN, COGT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              APGE, RYZB, VRDN, COGT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000110465923118127</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000110465923090491-vr-adviser-llc-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">30</td>
-          <td class="px-3 py-2 text-right">625,361</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRDN, COGT, FDMT, ELVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              VRDN, COGT, FDMT, ELVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-11">8/11/2023</td>
-          <td class="px-3 py-2 text-center">000110465923090491</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000110465923060793-vr-adviser-llc-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">25</td>
-          <td class="px-3 py-2 text-right">512,168</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRDN, COGT, ELVN, TERN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              VRDN, COGT, ELVN, TERN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000110465923060793</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000110465923060789-vr-adviser-llc-q4-2022-restatement">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">593,604</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRDN, ACRS, AXSM, COGT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              VRDN, ACRS, AXSM, COGT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000110465923060789</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000110465923060784-vr-adviser-llc-q3-2022-restatement">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">31</td>
-          <td class="px-3 py-2 text-right">648,091</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="TCDA, ACRS, COGT, RLMD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              TCDA, ACRS, COGT, RLMD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000110465923060784</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000110465923060779-vr-adviser-llc-q2-2022-restatement">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">507,777</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="TCDA, ACRS, RLMD, TVTX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              TCDA, ACRS, RLMD, TVTX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
-            RESTATEMENT
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000110465923060779</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000110465922061286-vr-adviser-llc-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">27</td>
-          <td class="px-3 py-2 text-right">617,244</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ACRS, TIL, RLMD, TVTX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ACRS, TIL, RLMD, TVTX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
-          <td class="px-3 py-2 text-center">000110465922061286</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000110465922022702-vr-adviser-llc-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">26</td>
-          <td class="px-3 py-2 text-right">731,539</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="TIL, ACRS, TVTX, RLMD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              TIL, ACRS, TVTX, RLMD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
-          <td class="px-3 py-2 text-center">000110465922022702</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000110465921139155-vr-adviser-llc-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">26</td>
-          <td class="px-3 py-2 text-right">778,548</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="TIL, ACRS, CLDX, AADI">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              TIL, ACRS, CLDX, AADI
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
-          <td class="px-3 py-2 text-center">000110465921139155</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000110465921105075-vr-adviser-llc-q2-2021">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">29</td>
-          <td class="px-3 py-2 text-right">824,402</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="TIL, ACRS, VTGN, GRPH">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              TIL, ACRS, VTGN, GRPH
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-13">8/13/2021</td>
-          <td class="px-3 py-2 text-center">000110465921105075</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000110465921066847-vr-adviser-llc-q1-2021">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">28</td>
-          <td class="px-3 py-2 text-right">921,764</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="TIL, CNST, ACRS, OLMA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              TIL, CNST, ACRS, OLMA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-05-14">5/14/2021</td>
-          <td class="px-3 py-2 text-center">000110465921066847</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000110465921021905-vr-adviser-llc-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">25</td>
-          <td class="px-3 py-2 text-right">680,145</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CNST, OLMA, TRIL, KNTE">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CNST, OLMA, TRIL, KNTE
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-12">2/12/2021</td>
-          <td class="px-3 py-2 text-center">000110465921021905</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-09-30">
-            <a href="/13f/000110465920125774-vr-adviser-llc-q3-2020">Q3 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">22</td>
-          <td class="px-3 py-2 text-right">511,173</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="TRIL, CNST, ALT, ATHA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              TRIL, CNST, ALT, ATHA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
-          <td class="px-3 py-2 text-center">000110465920125774</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-06-30">
-            <a href="/13f/000110465920095569-vr-adviser-llc-q2-2020">Q2 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">16</td>
-          <td class="px-3 py-2 text-right">417,632</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CNST, TRIL, ALT, RLMD">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CNST, TRIL, ALT, RLMD
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
-          <td class="px-3 py-2 text-center">000110465920095569</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-03-31">
-            <a href="/13f/000110465920062585-vr-adviser-llc-q1-2020">Q1 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">16</td>
-          <td class="px-3 py-2 text-right">369,181</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CNST, AXSM, RLMD, TRIL">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CNST, AXSM, RLMD, TRIL
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
-          <td class="px-3 py-2 text-center">000110465920062585</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000161598226000019-venrock-adviser-llc-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">34</td>
+            <td class="px-3 py-2 text-right" data-order="2058215.412">
+              2,058,215
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ORKA, ERAS, SYRE, KRSA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ORKA, ERAS, SYRE, KRSA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000161598226000019</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000161598226000015-venrock-adviser-llc-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">33</td>
+            <td class="px-3 py-2 text-right" data-order="3298051.614">
+              3,298,052
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, ORKA, ERAS, SYRE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, ORKA, ERAS, SYRE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000161598226000015</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000161598226000011-venrock-adviser-llc-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">33</td>
+            <td class="px-3 py-2 text-right" data-order="2679121.858">
+              2,679,122
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, ERAS, ORKA, SYRE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, ERAS, ORKA, SYRE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-15">5/15/2026</td>
+            <td class="px-3 py-2 text-center">000161598226000011</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000161598226000005-vr-adviser-llc-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="2024517.832">
+              2,024,518
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, ORKA, VRDN, SYRE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, ORKA, VRDN, SYRE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-17">2/17/2026</td>
+            <td class="px-3 py-2 text-center">000161598226000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000161598225000006-vr-adviser-llc-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">33</td>
+            <td class="px-3 py-2 text-right" data-order="1776690.536">
+              1,776,691
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, MTSR, OCUL, CDTX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, MTSR, OCUL, CDTX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000161598225000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000141588925021914-vr-adviser-llc-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">31</td>
+            <td class="px-3 py-2 text-right" data-order="1334436.576">
+              1,334,437
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, OCUL, MTSR, ELVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, OCUL, MTSR, ELVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000141588925021914</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000141588925013093-vr-adviser-llc-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">37</td>
+            <td class="px-3 py-2 text-right" data-order="1175247.364">
+              1,175,247
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, MTSR, OCUL, ELVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, MTSR, OCUL, ELVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000141588925013093</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000110465925014110-vr-adviser-llc-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">37</td>
+            <td class="px-3 py-2 text-right" data-order="1457403.476">
+              1,457,403
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, OCUL, ELVN, PRAX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, OCUL, ELVN, PRAX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000110465925014110</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000110465924118950-vr-adviser-llc-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">38</td>
+            <td class="px-3 py-2 text-right" data-order="1909252.051">
+              1,909,252
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, OCUL, ELVN, VRDN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, OCUL, ELVN, VRDN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924118950</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000110465924089632-vr-adviser-llc-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">35</td>
+            <td class="px-3 py-2 text-right" data-order="1570242.514">
+              1,570,243
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, ELVN, FDMT, OCUL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, ELVN, FDMT, OCUL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924089632</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000110465924061948-vr-adviser-llc-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">38</td>
+            <td class="px-3 py-2 text-right" data-order="2102200.301">
+              2,102,200
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, FDMT, OCUL, SYRE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, FDMT, OCUL, SYRE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
+            <td class="px-3 py-2 text-center">000110465924061948</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000110465924023659-vr-adviser-llc-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">36</td>
+            <td class="px-3 py-2 text-right" data-order="1458067.955">
+              1,458,068
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="RYZB, APGE, PHVS, VRDN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                RYZB, APGE, PHVS, VRDN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000110465924023659</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000110465923118127-vr-adviser-llc-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">37</td>
+            <td class="px-3 py-2 text-right" data-order="949945.221">
+              949,945
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="APGE, RYZB, VRDN, COGT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                APGE, RYZB, VRDN, COGT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000110465923118127</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000110465923090491-vr-adviser-llc-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">30</td>
+            <td class="px-3 py-2 text-right" data-order="625361.199">
+              625,361
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRDN, COGT, FDMT, ELVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                VRDN, COGT, FDMT, ELVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-11">8/11/2023</td>
+            <td class="px-3 py-2 text-center">000110465923090491</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000110465923060793-vr-adviser-llc-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">25</td>
+            <td class="px-3 py-2 text-right" data-order="512168.605">
+              512,169
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRDN, COGT, ELVN, TERN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                VRDN, COGT, ELVN, TERN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000110465923060793</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000110465923060789-vr-adviser-llc-q4-2022-restatement">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="593604.538">
+              593,605
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRDN, ACRS, AXSM, COGT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                VRDN, ACRS, AXSM, COGT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000110465923060789</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000110465923060784-vr-adviser-llc-q3-2022-restatement">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">31</td>
+            <td class="px-3 py-2 text-right" data-order="648091.0">
+              648,091
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="TCDAQ, ACRS, COGT, RLMD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                TCDAQ, ACRS, COGT, RLMD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000110465923060784</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000110465923060779-vr-adviser-llc-q2-2022-restatement">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="507777.0">
+              507,777
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="TCDAQ, ACRS, RLMD, TVTX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                TCDAQ, ACRS, RLMD, TVTX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="RESTATEMENT">
+              RESTATEMENT
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000110465923060779</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000110465922061286-vr-adviser-llc-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">27</td>
+            <td class="px-3 py-2 text-right" data-order="617244.0">
+              617,244
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ACRS, TIL, RLMD, TVTX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ACRS, TIL, RLMD, TVTX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
+            <td class="px-3 py-2 text-center">000110465922061286</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000110465922022702-vr-adviser-llc-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">26</td>
+            <td class="px-3 py-2 text-right" data-order="731539.0">
+              731,539
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="TIL, ACRS, TVTX, RLMD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                TIL, ACRS, TVTX, RLMD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
+            <td class="px-3 py-2 text-center">000110465922022702</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000110465921139155-vr-adviser-llc-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">26</td>
+            <td class="px-3 py-2 text-right" data-order="778548.0">
+              778,548
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="TIL, ACRS, CLDX, WHWK">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                TIL, ACRS, CLDX, WHWK
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
+            <td class="px-3 py-2 text-center">000110465921139155</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000110465921105075-vr-adviser-llc-q2-2021">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">29</td>
+            <td class="px-3 py-2 text-right" data-order="824402.0">
+              824,402
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="TIL, ACRS, VTGN, GRPH">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                TIL, ACRS, VTGN, GRPH
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-13">8/13/2021</td>
+            <td class="px-3 py-2 text-center">000110465921105075</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000110465921066847-vr-adviser-llc-q1-2021">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">28</td>
+            <td class="px-3 py-2 text-right" data-order="921764.0">
+              921,764
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="TIL, CNST, ACRS, OLMA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                TIL, CNST, ACRS, OLMA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-05-14">5/14/2021</td>
+            <td class="px-3 py-2 text-center">000110465921066847</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000110465921021905-vr-adviser-llc-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">25</td>
+            <td class="px-3 py-2 text-right" data-order="680145.0">
+              680,145
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CNST, OLMA, TRIL, KNTE">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CNST, OLMA, TRIL, KNTE
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-12">2/12/2021</td>
+            <td class="px-3 py-2 text-center">000110465921021905</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-09-30">
+              <a href="/13f/000110465920125774-vr-adviser-llc-q3-2020">Q3 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">22</td>
+            <td class="px-3 py-2 text-right" data-order="511173.0">
+              511,173
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="TRIL, CNST, ALT, ATHA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                TRIL, CNST, ALT, ATHA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
+            <td class="px-3 py-2 text-center">000110465920125774</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-06-30">
+              <a href="/13f/000110465920095569-vr-adviser-llc-q2-2020">Q2 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">16</td>
+            <td class="px-3 py-2 text-right" data-order="417632.0">
+              417,632
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CNST, TRIL, ALT, RLMD">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CNST, TRIL, ALT, RLMD
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
+            <td class="px-3 py-2 text-center">000110465920095569</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-03-31">
+              <a href="/13f/000110465920062585-vr-adviser-llc-q1-2020">Q1 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">16</td>
+            <td class="px-3 py-2 text-right" data-order="369181.0">
+              369,181
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CNST, AXSM, RLMD, TRIL">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CNST, AXSM, RLMD, TRIL
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
+            <td class="px-3 py-2 text-center">000110465920062585</td>
+          </tr>
     </tbody>
   </table>
 </div>
@@ -608,9 +685,7 @@
     </ul>
   </details>
 
-<script>
-  var holdingsChartData = {"labels":["2020-03-31","2020-06-30","2020-09-30","2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[369181000.0,417632000.0,511173000.0,680145000.0,921764000.0,824402000.0,778548000.0,731539000.0,617244000.0,507777000.0,648091000.0,593604538.0,512168605.0,625361199.0,949945221.0,1458067955.0,2102200301.0,1570242514.0,1909252051.0,1457403476.0,1175247364.0,1334436576.0,1776690536.0,2024517832.0,2679121858.0,3298051614.0]};
-</script>
+
 
       </div>
 
@@ -705,7 +780,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">

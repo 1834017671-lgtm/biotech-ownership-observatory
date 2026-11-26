@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-<link rel="stylesheet" href="/assets/application-5735a6e9.css" />
-<script src="/assets/application-0472c7cc.js" type="module"></script>
+<link rel="stylesheet" href="/assets/application-6130dfe7.css" />
+<script src="/assets/application-255ff41a.js" type="module"></script>
 <link rel="icon" type="image/x-icon" href="/assets/favicon-87930973.ico" />
 <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-c58206bc.png" />
-<meta property="og:title" content="Avidity Partners Management LP 13F Filings"><link href="https://13f.info/manager/0001791827-avidity-partners-management-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001791827-avidity-partners-management-lp"><meta name="description" content="Avidity Partners Management LP reported 45 holdings with total value $624 M as of Q2 2026. Top holdings included DNTH, CGON, ORKA, JBIO, and ELVN"><meta property="og:description" content="Avidity Partners Management LP reported 45 holdings with total value $624 M as of Q2 2026. Top holdings included DNTH, CGON, ORKA, JBIO, and ELVN"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"A","item":"https://13f.info/managers/A","@type":"ListItem","position":1},{"name":"Avidity Partners Management LP","item":"https://13f.info/manager/0001791827-avidity-partners-management-lp","identifier":"0001791827","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001791827","@type":"ListItem","position":2}]}</script>
+<meta property="og:title" content="Avidity Partners Management LP 13F Filings"><link href="https://13f.info/manager/0001791827-avidity-partners-management-lp" rel="canonical"><meta property="og:url" content="https://13f.info/manager/0001791827-avidity-partners-management-lp"><meta name="description" content="Avidity Partners Management LP reported 18 holdings with total value $428M excluding options as of Q3 2026. Top holdings included DNTH, CGON, ORKA, CGON calls, and JBIO"><meta property="og:description" content="Avidity Partners Management LP reported 18 holdings with total value $428M excluding options as of Q3 2026. Top holdings included DNTH, CGON, ORKA, CGON calls, and JBIO"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"A","item":"https://13f.info/managers/A","@type":"ListItem","position":1},{"name":"Avidity Partners Management LP","item":"https://13f.info/manager/0001791827-avidity-partners-management-lp","identifier":"0001791827","sameAs":"https://www.sec.gov/edgar/browse/?CIK=0001791827","@type":"ListItem","position":2}]}</script>
 <meta property="og:type" content="website">
 <meta name="format-detection" content="telephone=no">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4551758439748558" crossorigin="anonymous"></script>
@@ -29,11 +29,16 @@
       </svg>
 </a>  </div>
 
-  <div class="flex-1 max-w-xs mr-4 sm:mr-8">
-    <form action="/search" accept-charset="UTF-8" method="get">
-      <input name="q" data-url="/data/autocomplete" class="w-full rounded shadow" placeholder="Search by manager or investment…" tabindex="1" type="search" id="autocomplete" />
-</form>    <div class="autocomplete-results"></div>
-  </div>
+  <div class="flex-1 max-w-xs mr-4 sm:mr-8" data-controller="autocomplete" data-autocomplete-url-value="/search/autocomplete" data-action="keydown.down-&gt;autocomplete#next keydown.up-&gt;autocomplete#previous keydown.esc-&gt;autocomplete#dismiss click@document-&gt;autocomplete#closeOutside">
+  <form action="/search" accept-charset="UTF-8" method="get">
+    <input class="w-full rounded shadow" placeholder="Search by name, ticker, or CUSIP…" autocomplete="off" data-autocomplete-target="input" data-action="input-&gt;autocomplete#search" tabindex="1" type="search" name="q" id="q" />
+</form>
+  <div
+    class="absolute mt-2 pb-2 w-full max-w-xl overflow-y-auto overscroll-contain bg-white border border-gray-500 rounded shadow top-14 left-0 sm:left-auto"
+    data-autocomplete-target="results"
+    hidden
+  ></div>
+</div>
 
   <div>
     <a target="_blank" class="text-gray-100 visited:text-gray-100 hover:text-gray-300" aria-label="GitHub" href="https://github.com/toddwschneider/sec-13f-filings">
@@ -63,7 +68,15 @@
         Most recent 13F
       </dt>
       <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-        <a href="/13f/000179182726000005-avidity-partners-management-lp-q2-2026">Q2 2026</a>
+        <a href="/13f/000179182726000008-avidity-partners-management-lp-q3-2026">Q3 2026</a>
+      </dd>
+    </div>
+    <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
+      <dt class="text-sm font-medium text-gray-500">
+        13D/G filings
+      </dt>
+      <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+        <a href="#beneficial-ownership">13D on 1 security, 13G on 8 securities<span aria-hidden="true"> ↓</span></a>
       </dd>
     </div>
     <div class="bg-gray-50 even:bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4">
@@ -95,12 +108,13 @@
       </div>
 
       <div class="px-4 pt-2 border-t border-gray-200 text-sm font-medium text-gray-500">
-        Holdings Value
-      </div>
+  Holdings Value, Excluding Options
+</div>
 
-      <div class="h-64 px-4 py-2">
-        <canvas id="holdings-chart"></canvas>
-      </div>
+<div class="h-60 px-4 py-2">
+  <canvas data-controller="bar-chart" data-bar-chart-format-value="usd" data-bar-chart-label-value="Holdings Value" data-bar-chart-series-value="{&quot;labels&quot;:[&quot;Q4 2019&quot;,&quot;Q1 2020&quot;,&quot;Q2 2020&quot;,&quot;Q3 2020&quot;,&quot;Q4 2020&quot;,&quot;Q1 2021&quot;,&quot;Q2 2021&quot;,&quot;Q3 2021&quot;,&quot;Q4 2021&quot;,&quot;Q1 2022&quot;,&quot;Q2 2022&quot;,&quot;Q3 2022&quot;,&quot;Q4 2022&quot;,&quot;Q1 2023&quot;,&quot;Q2 2023&quot;,&quot;Q3 2023&quot;,&quot;Q4 2023&quot;,&quot;Q1 2024&quot;,&quot;Q2 2024&quot;,&quot;Q3 2024&quot;,&quot;Q4 2024&quot;,&quot;Q1 2025&quot;,&quot;Q2 2025&quot;,&quot;Q3 2025&quot;,&quot;Q4 2025&quot;,&quot;Q1 2026&quot;,&quot;Q2 2026&quot;,&quot;Q3 2026&quot;],&quot;data&quot;:[158691000.0,697553000.0,1560198000.0,1856674000.0,2974797000.0,3584013000.0,3699847000.0,3922451000.0,4714958000.0,4506041000.0,4355880000.0,4597357000.0,4278845045.0,3012659187.0,2863157697.0,2483190644.0,2614683462.0,2813517678.0,2353381213.0,1960342493.0,1003165480.0,484853406.0,498792546.0,439394999.0,346693009.0,493809335.0,624441478.0,427947516.0]}"></canvas>
+</div>
+
     </div>
   </div>
 
@@ -134,7 +148,7 @@
       <tr>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Quarter</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Holdings</th>
-        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value ($000)</th>
+        <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Value, Excl. Options ($000)</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Top Holdings</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Form Type</th>
         <th class="px-3 py-2 bg-white text-sm font-medium text-gray-500 uppercase">Date Filed</th>
@@ -142,524 +156,808 @@
       </tr>
     </thead>
     <tbody class="font-mono">
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-06-30">
-            <a href="/13f/000179182726000005-avidity-partners-management-lp-q2-2026">Q2 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">45</td>
-          <td class="px-3 py-2 text-right">624,441</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, ORKA, JBIO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              DNTH, CGON, ORKA, JBIO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
-          <td class="px-3 py-2 text-center">000179182726000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000179182726000004-avidity-partners-management-lp-q1-2026-new-holdings">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">45</td>
-          <td class="px-3 py-2 text-right">493,809</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, ORKA, CATX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              DNTH, CGON, ORKA, CATX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
-            NEW HOLDINGS
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-27">5/27/2026</td>
-          <td class="px-3 py-2 text-center">000179182726000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2026-03-31">
-            <a href="/13f/000179182726000003-avidity-partners-management-lp-q1-2026">Q1 2026</a>
-          </td>
-          <td class="px-3 py-2 text-right">46</td>
-          <td class="px-3 py-2 text-right">441,891</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, ORKA, JBIO, CATX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              DNTH, ORKA, JBIO, CATX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-05-13">5/13/2026</td>
-          <td class="px-3 py-2 text-center">000179182726000003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-12-31">
-            <a href="/13f/000179182726000002-avidity-partners-management-lp-q4-2025">Q4 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">39</td>
-          <td class="px-3 py-2 text-right">346,693</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, JBIO, ORKA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              DNTH, CGON, JBIO, ORKA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2026-02-13">2/13/2026</td>
-          <td class="px-3 py-2 text-center">000179182726000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-09-30">
-            <a href="/13f/000179182725000008-avidity-partners-management-lp-q3-2025">Q3 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">43</td>
-          <td class="px-3 py-2 text-right">439,394</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, MDT, BSX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              DNTH, CGON, MDT, BSX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
-          <td class="px-3 py-2 text-center">000179182725000008</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-06-30">
-            <a href="/13f/000179182725000007-avidity-partners-management-lp-q2-2025">Q2 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">56</td>
-          <td class="px-3 py-2 text-right">501,976</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, BSX, NTRA, DNTH">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              CGON, BSX, NTRA, DNTH
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
-          <td class="px-3 py-2 text-center">000179182725000007</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2025-03-31">
-            <a href="/13f/000179182725000005-avidity-partners-management-lp-q1-2025">Q1 2025</a>
-          </td>
-          <td class="px-3 py-2 text-right">67</td>
-          <td class="px-3 py-2 text-right">524,678</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BSX, DNTH, UNH, CGON">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BSX, DNTH, UNH, CGON
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
-          <td class="px-3 py-2 text-center">000179182725000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-12-31">
-            <a href="/13f/000179182725000002-avidity-partners-management-lp-q4-2024">Q4 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">63</td>
-          <td class="px-3 py-2 text-right">1,018,174</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, BSX, JANX, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              DNTH, BSX, JANX, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
-          <td class="px-3 py-2 text-center">000179182725000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-09-30">
-            <a href="/13f/000179182724000011-avidity-partners-management-lp-q3-2024">Q3 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">81</td>
-          <td class="px-3 py-2 text-right">1,960,342</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BSX, DNTH, ISRG, NTRA">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BSX, DNTH, ISRG, NTRA
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
-          <td class="px-3 py-2 text-center">000179182724000011</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-06-30">
-            <a href="/13f/000179182724000007-avidity-partners-management-lp-q2-2024">Q2 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">85</td>
-          <td class="px-3 py-2 text-right">2,353,381</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ISRG, BSX, NTRA, ARVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ISRG, BSX, NTRA, ARVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
-          <td class="px-3 py-2 text-center">000179182724000007</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2024-03-31">
-            <a href="/13f/000179182724000004-avidity-partners-management-lp-q1-2024">Q1 2024</a>
-          </td>
-          <td class="px-3 py-2 text-right">90</td>
-          <td class="px-3 py-2 text-right">3,101,466</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ITCI calls, FUSN, BSX, ARVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ITCI calls, FUSN, BSX, ARVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
-          <td class="px-3 py-2 text-center">000179182724000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-12-31">
-            <a href="/13f/000179182724000002-avidity-partners-management-lp-q4-2023">Q4 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">74</td>
-          <td class="px-3 py-2 text-right">2,743,946</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARVN, BSX, CI calls, TMO">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ARVN, BSX, CI calls, TMO
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
-          <td class="px-3 py-2 text-center">000179182724000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-09-30">
-            <a href="/13f/000179182723000006-avidity-partners-management-lp-q3-2023">Q3 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">83</td>
-          <td class="px-3 py-2 text-right">2,483,190</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BSX, JAZZ, BDX, NBIX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BSX, JAZZ, BDX, NBIX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
-          <td class="px-3 py-2 text-center">000179182723000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-06-30">
-            <a href="/13f/000179182723000004-avidity-partners-management-lp-q2-2023">Q2 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">93</td>
-          <td class="px-3 py-2 text-right">2,863,157</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BDX, KRTX, JAZZ, GEHC">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BDX, KRTX, JAZZ, GEHC
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
-          <td class="px-3 py-2 text-center">000179182723000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2023-03-31">
-            <a href="/13f/000179182723000003-avidity-partners-management-lp-q1-2023">Q1 2023</a>
-          </td>
-          <td class="px-3 py-2 text-right">83</td>
-          <td class="px-3 py-2 text-right">3,012,659</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARVN, SGRY, BIO, ARGX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ARVN, SGRY, BIO, ARGX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
-          <td class="px-3 py-2 text-center">000179182723000003</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-12-31">
-            <a href="/13f/000179182723000002-avidity-partners-management-lp-q4-2022">Q4 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">85</td>
-          <td class="px-3 py-2 text-right">4,615,991</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI calls, ARGX, UTHR, NBIX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI calls, ARGX, UTHR, NBIX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
-          <td class="px-3 py-2 text-center">000179182723000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-09-30">
-            <a href="/13f/000179182722000008-avidity-partners-management-lp-q3-2022">Q3 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">97</td>
-          <td class="px-3 py-2 text-right">4,918,761</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="LLY, SPDR SER TR calls, UTHR, NBIX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              LLY, SPDR SER TR calls, UTHR, NBIX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
-          <td class="px-3 py-2 text-center">000179182722000008</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-06-30">
-            <a href="/13f/000179182722000006-avidity-partners-management-lp-q2-2022">Q2 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">82</td>
-          <td class="px-3 py-2 text-right">4,355,880</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AZN, VRTX, ARGX, ELV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AZN, VRTX, ARGX, ELV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
-          <td class="px-3 py-2 text-center">000179182722000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2022-03-31">
-            <a href="/13f/000179182722000004-avidity-partners-management-lp-q1-2022">Q1 2022</a>
-          </td>
-          <td class="px-3 py-2 text-right">92</td>
-          <td class="px-3 py-2 text-right">4,802,645</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPDR SER TR calls, AZN, ABBV, ARVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SPDR SER TR calls, AZN, ABBV, ARVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
-          <td class="px-3 py-2 text-center">000179182722000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-12-31">
-            <a href="/13f/000179182722000002-avidity-partners-management-lp-q4-2021">Q4 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">97</td>
-          <td class="px-3 py-2 text-right">4,714,958</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ABBV, ZNTL, ARVN, AVTR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ABBV, ZNTL, ARVN, AVTR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
-          <td class="px-3 py-2 text-center">000179182722000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-09-30">
-            <a href="/13f/000179182721000006-avidity-partners-management-lp-q3-2021">Q3 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">105</td>
-          <td class="px-3 py-2 text-right">4,513,577</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI calls, XLRN calls, MRTX, ARVN">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              XBI calls, XLRN calls, MRTX, ARVN
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
-          <td class="px-3 py-2 text-center">000179182721000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-06-30">
-            <a href="/13f/000179182721000005-avidity-partners-management-lp-q2-2021">Q2 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">112</td>
-          <td class="px-3 py-2 text-right">3,699,847</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRTX, ABBV, ARVN, LLY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              VRTX, ABBV, ARVN, LLY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-08-16">8/16/2021</td>
-          <td class="px-3 py-2 text-center">000179182721000005</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2021-03-31">
-            <a href="/13f/000179182721000004-avidity-partners-management-lp-q1-2021">Q1 2021</a>
-          </td>
-          <td class="px-3 py-2 text-right">94</td>
-          <td class="px-3 py-2 text-right">3,619,767</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ABBV, AZN, AVTR, MDT">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ABBV, AZN, AVTR, MDT
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-05-17">5/17/2021</td>
-          <td class="px-3 py-2 text-center">000179182721000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-12-31">
-            <a href="/13f/000179182721000002-avidity-partners-management-lp-q4-2020">Q4 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">96</td>
-          <td class="px-3 py-2 text-right">3,080,209</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="AVTR, ARVN, ABBV, LLY">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              AVTR, ARVN, ABBV, LLY
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2021-02-16">2/16/2021</td>
-          <td class="px-3 py-2 text-center">000179182721000002</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-09-30">
-            <a href="/13f/000179182720000006-avidity-partners-management-lp-q3-2020">Q3 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">68</td>
-          <td class="px-3 py-2 text-right">2,155,960</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="PFIZER INC calls, ABBV, SGEN, AVTR">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              PFIZER INC calls, ABBV, SGEN, AVTR
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
-          <td class="px-3 py-2 text-center">000179182720000006</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-06-30">
-            <a href="/13f/000179182720000004-avidity-partners-management-lp-q2-2020">Q2 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">57</td>
-          <td class="px-3 py-2 text-right">1,560,198</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="ABBV, REGN, BIOHAVEN PHARMACTL HLDG CO L, BAX">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              ABBV, REGN, BIOHAVEN PHARMACTL HLDG CO L, BAX
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
-          <td class="px-3 py-2 text-center">000179182720000004</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-03-31">
-            <a href="/13f/000091957420004168-avidity-partners-management-lp-q1-2020-new-holdings">Q1 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">52</td>
-          <td class="px-3 py-2 text-right">723,593</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, MRK, ABBV, MCK">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              SGEN, MRK, ABBV, MCK
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
-            NEW HOLDINGS
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-06-17">6/17/2020</td>
-          <td class="px-3 py-2 text-center">000091957420004168</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2020-03-31">
-            <a href="/13f/000091957420003442-avidity-partners-management-lp-q1-2020">Q1 2020</a>
-          </td>
-          <td class="px-3 py-2 text-right">1</td>
-          <td class="px-3 py-2 text-right">0</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
-          <td class="px-3 py-2 text-center">000091957420003442</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-12-31">
-            <a href="/13f/000091957420004167-avidity-partners-management-lp-q4-2019-new-holdings">Q4 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">33</td>
-          <td class="px-3 py-2 text-right">158,691</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="BAX, HCA, VRTX, ABBV">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              BAX, HCA, VRTX, ABBV
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
-            NEW HOLDINGS
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-06-17">6/17/2020</td>
-          <td class="px-3 py-2 text-center">000091957420004167</td>
-        </tr>
-        <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
-          <td class="px-3 py-2 text-center" data-order="2019-12-31">
-            <a href="/13f/000091957420001350-avidity-partners-management-lp-q4-2019">Q4 2019</a>
-          </td>
-          <td class="px-3 py-2 text-right">1</td>
-          <td class="px-3 py-2 text-right">0</td>
-          <td class="px-3 py-2 truncate group hover:overflow-visible" title="">
-            <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
-              
-            </span>
-          </td>
-          <td class="px-3 py-2 text-center truncate" title="13F-HR">
-            13F-HR
-          </td>
-          <td class="px-3 py-2 text-right" data-order="2020-02-14">2/14/2020</td>
-          <td class="px-3 py-2 text-center">000091957420001350</td>
-        </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-09-30">
+              <a href="/13f/000179182726000008-avidity-partners-management-lp-q3-2026">Q3 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">18</td>
+            <td class="px-3 py-2 text-right" data-order="427947.516">
+              427,948
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, ORKA, CGON calls">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DNTH, CGON, ORKA, CGON calls
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-11-16">11/16/2026</td>
+            <td class="px-3 py-2 text-center">000179182726000008</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-06-30">
+              <a href="/13f/000179182726000005-avidity-partners-management-lp-q2-2026">Q2 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">45</td>
+            <td class="px-3 py-2 text-right" data-order="624441.478">
+              624,441
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, ORKA, JBIO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DNTH, CGON, ORKA, JBIO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-08-14">8/14/2026</td>
+            <td class="px-3 py-2 text-center">000179182726000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000179182726000004-avidity-partners-management-lp-q1-2026-new-holdings">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">45</td>
+            <td class="px-3 py-2 text-right" data-order="493809.335">
+              493,809
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, ORKA, CATX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DNTH, CGON, ORKA, CATX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
+              NEW HOLDINGS
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-27">5/27/2026</td>
+            <td class="px-3 py-2 text-center">000179182726000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2026-03-31">
+              <a href="/13f/000179182726000003-avidity-partners-management-lp-q1-2026">Q1 2026</a>
+            </td>
+            <td class="px-3 py-2 text-right">46</td>
+            <td class="px-3 py-2 text-right" data-order="441891.839">
+              441,892
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, ORKA, JBIO, CATX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DNTH, ORKA, JBIO, CATX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-05-13">5/13/2026</td>
+            <td class="px-3 py-2 text-center">000179182726000003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-12-31">
+              <a href="/13f/000179182726000002-avidity-partners-management-lp-q4-2025">Q4 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">39</td>
+            <td class="px-3 py-2 text-right" data-order="346693.009">
+              346,693
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, JBIO, ORKA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DNTH, CGON, JBIO, ORKA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2026-02-13">2/13/2026</td>
+            <td class="px-3 py-2 text-center">000179182726000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-09-30">
+              <a href="/13f/000179182725000008-avidity-partners-management-lp-q3-2025">Q3 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">43</td>
+            <td class="px-3 py-2 text-right" data-order="439394.999">
+              439,395
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, CGON, MDT, BSX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DNTH, CGON, MDT, BSX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-11-14">11/14/2025</td>
+            <td class="px-3 py-2 text-center">000179182725000008</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-06-30">
+              <a href="/13f/000179182725000007-avidity-partners-management-lp-q2-2025">Q2 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">56</td>
+            <td class="px-3 py-2 text-right" data-order="498792.546">
+              498,793
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="CGON, BSX, NTRA, DNTH">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                CGON, BSX, NTRA, DNTH
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-08-14">8/14/2025</td>
+            <td class="px-3 py-2 text-center">000179182725000007</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2025-03-31">
+              <a href="/13f/000179182725000005-avidity-partners-management-lp-q1-2025">Q1 2025</a>
+            </td>
+            <td class="px-3 py-2 text-right">67</td>
+            <td class="px-3 py-2 text-right" data-order="484853.406">
+              484,853
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BSX, DNTH, UNH, CGON">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BSX, DNTH, UNH, CGON
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-05-15">5/15/2025</td>
+            <td class="px-3 py-2 text-center">000179182725000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-12-31">
+              <a href="/13f/000179182725000002-avidity-partners-management-lp-q4-2024">Q4 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">63</td>
+            <td class="px-3 py-2 text-right" data-order="1003165.48">
+              1,003,165
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="DNTH, BSX, JANX, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                DNTH, BSX, JANX, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2025-02-14">2/14/2025</td>
+            <td class="px-3 py-2 text-center">000179182725000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-09-30">
+              <a href="/13f/000179182724000011-avidity-partners-management-lp-q3-2024">Q3 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">81</td>
+            <td class="px-3 py-2 text-right" data-order="1960342.493">
+              1,960,342
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BSX, DNTH, ISRG, NTRA">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BSX, DNTH, ISRG, NTRA
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-11-14">11/14/2024</td>
+            <td class="px-3 py-2 text-center">000179182724000011</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-06-30">
+              <a href="/13f/000179182724000007-avidity-partners-management-lp-q2-2024">Q2 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">85</td>
+            <td class="px-3 py-2 text-right" data-order="2353381.213">
+              2,353,381
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ISRG, BSX, NTRA, ARVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ISRG, BSX, NTRA, ARVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-08-14">8/14/2024</td>
+            <td class="px-3 py-2 text-center">000179182724000007</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2024-03-31">
+              <a href="/13f/000179182724000004-avidity-partners-management-lp-q1-2024">Q1 2024</a>
+            </td>
+            <td class="px-3 py-2 text-right">90</td>
+            <td class="px-3 py-2 text-right" data-order="2813517.678">
+              2,813,518
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ITCI calls, FUSN, BSX, ARVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ITCI calls, FUSN, BSX, ARVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-05-15">5/15/2024</td>
+            <td class="px-3 py-2 text-center">000179182724000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-12-31">
+              <a href="/13f/000179182724000002-avidity-partners-management-lp-q4-2023">Q4 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">74</td>
+            <td class="px-3 py-2 text-right" data-order="2614683.462">
+              2,614,683
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARVN, BSX, CI calls, TMO">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARVN, BSX, CI calls, TMO
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2024-02-14">2/14/2024</td>
+            <td class="px-3 py-2 text-center">000179182724000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-09-30">
+              <a href="/13f/000179182723000006-avidity-partners-management-lp-q3-2023">Q3 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">83</td>
+            <td class="px-3 py-2 text-right" data-order="2483190.644">
+              2,483,191
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BSX, JAZZ, BDX, NBIX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BSX, JAZZ, BDX, NBIX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-11-14">11/14/2023</td>
+            <td class="px-3 py-2 text-center">000179182723000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-06-30">
+              <a href="/13f/000179182723000004-avidity-partners-management-lp-q2-2023">Q2 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">93</td>
+            <td class="px-3 py-2 text-right" data-order="2863157.697">
+              2,863,158
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BDX, KRTX, JAZZ, GEHC">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BDX, KRTX, JAZZ, GEHC
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-08-14">8/14/2023</td>
+            <td class="px-3 py-2 text-center">000179182723000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2023-03-31">
+              <a href="/13f/000179182723000003-avidity-partners-management-lp-q1-2023">Q1 2023</a>
+            </td>
+            <td class="px-3 py-2 text-right">83</td>
+            <td class="px-3 py-2 text-right" data-order="3012659.187">
+              3,012,659
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ARVN, SGRY, BIO, ARGX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ARVN, SGRY, BIO, ARGX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-05-15">5/15/2023</td>
+            <td class="px-3 py-2 text-center">000179182723000003</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-12-31">
+              <a href="/13f/000179182723000002-avidity-partners-management-lp-q4-2022">Q4 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">85</td>
+            <td class="px-3 py-2 text-right" data-order="4278845.045">
+              4,278,845
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI calls, ARGX, UTHR, NBIX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI calls, ARGX, UTHR, NBIX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2023-02-14">2/14/2023</td>
+            <td class="px-3 py-2 text-center">000179182723000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-09-30">
+              <a href="/13f/000179182722000008-avidity-partners-management-lp-q3-2022">Q3 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">97</td>
+            <td class="px-3 py-2 text-right" data-order="4597357.0">
+              4,597,357
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="LLY, SPDR SER TR calls, UTHR, NBIX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                LLY, SPDR SER TR calls, UTHR, NBIX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-11-14">11/14/2022</td>
+            <td class="px-3 py-2 text-center">000179182722000008</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-06-30">
+              <a href="/13f/000179182722000006-avidity-partners-management-lp-q2-2022">Q2 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">82</td>
+            <td class="px-3 py-2 text-right" data-order="4355880.0">
+              4,355,880
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AZN, VRTX, ARGX, ELV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AZN, VRTX, ARGX, ELV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-08-15">8/15/2022</td>
+            <td class="px-3 py-2 text-center">000179182722000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2022-03-31">
+              <a href="/13f/000179182722000004-avidity-partners-management-lp-q1-2022">Q1 2022</a>
+            </td>
+            <td class="px-3 py-2 text-right">92</td>
+            <td class="px-3 py-2 text-right" data-order="4506041.0">
+              4,506,041
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SPDR SER TR calls, AZN, ABBV, ARVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SPDR SER TR calls, AZN, ABBV, ARVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-05-16">5/16/2022</td>
+            <td class="px-3 py-2 text-center">000179182722000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-12-31">
+              <a href="/13f/000179182722000002-avidity-partners-management-lp-q4-2021">Q4 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">97</td>
+            <td class="px-3 py-2 text-right" data-order="4714958.0">
+              4,714,958
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ABBV, ZNTL, ARVN, AVTR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ABBV, ZNTL, ARVN, AVTR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2022-02-14">2/14/2022</td>
+            <td class="px-3 py-2 text-center">000179182722000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-09-30">
+              <a href="/13f/000179182721000006-avidity-partners-management-lp-q3-2021">Q3 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">105</td>
+            <td class="px-3 py-2 text-right" data-order="3922451.0">
+              3,922,451
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="XBI calls, XLRN calls, MRTX, ARVN">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                XBI calls, XLRN calls, MRTX, ARVN
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-11-15">11/15/2021</td>
+            <td class="px-3 py-2 text-center">000179182721000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-06-30">
+              <a href="/13f/000179182721000005-avidity-partners-management-lp-q2-2021">Q2 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">112</td>
+            <td class="px-3 py-2 text-right" data-order="3699847.0">
+              3,699,847
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="VRTX, ABBV, ARVN, LLY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                VRTX, ABBV, ARVN, LLY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-08-16">8/16/2021</td>
+            <td class="px-3 py-2 text-center">000179182721000005</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2021-03-31">
+              <a href="/13f/000179182721000004-avidity-partners-management-lp-q1-2021">Q1 2021</a>
+            </td>
+            <td class="px-3 py-2 text-right">94</td>
+            <td class="px-3 py-2 text-right" data-order="3584013.0">
+              3,584,013
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ABBV, AZN, AVTR, MDT">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ABBV, AZN, AVTR, MDT
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-05-17">5/17/2021</td>
+            <td class="px-3 py-2 text-center">000179182721000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-12-31">
+              <a href="/13f/000179182721000002-avidity-partners-management-lp-q4-2020">Q4 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">96</td>
+            <td class="px-3 py-2 text-right" data-order="2974797.0">
+              2,974,797
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="AVTR, ARVN, ABBV, LLY">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                AVTR, ARVN, ABBV, LLY
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2021-02-16">2/16/2021</td>
+            <td class="px-3 py-2 text-center">000179182721000002</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-09-30">
+              <a href="/13f/000179182720000006-avidity-partners-management-lp-q3-2020">Q3 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">68</td>
+            <td class="px-3 py-2 text-right" data-order="1856674.0">
+              1,856,674
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="PFIZER INC calls, ABBV, SGEN, AVTR">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                PFIZER INC calls, ABBV, SGEN, AVTR
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-11-16">11/16/2020</td>
+            <td class="px-3 py-2 text-center">000179182720000006</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-06-30">
+              <a href="/13f/000179182720000004-avidity-partners-management-lp-q2-2020">Q2 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">57</td>
+            <td class="px-3 py-2 text-right" data-order="1560198.0">
+              1,560,198
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="ABBV, REGN, BHVN, BAX">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                ABBV, REGN, BHVN, BAX
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-08-14">8/14/2020</td>
+            <td class="px-3 py-2 text-center">000179182720000004</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-03-31">
+              <a href="/13f/000091957420004168-avidity-partners-management-lp-q1-2020-new-holdings">Q1 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">52</td>
+            <td class="px-3 py-2 text-right" data-order="697553.0">
+              697,553
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="SGEN, MRK, ABBV, MCK">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                SGEN, MRK, ABBV, MCK
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
+              NEW HOLDINGS
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-06-17">6/17/2020</td>
+            <td class="px-3 py-2 text-center">000091957420004168</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2020-03-31">
+              <a href="/13f/000091957420003442-avidity-partners-management-lp-q1-2020">Q1 2020</a>
+            </td>
+            <td class="px-3 py-2 text-right">1</td>
+            <td class="px-3 py-2 text-right" data-order="0.0">
+              0
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-05-15">5/15/2020</td>
+            <td class="px-3 py-2 text-center">000091957420003442</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-12-31">
+              <a href="/13f/000091957420004167-avidity-partners-management-lp-q4-2019-new-holdings">Q4 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">33</td>
+            <td class="px-3 py-2 text-right" data-order="158691.0">
+              158,691
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="BAX, HCA, VRTX, ABBV">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                BAX, HCA, VRTX, ABBV
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="NEW HOLDINGS">
+              NEW HOLDINGS
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-06-17">6/17/2020</td>
+            <td class="px-3 py-2 text-center">000091957420004167</td>
+          </tr>
+          <tr class="bg-gray-50 even:bg-white hover:bg-gray-200">
+            <td class="px-3 py-2 text-center" data-order="2019-12-31">
+              <a href="/13f/000091957420001350-avidity-partners-management-lp-q4-2019">Q4 2019</a>
+            </td>
+            <td class="px-3 py-2 text-right">1</td>
+            <td class="px-3 py-2 text-right" data-order="0.0">
+              0
+            </td>
+            <td class="px-3 py-2 truncate group hover:overflow-visible" title="">
+              <span class="group-hover:bg-white group-hover:relative group-hover:px-1 group-hover:-ml-1 group-hover:rounded group-hover:shadow">
+                
+              </span>
+            </td>
+            <td class="px-3 py-2 text-center truncate" title="13F-HR">
+              13F-HR
+            </td>
+            <td class="px-3 py-2 text-right" data-order="2020-02-14">2/14/2020</td>
+            <td class="px-3 py-2 text-center">000091957420001350</td>
+          </tr>
     </tbody>
   </table>
 </div>
 
 
-<script>
-  var holdingsChartData = {"labels":["2019-12-31","2020-03-31","2020-06-30","2020-09-30","2020-12-31","2021-03-31","2021-06-30","2021-09-30","2021-12-31","2022-03-31","2022-06-30","2022-09-30","2022-12-31","2023-03-31","2023-06-30","2023-09-30","2023-12-31","2024-03-31","2024-06-30","2024-09-30","2024-12-31","2025-03-31","2025-06-30","2025-09-30","2025-12-31","2026-03-31","2026-06-30"],"data":[158691000.0,723593000.0,1560198000.0,2155960000.0,3080209000.0,3619767000.0,3699847000.0,4513577000.0,4714958000.0,4802645000.0,4355880000.0,4918761000.0,4615991045.0,3012659187.0,2863157697.0,2483190644.0,2743946962.0,3101466678.0,2353381213.0,1960342493.0,1018174480.0,524678503.99999994,501976646.0,439394999.0,346693009.0,493809335.0,624441478.0]};
-</script>
+
+<div id="beneficial-ownership" class="w-full md:max-w-3xl lg:max-w-5xl mt-12 md:mt-16">
+  <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 sm:px-0">
+    <h2 class="text-2xl">13D and 13G Filings</h2>
+
+    <a class="mb-2 px-3 py-1 rounded bg-white shadow text-sm whitespace-nowrap text-indigo-600 hover:text-indigo-900 hover:bg-gray-50" href="/manager/0001791827-avidity-partners-management-lp/13dg-filings">All 13D and 13G filings</a>
+  </div>
+
+    <p class="text-sm text-gray-500 px-4 sm:px-0 mb-2">
+      Each security where the latest filing since 12/18/2024
+      is a 13D, newest first.
+    </p>
+
+    <table class="table-fixed w-full sm:table-auto bg-white shadow">
+  <thead>
+    <tr class="border-b border-gray-200">
+      <th class="sm:w-full text-sm font-medium text-gray-500 uppercase text-left px-3 sm:px-4 py-2">Issuer</th>
+        <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden lg:table-cell">Symbol</th>
+        <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden lg:table-cell">CUSIP</th>
+      <th class="w-20 sm:w-auto text-sm font-medium text-gray-500 uppercase text-right px-2 sm:px-4 py-2 sm:whitespace-nowrap">% of Class</th>
+      <th class="text-sm font-medium text-gray-500 uppercase text-right px-4 py-2 hidden sm:table-cell">Shares</th>
+      <th class="text-sm font-medium text-gray-500 uppercase text-left px-4 py-2 hidden sm:table-cell">Form</th>
+      <th class="w-32 sm:w-auto text-sm font-medium text-gray-500 uppercase text-right pl-2 pr-3 sm:px-4 py-2">Filed</th>
+    </tr>
+  </thead>
+
+
+    <tbody>
+  <tr class="bg-gray-100 border-y border-gray-200">
+    <td colspan="3" class="text-sm font-semibold text-gray-900 px-3 sm:px-4 py-1.5">
+      Under 5%, checked the &quot;5 percent or less&quot; box, or amended by a later filing (1)
+    </td>
+    <td colspan="2" class="hidden sm:table-cell"></td>
+      <td colspan="2" class="hidden lg:table-cell"></td>
+  </tr>
+</tbody>
+
+
+    <tbody>
+      
+<tr class="bg-white">
+  <td class="text-gray-900 px-3 sm:px-4 py-2 sm:py-1 break-words">
+      <a title="Common Stock, $0.001 par value" href="/cusip/252828108">Dianthus Therapeutics, Inc.</a>
+    <span class="ml-1 whitespace-nowrap sm:hidden">
+      <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+    </span>
+
+      <div class="text-xs text-gray-500 lg:hidden"><span class="font-medium text-gray-700">DNTH</span> · 252828108</div>
+
+
+      <div>
+        <button type="button" class="group text-xs text-gray-500 hover:text-gray-900 text-left cursor-pointer" aria-expanded="false" data-reporting-persons-toggle="reporting_persons_beneficial_ownership_filing_28970">
+          <span aria-hidden="true" class="inline-block transition-transform group-aria-expanded:rotate-90">▸</span>
+          6 Reporting Persons
+        </button>
+      </div>
+  </td>
+
+    <td class="text-gray-900 whitespace-nowrap px-4 py-1 hidden lg:table-cell">DNTH</td>
+    <td class="text-gray-600 tabular-nums whitespace-nowrap px-4 py-1 hidden lg:table-cell">252828108</td>
+
+  <td class="text-gray-500 text-right tabular-nums px-2 sm:px-4 py-2 sm:py-1 sm:whitespace-nowrap" title="4.9">
+    4.9%
+
+  </td>
+
+  <td class="text-gray-500 text-right tabular-nums whitespace-nowrap px-4 py-2 sm:py-1 hidden sm:table-cell">
+    2,104,184
+  </td>
+
+  <td class="px-4 py-1 hidden sm:table-cell">
+    <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-yellow-200 text-yellow-900" title="Schedule 13D, the full form, for holders who may seek to influence control">13D/A</span>
+
+  </td>
+
+  <td class="text-right tabular-nums whitespace-nowrap pl-2 pr-3 sm:px-4 py-2 sm:py-1">
+    <a target="_blank" href="https://www.sec.gov/Archives/edgar/data/1690585/000091957425007115/0000919574-25-007115-index.html">11/19/2025<span aria-hidden="true"> ↗</span></a>
+
+      <div class="text-xs text-gray-500">Event 11/17/2025</div>
+  </td>
+</tr>
+
+    <tr class="bg-white text-sm font-medium text-gray-900" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28970">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Avidity Partners Management LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,104,184
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28970">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Avidity Partners Management (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,104,184
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28970">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Avidity Capital Partners Fund (GP) LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,104,184
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28970">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Avidity Capital Partners (GP) LLC
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,104,184
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28970">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Avidity Private Master Fund I LP
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.4">
+        4.4%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        1,899,593
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+    <tr class="bg-white text-sm text-gray-600" hidden data-reporting-persons="reporting_persons_beneficial_ownership_filing_28970">
+      <td class="pl-7 sm:pl-8 pr-3 sm:pr-4 py-1 break-words">
+        Michael Gregory
+      </td>
+
+        <td colspan="2" class="hidden lg:table-cell"></td>
+
+      <td class="text-right tabular-nums px-2 sm:px-4 py-1 sm:whitespace-nowrap" title="4.9">
+        4.9%
+      </td>
+
+      <td class="text-right tabular-nums whitespace-nowrap px-4 py-1 hidden sm:table-cell">
+        2,104,184
+      </td>
+
+      <td class="hidden sm:table-cell"></td>
+      <td></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+    <p class="bg-white shadow px-3 sm:px-4 py-2 text-gray-900 mt-6">
+      8
+      other
+      securities
+      where the latest filing
+      is a <span class="px-1.5 py-0.5 rounded text-xs font-medium whitespace-nowrap bg-gray-200 text-gray-700" title="Schedule 13G, the short form. The filer certifies it doesn&#39;t hold the shares to change or influence control">13G</span>,
+      the newest
+      filed 11/16/2026.
+      <a class="whitespace-nowrap" href="/manager/0001791827-avidity-partners-management-lp/13dg-filings">View all</a>
+    </p>
+</div>
+
 
       </div>
 
@@ -754,7 +1052,11 @@
     </ul>
 
     <span class="inline pl-8">
-      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest Filings</a>
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/newest">Latest 13Fs</a>
+    </span>
+
+    <span class="inline pl-8">
+      <a class="text-gray-100 visited:text-gray-100 hover:text-gray-300" href="/13d/newest">Latest 13Ds</a>
     </span>
 
     <span class="inline pl-8">
