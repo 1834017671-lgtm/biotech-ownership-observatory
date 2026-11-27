@@ -1848,5 +1848,29 @@
     "MASI"
    ]
   }
+ },
+ {
+  "run": "2026-11-27T11:38:35+00:00",
+  "newFilings": [],
+  "errors": [
+   {
+    "source": "SEC EDGAR",
+    "error": "SEC_USER_AGENT not set; new-filing check skipped"
+   }
+  ],
+  "prices": {
+   "withPrices": 525,
+   "carriedForward": [
+    "BLFS",
+    "RLYB",
+    "SLP",
+    "SVA"
+   ],
+   "missing": [
+    "EXAS",
+    "HOLX",
+    "MASI"
+   ]
+  }
  }
 ]
